@@ -2,7 +2,10 @@
 Initial repo for building ontology for mutations (specific to microbes) including re-purposing of other ontologies
 
 
-# till-date
+# Pipeline
+#### install `robot`
+See here: [robot](https://github.com/ontodev/robot)
+
 #### extract terms from biolink
 ```bash
 robot extract --input ontologies/biolink-model.owl.ttl --term-file biolinkTermFile.txt --method BOT --output results/biolink_bot.owl --prefix 'biolink: https://w3id.org/biolink/vocab/'
