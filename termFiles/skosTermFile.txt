@@ -1,0 +1,2 @@
+skos:broader
+skos:narrower

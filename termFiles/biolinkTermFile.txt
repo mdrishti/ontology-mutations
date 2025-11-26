@@ -1,0 +1,15 @@
+biolink:OrganismTaxon
+biolink:ThingWithTaxon
+biolink:SequenceVariant
+biolink:GenomicEntity
+biolink:Gene
+biolink:VariantToGeneAssociation
+biolink:PhenotypicFeature
+biolink:has_gene
+biolink:in_taxon
+biolink:has_sequence_variant
+biolink:is_sequence_variant_of
+biolink:has_phenotype
+biolink:form_or_variant_qualifier
+
+

@@ -1,0 +1,7 @@
+sosa:Sample
+sosa:hasFeatureOfInterest
+sosa:isFeatureOfInterest
+sosa:hasSample
+sosa:isSampleOf
+sosa:hasResult
+sosa:isResultOf
