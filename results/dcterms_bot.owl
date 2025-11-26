@@ -1,0 +1,687 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/dc/terms/"
+     xml:base="http://purl.org/dc/terms/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://purl.org/dc/terms/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/type -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation">
+        <dc:description xml:lang="en-us">Recommended practice is to include sufficient 
+            bibliographic detail to identify the resource as 
+            unambiguously as possible, whether or not the
+            citation is in a standard form.
+            </dc:description>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#element-refinement"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#bibliographicCitation-001"/>
+        <issued>2003-02-15</issued>
+        <rdfs:comment xml:lang="en-us">A bibliographic reference for the resource.
+            </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">Bibliographic Citation</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/references -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/references"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/DCMIType -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/DCMIType">
+        <dc:description>
+            The DCMI Type Vocabulary provides a general, cross-domain list of
+            approved terms that may be used as values for the Resource Type
+            element to identify the genre of a resource.
+     </dc:description>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#DCMIType-002"/>
+        <issued>2000-07-11</issued>
+        <modified>2002-06-15</modified>
+        <rdfs:comment xml:lang="en-us">A list of types used to categorize the nature or genre 
+                                            of the content of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">DCMI Type Vocabulary</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-type-vocabulary/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/DateScheme -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/DateScheme">
+        <issued>2000-07-11</issued>
+        <references rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+        <references rdf:resource="http://purl.org/dc/terms/temporal"/>
+        <rdfs:comment xml:lang="en-us">A set of date encoding schemes and/or formats </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">Date Encoding Schemes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/FormatScheme -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/FormatScheme">
+        <issued>2000-07-11</issued>
+        <references rdf:resource="http://purl.org/dc/elements/1.1/format"/>
+        <rdfs:comment xml:lang="en-us">A set of format encoding schemes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">Format Encoding Schemes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/IdentifierScheme -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/IdentifierScheme">
+        <issued>2000-07-11</issued>
+        <references rdf:resource="http://purl.org/dc/elements/1.1/identifier"/>
+        <rdfs:comment xml:lang="en-us">A set of resource identifier encoding schemes and/or formats</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">Resource Identifier Encoding Schemes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/LanguageScheme -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/LanguageScheme">
+        <issued>2000-07-11</issued>
+        <references rdf:resource="http://purl.org/dc/elements/1.1/language"/>
+        <rdfs:comment xml:lang="en-us">A set of language encoding schemes and/or formats.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">Language Encoding Schemes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/RelationScheme -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/RelationScheme">
+        <issued>2000-07-11</issued>
+        <references rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+        <rdfs:comment xml:lang="en-us">A set of resource relation encoding schemes and/or formats</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">Resource Relation Encoding Schemes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/SourceScheme -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/SourceScheme">
+        <issued>2000-07-11</issued>
+        <references rdf:resource="http://purl.org/dc/elements/1.1/source"/>
+        <rdfs:comment xml:lang="en-us">A set of source encoding schemes and/or formats</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">Source Encoding Schemes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/SpatialScheme -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/SpatialScheme">
+        <issued>2000-07-11</issued>
+        <references rdf:resource="http://purl.org/dc/terms/spatial"/>
+        <rdfs:comment xml:lang="en-us">A set of geographic place encoding schemes and/or formats</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">Place Encoding Schemes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/SubjectScheme -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/SubjectScheme">
+        <issued>2000-07-11</issued>
+        <references rdf:resource="http://purl.org/dc/elements/1.1/subject"/>
+        <rdfs:comment xml:lang="en-us">A set of subject encoding schemes and/or formats</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">Subject Encoding Schemes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/TemporalScheme -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/TemporalScheme">
+        <issued>2000-07-11</issued>
+        <references rdf:resource="http://purl.org/dc/terms/temporal"/>
+        <rdfs:comment xml:lang="en-us">A set of encoding schemes for 
+       the coverage qualifier &quot;temporal&quot;</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">Encoding Schemes
+        for temporal characteristics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Collection -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/dcmitype/Collection">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/DCMIType"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#vocabulary-term"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Collection-001"/>
+        <issued>2000-07-11</issued>
+        <rdfs:comment xml:lang="en-us">A collection is an aggregation of items. The term 
+            collection means that the resource is described as a 
+            group; its parts may be separately described and navigated.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
+        <rdfs:label xml:lang="en-us">Collection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Dataset -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/dcmitype/Dataset">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/DCMIType"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#vocabulary-term"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Dataset-001"/>
+        <issued>2000-07-11</issued>
+        <rdfs:comment xml:lang="en-us">A dataset is information encoded in a defined structure 
+            (for example, lists, tables, and databases), intended to 
+            be useful for direct machine processing.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
+        <rdfs:label xml:lang="en-us">Dataset</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Event -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/dcmitype/Event">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/DCMIType"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#vocabulary-term"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Event-001"/>
+        <issued>2000-07-11</issued>
+        <rdfs:comment xml:lang="en-us">An event is a non-persistent, time-based occurrence. 
+            Metadata for an event provides descriptive
+            information that is the basis for discovery of the
+            purpose, location, duration, responsible agents, and
+            links to related events and resources.  The resource
+            of type event may not be retrievable if the described
+            instantiation has expired or is yet to occur.
+            Examples - exhibition, web-cast, conference,
+            workshop, open-day, performance, battle, trial,
+            wedding, tea-party, conflagration.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
+        <rdfs:label xml:lang="en-us">Event</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Image -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/dcmitype/Image">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/DCMIType"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#vocabulary-term"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Image-001"/>
+        <issued>2000-07-11</issued>
+        <rdfs:comment xml:lang="en-us">An image is a primarily symbolic visual representation 
+            other than text. For example - images and photographs of 
+            physical objects, paintings, prints, drawings, other 
+            images and graphics, animations and moving pictures, 
+            film, diagrams, maps, musical notation. Note that image 
+            may include both electronic and physical representations.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
+        <rdfs:label xml:lang="en-us">Image</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/InteractiveResource -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/dcmitype/InteractiveResource">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/DCMIType"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#vocabulary-term"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#InteractiveResource-001"/>
+        <issued>2000-07-11</issued>
+        <rdfs:comment xml:lang="en-us">An interactive resource is a resource which requires 
+            interaction from the user to be understood, executed, 
+            or experienced. For example - forms on web pages, applets, 
+            multimedia learning objects, chat services, virtual 
+            reality.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
+        <rdfs:label xml:lang="en-us">Interactive Resource</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/PhysicalObject -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/dcmitype/PhysicalObject">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/DCMIType"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#vocabulary-term"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#PhysicalObject-001"/>
+        <issued>2002-07-13</issued>
+        <rdfs:comment xml:lang="en-us">An inanimate, three-dimensional object or substance.  
+            For example -- a computer, the great pyramid, a 
+            sculpture.  Note that digital representations 
+            of, or surrogates for, these things should use Image, 
+            Text or one of the other types.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
+        <rdfs:label xml:lang="en-us">Physical Object</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Service -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/dcmitype/Service">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/DCMIType"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#vocabulary-term"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Service-001"/>
+        <issued>2000-07-11</issued>
+        <rdfs:comment xml:lang="en-us">A service is a system that provides one or more 
+            functions of value to the end-user. Examples include: 
+            a photocopying service, a banking service, an 
+            authentication service, interlibrary loans, a Z39.50 
+            or Web server.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
+        <rdfs:label xml:lang="en-us">Service</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Software -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/dcmitype/Software">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/DCMIType"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#vocabulary-term"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Software-001"/>
+        <issued>2000-07-11</issued>
+        <rdfs:comment xml:lang="en-us">Software is a computer program in source or 
+            compiled form which may be available for installation 
+            non-transiently on another machine. For software which 
+            exists only to create an interactive environment, use 
+            interactive instead.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
+        <rdfs:label xml:lang="en-us">Software</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Sound -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/dcmitype/Sound">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/DCMIType"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#vocabulary-term"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Sound-001"/>
+        <issued>2000-07-11</issued>
+        <rdfs:comment xml:lang="en-us">A sound is a resource whose content is primarily 
+            intended to be rendered as audio. For example - a 
+            music playback file format, an audio compact disc, 
+            and recorded speech or sounds.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
+        <rdfs:label xml:lang="en-us">Sound</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Text -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/dcmitype/Text">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/DCMIType"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#vocabulary-term"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Text-001"/>
+        <issued>2000-07-11</issued>
+        <rdfs:comment xml:lang="en-us">A text is a resource whose content is primarily 
+            words for reading. For example - books, letters, 
+            dissertations, poems, newspapers, articles, 
+            archives of mailing lists. Note that facsimiles 
+            or images of texts are still of the genre text.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/dcmitype/"/>
+        <rdfs:label xml:lang="en-us">Text</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/Box -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Box">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/SpatialScheme"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Box-002"/>
+        <issued>2000-07-11</issued>
+        <modified>2002-06-15</modified>
+        <rdfs:comment xml:lang="en-us">The DCMI Box identifies a region of space using its geographic limits.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">DCMI Box</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-box/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/DDC -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/DDC">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/SubjectScheme"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#DDC-002"/>
+        <issued>2000-07-11</issued>
+        <modified>2002-06-15</modified>
+        <rdfs:comment xml:lang="en-us">Dewey Decimal Classification</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">DDC</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.oclc.org/dewey/index.htm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/IMT -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/IMT">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/FormatScheme"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#IMT-002"/>
+        <issued>2000-07-11</issued>
+        <modified>2002-06-15</modified>
+        <rdfs:comment xml:lang="en-us">The Internet media type of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">IMT</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.isi.edu/in-notes/iana/assignments/media-types/media-types"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/ISO3166 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/ISO3166">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/SpatialScheme"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#ISO3166-002"/>
+        <issued>2000-07-11</issued>
+        <modified>2002-06-15</modified>
+        <rdfs:comment xml:lang="en-us">ISO 3166 Codes for the representation of names of countries</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">ISO 3166</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.din.de/gremien/nas/nabd/iso3166ma/codlstp1/index.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/ISO639-2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/ISO639-2">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/LanguageScheme"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#ISO639-2-002"/>
+        <issued>2000-07-11</issued>
+        <modified>2002-06-15</modified>
+        <rdfs:comment xml:lang="en-us">ISO 639-2: Codes for the representation of names of languages.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">ISO 639-2</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://lcweb.loc.gov/standards/iso639-2/langhome.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/LCC -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/LCC">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/SubjectScheme"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#LCC-002"/>
+        <issued>2000-07-11</issued>
+        <modified>2002-06-15</modified>
+        <rdfs:comment xml:lang="en-us">Library of Congress Classification</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">LCC</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://lcweb.loc.gov/catdir/cpso/lcco/lcco.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/LCSH -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/LCSH">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/SubjectScheme"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#LCSH-002"/>
+        <issued>2000-07-11</issued>
+        <modified>2002-06-15</modified>
+        <rdfs:comment xml:lang="en-us">Library of Congress Subject Headings</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">LCSH</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/MESH -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/MESH">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/SubjectScheme"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#MESH-002"/>
+        <issued>2000-07-11</issued>
+        <modified>2002-06-15</modified>
+        <rdfs:comment xml:lang="en-us">Medical Subject Headings</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">MeSH</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.nlm.nih.gov/mesh/meshhome.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/Period -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Period">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/DateScheme"/>
+        <rdf:type rdf:resource="http://purl.org/dc/terms/TemporalScheme"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Period-002"/>
+        <issued>2000-07-11</issued>
+        <modified>2002-06-15</modified>
+        <rdfs:comment xml:lang="en-us">A specification of the limits of a time interval.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">DCMI Period</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-period/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/Point -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/Point">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/SpatialScheme"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#Point-002"/>
+        <issued>2000-07-11</issued>
+        <modified>2002-06-15</modified>
+        <rdfs:comment xml:lang="en-us">The DCMI Point identifies a point in space using its geographic coordinates.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">DCMI Point</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dublincore.org/documents/dcmi-point/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/RFC1766 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/RFC1766">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/LanguageScheme"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#RFC1766-002"/>
+        <issued>2000-07-11</issued>
+        <modified>2002-06-15</modified>
+        <rdfs:comment xml:lang="en-us">Internet RFC 1766 &apos;Tags for the identification of Language&apos; 
+                                            specifies a two letter code taken from ISO 639, followed 
+                                            optionally by a two letter country code taken from ISO 3166.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">RFC 1766</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc1766.txt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/RFC3066 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/RFC3066">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/LanguageScheme"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#RFC3066-001"/>
+        <issued>2002-07-13</issued>
+        <rdfs:comment xml:lang="en-us">Internet RFC 3066 &apos;Tags for the Identification of 
+            Languages&apos; specifies a primary subtag which
+            is a two-letter code taken from ISO 639 part
+            1 or a three-letter code taken from ISO 639
+            part 2, followed optionally by a two-letter
+            country code taken from ISO 3166.  When a
+            language in ISO 639 has both a two-letter and
+            three-letter code, use the two-letter code;
+            when it has only a three-letter code, use the
+            three-letter code.  This RFC replaces RFC
+            1766.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">RFC 3066</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/TGN -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/TGN">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/SpatialScheme"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#TGN-002"/>
+        <issued>2000-07-11</issued>
+        <modified>2002-06-15</modified>
+        <rdfs:comment xml:lang="en-us">The Getty Thesaurus of Geographic Names</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">TGN</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.getty.edu/research/tools/vocabulary/tgn/index.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/UDC -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/UDC">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/SubjectScheme"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#UDC-002"/>
+        <issued>2000-07-11</issued>
+        <modified>2002-06-15</modified>
+        <rdfs:comment xml:lang="en-us">Universal Decimal Classification</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">UDC</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.udcc.org/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/URI -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/URI">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/IdentifierScheme"/>
+        <rdf:type rdf:resource="http://purl.org/dc/terms/RelationScheme"/>
+        <rdf:type rdf:resource="http://purl.org/dc/terms/SourceScheme"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#URI-002"/>
+        <issued>2000-07-11</issued>
+        <modified>2002-06-15</modified>
+        <rdfs:comment xml:lang="en-us">A URI Uniform Resource Identifier</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">URI</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc2396.txt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/dc/terms/W3CDTF -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/W3CDTF">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/DateScheme"/>
+        <rdf:type rdf:resource="http://purl.org/dc/terms/TemporalScheme"/>
+        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#encoding-scheme"/>
+        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#W3CDTF-002"/>
+        <issued>2000-07-11</issued>
+        <modified>2002-06-15</modified>
+        <rdfs:comment xml:lang="en-us">W3C Encoding rules for dates and times - a profile based on ISO 8601</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:label xml:lang="en-us">W3C-DTF</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/NOTE-datetime"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+
