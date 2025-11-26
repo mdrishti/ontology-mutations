@@ -1,4 +1,3 @@
 rdfs:label
 rdfs:comment
 rdfs:subClassOf
-

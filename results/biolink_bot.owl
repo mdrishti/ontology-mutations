@@ -10,10 +10,10 @@
      xmlns:vocab="https://w3id.org/biolink/vocab/"
      xmlns:linkml="https://w3id.org/linkml/">
     <owl:Ontology rdf:about="https://w3id.org/biolink/biolink-model.owl.ttl"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -21,82 +21,82 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#mappingRelation -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#narrowMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowMatch"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#note -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/canonical_predicate -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/biolink/vocab/canonical_predicate"/>
-    
+
 
 
     <!-- https://w3id.org/linkml/permissible_values -->
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/linkml/permissible_values"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Datatypes
@@ -104,16 +104,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.w3.org/2001/XMLSchema#string -->
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -121,7 +121,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/agent_type -->
@@ -134,7 +134,7 @@
         <skos:editorialNote>Note that this property indicates the type of agent who produced a final statement of knowledge, which is often different from the agent oragents who produced information used as evidence to support generation of this knowledge. For example, if a human curator concludes that a particular gene variant causes a medical condition - based on their interpretation of information produced by computational modeling tools, automated data analysis pipelines, and robotic laboratory assay systems - the agent_type for this statement is &apos;manual agent&apos; - despite all of the evidence being created by automated agents. But if any of these systems is programmed to generate knowledge statements directly and without human assistance, the statement would be attributed to an &apos;automated_agent&apos;.</skos:editorialNote>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/has_gene -->
@@ -146,7 +146,7 @@
         <skos:definition>connects an entity associated with one or more genes</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/has_gene_or_gene_product -->
@@ -158,7 +158,7 @@
         <skos:definition>connects an entity with one or more gene or gene products</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/has_phenotype -->
@@ -182,7 +182,7 @@
         <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/doid#has_symptom"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/has_sequence_variant -->
@@ -195,7 +195,7 @@
         <rdfs:label>has sequence variant</rdfs:label>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/in_taxon -->
@@ -218,7 +218,7 @@
         <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002160"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/is_sequence_variant_of -->
@@ -236,7 +236,7 @@
         <skos:narrowMatch rdf:resource="https://www.wikidata.org/entity/P3433"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/knowledge_level -->
@@ -250,7 +250,7 @@
         <skos:editorialNote>The notion of a &apos;level&apos; of knowledge can in one sense relate to the strength of a statement - i.e. how confident we are that it says something true about our domain of discourse. Here, we can generally consider Assertions to be stronger than Entailments to be stronger than Predictions. But in another sense, &apos;level&apos; of knowledge can refer to the scope or specificity of what a statement expresses - on a spectrum from context-specific results of a data analysis, to generalized assertions of knowledge or fact. Here, Statistical Associations and  Observations represent more foundational statements that are only slightly removed from the data on which they are based (the former reporting the direct results of  an analysis in terms of correlations between variables in the data, and the latter describing phenomena that were observed/reported to have occurred).</skos:editorialNote>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/node_property -->
@@ -261,7 +261,7 @@
         <skos:definition>A grouping for any property that holds between a node and a value</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/object -->
@@ -275,7 +275,7 @@
         <skos:exactMatch rdf:resource="http://www.w3.org/2002/07/owl#annotatedTarget"/>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/phenotype_of -->
@@ -287,7 +287,7 @@
         <rdfs:label>phenotype of</rdfs:label>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/related_to -->
@@ -410,7 +410,7 @@
         <skos:narrowMatch rdf:resource="https://www.ama-assn.org/practice-management/cpt/mapped_to"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/related_to_at_instance_level -->
@@ -423,7 +423,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/subject -->
@@ -437,7 +437,7 @@
         <skos:exactMatch rdf:resource="http://www.w3.org/2002/07/owl#annotatedSource"/>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/taxon_of -->
@@ -449,16 +449,16 @@
         <rdfs:label>taxon of</rdfs:label>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/linkml/mixins -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/linkml/mixins"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -466,7 +466,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/association_slot -->
@@ -482,7 +482,7 @@
         <skos:definition>any slot that relates an association to another entity</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/category -->
@@ -495,7 +495,7 @@
         <skos:definition>Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the biolink entity type class. In a neo4j database this MAY correspond to the neo4j label tag. In an RDF database it should be a biolink model class URI. This field is multi-valued. It should include values for ancestors of the biolink class; for example, a protein such as Shh would have category values `biolink:Protein`, `biolink:GeneProduct`, `biolink:MolecularEntity`. In an RDF database, nodes will typically have an rdf:type triples. This can be to the most specific biolink class, or potentially to a class more specific than something in biolink. For example, a sequence feature `f` may have a rdf:type assertion to a SO class such as TF_binding_site, which is more specific than anything in biolink. Here we would have categories {biolink:GenomicEntity, biolink:MolecularEntity, biolink:NamedThing}</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/description -->
@@ -510,7 +510,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <skos:narrowMatch rdf:resource="https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md#Description"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/id -->
@@ -524,7 +524,7 @@
         <skos:exactMatch rdf:resource="https://www.alliancegenome.org/primaryId"/>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/opposite_of -->
@@ -538,7 +538,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/predicate -->
@@ -554,7 +554,7 @@
         <skos:exactMatch rdf:resource="http://www.w3.org/2002/07/owl#annotatedProperty"/>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/type -->
@@ -566,10 +566,10 @@
         <skos:exactMatch rdf:resource="https://github.com/geneontology/go-annotation/blob/master/specs/gpad-gpi-2-0.md#DB_Object_Type"/>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -577,7 +577,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/AgentTypeEnum -->
@@ -607,7 +607,7 @@
         <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#not_provided"/>
         <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#text_mining_agent"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/Association -->
@@ -724,7 +724,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <skos:note>This is roughly the model used by biolink and ontobio at the moment</skos:note>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/BiologicalEntity -->
@@ -745,7 +745,7 @@
         <skos:narrowMatch rdf:resource="http://semanticscience.org/resource/SIO_010046"/>
         <skos:narrowMatch rdf:resource="https://www.wikidata.org/entity/Q28845870"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/ChemicalEntityOrGeneOrGeneProduct -->
@@ -756,7 +756,7 @@
         <skos:definition>A union of chemical entities and children, and gene or gene product. This mixin is helpful to use when searching across chemical entities that must include genes and their children as chemical entities.</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/DiseaseOrPhenotypicFeature -->
@@ -775,7 +775,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <skos:narrowMatch rdf:resource="http://purl.bioontology.org/ontology/STY/T033"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/Entity -->
@@ -828,7 +828,7 @@
         <skos:definition>Root Biolink Model class for all things and informational relationships, real or imagined.</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/Gene -->
@@ -875,7 +875,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <skos:narrowMatch rdf:resource="https://bioschemas.org/gene"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/GeneOrGeneProduct -->
@@ -886,7 +886,7 @@
         <skos:definition>A union of gene loci or gene products. Frequently an identifier for one will be used as proxy for another</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/GenomicEntity -->
@@ -898,7 +898,7 @@
         <skos:narrowMatch rdf:resource="http://purl.bioontology.org/ontology/STY/T028"/>
         <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/GENO_0000897"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/KnowledgeLevelEnum -->
@@ -924,7 +924,7 @@
         <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#prediction"/>
         <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#statistical_association"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/MacromolecularMachineMixin -->
@@ -935,7 +935,7 @@
         <skos:definition>A union of gene locus, gene product, and macromolecular complex. These are the basic units of function in a cell. They either carry out individual biological activities, or they encode molecules which do this.</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/NamedThing -->
@@ -963,7 +963,7 @@
         <skos:exactMatch rdf:resource="https://www.wikidata.org/entity/Q35120"/>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/OntologyClass -->
@@ -979,7 +979,7 @@
         <skos:note>Note that formally this is a metaclass. Instances of this class are instances in the graph, but can be the object of &apos;type&apos; edges. For example, if we had a node in the graph representing a specific brain of a specific patient (e.g brain001), this could have a category of bl:Sample, and by typed more specifically with an ontology class UBERON:nnn, which has as category bl:AnatomicalEntity</skos:note>
         <skos:note>This is modeled as a mixin. &apos;ontology class&apos; should not be the primary type of a node in the KG. Instead you should use an informative bioloink category, such as AnatomicalEntity (for Uberon classes), ChemicalSubstance (for CHEBI or CHEMBL), etc</skos:note>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/OrganismTaxon -->
@@ -996,7 +996,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <skos:narrowMatch rdf:resource="https://datacommons.org/browser/BiologicalSpecies"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/PhenotypicFeature -->
@@ -1034,7 +1034,7 @@
         <skos:narrowMatch rdf:resource="https://www.wikidata.org/entity/Q169872"/>
         <skos:narrowMatch rdf:resource="https://www.wikidata.org/entity/Q25203551"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/PhysicalEssence -->
@@ -1045,7 +1045,7 @@
         <skos:definition>Semantic mixin concept.  Pertains to entities that have physical properties such as mass, volume, or charge.</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/PhysicalEssenceOrOccurrent -->
@@ -1056,7 +1056,7 @@
         <skos:definition>Either a physical or processual entity.</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/SequenceVariant -->
@@ -1117,7 +1117,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <skos:note>This class is for modeling the specific state at a locus. A single DBSNP rs ID could correspond to more than one sequence variants (e.g CIViC:1252 and CIViC:1253, two distinct BRCA2 alleles for rs28897743)</skos:note>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/ThingWithTaxon -->
@@ -1128,7 +1128,7 @@
         <skos:definition>A mixin that can be used on any entity that can be taxonomically classified. This includes individual organisms; genes, their products and other molecular entities; body parts; biological processes</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin -->
@@ -1138,7 +1138,7 @@
         <rdfs:label>variant to entity association mixin</rdfs:label>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/VariantToGeneAssociation -->
@@ -1191,7 +1191,7 @@
         <skos:definition>An association between a variant and a gene, where the variant has a genetic association with the gene (i.e. is in linkage disequilibrium)</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent -->
@@ -1201,7 +1201,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
         <rdfs:label>automated_agent</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/AgentTypeEnum#computational_model -->
@@ -1211,7 +1211,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent"/>
         <rdfs:label>computational_model</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/AgentTypeEnum#data_analysis_pipeline -->
@@ -1221,7 +1221,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent"/>
         <rdfs:label>data_analysis_pipeline</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/AgentTypeEnum#image_processing_agent -->
@@ -1231,7 +1231,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent"/>
         <rdfs:label>image_processing_agent</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/AgentTypeEnum#manual_agent -->
@@ -1241,7 +1241,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
         <rdfs:label>manual_agent</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/AgentTypeEnum#manual_validation_of_automated_agent -->
@@ -1251,7 +1251,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
         <rdfs:label>manual_validation_of_automated_agent</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/AgentTypeEnum#not_provided -->
@@ -1261,7 +1261,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
         <rdfs:label>not_provided</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/AgentTypeEnum#text_mining_agent -->
@@ -1271,7 +1271,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent"/>
         <rdfs:label>text_mining_agent</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/KnowledgeLevelEnum#knowledge_assertion -->
@@ -1281,7 +1281,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
         <rdfs:label>knowledge_assertion</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/KnowledgeLevelEnum#logical_entailment -->
@@ -1291,7 +1291,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
         <rdfs:label>logical_entailment</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/KnowledgeLevelEnum#not_provided -->
@@ -1301,7 +1301,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
         <rdfs:label>not_provided</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/KnowledgeLevelEnum#observation -->
@@ -1311,7 +1311,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
         <rdfs:label>observation</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/KnowledgeLevelEnum#prediction -->
@@ -1321,7 +1321,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
         <rdfs:label>prediction</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/KnowledgeLevelEnum#statistical_association -->
@@ -1331,34 +1331,34 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
         <rdfs:label>statistical_association</rdfs:label>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/linkml/ClassDefinition -->
 
     <owl:Class rdf:about="https://w3id.org/linkml/ClassDefinition"/>
-    
+
 
 
     <!-- https://w3id.org/linkml/EnumDefinition -->
 
     <owl:Class rdf:about="https://w3id.org/linkml/EnumDefinition"/>
-    
+
 
 
     <!-- https://w3id.org/linkml/PermissibleValue -->
 
     <owl:Class rdf:about="https://w3id.org/linkml/PermissibleValue"/>
-    
+
 
 
     <!-- https://w3id.org/linkml/ClassDefinition#Mixin -->
 
     <owl:Class rdf:about="https://w3id.org/linkml/ClassDefinition#Mixin"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -1366,7 +1366,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/ameliorates_condition -->
@@ -1383,7 +1383,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/broad_match -->
@@ -1397,7 +1397,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/contraindicated_in -->
@@ -1411,7 +1411,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/decreases_sensitivity_to -->
@@ -1425,7 +1425,7 @@
         <skos:narrowMatch rdf:resource="http://ctdbase.org/decreases_response_to_substance"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/disrupts -->
@@ -1442,7 +1442,7 @@
         <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0004025"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/enabled_by -->
@@ -1454,7 +1454,7 @@
         <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002333"/>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/end_interbase_coordinate -->
@@ -1466,7 +1466,7 @@
         <skos:definition>The position at which the subject nucleic acid entity ends on the chromosome or other entity to which it is located on.</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/exacerbates_condition -->
@@ -1483,7 +1483,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/genetically_associated_with -->
@@ -1495,7 +1495,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/has_active_ingredient -->
@@ -1508,7 +1508,7 @@
         <skos:mappingRelation rdf:resource="http://purl.obolibrary.org/obo/RO_0002248"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/has_completed -->
@@ -1521,7 +1521,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/has_decreased_amount -->
@@ -1533,7 +1533,7 @@
         <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/CL_has_low_plasma_membrane_amount"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/has_increased_amount -->
@@ -1545,7 +1545,7 @@
         <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/CL_has_high_plasma_membrane_amount"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/has_input -->
@@ -1572,7 +1572,7 @@
         <skos:narrowMatch rdf:resource="http://smpdb.ca/pathways/#has_left_element"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/has_not_completed -->
@@ -1585,7 +1585,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/has_output -->
@@ -1607,7 +1607,7 @@
         <skos:narrowMatch rdf:resource="http://smpdb.ca/pathways/#has_right_element"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/has_part -->
@@ -1652,7 +1652,7 @@
         <skos:narrowMatch rdf:resource="http://smpdb.ca/pathways/#has_protein_in_complex"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/increases_sensitivity_to -->
@@ -1665,7 +1665,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/lacks_part -->
@@ -1679,7 +1679,7 @@
         <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/CL_lacks_plasma_membrane_part"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/narrow_match -->
@@ -1692,7 +1692,7 @@
         <skos:exactMatch rdf:resource="https://www.wikidata.org/entity/Q39893967"/>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/negatively_correlated_with -->
@@ -1705,7 +1705,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/positively_correlated_with -->
@@ -1718,7 +1718,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/preventative_for_condition -->
@@ -1733,7 +1733,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/promotes_condition -->
@@ -1745,7 +1745,7 @@
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- https://w3id.org/biolink/vocab/start_interbase_coordinate -->
@@ -1757,10 +1757,10 @@
         <skos:definition>The position at which the subject nucleic acid entity starts on the chromosome or other entity to which it is located on. (ie: the start of the sequence being referenced is 0).</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:NamedIndividual>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // General axioms
@@ -1913,4 +1913,3 @@
 
 
 <!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
-

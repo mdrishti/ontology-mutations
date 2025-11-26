@@ -11,5 +11,3 @@ biolink:has_sequence_variant
 biolink:is_sequence_variant_of
 biolink:has_phenotype
 biolink:form_or_variant_qualifier
-
-

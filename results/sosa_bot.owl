@@ -9,10 +9,10 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="http://www.w3.org/ns/ssn/"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -20,40 +20,40 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://schema.org/domainIncludes -->
 
     <owl:AnnotationProperty rdf:about="http://schema.org/domainIncludes"/>
-    
+
 
 
     <!-- http://schema.org/rangeIncludes -->
 
     <owl:AnnotationProperty rdf:about="http://schema.org/rangeIncludes"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#example -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#note -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -61,7 +61,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/hasFeatureOfInterest -->
@@ -79,7 +79,7 @@
         <skos:definition xml:lang="en">A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.</skos:definition>
         <skos:example xml:lang="en">For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.</skos:example>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/hasResult -->
@@ -96,7 +96,7 @@
         <rdfs:label xml:lang="en">has result</rdfs:label>
         <skos:definition xml:lang="en">Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.</skos:definition>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/hasSample -->
@@ -111,7 +111,7 @@
         <rdfs:label xml:lang="en">has sample</rdfs:label>
         <skos:definition xml:lang="en">Relation between a FeatureOfInterest and the Sample used to represent it.</skos:definition>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/isFeatureOfInterestOf -->
@@ -127,7 +127,7 @@
         <rdfs:label xml:lang="en">is feature of interest of</rdfs:label>
         <skos:definition xml:lang="en">A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it.</skos:definition>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/isResultOf -->
@@ -143,7 +143,7 @@
         <rdfs:label xml:lang="en">is result of</rdfs:label>
         <skos:definition xml:lang="en">Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it.</skos:definition>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/isSampleOf -->
@@ -157,7 +157,7 @@
         <rdfs:label xml:lang="en">is sample of</rdfs:label>
         <skos:definition xml:lang="en">Relation from a Sample to the FeatureOfInterest that it is intended to be representative of.</skos:definition>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/madeBySampler -->
@@ -171,7 +171,7 @@
         <rdfs:label xml:lang="en">made by sampler</rdfs:label>
         <skos:definition xml:lang="en">Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.</skos:definition>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/madeSampling -->
@@ -184,7 +184,7 @@
         <rdfs:label xml:lang="en">made sampling</rdfs:label>
         <skos:definition xml:lang="en">Relation between a Sampler (sampling device or entity) and the Sampling act it performed.</skos:definition>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/usedProcedure -->
@@ -203,7 +203,7 @@
         <rdfs:label xml:lang="en">used procedure</rdfs:label>
         <skos:definition xml:lang="en">A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.</skos:definition>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/ssn/hasProperty -->
@@ -215,7 +215,7 @@
         <rdfs:label xml:lang="en">has property</rdfs:label>
         <skos:definition xml:lang="en">Relation between an entity and a Property of that entity.</skos:definition>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/ssn/implementedBy -->
@@ -228,7 +228,7 @@
         <skos:definition xml:lang="en">Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way.</skos:definition>
         <skos:example xml:lang="en">For example, the relationship between a scientific measuring Procedure and a sensor that senses via that Procedure.</skos:example>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/ssn/implements -->
@@ -240,7 +240,7 @@
         <skos:definition xml:lang="en">Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method).</skos:definition>
         <skos:example xml:lang="en">For example, the relationship between a sensor and the scientific measuring Procedure via which it senses.</skos:example>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/ssn/isPropertyOf -->
@@ -251,10 +251,10 @@
         <rdfs:label xml:lang="en">is property of</rdfs:label>
         <skos:definition xml:lang="en">Relation between a Property and the entity it belongs to.</skos:definition>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -262,7 +262,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/resultTime -->
@@ -277,10 +277,10 @@
         <rdfs:label xml:lang="en">result time</rdfs:label>
         <skos:definition xml:lang="en">The result time is the instant of time when the Observation, Actuation or Sampling activity was completed.</skos:definition>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -288,13 +288,13 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.org/vocommons/voaf#Vocabulary -->
 
     <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/FeatureOfInterest -->
@@ -324,7 +324,7 @@
         <skos:definition xml:lang="en">The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling.</skos:definition>
         <skos:example xml:lang="en">When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator.</skos:example>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/Procedure -->
@@ -343,7 +343,7 @@
         <skos:example xml:lang="en">The measured wind speed differs depending on the height of the sensor above the surface, e.g., due to friction. Consequently, procedures for measuring wind speed define a standard height for anemometers above ground, typically 10m for meteorological measures and 2m in Agrometeorology. This definition of height, sensor placement, and so forth are defined by the Procedure.</skos:example>
         <skos:note xml:lang="en">Many observations may be created via the same Procedure, the same way as many tables are assembled using the same instructions (as information objects, not their concrete realization).</skos:note>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/Result -->
@@ -361,7 +361,7 @@
         <skos:definition xml:lang="en">The Result of an Observation, Actuation, or act of Sampling. To store an observation&apos;s simple result value one can use the hasSimpleResult property.</skos:definition>
         <skos:example xml:lang="en">The value 20 as the height of a certain tree together with the unit, e.g., Meter.</skos:example>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/Sample -->
@@ -406,7 +406,7 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <skos:example xml:lang="en">A statistical sample is often designed to be characteristic of an entire population, so that observations can be made regarding the sample that provide a good estimate of the properties of the population.</skos:example>
         <skos:note xml:lang="en">A transient sample, such as a ships-track or flight-line, might be identified and described, but is unlikely to be revisited exactly.</skos:note>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/Sampler -->
@@ -431,7 +431,7 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <skos:definition xml:lang="en">A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples.</skos:definition>
         <skos:example xml:lang="en">A ball mill, diamond drill, hammer, hypodermic syringe and needle, image Sensor or a soil auger can all act as sampling devices (i.e., be Samplers). However, sometimes the distinction between the Sampler and the Sensor is not evident, as they are packaged as a unit. A Sampler need not be a physical device.</skos:example>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/Sampling -->
@@ -501,7 +501,7 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <skos:example xml:lang="en">Splitting a piece of drill-core to create two new samples.</skos:example>
         <skos:example xml:lang="en">Taking a diamond-drill core from a rock outcrop.</skos:example>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/ns/ssn/Property -->
@@ -518,7 +518,7 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <rdfs:label xml:lang="en">Property</rdfs:label>
         <skos:definition xml:lang="en">A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- http://www.w3.org/ns/ssn/System -->
@@ -535,16 +535,16 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <rdfs:label xml:lang="en">System</rdfs:label>
         <skos:definition xml:lang="en">System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems.</skos:definition>
     </owl:Class>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/Agent -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -552,7 +552,7 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://www.w3.org/ns/sosa/ -->
@@ -560,7 +560,7 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/sosa/">
         <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
     </owl:NamedIndividual>
-    
+
 
 
     <!-- http://www.w3.org/ns/ssn/ -->
@@ -585,4 +585,3 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 
 
 <!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
-
