@@ -29,12 +29,16 @@ robot extract --input ontologies/envo.owl --term-file termFiles/envoTermFile.txt
 robot extract --input ontologies/dublin_core_terms.ttl --term-file termFiles/dctermsTermFile.txt --method BOT --output results/dcterms_bot.owl --prefix 'dcterms: http://purl.org/dc/terms/'
 ```
 gives the following error:
-```2025-11-26 15:45:22,229 ERROR org.obolibrary.robot.IOHelper - Input ontology contains 1 triple(s) that could not be parsed:
+```
+2025-11-26 15:45:22,229 ERROR org.obolibrary.robot.IOHelper - Input ontology contains 1 triple(s) that could not be parsed:
  - <http://purl.org/dc/terms/creator> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://xmlns.com/foaf/0.1/maker>.
 
 Ontology IRI cannot be null
 ````
-
+but works if the iri (owl format) is used
+```bash
+robot extract --input-iri http://protege.stanford.edu/plugins/owl/dc/terms.owl --term-file termFiles/dctermsTermFile.txt --method BOT --output results/dcterms_bot.owl --prefix 'dcterms: http://purl.org/dc/terms/'
+```
 
 #### extract terms from sosa
 ```bash
