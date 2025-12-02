@@ -5,6 +5,7 @@ biolink:GenomicEntity
 biolink:Gene
 biolink:VariantToGeneAssociation
 biolink:PhenotypicFeature
+biolink:SequenceVariant
 biolink:has_gene
 biolink:in_taxon
 biolink:has_sequence_variant
