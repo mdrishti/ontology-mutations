@@ -22,6 +22,12 @@ bash
 robot extract --input ontologies/rdf-schema.ttl --term-file termFiles/rdfsTermFile.txt --method BOT --output results/rdfs_bot.owl --prefix 'rdfs: http://www.w3.org/2000/01/rdf-schema#'
 ```
 
+### extract terms from skos
+```
+bash
+robot extract --input ontologies/skos.owl --term-file termFiles/skosTermFile.txt --method BOT --output results/skos_bot.owl --prefix 'skos: http://www.w3.org/2008/05/skos#'
+```
+
 ### extract terms from envo
 ```bash
 robot extract --input ontologies/envo.owl --term-file termFiles/envoTermFile.txt --method BOT --output results/envo_bot.owl --prefix 'ENVO: http://purl.obolibrary.org/obo/ENVO_'
