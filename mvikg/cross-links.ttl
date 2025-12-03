@@ -1,0 +1,46 @@
+@prefix biolink: <https://w3id.org/biolink/vocab/> .
+@prefix sosa:    <http://www.w3.org/ns/sosa/> .
+@prefix RO:    <http://purl.obolibrary.org/obo/RO_> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2008/05/skos#> .
+@prefix ENVO:    <http://purl.obolibrary.org/obo/ENVO_> .
+@prefix dcterms:    <http://purl.org/dc/terms/> .
+@prefix mvikg:    <http://example.org/mvikg/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+
+
+
+# Mutation data modelling
+
+biolink:GenomicEntity sosa:hasFeatureOfInterest sosa:Sample .
+sosa:Sample sosa:isFeatureOfInterest biolink:GenomicEntity .
+
+biolink:Gene rdf:type biolink:GenomicEntity .
+
+biolink:SequenceVariant biolink:has_gene biolink:Gene .
+
+biolink:SequenceVariant biolink:has_sequence_variant biolink:Gene .
+
+biolink:Gene biolink:is_sequence_variant_of biolink:SequenceVariant .
+
+biolink:Gene biolink:form_or_variant_qualifier biolink:VariantToGeneAssociation .
+
+
+
+# Organism data modelling
+
+sosa:Sample sosa:isSampleOf biolink:OrganismTaxon .
+sosa:Sample dcterms:isPartOf dcmitype:Dataset .
+
+biolink:OrganismTaxon sosa:hasSample sosa:Sample .
+
+
+# Linking from Mutation data modelling to Phenotype data modelling
+
+biolink:Gene biolink:has_phenotype biolink:PhenotypicFeature .
+
+sosa:Sample RO:0002303 	ENVO:01000254 .
+	# RO:hasHabitat
+	# ENVO:EnvironmentalSystem
+sosa:Sample mvikg:hasDevelopmentalStage mvikg:DevelopmentalStage .
