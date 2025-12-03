@@ -25,7 +25,7 @@ robot extract --input ontologies/rdf-schema.ttl --term-file termFiles/rdfsTermFi
 ### extract terms from skos
 ```
 bash
-robot extract --input ontologies/skos.owl --term-file termFiles/skosTermFile.txt --method BOT --output results/skos_bot.owl --prefix 'skos: http://www.w3.org/2008/05/skos#'
+robot extract --input ontologies/skos.owl --term-file termFiles/skosTermFile.txt --method STAR --output results/skos_star.owl --prefix 'skos: http://www.w3.org/2004/02/skos/core#'
 ```
 
 ### extract terms from envo
