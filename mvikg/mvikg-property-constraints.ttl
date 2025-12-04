@@ -3,51 +3,73 @@
 @prefix RO: <http://purl.obolibrary.org/obo/RO_> .
 @prefix ENVO: <http://purl.obolibrary.org/obo/ENVO_> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix gold: <https://w3id.org/gold.path/> .
+@prefix mvikg: <http://example.org/mvikg/> .
 
-# Define that RO:hasHabitat can be used with sosa:Sample
-# and can point to several GOLD biomes
-gold:AnyBiome a owl:Class ;
-    owl:unionOf ( gold:Biome_A gold:Biome_B gold:Biome_C ) .
-RO:0002303 rdfs:range gold:AnyBiome .
+# Define a union of GOLD biome classes that samples can have as habitats
+mvikg:GoldBiome a owl:Class ;
+    rdfs:label "GOLD Biome" ;
+    rdfs:comment "Any biome class from the GOLD ontology" ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:unionOf (
+            gold:AtomicElement
+            gold:Engineered
+            gold:Environmental
+            gold:Host-associated
+        )
+    ] .
 
-#RO:0002303  # hasHabitat
-#    rdfs:domain sosa:Sample ;
-#    rdfs:range ENVO:01000254 .  # or whatever your GOLD biome class is
-#
-
+# RO:hasHabitat can point to any GOLD biome (or their subclasses)
+RO:0002303  # hasHabitat
+    rdfs:label "has habitat" ;
+    rdfs:comment "Relates a sample to its environmental habitat from GOLD" ;
+    rdfs:domain sosa:Sample ;
+    rdfs:range mvikg:GoldBiome .
 
 # Define that has_gene relates sequence variants to genes
 biolink:has_gene
     rdfs:domain biolink:SequenceVariant ;
     rdfs:range biolink:Gene .
 
-
-
 # Define that has_phenotype relates genes to phenotypes
 biolink:has_phenotype
     rdfs:domain biolink:Gene ;
     rdfs:range biolink:PhenotypicFeature .
 
-
-
 # Define that has_sequence_variant relates genes to sequence variants
 biolink:has_sequence_variant
-	rdfs:domain biolink:Gene ;
-	rdfs:range biolink:SequenceVariant .
+    rdfs:domain biolink:Gene ;
+    rdfs:range biolink:SequenceVariant .
 
 biolink:is_sequence_variant_of
     rdfs:domain biolink:SequenceVariant ;
     rdfs:range biolink:Gene .
 
-
-# Define that form_or_variant_qualifier relates genes to sequence variants
+# Define that form_or_variant_qualifier relates genes to variant associations
 biolink:form_or_variant_qualifier
-	rdfs:domain biolink:Gene ;
-	rdfs:range biolink:VariantToGeneAssociation .
-
+    rdfs:domain biolink:Gene ;
+    rdfs:range biolink:VariantToGeneAssociation .
 
 # Define that mvikg:hasDevelopmentalStage relates a sample to a developmental stage
 mvikg:hasDevelopmentalStage
-	rdfs:domain sosa:Sample ;
-	rdfs:range mvikg:DevelopmentalStage .
+    rdfs:domain sosa:Sample ;
+    rdfs:range mvikg:DevelopmentalStage .
+
+# Define domains and ranges for SOSA properties used in cross-links
+sosa:hasFeatureOfInterest
+    rdfs:domain biolink:GenomicEntity ;
+    rdfs:range sosa:Sample .
+
+sosa:isFeatureOfInterest
+    rdfs:domain sosa:Sample ;
+    rdfs:range biolink:GenomicEntity .
+
+sosa:isSampleOf
+    rdfs:domain sosa:Sample ;
+    rdfs:range biolink:OrganismTaxon .
+
+sosa:hasSample
+    rdfs:domain biolink:OrganismTaxon ;
+    rdfs:range sosa:Sample .
