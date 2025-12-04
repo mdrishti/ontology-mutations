@@ -4,6 +4,7 @@ extracted/*temp*
 
 # temp files
 temp
+run*
 
 # Personal dynamic notes
 NOTES.md
