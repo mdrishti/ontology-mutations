@@ -1,0 +1,34 @@
+@prefix biolink: <https://w3id.org/biolink/vocab/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix mvikg: <http://example.org/mvikg/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+# Custom MVIKG classes
+mvikg:DevelopmentalStage a owl:Class ;
+    rdfs:label "Developmental Stage" ;
+    rdfs:comment "A stage in the development of an organism" ;
+    skos:definition "Represents a specific point or period in an organism's life cycle" .
+
+# Custom MVIKG properties
+mvikg:hasDevelopmentalStage a owl:ObjectProperty ;
+    rdfs:label "has developmental stage" ;
+    rdfs:comment "Relates a sample to its developmental stage" .
+
+# Add context-specific annotations to imported classes
+sosa:Sample
+    rdfs:comment "In MVIKG: A biological sample with genomic, environmental, and phenotypic metadata" ;
+    skos:note "Samples are central to MVIKG, linking organisms, genomes, environments, and phenotypes" .
+
+biolink:Gene
+    rdfs:comment "In MVIKG: A gene that may have sequence variants and associated phenotypes" .
+
+biolink:SequenceVariant
+    rdfs:comment "In MVIKG: A genomic variant associated with a specific gene" .
+
+biolink:PhenotypicFeature
+    rdfs:comment "In MVIKG: An observable characteristic linked to genes" .
+
+biolink:OrganismTaxon
+    rdfs:comment "In MVIKG: The taxonomic classification of sampled organisms" .
