@@ -1,0 +1,4 @@
+GOLDTERMS:AtomicElement
+GOLDTERMS:Engineered
+GOLDTERMS:Environmental
+GOLDVOCAB:Host-associated

@@ -1,0 +1,6 @@
+{
+  "@context" : {
+    "GOLDTERMS" : "https://w3id.org/gold.path/",
+    "GOLDVOCAB" : "https://w3id.org/gold.vocab/"
+  }
+}
