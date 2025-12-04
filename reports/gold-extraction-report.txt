@@ -1,0 +1,2 @@
+Level	Rule Name	Subject	Property	Value
+WARN	missing_definition	https://w3id.org/gold.vocab/Host-associated	IAO:0000115

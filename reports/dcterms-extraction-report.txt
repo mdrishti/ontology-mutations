@@ -1,0 +1,8 @@
+Level	Rule Name	Subject	Property	Value
+WARN	annotation_whitespace	dc:bibliographicCitation	dc11:description	"Recommended practice is to include sufficient
+            bibliographic detail to identify the resource as
+            unambiguously as possible, whether or not the
+            citation is in a standard form.
+            @en-us"
+WARN	missing_definition	dc:bibliographicCitation	IAO:0000115
+WARN	missing_definition	dc:isPartOf	IAO:0000115
