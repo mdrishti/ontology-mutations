@@ -1,14 +1,40 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.w3.org/ns/ssn/"
-     xml:base="http://www.w3.org/ns/ssn/"
+<rdf:RDF xmlns="http://www.w3.org/ns/sosa/"
+     xml:base="http://www.w3.org/ns/sosa/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="http://schema.org/">
-    <owl:Ontology rdf:about="http://www.w3.org/ns/ssn/"/>
+    <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/">
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-04-17</terms:created>
+        <terms:creator>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+            </rdf:Description>
+        </terms:creator>
+        <terms:description xml:lang="en">This ontology describes sensors, actuators and observations, and related concepts. It does not describe domain concepts, time, locations, etc. these are intended to be included from other ontologies via OWL imports.</terms:description>
+        <terms:description>Extracted classifications from Sensor, Observation, Sample, and Actuator Ontology</terms:description>
+        <terms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+        <terms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+        <terms:license>http://www.opengeospatial.org/ogc/Software</terms:license>
+        <terms:rights>Copyright 2017 W3C/OGC.</terms:rights>
+        <terms:title xml:lang="en">Semantic Sensor Network Ontology</terms:title>
+        <terms:title>SOSA Ontology (Extracted)</terms:title>
+        <vann:preferredNamespacePrefix>ssn</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://www.w3.org/ns/ssn/</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">Please report any errors to the W3C Spatial Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology"/>
+        <owl:versionInfo xml:lang="en">New modular version of the SSN ontology.
+
+This ontology was originally developed in 2009-2011 by the W3C Semantic Sensor Networks Incubator Group (SSN-XG). For more information on the group&apos;s activities see: http://www.w3.org/2005/Incubator/ssn/. The ontology was revised and modularized in 2015-2017 by the W3C/OGC Spatial Data on the Web Working Group, see: https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology.
+
+In particular, (a) the scope is extended to include actuation and sampling; (b) the core concepts and properties are factored out into the SOSA ontology. The SSN ontology imports SOSA and adds formal axiomatization consistent with the text definitions in SOSA, and adds classes and properties to accommodate the scope of the original SSN ontology. </owl:versionInfo>
+    </owl:Ontology>
 
 
 
@@ -20,6 +46,54 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
 
 
 
@@ -50,6 +124,23 @@
     <!-- http://www.w3.org/2004/02/skos/core#note -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
 
 
 
@@ -568,9 +659,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     <owl:NamedIndividual rdf:about="http://www.w3.org/ns/ssn/">
         <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
     </owl:NamedIndividual>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     </rdf:Description>

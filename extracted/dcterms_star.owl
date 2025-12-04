@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.org/dc/terms/"
-     xml:base="http://purl.org/dc/terms/"
+<rdf:RDF xmlns="http://protege.stanford.edu/plugins/owl/dc/terms.owl#"
+     xml:base="http://protege.stanford.edu/plugins/owl/dc/terms.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -8,7 +8,21 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://purl.org/dc/terms/"/>
+    <owl:Ontology rdf:about="http://protege.stanford.edu/plugins/owl/dc/terms.owl">
+        <dc:description xml:lang="en-us">The Dublin Core Terms namespace provides URIs for the Dublin Core Element Set Qualifier Vocabulary. Vocabulary terms are declared using RDF Schema language to support RDF applications. The Dublin Core qualifiers form a richer vocabulary, which is intended to facilitate discovery of resources. It will be updated according to dc-usage decisions.</dc:description>
+        <dc:language xml:lang="en-us">English</dc:language>
+        <dc:publisher xml:lang="en-us">The Dublin Core Metadata Initiative</dc:publisher>
+        <dc:source rdf:resource="http://www.dublincore.org/documents/2000/07/11/dcmes-qualifiers/"/>
+        <dc:source rdf:resource="http://www.dublincore.org/usage/decisions/"/>
+        <dc:title xml:lang="en-us">The Dublin Core Terms Namespace providing access to its content by means of an RDF Schema.</dc:title>
+        <terms:description>Extracted classifications from DCTERMS</terms:description>
+        <terms:issued>2000-07-11</terms:issued>
+        <terms:license>https://creativecommons.org/licenses/by/4.0</terms:license>
+        <terms:modified>2003-03-24</terms:modified>
+        <terms:references rdf:resource="http://purl.org/dc/dcmitype/"/>
+        <terms:requires rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:title>DCTERMS Ontology (Extracted)</terms:title>
+    </owl:Ontology>
 
 
 
@@ -29,6 +43,30 @@
 
 
 
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+
+
+
     <!-- http://purl.org/dc/elements/1.1/type -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
@@ -44,13 +82,19 @@
             citation is in a standard form.
             </dc:description>
         <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#element-refinement"/>
-        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#bibliographicCitation-001"/>
-        <issued>2003-02-15</issued>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#bibliographicCitation-001"/>
+        <terms:issued>2003-02-15</terms:issued>
         <rdfs:comment xml:lang="en-us">A bibliographic reference for the resource.
             </rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en-us">Bibliographic Citation</rdfs:label>
     </owl:AnnotationProperty>
+
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
 
 
 
@@ -64,9 +108,9 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isPartOf">
         <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#element-refinement"/>
-        <hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#isPartOf-002"/>
-        <issued>2000-07-11</issued>
-        <modified>2002-06-15</modified>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#isPartOf-002"/>
+        <terms:issued>2000-07-11</terms:issued>
+        <terms:modified>2002-06-15</terms:modified>
         <rdfs:comment xml:lang="en-us">The described resource is a physical or logical part of the
             referenced resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
@@ -81,9 +125,33 @@
 
 
 
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+
+
+
     <!-- http://purl.org/dc/terms/modified -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+
+
+
+    <!-- http://purl.org/dc/terms/references -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/references"/>
+
+
+
+    <!-- http://purl.org/dc/terms/requires -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/requires"/>
+
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
 </rdf:RDF>
 
 

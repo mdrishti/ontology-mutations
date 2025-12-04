@@ -8,10 +8,16 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vocab="https://w3id.org/biolink/vocab/"
+     xmlns:linkml="https://w3id.org/linkml/">
     <owl:Ontology rdf:about="https://w3id.org/biolink/biolink-model.owl.ttl">
+        <terms:description>Extracted ontology classes and properties from BioLink</terms:description>
         <terms:license>https://creativecommons.org/publicdomain/zero/1.0/</terms:license>
+        <terms:source>BioLink Model</terms:source>
+        <terms:title>BioLink Ontology (Extracted)</terms:title>
         <pav:version>4.3.4</pav:version>
+        <rdfs:comment>Extracted biolink terms</rdfs:comment>
         <rdfs:label>Biolink-Model</rdfs:label>
         <skos:definition>Entity and association taxonomy and datamodel for life-sciences data</skos:definition>
     </owl:Ontology>
@@ -29,9 +35,27 @@
 
 
 
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+
+
+
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
 
 
 
