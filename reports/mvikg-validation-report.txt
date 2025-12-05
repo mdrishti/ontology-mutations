@@ -1,9 +1,4 @@
 Level	Rule Name	Subject	Property	Value
-ERROR	missing_label	http://www.w3.org/ns/sosa/isFeatureOfInterest	rdfs:label
-ERROR	missing_label	https://w3id.org/gold.path/AtomicElement	rdfs:label
-ERROR	missing_label	https://w3id.org/gold.path/Engineered	rdfs:label
-ERROR	missing_label	https://w3id.org/gold.path/Environmental	rdfs:label
-ERROR	missing_label	https://w3id.org/gold.path/Host-associated	rdfs:label
 ERROR	multiple_labels	GO:0003674	rdfs:label	gene product or complex activity@en
 ERROR	multiple_labels	GO:0003674	rdfs:label	molecular_function
 ERROR	multiple_labels	GO:0008150	rdfs:label	biological process@en
@@ -18,6 +13,8 @@ WARN	annotation_whitespace	dc:bibliographicCitation	dc11:description	"Recommende
             @en-us"
 WARN	annotation_whitespace	dc:bibliographicCitation	rdfs:comment	"A bibliographic reference for the resource.
             @en-us"
+WARN	missing_definition	http://example.org/mvikg/Biome	IAO:0000115
+WARN	missing_definition	http://example.org/mvikg/DevelopmentalStage	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/hasDevelopmentalStage	IAO:0000115
 WARN	missing_definition	BFO:0000016	IAO:0000115
 WARN	missing_definition	BFO:0000019	IAO:0000115
@@ -43,12 +40,12 @@ WARN	missing_definition	skos:narrower	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/FeatureOfInterest	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/Procedure	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/Result	IAO:0000115
+WARN	missing_definition	http://www.w3.org/ns/sosa/Sample	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/Sampler	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/Sampling	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/hasFeatureOfInterest	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/hasResult	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/hasSample	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/isFeatureOfInterest	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/isFeatureOfInterestOf	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/isResultOf	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/isSampleOf	IAO:0000115
@@ -76,7 +73,9 @@ WARN	missing_definition	https://w3id.org/biolink/vocab/BiologicalEntity	IAO:0000
 WARN	missing_definition	https://w3id.org/biolink/vocab/ChemicalEntityOrGeneOrGeneProduct	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/DiseaseOrPhenotypicFeature	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/Entity	IAO:0000115
+WARN	missing_definition	https://w3id.org/biolink/vocab/Gene	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/GeneOrGeneProduct	IAO:0000115
+WARN	missing_definition	https://w3id.org/biolink/vocab/GenomicEntity	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/KnowledgeLevelEnum	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/KnowledgeLevelEnum#knowledge_assertion	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/KnowledgeLevelEnum#logical_entailment	IAO:0000115
@@ -87,10 +86,14 @@ WARN	missing_definition	https://w3id.org/biolink/vocab/KnowledgeLevelEnum#statis
 WARN	missing_definition	https://w3id.org/biolink/vocab/MacromolecularMachineMixin	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/NamedThing	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/OntologyClass	IAO:0000115
+WARN	missing_definition	https://w3id.org/biolink/vocab/OrganismTaxon	IAO:0000115
+WARN	missing_definition	https://w3id.org/biolink/vocab/PhenotypicFeature	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/PhysicalEssence	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/PhysicalEssenceOrOccurrent	IAO:0000115
+WARN	missing_definition	https://w3id.org/biolink/vocab/SequenceVariant	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/ThingWithTaxon	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin	IAO:0000115
+WARN	missing_definition	https://w3id.org/biolink/vocab/VariantToGeneAssociation	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/agent_type	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/association_slot	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/category	IAO:0000115
@@ -115,13 +118,6 @@ WARN	missing_definition	https://w3id.org/biolink/vocab/related_to_at_instance_le
 WARN	missing_definition	https://w3id.org/biolink/vocab/subject	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/taxon_of	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/type	IAO:0000115
-WARN	missing_definition	https://w3id.org/gold.path/AtomicElement	IAO:0000115
-WARN	missing_definition	https://w3id.org/gold.path/Engineered	IAO:0000115
-WARN	missing_definition	https://w3id.org/gold.path/Environmental	IAO:0000115
-WARN	missing_definition	https://w3id.org/gold.path/Host-associated	IAO:0000115
-WARN	missing_definition	https://w3id.org/gold.vocab/Engineered	IAO:0000115
-WARN	missing_definition	https://w3id.org/gold.vocab/Environmental	IAO:0000115
-WARN	missing_definition	https://w3id.org/gold.vocab/Host-associated	IAO:0000115
 WARN	missing_subset_declaration	RO:0002259	rdfs:subPropertyOf
 WARN	missing_subset_declaration	obo:ro/subsets#ro-eco	rdfs:subPropertyOf
 WARN	missing_subset_declaration	obo:valid_for_go_annotation_extension	rdfs:subPropertyOf
@@ -186,6 +182,6 @@ INFO	lowercase_definition	RO:0004034	IAO:0000115	c 'acts upstream of, positive e
 INFO	lowercase_definition	RO:0004035	IAO:0000115	c 'acts upstream of, negative effect' p if c is enables f, and f is causally upstream of p, and the direction of f is negative
 INFO	lowercase_definition	RO:0012011	IAO:0000115	p is indirectly causally upstream of q iff p is causally upstream of q and there exists some process r such that p is causally upstream of r and r is causally upstream of q.
 INFO	lowercase_definition	RO:0012012	IAO:0000115	p indirectly regulates q iff p is indirectly causally upstream of q and p regulates q.
+INFO	missing_superclass	http://example.org/mvikg/Biome	rdfs:subClassOf
 INFO	missing_superclass	http://example.org/mvikg/DevelopmentalStage	rdfs:subClassOf
-INFO	missing_superclass	http://example.org/mvikg/GoldBiome	rdfs:subClassOf
 INFO	missing_superclass	IAO:0000078	rdfs:subClassOf
