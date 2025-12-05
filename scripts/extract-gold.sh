@@ -34,7 +34,7 @@ robot annotate \
 #cleanup
 echo "Cleaning up.."
 mv ../extracted/gold_bot_temp_annotated.owl ../extracted/gold_bot.owl
-rm /gold_bot_temp*
+rm ../extracted/gold_bot_temp*
 
 # Generate a report to see what we got
 echo "Creating a report..."

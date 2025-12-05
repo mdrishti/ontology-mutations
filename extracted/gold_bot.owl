@@ -7,7 +7,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/gold.owl">
         <terms:description>Extracted biome classifications from the Genomes OnLine Database (GOLD)</terms:description>
         <terms:license>https://gold.jgi.doe.gov/distribution_license</terms:license>
@@ -46,6 +47,18 @@
 
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+
+
+
     <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
@@ -72,6 +85,48 @@
     <!-- https://w3id.org/gold.path/AtomicElement -->
 
     <owl:Class rdf:about="https://w3id.org/gold.path/AtomicElement"/>
+
+
+
+    <!-- https://w3id.org/gold.vocab/Engineered -->
+
+    <owl:Class rdf:about="https://w3id.org/gold.vocab/Engineered">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gold.path/AtomicElement"/>
+        <oboInOwl:hasExactSynonym>human construction</oboInOwl:hasExactSynonym>
+        <rdfs:label>Engineered</rdfs:label>
+        <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000313"/>
+        <skos:closeMatch rdf:resource="http://purl.obolibrary.org/obo/MIXS_MiscellaneousNaturalOrArtificialEnvironment"/>
+        <skos:inScheme rdf:resource="https://w3id.org/gold.path/Engineered"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/gold.vocab/Engineered"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000313"/>
+        <rdfs:label>anthropogenic environment</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/gold.vocab/Engineered"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/MIXS_MiscellaneousNaturalOrArtificialEnvironment"/>
+        <rdfs:label>Miscellaneous Natural Or Artificial Environment</rdfs:label>
+    </owl:Axiom>
+
+
+
+    <!-- https://w3id.org/gold.vocab/Environmental -->
+
+    <owl:Class rdf:about="https://w3id.org/gold.vocab/Environmental">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/gold.path/AtomicElement"/>
+        <rdfs:label>Environmental</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000428"/>
+        <skos:inScheme rdf:resource="https://w3id.org/gold.path/Environmental"/>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://w3id.org/gold.vocab/Environmental"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000428"/>
+        <rdfs:label>biome</rdfs:label>
+    </owl:Axiom>
 
 
 
