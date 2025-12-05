@@ -119,6 +119,8 @@ WARN	missing_definition	https://w3id.org/gold.path/AtomicElement	IAO:0000115
 WARN	missing_definition	https://w3id.org/gold.path/Engineered	IAO:0000115
 WARN	missing_definition	https://w3id.org/gold.path/Environmental	IAO:0000115
 WARN	missing_definition	https://w3id.org/gold.path/Host-associated	IAO:0000115
+WARN	missing_definition	https://w3id.org/gold.vocab/Engineered	IAO:0000115
+WARN	missing_definition	https://w3id.org/gold.vocab/Environmental	IAO:0000115
 WARN	missing_definition	https://w3id.org/gold.vocab/Host-associated	IAO:0000115
 WARN	missing_subset_declaration	RO:0002259	rdfs:subPropertyOf
 WARN	missing_subset_declaration	obo:ro/subsets#ro-eco	rdfs:subPropertyOf
