@@ -6,25 +6,25 @@
 @prefix goldvocab: <https://w3id.org/gold.vocab/> .
 @prefix mvikg: <http://example.org/mvikg/> .
 
-# Define a union of GOLD biome classes that samples can have as habitats
-mvikg:GoldBiome a owl:Class ;
-    rdfs:label "GOLD Biome" ;
-    rdfs:comment "Any biome class from the GOLD ontology" ;
-    owl:equivalentClass [
-        a owl:Class ;
-        owl:unionOf (
-            goldvocab:Engineered
-            goldvocab:Environmental
-            goldvocab:Host-associated
-        )
-    ] .
 
-# RO:hasHabitat can point to any GOLD biome (or their subclasses)
-RO:0002303  # hasHabitat
-    rdfs:label "has habitat" ;
+# Custom MVIKG properties (both restrictions and annotations)
+# mvikg:has_habitat can point to any GOLD biome (or their subclasses)
+mvikg:has_habitat rdf:type owl:ObjectProperty ;
     rdfs:comment "Relates a sample to its environmental habitat from GOLD" ;
+    rdfs:domain [ rdf:type owl:Class ;
+                owl:unionOf ( sosa:Sample
+			      biolink:OrganismTaxon
+                            )
+                ] ;
+    rdfs:range mvikg:Biome ;
+    rdfs:label "has habitat" .
+
+# Define that mvikg:has_developmental_stage relates a sample to a developmental stage. Initially taken from UNIPROTRDFS, that definition did not fit here, hence removed.
+mvikg:has_developmental_stage rdf:type owl:ObjectProperty ;
     rdfs:domain sosa:Sample ;
-    rdfs:range mvikg:GoldBiome .
+    rdfs:range mvikg:DevelopmentalStage ;
+    rdfs:label "has developmental stage" .
+
 
 # Define that has_gene relates sequence variants to genes
 biolink:has_gene
@@ -50,17 +50,16 @@ biolink:form_or_variant_qualifier
     rdfs:domain biolink:Gene ;
     rdfs:range biolink:VariantToGeneAssociation .
 
-# Define that mvikg:hasDevelopmentalStage relates a sample to a developmental stage
-mvikg:hasDevelopmentalStage
-    rdfs:domain sosa:Sample ;
-    rdfs:range mvikg:DevelopmentalStage .
+
+
+
 
 # Define domains and ranges for SOSA properties used in cross-links
 sosa:hasFeatureOfInterest
     rdfs:domain biolink:GenomicEntity ;
     rdfs:range sosa:Sample .
 
-sosa:isFeatureOfInterest
+sosa:isFeatureOfInterestOf
     rdfs:domain sosa:Sample ;
     rdfs:range biolink:GenomicEntity .
 

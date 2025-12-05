@@ -6,15 +6,28 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 # Custom MVIKG classes
-mvikg:DevelopmentalStage a owl:Class ;
-    rdfs:label "Developmental Stage" ;
-    rdfs:comment "A stage in the development of an organism" ;
-    skos:definition "Represents a specific point or period in an organism's life cycle" .
+mvikg:DevelopmentalStage rdf:type owl:Class ;
+                       rdfs:comment "A developmental stage is a stage corresponding to a stage in bacteria's  growth. e.g.: exponential, lag.";
+                       rdfs:label "Developmental stage" ;
+    		       skos:definition "Represents a specific point or period in an organism's life cycle" ;
+                       skos:closeMatch <http://www.ebi.ac.uk/efo/EFO_0000399> .
 
-# Custom MVIKG properties
-mvikg:hasDevelopmentalStage a owl:ObjectProperty ;
-    rdfs:label "has developmental stage" ;
-    rdfs:comment "Relates a sample to its developmental stage" .
+
+mvikg:Biome a owl:Class ;
+    rdfs:label "GOLD Biome" ;
+    rdfs:comment "Any biome class from the GOLD ontology" .
+#    owl:equivalentClass [
+#        a owl:Class ;
+#        owl:unionOf (
+#            goldvocab:Engineered
+#            goldvocab:Environmental
+#            goldvocab:Host-associated
+#        )
+#    ] .
+#
+
+
+
 
 # Add context-specific annotations to imported classes
 sosa:Sample

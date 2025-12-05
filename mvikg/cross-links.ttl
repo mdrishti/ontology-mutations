@@ -11,7 +11,7 @@
 
 # Mutation data modelling
 biolink:GenomicEntity sosa:hasFeatureOfInterest sosa:Sample .
-sosa:Sample sosa:isFeatureOfInterest biolink:GenomicEntity .
+sosa:Sample sosa:isFeatureOfInterestOf biolink:GenomicEntity .
 biolink:Gene rdf:type biolink:GenomicEntity .
 biolink:SequenceVariant biolink:has_gene biolink:Gene .
 biolink:SequenceVariant biolink:has_sequence_variant biolink:Gene .

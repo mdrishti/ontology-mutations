@@ -7,18 +7,18 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 
-# If a Sample has a habitat, it CAN ONLY be a GOLD biome
+# If a Sample has a habitat/location/biome, it CAN ONLY be a GOLD biome
 # (i.e., one of: AtomicElement, Engineered, Environmental, Host-associated, or their subclasses)
 sosa:Sample rdfs:subClassOf [
     a owl:Restriction ;
-    owl:onProperty RO:0002303 ;
-    owl:allValuesFrom mvikg:GoldBiome
+    owl:onProperty mvikg:has_habitat ;
+    owl:allValuesFrom mvikg:Biome
 ] .
 
 # If a Sample has a developmental stage, it CAN ONLY be a mvikg:DevelopmentalStage
 sosa:Sample rdfs:subClassOf [
     a owl:Restriction ;
-    owl:onProperty mvikg:hasDevelopmentalStage ;
+    owl:onProperty mvikg:has_developmental_stage ;
     owl:allValuesFrom mvikg:DevelopmentalStage
 ] .
 
@@ -39,7 +39,7 @@ sosa:Sample rdfs:subClassOf [
 # If a Sample is feature of interest, it CAN ONLY be a GenomicEntity
 sosa:Sample rdfs:subClassOf [
     a owl:Restriction ;
-    owl:onProperty sosa:isFeatureOfInterest ;
+    owl:onProperty sosa:isFeatureOfInterestOf ;
     owl:allValuesFrom biolink:GenomicEntity
 ] .
 
