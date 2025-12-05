@@ -1,8 +1,4 @@
 Level	Rule Name	Subject	Property	Value
-ERROR	duplicate_label	https://w3id.org/biolink/vocab/AgentTypeEnum#not_provided	rdfs:label	not_provided
-ERROR	duplicate_label	https://w3id.org/biolink/vocab/KnowledgeLevelEnum#not_provided	rdfs:label	not_provided
-ERROR	missing_label	https://w3id.org/biolink/vocab/AgentTypeEnum	rdfs:label
-ERROR	missing_label	https://w3id.org/biolink/vocab/KnowledgeLevelEnum	rdfs:label
 WARN	missing_definition	https://w3id.org/biolink/vocab/AgentTypeEnum	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/AgentTypeEnum#computational_model	IAO:0000115
