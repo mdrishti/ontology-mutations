@@ -1,6 +1,7 @@
 # ignore intermediate files
 extracted/*merge*
 extracted/*temp*
+output/*temp*
 
 # temp files
 temp
