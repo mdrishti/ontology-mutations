@@ -12,11 +12,11 @@ echo "Step 1: Merging source ../ontologies..."
 robot merge \
   --input ../extracted/biolink_bot.owl \
   --input ../extracted/sosa_bot.owl \
-  --input ../extracted/ro_star.owl \
   --input ../extracted/rdfs_star.owl \
   --input ../extracted/dcterms_star.owl \
   --input ../extracted/skos_star.owl \
   --output ../output/temp-sources-merged.owl
+#  --input ../extracted/ro_star.owl \
 #  --input ../extracted/gold_bot.owl \
 
 
