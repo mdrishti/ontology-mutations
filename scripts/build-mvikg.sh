@@ -19,33 +19,40 @@ robot merge \
   --input ../extracted/gold_bot.owl \
   --output output/temp-sources-merged.owl
 
+robot remove \
+  --input output/temp-sources-merged.owl \
+  --select ontology \
+  --output output/temp-sources-merged-removed.owl
+
+
 echo "Step 2: Merging schema files..."
 robot merge \
-  --input schema/mvikg-crosslinks.ttl \
-  --input schema/mvikg-property-constraints.ttl \
-  --input schema/mvikg-restrictions.ttl \
-  --input schema/mvikg-annotations.ttl \
-  --output output/temp-schema-merged.owl
+  --input ../mvikg/cross-links.ttl \
+  --input ../mvikg/mvikg-property-constraints.ttl \
+  --input ../mvikg/mvikg-restrictions.ttl \
+  --input ../mvikg/mvikg-annotations.ttl \
+  --output output/temp-mvikg-merged.owl
 
 echo "Step 3: Combining sources and schema..."
 robot merge \
-  --input output/temp-sources-merged.owl \
-  --input output/temp-schema-merged.owl \
+  --input output/temp-mvikg-merged.owl \
+  --input output/temp-sources-merged-removed.owl \
   --output output/temp-combined.owl
 
 echo "Step 4: Adding ontology metadata..."
 robot annotate \
   --input output/temp-combined.owl \
   --ontology-iri "http://example.org/mvikg" \
-  --version-iri "http://example.org/mvikg/1.0.0" \
+  --version-iri "http://example.org/mvikg/0.0.1" \
+  --output output/mvikg-integrated.owl \
   --annotation rdfs:label "MVIKG Ontology" \
-  --annotation rdfs:comment "Multi-Variant Integration Knowledge Graph for genomic, environmental, and phenotypic data integration" \
-  --annotation dcterms:title "MVIKG: Multi-Variant Integration Knowledge Graph" \
-  --annotation dcterms:description "An integrated ontology combining BioLink, SOSA, ENVO, RO, GOLD and other established ../ontologies for multi-omics data modeling" \
-  --annotation dcterms:license "https://creativecommons.org/licenses/by/4.0/" \
-  --annotation dcterms:creator "Your Name" \
-  --annotation owl:versionInfo "1.0.0" \
-  --output output/mvikg-integrated.owl
+  --annotation rdfs:comment "A schema for bacterial genotype-phenotype data integration" \
+  --annotation dc:title "MVIKG: Multi-Variant Integration Knowledge Graph" \
+  --annotation dc:description "An integrated ontology combining BioLink, SOSA, ENVO, RO, GOLD and other established ontologies for bacterial variant data modeling" \
+  --annotation dc:license "https://creativecommons.org/licenses/by/4.0/" \
+  --annotation dc:creator "MVIKG" \
+  --annotation owl:versionInfo "0.0.1" \
+
 
 echo "Step 5: Running reasoner (ELK)..."
 robot reason \
@@ -74,26 +81,5 @@ robot query \
   --query "SELECT (COUNT(DISTINCT ?p) AS ?count) WHERE { ?p a owl:ObjectProperty }" \
   /dev/stdout >> ../reports/summary.txt
 
-echo "Step 8: Listing GOLD biome classes included..."
-robot query \
-  --input output/mvikg-reasoned.owl \
-  --query "PREFIX gold: <https://w3id.org/gold.path/>
-           PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-           SELECT ?biome ?label WHERE {
-             ?biome rdfs:subClassOf* gold:AtomicElement .
-             OPTIONAL { ?biome rdfs:label ?label }
-           } LIMIT 20" \
-  ../reports/gold-biomes-sample.txt
-
-echo "Step 9: Cleanup temporary files..."
-rm output/temp-*.owl
-
-echo ""
-echo "================================================"
-echo "Build Complete!"
-echo "================================================"
-echo "Final ontology: output/mvikg-reasoned.owl"
-echo "Validation report: ../reports/mvikg-validation-report.txt"
-echo "Summary: ../reports/summary.txt"
-echo "GOLD biomes sample: ../reports/gold-biomes-sample.txt"
-echo ""
+#echo "Step 8: Cleanup temporary files..."
+#rm output/temp-*.owl
