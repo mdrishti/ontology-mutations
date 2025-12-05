@@ -1,4 +1,4 @@
-GOLDTERMS:AtomicElement
+GOLDPATH:AtomicElement
 GOLDVOCAB:Engineered
 GOLDVOCAB:Environmental
 GOLDVOCAB:Host-associated
