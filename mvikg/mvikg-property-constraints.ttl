@@ -1,10 +1,9 @@
 @prefix biolink: <https://w3id.org/biolink/vocab/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix RO: <http://purl.obolibrary.org/obo/RO_> .
-@prefix ENVO: <http://purl.obolibrary.org/obo/ENVO_> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix gold: <https://w3id.org/gold.path/> .
+@prefix goldvocab: <https://w3id.org/gold.vocab/> .
 @prefix mvikg: <http://example.org/mvikg/> .
 
 # Define a union of GOLD biome classes that samples can have as habitats
@@ -14,10 +13,9 @@ mvikg:GoldBiome a owl:Class ;
     owl:equivalentClass [
         a owl:Class ;
         owl:unionOf (
-            gold:AtomicElement
-            gold:Engineered
-            gold:Environmental
-            gold:Host-associated
+            goldvocab:Engineered
+            goldvocab:Environmental
+            goldvocab:Host-associated
         )
     ] .
 

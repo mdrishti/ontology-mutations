@@ -8,7 +8,6 @@
 @prefix mvikg:    <http://example.org/mvikg/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
-@prefix gold: <https://w3id.org/gold.path/> .
 
 # Mutation data modelling
 biolink:GenomicEntity sosa:hasFeatureOfInterest sosa:Sample .
