@@ -13,7 +13,6 @@ WARN	missing_definition	dc:isPartOf	IAO:0000115
 WARN	missing_definition	skos:broader	IAO:0000115
 WARN	missing_definition	skos:narrower	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/FeatureOfInterest	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/Procedure	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/Result	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/Sample	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/Sampler	IAO:0000115
@@ -27,12 +26,8 @@ WARN	missing_definition	http://www.w3.org/ns/sosa/isSampleOf	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/madeBySampler	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/madeSampling	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/resultTime	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/usedProcedure	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/ssn/Property	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/ssn/System	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/ssn/hasProperty	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/ssn/implementedBy	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/ssn/implements	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/ssn/isPropertyOf	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/AgentTypeEnum	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent	IAO:0000115
