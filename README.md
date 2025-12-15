@@ -54,6 +54,19 @@ sh extract-dcterms.sh
 sh extract-sosa.sh
 ```
 
+
+### combine extracted terms and mvikg schema
+```bash
+sh build-mvikg.sh
+```
+
+
+### widoco documentation (with WebVOWL visualization)
+```bash
+java -jar widoco-1.4.25-jar-with-dependencies_JDK-17.jar -ontFile output/mvikg-reasoned.owl -getOntologyMetadata -webVowl -oops
+```
+
+
 # Notes
 #### Ontology by Open Mutation Miner (OMM)
 https://www.semanticsoftware.info/open-mutation-miner#OMM_Ontology
