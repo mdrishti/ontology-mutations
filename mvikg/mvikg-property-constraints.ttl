@@ -26,31 +26,11 @@ mvikg:has_developmental_stage rdf:type owl:ObjectProperty ;
     rdfs:label "has developmental stage" .
 
 
-# Define that has_gene relates sequence variants to genes
-biolink:has_gene
-    rdfs:domain biolink:SequenceVariant ;
-    rdfs:range biolink:Gene .
 
 # Define that has_phenotype relates genes to phenotypes
 biolink:has_phenotype
     rdfs:domain biolink:Gene ;
     rdfs:range biolink:PhenotypicFeature .
-
-# Define that has_sequence_variant relates genes to sequence variants
-biolink:has_sequence_variant
-    rdfs:domain biolink:Gene ;
-    rdfs:range biolink:SequenceVariant .
-
-biolink:is_sequence_variant_of
-    rdfs:domain biolink:SequenceVariant ;
-    rdfs:range biolink:Gene .
-
-# Define that form_or_variant_qualifier relates genes to variant associations
-biolink:form_or_variant_qualifier
-    rdfs:domain biolink:Gene ;
-    rdfs:range biolink:VariantToGeneAssociation .
-
-
 
 
 
@@ -59,13 +39,7 @@ sosa:hasFeatureOfInterest
     rdfs:domain biolink:GenomicEntity ;
     rdfs:range sosa:Sample .
 
-sosa:isFeatureOfInterestOf
-    rdfs:domain sosa:Sample ;
-    rdfs:range biolink:GenomicEntity .
 
-sosa:isSampleOf
-    rdfs:domain sosa:Sample ;
-    rdfs:range biolink:OrganismTaxon .
 
 sosa:hasSample
     rdfs:domain biolink:OrganismTaxon ;

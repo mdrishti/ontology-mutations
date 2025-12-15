@@ -22,72 +22,10 @@ sosa:Sample rdfs:subClassOf [
     owl:allValuesFrom mvikg:DevelopmentalStage
 ] .
 
-# If a Sample is sample of something, it CAN ONLY be an OrganismTaxon
-sosa:Sample rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty sosa:isSampleOf ;
-    owl:allValuesFrom biolink:OrganismTaxon
-] .
 
 # If a Sample is part of something, it CAN ONLY be a Dataset
 sosa:Sample rdfs:subClassOf [
     a owl:Restriction ;
     owl:onProperty dcterms:isPartOf ;
     owl:allValuesFrom dcmitype:Dataset
-] .
-
-# If a Sample is feature of interest, it CAN ONLY be a GenomicEntity
-sosa:Sample rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty sosa:isFeatureOfInterestOf ;
-    owl:allValuesFrom biolink:GenomicEntity
-] .
-
-# If a Gene has a phenotype, it CAN ONLY be a PhenotypicFeature
-biolink:Gene rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty biolink:has_phenotype ;
-    owl:allValuesFrom biolink:PhenotypicFeature
-] .
-
-# If a Gene has a sequence variant, it CAN ONLY be a SequenceVariant
-biolink:Gene rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty biolink:has_sequence_variant ;
-    owl:allValuesFrom biolink:SequenceVariant
-] .
-
-# If a Gene has a variant qualifier, it CAN ONLY be a VariantToGeneAssociation
-biolink:Gene rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty biolink:form_or_variant_qualifier ;
-    owl:allValuesFrom biolink:VariantToGeneAssociation
-] .
-
-# If a SequenceVariant has a gene, it CAN ONLY be a Gene
-biolink:SequenceVariant rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty biolink:has_gene ;
-    owl:allValuesFrom biolink:Gene
-] .
-
-# If a SequenceVariant is variant of something, it CAN ONLY be a Gene
-biolink:SequenceVariant rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty biolink:is_sequence_variant_of ;
-    owl:allValuesFrom biolink:Gene
-] .
-
-# If an OrganismTaxon has a sample, it CAN ONLY be a Sample
-biolink:OrganismTaxon rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty sosa:hasSample ;
-    owl:allValuesFrom sosa:Sample
-] .
-
-# If a GenomicEntity has feature of interest, it CAN ONLY be a Sample
-biolink:GenomicEntity rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty sosa:hasFeatureOfInterest ;
-    owl:allValuesFrom sosa:Sample
 ] .
