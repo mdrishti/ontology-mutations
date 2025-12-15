@@ -12,7 +12,7 @@ repos:
       - id: check-toml
       - id: check-ast
       - id: check-added-large-files
-        args: ["--maxkb=500"]
+        args: ["--maxkb=5000"]
 
   # ---------------------------
   # 2. Ruff (Linter + Import Sorter)

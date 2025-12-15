@@ -1,0 +1,5819 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en-us", "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/biolink/vocab/KnowledgeLevelEnum", "https://w3id.org/linkml", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/ns/sosa", "https://w3id.org/biolink/vocab", "http://www.w3.org/ns/ssn", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/linkml/ClassDefinition", "https://w3id.org/biolink/vocab/AgentTypeEnum", "http://purl.org/dc/terms", "http://example.org/mvikg", "http://purl.org/dc/dcmitype", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "undefined" : "MVIKG: Multi-Variant Integration Knowledge Graph"
+    },
+    "iri" : "http://example.org/mvikg",
+    "version" : "0.0.1",
+    "author" : [ "MVIKG" ],
+    "description" : {
+      "undefined" : "An integrated ontology combining BioLink, SOSA, ENVO, RO, GOLD and other established ontologies for bacterial variant data modeling"
+    },
+    "labels" : {
+      "undefined" : "MVIKG Ontology"
+    },
+    "comments" : {
+      "undefined" : "A schema for bacterial genotype-phenotype data integration"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "MVIKG",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.0.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "undefined",
+        "value" : "MVIKG: Multi-Variant Integration Knowledge Graph",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "75",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "80",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "94",
+    "type" : "owl:Class"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "100",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "109",
+    "type" : "owl:Class"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "125",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "134",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "139",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "145",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "156",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "102",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "84",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "143",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "35",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "159",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "137",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "128",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "129",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "25",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "66",
+    "type" : "owl:Class"
+  }, {
+    "id" : "163",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "121",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/biolink/vocab/NamedThing",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.bioontology.org/ontology/STY/T071",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://datacommons.org/browser/Thing",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/BFO_0000001",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://lhncbc.nlm.nih.gov/semanticnetwork/download/sg_archive/SemGroups-v04.txtOBJC",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q35120",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "a databased entity or concept/class",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "NamedThing",
+      "undefined" : "named thing"
+    },
+    "subClasses" : [ "5", "2" ],
+    "attributes" : [ "external" ],
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/AgentTypeEnum#data_analysis_pipeline",
+    "baseIri" : "https://w3id.org/biolink/vocab/AgentTypeEnum",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "data_analysis_pipeline",
+      "undefined" : "data_analysis_pipeline"
+    },
+    "attributes" : [ "external" ],
+    "id" : "22",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/AgentTypeEnum#not_provided",
+    "baseIri" : "https://w3id.org/biolink/vocab/AgentTypeEnum",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "not_provided",
+      "undefined" : "AgentTypeEnum not_provided"
+    },
+    "attributes" : [ "external" ],
+    "id" : "34",
+    "superClasses" : [ "32", "35" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#not_provided",
+    "baseIri" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "not_provided",
+      "undefined" : "KnowledgeLevelEnum not_provided"
+    },
+    "attributes" : [ "external" ],
+    "id" : "43",
+    "superClasses" : [ "32", "64" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/MacromolecularMachineMixin",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A union of gene locus, gene product, and macromolecular complex. These are the basic units of function in a cell. They either carry out individual biological activities, or they encode molecules which do this.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "MacromolecularMachineMixin",
+      "undefined" : "macromolecular machine mixin"
+    },
+    "subClasses" : [ "71" ],
+    "attributes" : [ "external" ],
+    "id" : "70",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#logical_entailment",
+    "baseIri" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "logical_entailment",
+      "undefined" : "logical_entailment"
+    },
+    "attributes" : [ "external" ],
+    "id" : "31",
+    "superClasses" : [ "32", "64" ]
+  }, {
+    "iri" : "http://example.org/mvikg/DevelopmentalStage",
+    "baseIri" : "http://example.org/mvikg",
+    "instances" : 0,
+    "annotations" : {
+      "closeMatch" : [ {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://www.ebi.ac.uk/efo/EFO_0000399",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Represents a specific point or period in an organism's life cycle",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DevelopmentalStage",
+      "undefined" : "Developmental stage"
+    },
+    "comment" : {
+      "undefined" : "A developmental stage is a stage corresponding to a stage in bacteria's  growth. e.g.: exponential, lag."
+    },
+    "attributes" : [ "external" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/Property",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Property",
+      "en" : "Property"
+    },
+    "comment" : {
+      "en" : "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity."
+    },
+    "attributes" : [ "external" ],
+    "id" : "76"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/Entity",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Root Biolink Model class for all things and informational relationships, real or imagined.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Entity",
+      "undefined" : "entity"
+    },
+    "subClasses" : [ "3", "8" ],
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "79" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/PhysicalEssence",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Semantic mixin concept.  Pertains to entities that have physical properties such as mass, volume, or charge.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PhysicalEssence",
+      "undefined" : "physical essence"
+    },
+    "attributes" : [ "external" ],
+    "id" : "80",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#knowledge_assertion",
+    "baseIri" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "knowledge_assertion",
+      "undefined" : "knowledge_assertion"
+    },
+    "attributes" : [ "external" ],
+    "id" : "49",
+    "superClasses" : [ "32", "64" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/AgentTypeEnum#manual_validation_of_automated_agent",
+    "baseIri" : "https://w3id.org/biolink/vocab/AgentTypeEnum",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "manual_validation_of_automated_agent",
+      "undefined" : "manual_validation_of_automated_agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "37",
+    "superClasses" : [ "32", "35" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/AgentTypeEnum#manual_agent",
+    "baseIri" : "https://w3id.org/biolink/vocab/AgentTypeEnum",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "manual_agent",
+      "undefined" : "manual_agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "47",
+    "superClasses" : [ "32", "35" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/DiseaseOrPhenotypicFeature",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "phenome",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Either one of a disease or an individual phenotypic feature. Some knowledge resources such as Monarch treat these as distinct, others such as MESH conflate.  Please see definitions of phenotypic feature and disease in this model for their independent descriptions.  This class is helpful to enforce domains and ranges that may involve either a disease or a phenotypic feature.",
+        "type" : "label"
+      } ],
+      "narrowMatch" : [ {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.bioontology.org/ontology/STY/T033",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "DiseaseOrPhenotypicFeature",
+      "undefined" : "disease or phenotypic feature"
+    },
+    "subClasses" : [ "85" ],
+    "attributes" : [ "external" ],
+    "id" : "27",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#observation",
+    "baseIri" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "observation",
+      "undefined" : "observation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "45",
+    "superClasses" : [ "32", "64" ]
+  }, {
+    "iri" : "https://w3id.org/linkml/PermissibleValue",
+    "baseIri" : "https://w3id.org/linkml",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PermissibleValue"
+    },
+    "subClasses" : [ "34", "74", "31", "23", "37", "39", "43", "45", "47", "49" ],
+    "attributes" : [ "external" ],
+    "id" : "32"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/PhenotypicFeature",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/UPHENO_0001001",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://id.nlm.nih.gov/mesh/D010641",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://semanticscience.org/resource/SIO_010056",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://snomed.info/id/8116006",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q104053",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/NCIT_C16977",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://identifiers.org/umls/C4021819",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "broadMatch" : [ {
+        "identifier" : "broadMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/PATO_0000001",
+        "type" : "iri"
+      }, {
+        "identifier" : "broadMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/BFO_0000019",
+        "type" : "iri"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "phenotype",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "endophenotype",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "trait",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "symptom",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "sign",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A combination of entity and quality that makes up a phenotyping statement. An observable characteristic of an individual resulting from the interaction of its genotype with its molecular and physical environment.",
+        "type" : "label"
+      } ],
+      "narrowMatch" : [ {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/ZP_00000000",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/FBcv_0001347",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/APO_0000017",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/TO_0000387",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/WBPhenotype_0000886",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/HP_0000118",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/XPO_00000000",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/MP_0000001",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/FYPO_0000001",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.bioontology.org/ontology/STY/T190",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.bioontology.org/ontology/STY/T184",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q169872",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q25203551",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PhenotypicFeature",
+      "undefined" : "phenotypic feature"
+    },
+    "comment" : {
+      "undefined" : "In MVIKG: An observable characteristic linked to genes"
+    },
+    "attributes" : [ "external" ],
+    "id" : "85",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#prediction",
+    "baseIri" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "prediction",
+      "undefined" : "prediction"
+    },
+    "attributes" : [ "external" ],
+    "id" : "74",
+    "superClasses" : [ "32", "64" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/BiologicalEntity",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "bioentity",
+        "type" : "label"
+      } ],
+      "narrowMatch" : [ {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q28845870",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.bioontology.org/ontology/STY/T050",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://semanticscience.org/resource/SIO_010046",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.bioontology.org/ontology/STY/T129",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "BiologicalEntity",
+      "undefined" : "biological entity"
+    },
+    "subClasses" : [ "27", "29", "1" ],
+    "attributes" : [ "external" ],
+    "id" : "2",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/Association",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "undefined",
+        "value" : "This is roughly the model used by biolink and ontobio at the moment",
+        "type" : "label"
+      } ],
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.org/oban/association",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Axiom",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A typed association between two entities, supported by evidence",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Association",
+      "undefined" : "association"
+    },
+    "subClasses" : [ "7" ],
+    "attributes" : [ "external" ],
+    "id" : "8",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/linkml/ClassDefinition#Mixin",
+    "baseIri" : "https://w3id.org/linkml/ClassDefinition",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Mixin"
+    },
+    "subClasses" : [ "10", "13", "15", "17", "19", "21", "70" ],
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://example.org/mvikg/Biome",
+    "baseIri" : "http://example.org/mvikg",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Biome",
+      "undefined" : "GOLD Biome"
+    },
+    "comment" : {
+      "undefined" : "Any biome class from the GOLD ontology"
+    },
+    "attributes" : [ "external" ],
+    "id" : "83"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/AgentTypeEnum#text_mining_agent",
+    "baseIri" : "https://w3id.org/biolink/vocab/AgentTypeEnum",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "text_mining_agent",
+      "undefined" : "text_mining_agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "94",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "95",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/AgentTypeEnum#image_processing_agent",
+    "baseIri" : "https://w3id.org/biolink/vocab/AgentTypeEnum",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "image_processing_agent",
+      "undefined" : "image_processing_agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "97",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#statistical_association",
+    "baseIri" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "statistical_association",
+      "undefined" : "statistical_association"
+    },
+    "attributes" : [ "external" ],
+    "id" : "39",
+    "superClasses" : [ "32", "64" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "100",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "104",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Sampling",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An act of Sampling carries out a sampling Procedure to create or transform one or more samples.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Digging a pit through a soil sequence.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Crushing a rock sample in a ball mill.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Drawing blood from a patient.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Drilling an observation well.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Taking a diamond-drill core from a rock outcrop.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Dividing a field site into quadrants.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Sieving a powder to separate the subset finer than 100-mesh.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Establishing a station for environmental monitoring.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Selecting a subset of a population.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Registering an image of the landscape.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Splitting a piece of drill-core to create two new samples.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Sampling",
+      "en" : "Sampling"
+    },
+    "comment" : {
+      "en" : "An act of Sampling carries out a sampling Procedure to create or transform one or more samples."
+    },
+    "attributes" : [ "external" ],
+    "id" : "109"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "112",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/Gene",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q7187",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/SO_0000704",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://semanticscience.org/resource/SIO_010035",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://datacommons.org/browser/Gene",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "broadMatch" : [ {
+        "identifier" : "broadMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/NCIT_C45822",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A region (or regions) that includes all of the sequence elements necessary to encode a functional transcript. A gene locus may include regulatory regions, transcribed regions and/or other functional sequence regions.",
+        "type" : "label"
+      } ],
+      "narrowMatch" : [ {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "https://bioschemas.org/gene",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Gene",
+      "undefined" : "gene"
+    },
+    "comment" : {
+      "undefined" : "In MVIKG: A gene that may have sequence variants and associated phenotypes"
+    },
+    "attributes" : [ "external" ],
+    "id" : "29",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "117",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Result",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The value 20 as the height of a certain tree together with the unit, e.g., Meter.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Result",
+      "en" : "Result"
+    },
+    "subClasses" : [ "41" ],
+    "comment" : {
+      "en" : "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."
+    },
+    "attributes" : [ "external" ],
+    "id" : "125"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/OrganismTaxon",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://bioschemas.org/Taxon",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q16521",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.bioontology.org/ontology/STY/T001",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "taxon",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "taxonomic classification",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A classification of a set of organisms. Example instances: NCBITaxon:9606 (Homo sapiens), NCBITaxon:2 (Bacteria). Can also be used to represent strains or subspecies.",
+        "type" : "label"
+      } ],
+      "narrowMatch" : [ {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "https://datacommons.org/browser/BiologicalSpecies",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "OrganismTaxon",
+      "undefined" : "organism taxon"
+    },
+    "comment" : {
+      "undefined" : "In MVIKG: The taxonomic classification of sampled organisms"
+    },
+    "attributes" : [ "external" ],
+    "id" : "5",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "permissible_values" : [ {
+        "identifier" : "permissible_values",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#statistical_association",
+        "type" : "iri"
+      }, {
+        "identifier" : "permissible_values",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "permissible_values",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#logical_entailment",
+        "type" : "iri"
+      }, {
+        "identifier" : "permissible_values",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#not_provided",
+        "type" : "iri"
+      }, {
+        "identifier" : "permissible_values",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#prediction",
+        "type" : "iri"
+      }, {
+        "identifier" : "permissible_values",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#knowledge_assertion",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "KnowledgeLevelEnum",
+      "undefined" : "KnowledgeLevelEnum"
+    },
+    "union" : [ "74", "31", "39", "43", "45", "49" ],
+    "subClasses" : [ "74", "31", "39", "43", "45", "49" ],
+    "attributes" : [ "external", "union" ],
+    "id" : "64",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/AgentTypeEnum#computational_model",
+    "baseIri" : "https://w3id.org/biolink/vocab/AgentTypeEnum",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "computational_model",
+      "undefined" : "computational_model"
+    },
+    "attributes" : [ "external" ],
+    "id" : "134",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/OntologyClass",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "undefined",
+        "value" : "Note that formally this is a metaclass. Instances of this class are instances in the graph, but can be the object of 'type' edges. For example, if we had a node in the graph representing a specific brain of a specific patient (e.g brain001), this could have a category of bl:Sample, and by typed more specifically with an ontology class UBERON:nnn, which has as category bl:AnatomicalEntity",
+        "type" : "label"
+      }, {
+        "identifier" : "note",
+        "language" : "undefined",
+        "value" : "This is modeled as a mixin. 'ontology class' should not be the primary type of a node in the KG. Instead you should use an informative bioloink category, such as AnatomicalEntity (for Uberon classes), ChemicalSubstance (for CHEBI or CHEMBL), etc",
+        "type" : "label"
+      } ],
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#Class",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://schema.org/Class",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "a concept or class in an ontology, vocabulary or thesaurus. Note that nodes in a biolink compatible KG can be considered both instances of biolink classes, and OWL classes in their own right. In general you should not need to use this class directly. Instead, use the appropriate biolink class. For example, for the GO concept of endocytosis (GO:0006897), use bl:BiologicalProcess as the type.",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://github.com/biolink/biolink-model/issues/486",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "OntologyClass",
+      "undefined" : "ontology class"
+    },
+    "attributes" : [ "external" ],
+    "id" : "15",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "139",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Sample",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "undefined",
+        "value" : "Samples are central to MVIKG, linking organisms, genomes, environments, and phenotypes",
+        "type" : "label"
+      }, {
+        "identifier" : "note",
+        "language" : "en",
+        "value" : "A transient sample, such as a ships-track or flight-line, might be identified and described, but is unlikely to be revisited exactly.",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "A 'station' is essentially an identifiable locality where a sensor system or Procedure may be deployed and an observation made. In the context of the observation model, it connotes the 'world in the vicinity of the station', so the observed properties relate to the physical medium at the station, and not to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc.",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "A statistical sample is often designed to be characteristic of an entire population, so that observations can be made regarding the sample that provide a good estimate of the properties of the population.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Sample",
+      "en" : "Sample"
+    },
+    "comment" : {
+      "en" : "A Sample is the result from an act of Sampling.",
+      "undefined" : "In MVIKG: A biological sample with genomic, environmental, and phenotypic metadata"
+    },
+    "attributes" : [ "external" ],
+    "id" : "41",
+    "superClasses" : [ "125", "51" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "145",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/PhysicalEssenceOrOccurrent",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Either a physical or processual entity.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PhysicalEssenceOrOccurrent",
+      "undefined" : "physical essence or occurrent"
+    },
+    "subClasses" : [ "80" ],
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "91",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "156",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "29", "21" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/ChemicalEntityOrGeneOrGeneProduct",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A union of chemical entities and children, and gene or gene product. This mixin is helpful to use when searching across chemical entities that must include genes and their children as chemical entities.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ChemicalEntityOrGeneOrGeneProduct",
+      "undefined" : "chemical entity or gene or gene product"
+    },
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "11" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "29", "21" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "84"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "VariantToEntityAssociationMixin",
+      "undefined" : "variant to entity association mixin"
+    },
+    "attributes" : [ "external" ],
+    "id" : "17",
+    "superClasses" : [ "11" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "2", "29" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "88"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "143",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/AgentTypeEnum",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "permissible_values" : [ {
+        "identifier" : "permissible_values",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/vocab/AgentTypeEnum#computational_model",
+        "type" : "iri"
+      }, {
+        "identifier" : "permissible_values",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/vocab/AgentTypeEnum#manual_validation_of_automated_agent",
+        "type" : "iri"
+      }, {
+        "identifier" : "permissible_values",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent",
+        "type" : "iri"
+      }, {
+        "identifier" : "permissible_values",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/vocab/AgentTypeEnum#text_mining_agent",
+        "type" : "iri"
+      }, {
+        "identifier" : "permissible_values",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/vocab/AgentTypeEnum#manual_agent",
+        "type" : "iri"
+      }, {
+        "identifier" : "permissible_values",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/vocab/AgentTypeEnum#not_provided",
+        "type" : "iri"
+      }, {
+        "identifier" : "permissible_values",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/vocab/AgentTypeEnum#image_processing_agent",
+        "type" : "iri"
+      }, {
+        "identifier" : "permissible_values",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/vocab/AgentTypeEnum#data_analysis_pipeline",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "AgentTypeEnum",
+      "undefined" : "AgentTypeEnum"
+    },
+    "union" : [ "34", "94", "23", "37", "134", "97", "22", "47" ],
+    "subClasses" : [ "34", "23", "37", "47" ],
+    "attributes" : [ "external", "union" ],
+    "id" : "35",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "http://purl.org/dc/dcmitype/Dataset",
+    "baseIri" : "http://purl.org/dc/dcmitype",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dataset"
+    },
+    "attributes" : [ "external" ],
+    "id" : "159"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent",
+    "baseIri" : "https://w3id.org/biolink/vocab/AgentTypeEnum",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "automated_agent",
+      "undefined" : "automated_agent"
+    },
+    "subClasses" : [ "94", "134", "97", "22" ],
+    "attributes" : [ "external" ],
+    "id" : "23",
+    "superClasses" : [ "32", "35" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "137",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "136",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "128",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/SequenceVariant",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "note" : [ {
+        "identifier" : "note",
+        "language" : "undefined",
+        "value" : "This class is for modeling the specific state at a locus. A single DBSNP rs ID could correspond to more than one sequence variants (e.g CIViC:1252 and CIViC:1253, two distinct BRCA2 alleles for rs28897743)",
+        "type" : "label"
+      } ],
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q15304597",
+        "type" : "iri"
+      } ],
+      "closeMatch" : [ {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://semanticscience.org/resource/SIO_010277",
+        "type" : "iri"
+      }, {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/GENO_0000002",
+        "type" : "iri"
+      }, {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "https://github.com/ga4gh/vr-spec/Allele",
+        "type" : "iri"
+      }, {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "https://datacommons.org/browser/Allele",
+        "type" : "iri"
+      }, {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/SO_0001060",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "allele",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A sequence_variant is a non exact copy of a sequence_feature or genome exhibiting one or more sequence_alteration.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SequenceVariant",
+      "undefined" : "sequence variant"
+    },
+    "comment" : {
+      "undefined" : "In MVIKG: A genomic variant associated with a specific gene"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "53",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "160",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "129",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/linkml/ClassDefinition",
+    "baseIri" : "https://w3id.org/linkml",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassDefinition"
+    },
+    "subClasses" : [ "4" ],
+    "attributes" : [ "external" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "93",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "111",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "25",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/linkml/EnumDefinition",
+    "baseIri" : "https://w3id.org/linkml",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnumDefinition"
+    },
+    "subClasses" : [ "64", "35" ],
+    "attributes" : [ "external" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "163",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/ThingWithTaxon",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A mixin that can be used on any entity that can be taxonomically classified. This includes individual organisms; genes, their products and other molecular entities; body parts; biological processes",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ThingWithTaxon",
+      "undefined" : "thing with taxon"
+    },
+    "attributes" : [ "external" ],
+    "id" : "19",
+    "superClasses" : [ "11" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "5", "41" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "78",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "165",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/GeneOrGeneProduct",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A union of gene loci or gene products. Frequently an identifier for one will be used as proxy for another",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "GeneOrGeneProduct",
+      "undefined" : "gene or gene product"
+    },
+    "attributes" : [ "external" ],
+    "id" : "71",
+    "superClasses" : [ "70" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Sampler",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "A ball mill, diamond drill, hammer, hypodermic syringe and needle, image Sensor or a soil auger can all act as sampling devices (i.e., be Samplers). However, sometimes the distinction between the Sampler and the Sensor is not evident, as they are packaged as a unit. A Sampler need not be a physical device.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Sampler",
+      "en" : "Sampler"
+    },
+    "comment" : {
+      "en" : "A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples."
+    },
+    "attributes" : [ "external" ],
+    "id" : "121"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/VariantToGeneAssociation",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "An association between a variant and a gene, where the variant has a genetic association with the gene (i.e. is in linkage disequilibrium)",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "VariantToGeneAssociation",
+      "undefined" : "variant to gene association"
+    },
+    "attributes" : [ "external" ],
+    "id" : "7",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FeatureOfInterest",
+      "en" : "Feature Of Interest"
+    },
+    "subClasses" : [ "41" ],
+    "comment" : {
+      "en" : "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."
+    },
+    "attributes" : [ "external" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/GenomicEntity",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "instances" : 0,
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "narrowMatch" : [ {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.bioontology.org/ontology/STY/T028",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/GENO_0000897",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "GenomicEntity",
+      "undefined" : "genomic entity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "21",
+    "superClasses" : [ "11" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "90",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "98",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "99",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "101",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "105",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "106",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "107",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "110",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "113",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "114",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "115",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "116",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "118",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "119",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "120",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "123",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "126",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "127",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "130",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "131",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "132",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "135",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "133",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "138",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "140",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "141",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "142",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "144",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "146",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "147",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "148",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "149",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "108",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "150",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "151",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "152",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "153",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "154",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "155",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "157",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "158",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "161",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "162",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "164",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "166",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "167",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "168",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "169",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "170",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "171",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "172",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "173",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "174",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "175",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "176",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "177",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "178",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "179",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "180",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "181",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "182",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "183",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "184",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "185",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "186",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "188",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "189",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "190",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "191",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "192",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "193",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "194",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "195",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "196",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "197",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "198",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "199",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "200",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "201",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "202",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "203",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "204",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "0"
+  }, {
+    "range" : "8",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "6"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "9"
+  }, {
+    "range" : "11",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "12"
+  }, {
+    "range" : "11",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "14"
+  }, {
+    "range" : "11",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "16"
+  }, {
+    "range" : "11",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "18"
+  }, {
+    "range" : "11",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#narrower",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "25",
+    "annotations" : {
+      "descriptionAnnot" : [ {
+        "identifier" : "descriptionAnnot",
+        "language" : "undefined",
+        "value" : "Public description modified from the information on this page: http://www.w3.org/TR/2005/WD-swbp-skos-core-guide-20050510/#sechierarchy .",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "narrower",
+      "en-us" : "narrower term"
+    },
+    "domain" : "25",
+    "attributes" : [ "object", "external" ],
+    "id" : "24"
+  }, {
+    "range" : "2",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
+  }, {
+    "range" : "2",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "28"
+  }, {
+    "range" : "32",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "30"
+  }, {
+    "range" : "32",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "32",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "36"
+  }, {
+    "range" : "32",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "21",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isFeatureOfInterestOf",
+      "en" : "is feature of interest of"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "40"
+  }, {
+    "range" : "32",
+    "domain" : "43",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  }, {
+    "range" : "32",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "44"
+  }, {
+    "range" : "32",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "46"
+  }, {
+    "range" : "32",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "48"
+  }, {
+    "range" : "51",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "50"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/has_gene_or_gene_product",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "29",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "connects an entity with one or more gene or gene products",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_gene_or_gene_product",
+      "undefined" : "has gene or gene product"
+    },
+    "superproperty" : [ "54" ],
+    "domain" : "53",
+    "subproperty" : [ "55" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/related_to_at_instance_level",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "25",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "canonical_predicate" : [ {
+        "identifier" : "canonical_predicate",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Represents a relationship held between two instances of a data classes.  Much like an assertion component, in an ABox, these represent facts associated with the conceptual model.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "related_to_at_instance_level",
+      "undefined" : "related to at instance level"
+    },
+    "superproperty" : [ "57" ],
+    "domain" : "25",
+    "subproperty" : [ "58", "59", "60", "61", "62", "63" ],
+    "attributes" : [ "symmetric", "object", "external" ],
+    "id" : "56"
+  }, {
+    "range" : "66",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
+  }, {
+    "range" : "66",
+    "domain" : "64",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "67"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/predicate",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "69",
+    "annotations" : {
+      "editorialNote" : [ {
+        "identifier" : "editorialNote",
+        "language" : "undefined",
+        "value" : "Has a value from the Biolink related_to hierarchy. In RDF,  this corresponds to rdf:predicate and in Neo4j this corresponds to the relationship type. The convention is for an edge label in snake_case form. For example, biolink:related_to, biolink:causes, biolink:treats",
+        "type" : "label"
+      } ],
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.org/oban/association_has_predicate",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#annotatedProperty",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A high-level grouping for the relationship type. AKA minimal predicate. This is analogous to category for nodes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "predicate",
+      "undefined" : "predicate"
+    },
+    "maxCardinality" : "1",
+    "minCardinality" : "1",
+    "domain" : "8",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "68"
+  }, {
+    "range" : "32",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "72"
+  }, {
+    "range" : "32",
+    "domain" : "74",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "73"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/in_taxon",
+    "inverse" : "61",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "5",
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002162",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/prop/P703",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "canonical_predicate" : [ {
+        "identifier" : "canonical_predicate",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "gene product has organism source",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "is organism source of gene product",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "gene found in organism",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "instance of",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "organism has gene",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "connects an entity to its taxonomic classification. Only certain kinds of entities can be taxonomically classified; see 'thing with taxon'",
+        "type" : "label"
+      } ],
+      "narrowMatch" : [ {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002160",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "in_taxon",
+      "undefined" : "in taxon"
+    },
+    "superproperty" : [ "56" ],
+    "domain" : "19",
+    "attributes" : [ "object", "external" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/category",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "78",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the biolink entity type class. In a neo4j database this MAY correspond to the neo4j label tag. In an RDF database it should be a biolink model class URI. This field is multi-valued. It should include values for ancestors of the biolink class; for example, a protein such as Shh would have category values `biolink:Protein`, `biolink:GeneProduct`, `biolink:MolecularEntity`. In an RDF database, nodes will typically have an rdf:type triples. This can be to the most specific biolink class, or potentially to a class more specific than something in biolink. For example, a sequence feature `f` may have a rdf:type assertion to a SO class such as TF_binding_site, which is more specific than anything in biolink. Here we would have categories {biolink:GenomicEntity, biolink:MolecularEntity, biolink:NamedThing}",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "category",
+      "undefined" : "category"
+    },
+    "minCardinality" : "1",
+    "domain" : "4",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "77"
+  }, {
+    "iri" : "http://example.org/mvikg/has_habitat",
+    "baseIri" : "http://example.org/mvikg",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "has_habitat",
+      "undefined" : "has habitat"
+    },
+    "domain" : "82",
+    "comment" : {
+      "undefined" : "Relates a sample to its environmental habitat from GOLD"
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "81"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/is_sequence_variant_of",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "84",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "canonical_predicate" : [ {
+        "identifier" : "canonical_predicate",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "gene product variant of gene product",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "gene product sequence variation encoded by gene mutant",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "allelic variant of",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "holds between a sequence variant and a nucleic acid entity",
+        "type" : "label"
+      } ],
+      "narrowMatch" : [ {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/P3433",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "is_sequence_variant_of",
+      "undefined" : "is sequence variant of"
+    },
+    "superproperty" : [ "56" ],
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/object",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "3",
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.org/oban/association_has_object",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#annotatedTarget",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "connects an association to the object of the association. For example, in a gene-to-phenotype association, the gene is subject and phenotype is object.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "object",
+      "undefined" : "object"
+    },
+    "maxCardinality" : "1",
+    "minCardinality" : "1",
+    "domain" : "8",
+    "attributes" : [ "object", "external" ],
+    "id" : "86"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "inverse" : "40",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "41",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasFeatureOfInterest",
+      "en" : "has feature of interest"
+    },
+    "cardinality" : "1",
+    "domain" : "21",
+    "comment" : {
+      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "87"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/has_phenotype",
+    "inverse" : "60",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "85",
+    "annotations" : {
+      "editorialNote" : [ {
+        "identifier" : "editorialNote",
+        "language" : "undefined",
+        "value" : "check the range",
+        "type" : "label"
+      } ],
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002200",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "broadMatch" : [ {
+        "identifier" : "broadMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/NCIT_R108",
+        "type" : "iri"
+      }, {
+        "identifier" : "broadMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/NCIT_R115",
+        "type" : "iri"
+      } ],
+      "canonical_predicate" : [ {
+        "identifier" : "canonical_predicate",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "holds between a biological entity and a phenotype, where a phenotype is construed broadly as any kind of quality of an organism part, a collection of these qualities, or a change in quality or qualities (e.g. abnormally increased temperature). In SNOMEDCT, disorders with keyword 'characterized by' should translate into this predicate.",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "disease presents symptom",
+        "type" : "label"
+      } ],
+      "narrowMatch" : [ {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0004022",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/doid#has_symptom",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/NCIT_R89",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0004029",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_phenotype",
+      "undefined" : "has phenotype"
+    },
+    "superproperty" : [ "56" ],
+    "domain" : "88",
+    "attributes" : [ "object", "external" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/related_to",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "3",
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://identifiers.org/umls/related_to",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "broadMatch" : [ {
+        "identifier" : "broadMatch",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+        "type" : "iri"
+      } ],
+      "canonical_predicate" : [ {
+        "identifier" : "canonical_predicate",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A relationship that is asserted between two named things",
+        "type" : "label"
+      } ],
+      "narrowMatch" : [ {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002001",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/FMA_homonym_of",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0000052",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/SNOMED_relative_to_part_of",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/SNOMED_is_interpreted_by",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/PATO_reciprocal_of",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002002",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.bioontology.org/ontology/HCPCS/mapped_to",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://www.ebi.ac.uk/efo/EFO_0006351",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002339",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/NCIT_is_related_to_endogenous_product",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/SNOMED_has_modification",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002341",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/GOREL_0012006",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/FMA_related_developmental_entity_of",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://identifiers.org/umls/mapped_to",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/SNOMED_inheres_in",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/SNOMED_has_associated_morphology",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/CHEBI_is_conjugate_acid_of",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "https://skr3.nlm.nih.gov/SemMedDBADMINISTERED_TO",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002342",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://identifiers.org/hmdb/has_protein_association",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002092",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://id.nlm.nih.gov/mesh/has_mapping_qualifier",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.bioontology.org/ontology/RXNORM/reformulated_to",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/SNOMED_has_associated_procedure",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://id.nlm.nih.gov/mesh/RO",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://loinc.org/rdf/mapped_to",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://identifiers.org/umls/exhibited_by",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/SNOMED_has_indirect_morphology",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://identifiers.org/umls/RO",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002093",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002150",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002177",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/NCIT_is_abnormal_cell_of_disease",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/SNOMED_has_specimen_source_morphology",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002385",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://identifiers.org/umls/has_form",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/SNOMED_has_procedure_morphology",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "https://www.ama-assn.org/practice-management/cpt/mapped_to",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://identifiers.org/hmdb/disease",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002568",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://identifiers.org/umls/owning_section_of",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0009001",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/NCIT_disease_may_have_associated_disease",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/SNOMED_has_disposition",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://identifiers.org/umls/has_mapping_qualifier",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0004026",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://loinc.org/rdf/has_evaluation",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002338",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://loinc.org/rdf/has_challenge",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/IAO_0000136",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/GOREL_0002005",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002176",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002344",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/BTO_related_to",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002495",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://identifiers.org/umls/larger_than",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/SNOMED_has_direct_morphology",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://identifiers.org/umls/has_context_binding",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/BFO_0000054",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002348",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "https://skr3.nlm.nih.gov/SemMedDBhigher_than",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002314",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/MONDO_disease_shares_features_of",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0004027",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002159",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002084",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002372",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002374",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002573",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002451",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "https://skr3.nlm.nih.gov/SemMedDBlower_than",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002322",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002008",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002134",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://loinc.org/rdf/has_answer",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002328",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002356",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "https://skr3.nlm.nih.gov/SemMedDBASSOCIATED_WITH",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/uberon/core#protects",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.bioontology.org/ontology/RXNORM/has_form",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002373",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002387",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002178",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002494",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0009004",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/UBERON_synapsed_by",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/core#innervated_by",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/CHEBI_is_conjugate_base_of",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/FMA_connected_to",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002371",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002332",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0000053",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/FMA_continuous_with",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "https://skr3.nlm.nih.gov/SemMedDBcompared_with",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://id.nlm.nih.gov/mesh/mapped_to",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/NCIT_human_disease_maps_to_eo_disease",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "https://www.ama-assn.org/practice-management/cpt/has_add_on_code",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/nbo#is_about",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://identifiers.org/umls/class_code_classified_by",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002003",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://loinc.org/rdf/mth_has_expanded_form",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002179",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://identifiers.org/umls/RQ",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/core#connected_to",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002349",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "related_to",
+      "undefined" : "related to"
+    },
+    "domain" : "3",
+    "subproperty" : [ "56" ],
+    "attributes" : [ "symmetric", "object", "external" ],
+    "id" : "57"
+  }, {
+    "range" : "11",
+    "domain" : "70",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "89"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/description",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "91",
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core#definitions",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/IAO_0000115",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "definition",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "a human-readable description of an entity",
+        "type" : "label"
+      } ],
+      "narrowMatch" : [ {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md#Description",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "description",
+      "undefined" : "description"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "allValues", "external" ],
+    "id" : "90"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/description",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "93",
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core#definitions",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/IAO_0000115",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "definition",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "a human-readable description of an entity",
+        "type" : "label"
+      } ],
+      "narrowMatch" : [ {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md#Description",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "description",
+      "undefined" : "description"
+    },
+    "maxCardinality" : "1",
+    "domain" : "25",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/id",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "95",
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://github.com/geneontology/go-annotation/blob/master/specs/gpad-gpi-2-0.md#DB_Object_ID",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md#ID",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://www.alliancegenome.org/primaryId",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A unique identifier for an entity. Must be either a CURIE shorthand for a URI or a complete URI",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "id",
+      "undefined" : "id"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "allValues", "external" ],
+    "id" : "96"
+  }, {
+    "iri" : "https://w3id.org/linkml/mixins",
+    "baseIri" : "https://w3id.org/linkml",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "mixins"
+    },
+    "domain" : "27",
+    "attributes" : [ "object", "someValues", "external" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://w3id.org/linkml/mixins",
+    "baseIri" : "https://w3id.org/linkml",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "mixins"
+    },
+    "domain" : "2",
+    "attributes" : [ "object", "someValues", "external" ],
+    "id" : "99"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/category",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "100",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the biolink entity type class. In a neo4j database this MAY correspond to the neo4j label tag. In an RDF database it should be a biolink model class URI. This field is multi-valued. It should include values for ancestors of the biolink class; for example, a protein such as Shh would have category values `biolink:Protein`, `biolink:GeneProduct`, `biolink:MolecularEntity`. In an RDF database, nodes will typically have an rdf:type triples. This can be to the most specific biolink class, or potentially to a class more specific than something in biolink. For example, a sequence feature `f` may have a rdf:type assertion to a SO class such as TF_binding_site, which is more specific than anything in biolink. Here we would have categories {biolink:GenomicEntity, biolink:MolecularEntity, biolink:NamedThing}",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "category",
+      "undefined" : "category"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "allValues", "external" ],
+    "id" : "101"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/has_sequence_variant",
+    "inverse" : "59",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "1",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_sequence_variant",
+      "undefined" : "has sequence variant"
+    },
+    "superproperty" : [ "56" ],
+    "domain" : "102",
+    "attributes" : [ "object", "external" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/category",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "104",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the biolink entity type class. In a neo4j database this MAY correspond to the neo4j label tag. In an RDF database it should be a biolink model class URI. This field is multi-valued. It should include values for ancestors of the biolink class; for example, a protein such as Shh would have category values `biolink:Protein`, `biolink:GeneProduct`, `biolink:MolecularEntity`. In an RDF database, nodes will typically have an rdf:type triples. This can be to the most specific biolink class, or potentially to a class more specific than something in biolink. For example, a sequence feature `f` may have a rdf:type assertion to a SO class such as TF_binding_site, which is more specific than anything in biolink. Here we would have categories {biolink:GenomicEntity, biolink:MolecularEntity, biolink:NamedThing}",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "category",
+      "undefined" : "category"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype", "allValues", "external" ],
+    "id" : "103"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/agent_type",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "35",
+    "annotations" : {
+      "editorialNote" : [ {
+        "identifier" : "editorialNote",
+        "language" : "undefined",
+        "value" : "Note that this property indicates the type of agent who produced a final statement of knowledge, which is often different from the agent oragents who produced information used as evidence to support generation of this knowledge. For example, if a human curator concludes that a particular gene variant causes a medical condition - based on their interpretation of information produced by computational modeling tools, automated data analysis pipelines, and robotic laboratory assay systems - the agent_type for this statement is 'manual agent' - despite all of the evidence being created by automated agents. But if any of these systems is programmed to generate knowledge statements directly and without human assistance, the statement would be attributed to an 'automated_agent'.",
+        "type" : "label"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Describes the high-level category of agent who originally generated a statement of knowledge or other type of information.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "agent_type",
+      "undefined" : "agent type"
+    },
+    "domain" : "8",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "105"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/object",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "3",
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.org/oban/association_has_object",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#annotatedTarget",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "connects an association to the object of the association. For example, in a gene-to-phenotype association, the gene is subject and phenotype is object.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "object",
+      "undefined" : "object"
+    },
+    "domain" : "8",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "106"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasSample",
+    "inverse" : "108",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "41",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a FeatureOfInterest and the Sample used to represent it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSample",
+      "en" : "has sample"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Relation between a FeatureOfInterest and the Sample used to represent it."
+    },
+    "attributes" : [ "inverse functional", "object", "external" ],
+    "id" : "107"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/type",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "111",
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md#type",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://github.com/geneontology/go-annotation/blob/master/specs/gpad-gpi-2-0.md#DB_Object_Type",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "type",
+      "undefined" : "type"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "110"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/type",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "112",
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md#type",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://github.com/geneontology/go-annotation/blob/master/specs/gpad-gpi-2-0.md#DB_Object_Type",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "type",
+      "undefined" : "type"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype", "allValues", "external" ],
+    "id" : "113"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/subject",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "3",
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.org/oban/association_has_subject",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#annotatedSource",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "connects an association to the subject of the association. For example, in a gene-to-phenotype association, the gene is subject and phenotype is object.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "subject",
+      "undefined" : "subject"
+    },
+    "domain" : "8",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "114"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/knowledge_level",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "64",
+    "annotations" : {
+      "editorialNote" : [ {
+        "identifier" : "editorialNote",
+        "language" : "undefined",
+        "value" : "The notion of a 'level' of knowledge can in one sense relate to the strength of a statement - i.e. how confident we are that it says something true about our domain of discourse. Here, we can generally consider Assertions to be stronger than Entailments to be stronger than Predictions. But in another sense, 'level' of knowledge can refer to the scope or specificity of what a statement expresses - on a spectrum from context-specific results of a data analysis, to generalized assertions of knowledge or fact. Here, Statistical Associations and  Observations represent more foundational statements that are only slightly removed from the data on which they are based (the former reporting the direct results of  an analysis in terms of correlations between variables in the data, and the latter describing phenomena that were observed/reported to have occurred).",
+        "type" : "label"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Describes the level of knowledge expressed in a statement, based on the reasoning or analysis methods used to generate the statement, or the scope or specificity of what the statement expresses to be true.",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "knowledge type",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "knowledge_level",
+      "undefined" : "knowledge level"
+    },
+    "domain" : "8",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "115"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/isPropertyOf",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "51",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Property and the entity it belongs to.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isPropertyOf",
+      "en" : "is property of"
+    },
+    "domain" : "76",
+    "comment" : {
+      "en" : "Relation between a Property and the entity it belongs to."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "116"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/predicate",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "117",
+    "annotations" : {
+      "editorialNote" : [ {
+        "identifier" : "editorialNote",
+        "language" : "undefined",
+        "value" : "Has a value from the Biolink related_to hierarchy. In RDF,  this corresponds to rdf:predicate and in Neo4j this corresponds to the relationship type. The convention is for an edge label in snake_case form. For example, biolink:related_to, biolink:causes, biolink:treats",
+        "type" : "label"
+      } ],
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.org/oban/association_has_predicate",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#annotatedProperty",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A high-level grouping for the relationship type. AKA minimal predicate. This is analogous to category for nodes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "predicate",
+      "undefined" : "predicate"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype", "allValues", "external" ],
+    "id" : "118"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "inverse" : "40",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "51",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasFeatureOfInterest",
+      "en" : "has feature of interest"
+    },
+    "domain" : "109",
+    "comment" : {
+      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "119"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeBySampler",
+    "inverse" : "122",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "121",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampler",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeBySampler",
+      "en" : "made by sampler"
+    },
+    "domain" : "109",
+    "comment" : {
+      "en" : "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "120"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasResult",
+    "inverse" : "124",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "41",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Result",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasResult",
+      "en" : "has result"
+    },
+    "domain" : "109",
+    "comment" : {
+      "en" : "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "123"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/has_gene",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "29",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "connects an entity associated with one or more genes",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_gene",
+      "undefined" : "has gene"
+    },
+    "superproperty" : [ "52" ],
+    "domain" : "1",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "126"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/id",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "128",
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://github.com/geneontology/go-annotation/blob/master/specs/gpad-gpi-2-0.md#DB_Object_ID",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md#ID",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://www.alliancegenome.org/primaryId",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A unique identifier for an entity. Must be either a CURIE shorthand for a URI or a complete URI",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "id",
+      "undefined" : "id"
+    },
+    "maxCardinality" : "1",
+    "minCardinality" : "1",
+    "domain" : "4",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "127"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/node_property",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "129",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A grouping for any property that holds between a node and a value",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "node_property",
+      "undefined" : "node property"
+    },
+    "domain" : "3",
+    "subproperty" : [ "52" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "54"
+  }, {
+    "iri" : "https://w3id.org/linkml/mixins",
+    "baseIri" : "https://w3id.org/linkml",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "mixins"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "someValues", "external" ],
+    "id" : "130"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/is_sequence_variant_of",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "29",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "canonical_predicate" : [ {
+        "identifier" : "canonical_predicate",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "gene product variant of gene product",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "gene product sequence variation encoded by gene mutant",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "allelic variant of",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "holds between a sequence variant and a nucleic acid entity",
+        "type" : "label"
+      } ],
+      "narrowMatch" : [ {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/P3433",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "is_sequence_variant_of",
+      "undefined" : "is sequence variant of"
+    },
+    "superproperty" : [ "56" ],
+    "domain" : "1",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "131"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/form_or_variant_qualifier",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "7",
+    "annotations" : {
+      "editorialNote" : [ {
+        "identifier" : "editorialNote",
+        "language" : "undefined",
+        "value" : "please see the ChemicalOrGeneOrGeneProductFormOrVariantEnum (below) for examples of 'form or variant qualifier' terms in the gene->chemical association space. the qualifier ‘mutation’ combines with the core concept ‘Gene X’ to express the compose concept ‘Mutated forms of Gene X’. the qualifier ‘late stage’ combines with a core concept of ‘Disease X’ to express the  more specific concept ‘Late Stage forms of Disease X’ the qualifier ‘recombinant’ combines with a core concept of ‘FLT1 Gene’ to express the composed concept ‘Recombinant forms of the FLT1 gene’ the qualifier ‘chemical analog’ combines with a core concept of ‘Ditiocarb’ to express the composed concept ‘analog forms of Ditiocarb’",
+        "type" : "label"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A qualifier that composes with a core subject/object concept to define a specific type, variant, alternative version of this concept. The composed concept remains a subtype or instance of the core concept. For example, the qualifier ‘mutation’ combines with the core concept ‘Gene X’ to express the compose concept ‘a mutation of Gene X’.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "form_or_variant_qualifier",
+      "undefined" : "form or variant qualifier"
+    },
+    "superproperty" : [ "133" ],
+    "domain" : "29",
+    "attributes" : [ "object", "external" ],
+    "id" : "132"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/association_slot",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "136",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "statement qualifier",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "node qualifier",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "edge property",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "statement property",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "edge qualifier",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "any slot that relates an association to another entity",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "association_slot",
+      "undefined" : "association slot"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "135"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/qualifier",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "137",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "grouping slot for all qualifiers on an edge.  useful for testing compliance with association classes",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "qualifier",
+      "undefined" : "qualifier"
+    },
+    "maxCardinality" : "1",
+    "domain" : "137",
+    "subproperty" : [ "132" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "133"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/id",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "139",
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://github.com/geneontology/go-annotation/blob/master/specs/gpad-gpi-2-0.md#DB_Object_ID",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md#ID",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://www.alliancegenome.org/primaryId",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A unique identifier for an entity. Must be either a CURIE shorthand for a URI or a complete URI",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "id",
+      "undefined" : "id"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "allValues", "external" ],
+    "id" : "138"
+  }, {
+    "iri" : "https://w3id.org/linkml/mixins",
+    "baseIri" : "https://w3id.org/linkml",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "mixins"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "someValues", "external" ],
+    "id" : "140"
+  }, {
+    "iri" : "https://w3id.org/linkml/mixins",
+    "baseIri" : "https://w3id.org/linkml",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "mixins"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "someValues", "external" ],
+    "id" : "141"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/opposite_of",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "143",
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002604",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "canonical_predicate" : [ {
+        "identifier" : "canonical_predicate",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "x is the opposite of y if there exists some distance metric M, and there exists no z such as M(x,z) <= M(x,y) or M(y,z) <= M(y,x). (This description is from RO. Needs to be rephrased).",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://doi.org/10.1101/108977",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://github.com/biolink/biolink-model/issues/657",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "opposite_of",
+      "undefined" : "opposite of"
+    },
+    "domain" : "137",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "142"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/category",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "145",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Name of the high level ontology class in which this entity is categorized. Corresponds to the label for the biolink entity type class. In a neo4j database this MAY correspond to the neo4j label tag. In an RDF database it should be a biolink model class URI. This field is multi-valued. It should include values for ancestors of the biolink class; for example, a protein such as Shh would have category values `biolink:Protein`, `biolink:GeneProduct`, `biolink:MolecularEntity`. In an RDF database, nodes will typically have an rdf:type triples. This can be to the most specific biolink class, or potentially to a class more specific than something in biolink. For example, a sequence feature `f` may have a rdf:type assertion to a SO class such as TF_binding_site, which is more specific than anything in biolink. Here we would have categories {biolink:GenomicEntity, biolink:MolecularEntity, biolink:NamedThing}",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "category",
+      "undefined" : "category"
+    },
+    "domain" : "3",
+    "attributes" : [ "datatype", "allValues", "external" ],
+    "id" : "144"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "inverse" : "40",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "41",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasFeatureOfInterest",
+      "en" : "has feature of interest"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "146"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasSample",
+    "inverse" : "108",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "41",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a FeatureOfInterest and the Sample used to represent it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSample",
+      "en" : "has sample"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "Relation between a FeatureOfInterest and the Sample used to represent it."
+    },
+    "attributes" : [ "inverse functional", "object", "allValues", "external" ],
+    "id" : "147"
+  }, {
+    "iri" : "https://w3id.org/linkml/mixins",
+    "baseIri" : "https://w3id.org/linkml",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "mixins"
+    },
+    "domain" : "29",
+    "attributes" : [ "object", "someValues", "external" ],
+    "id" : "148"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/has_phenotype",
+    "inverse" : "60",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "85",
+    "annotations" : {
+      "editorialNote" : [ {
+        "identifier" : "editorialNote",
+        "language" : "undefined",
+        "value" : "check the range",
+        "type" : "label"
+      } ],
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0002200",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "broadMatch" : [ {
+        "identifier" : "broadMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/NCIT_R108",
+        "type" : "iri"
+      }, {
+        "identifier" : "broadMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/NCIT_R115",
+        "type" : "iri"
+      } ],
+      "canonical_predicate" : [ {
+        "identifier" : "canonical_predicate",
+        "language" : "undefined",
+        "value" : "true",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "holds between a biological entity and a phenotype, where a phenotype is construed broadly as any kind of quality of an organism part, a collection of these qualities, or a change in quality or qualities (e.g. abnormally increased temperature). In SNOMEDCT, disorders with keyword 'characterized by' should translate into this predicate.",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "disease presents symptom",
+        "type" : "label"
+      } ],
+      "narrowMatch" : [ {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0004022",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/doid#has_symptom",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/NCIT_R89",
+        "type" : "iri"
+      }, {
+        "identifier" : "narrowMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/RO_0004029",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_phenotype",
+      "undefined" : "has phenotype"
+    },
+    "superproperty" : [ "56" ],
+    "domain" : "29",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "149"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isSampleOf",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "5",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isSampleOf",
+      "en" : "is sample of"
+    },
+    "minCardinality" : "1",
+    "domain" : "41",
+    "comment" : {
+      "en" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of."
+    },
+    "attributes" : [ "functional", "object", "external" ],
+    "id" : "108"
+  }, {
+    "iri" : "https://w3id.org/linkml/mixins",
+    "baseIri" : "https://w3id.org/linkml",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "mixins"
+    },
+    "domain" : "29",
+    "attributes" : [ "object", "someValues", "external" ],
+    "id" : "150"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/phenotype_of",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "2",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "phenotype_of",
+      "undefined" : "phenotype of"
+    },
+    "superproperty" : [ "56" ],
+    "domain" : "85",
+    "attributes" : [ "object", "external" ],
+    "id" : "60"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/has_sequence_variant",
+    "inverse" : "59",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "1",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_sequence_variant",
+      "undefined" : "has sequence variant"
+    },
+    "superproperty" : [ "56" ],
+    "domain" : "29",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "151"
+  }, {
+    "iri" : "https://w3id.org/linkml/mixins",
+    "baseIri" : "https://w3id.org/linkml",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "mixins"
+    },
+    "domain" : "29",
+    "attributes" : [ "object", "someValues", "external" ],
+    "id" : "152"
+  }, {
+    "iri" : "https://w3id.org/linkml/mixins",
+    "baseIri" : "https://w3id.org/linkml",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "mixins"
+    },
+    "domain" : "29",
+    "attributes" : [ "object", "someValues", "external" ],
+    "id" : "153"
+  }, {
+    "iri" : "https://w3id.org/linkml/mixins",
+    "baseIri" : "https://w3id.org/linkml",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "mixins"
+    },
+    "domain" : "29",
+    "attributes" : [ "object", "someValues", "external" ],
+    "id" : "154"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/type",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "156",
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md#type",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "https://github.com/geneontology/go-annotation/blob/master/specs/gpad-gpi-2-0.md#DB_Object_Type",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "type",
+      "undefined" : "type"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype", "allValues", "external" ],
+    "id" : "155"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/form_or_variant_qualifier",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "7",
+    "annotations" : {
+      "editorialNote" : [ {
+        "identifier" : "editorialNote",
+        "language" : "undefined",
+        "value" : "please see the ChemicalOrGeneOrGeneProductFormOrVariantEnum (below) for examples of 'form or variant qualifier' terms in the gene->chemical association space. the qualifier ‘mutation’ combines with the core concept ‘Gene X’ to express the compose concept ‘Mutated forms of Gene X’. the qualifier ‘late stage’ combines with a core concept of ‘Disease X’ to express the  more specific concept ‘Late Stage forms of Disease X’ the qualifier ‘recombinant’ combines with a core concept of ‘FLT1 Gene’ to express the composed concept ‘Recombinant forms of the FLT1 gene’ the qualifier ‘chemical analog’ combines with a core concept of ‘Ditiocarb’ to express the composed concept ‘analog forms of Ditiocarb’",
+        "type" : "label"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A qualifier that composes with a core subject/object concept to define a specific type, variant, alternative version of this concept. The composed concept remains a subtype or instance of the core concept. For example, the qualifier ‘mutation’ combines with the core concept ‘Gene X’ to express the compose concept ‘a mutation of Gene X’.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "form_or_variant_qualifier",
+      "undefined" : "form or variant qualifier"
+    },
+    "superproperty" : [ "133" ],
+    "domain" : "29",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "157"
+  }, {
+    "range" : "3",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "158"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/has_gene",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "29",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "connects an entity associated with one or more genes",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_gene",
+      "undefined" : "has gene"
+    },
+    "superproperty" : [ "52" ],
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "55"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/knowledge_level",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "64",
+    "annotations" : {
+      "editorialNote" : [ {
+        "identifier" : "editorialNote",
+        "language" : "undefined",
+        "value" : "The notion of a 'level' of knowledge can in one sense relate to the strength of a statement - i.e. how confident we are that it says something true about our domain of discourse. Here, we can generally consider Assertions to be stronger than Entailments to be stronger than Predictions. But in another sense, 'level' of knowledge can refer to the scope or specificity of what a statement expresses - on a spectrum from context-specific results of a data analysis, to generalized assertions of knowledge or fact. Here, Statistical Associations and  Observations represent more foundational statements that are only slightly removed from the data on which they are based (the former reporting the direct results of  an analysis in terms of correlations between variables in the data, and the latter describing phenomena that were observed/reported to have occurred).",
+        "type" : "label"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Describes the level of knowledge expressed in a statement, based on the reasoning or analysis methods used to generate the statement, or the scope or specificity of what the statement expresses to be true.",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "undefined",
+        "value" : "knowledge type",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "knowledge_level",
+      "undefined" : "knowledge level"
+    },
+    "maxCardinality" : "1",
+    "minCardinality" : "1",
+    "domain" : "8",
+    "attributes" : [ "object", "external" ],
+    "id" : "161"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#broader",
+    "inverse" : "24",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "25",
+    "annotations" : {
+      "descriptionAnnot" : [ {
+        "identifier" : "descriptionAnnot",
+        "language" : "undefined",
+        "value" : "Public description modified from the information on this page: http://www.w3.org/TR/2005/WD-swbp-skos-core-guide-20050510/#sechierarchy .",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "broader",
+      "en-us" : "broader term"
+    },
+    "domain" : "25",
+    "attributes" : [ "object", "external" ],
+    "id" : "162"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/subject",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "3",
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.org/oban/association_has_subject",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#annotatedSource",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "connects an association to the subject of the association. For example, in a gene-to-phenotype association, the gene is subject and phenotype is object.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "subject",
+      "undefined" : "subject"
+    },
+    "maxCardinality" : "1",
+    "minCardinality" : "1",
+    "domain" : "8",
+    "attributes" : [ "object", "external" ],
+    "id" : "164"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/predicate",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "165",
+    "annotations" : {
+      "editorialNote" : [ {
+        "identifier" : "editorialNote",
+        "language" : "undefined",
+        "value" : "Has a value from the Biolink related_to hierarchy. In RDF,  this corresponds to rdf:predicate and in Neo4j this corresponds to the relationship type. The convention is for an edge label in snake_case form. For example, biolink:related_to, biolink:causes, biolink:treats",
+        "type" : "label"
+      } ],
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.org/oban/association_has_predicate",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#annotatedProperty",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "A high-level grouping for the relationship type. AKA minimal predicate. This is analogous to category for nodes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "predicate",
+      "undefined" : "predicate"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype", "allValues", "external" ],
+    "id" : "166"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/object",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "29",
+    "annotations" : {
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.org/oban/association_has_object",
+        "type" : "iri"
+      }, {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2002/07/owl#annotatedTarget",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "connects an association to the object of the association. For example, in a gene-to-phenotype association, the gene is subject and phenotype is object.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "object",
+      "undefined" : "object"
+    },
+    "domain" : "7",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "167"
+  }, {
+    "iri" : "https://w3id.org/linkml/mixins",
+    "baseIri" : "https://w3id.org/linkml",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "mixins"
+    },
+    "domain" : "7",
+    "attributes" : [ "object", "someValues", "external" ],
+    "id" : "168"
+  }, {
+    "iri" : "http://example.org/mvikg/has_developmental_stage",
+    "baseIri" : "http://example.org/mvikg",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "has_developmental_stage",
+      "undefined" : "has developmental stage"
+    },
+    "domain" : "41",
+    "attributes" : [ "object", "external" ],
+    "id" : "169"
+  }, {
+    "range" : "23",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "170"
+  }, {
+    "range" : "23",
+    "domain" : "97",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "171"
+  }, {
+    "range" : "79",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "172"
+  }, {
+    "range" : "27",
+    "domain" : "85",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "173"
+  }, {
+    "range" : "35",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "174"
+  }, {
+    "range" : "23",
+    "domain" : "134",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "175"
+  }, {
+    "range" : "23",
+    "domain" : "94",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "176"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/taxon_of",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "19",
+    "annotations" : {
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "taxon_of",
+      "undefined" : "taxon of"
+    },
+    "superproperty" : [ "56" ],
+    "domain" : "5",
+    "attributes" : [ "object", "external" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://example.org/mvikg/has_habitat",
+    "baseIri" : "http://example.org/mvikg",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "has_habitat",
+      "undefined" : "has habitat"
+    },
+    "domain" : "41",
+    "comment" : {
+      "undefined" : "Relates a sample to its environmental habitat from GOLD"
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "177"
+  }, {
+    "iri" : "http://purl.org/dc/terms/isPartOf",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "159",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ],
+      "hasVersion" : [ {
+        "identifier" : "hasVersion",
+        "language" : "undefined",
+        "value" : "http://dublincore.org/usage/terms/history/#isPartOf-002",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2002-06-15",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2000-07-11",
+        "type" : "label"
+      } ],
+      "type" : [ {
+        "identifier" : "type",
+        "language" : "undefined",
+        "value" : "http://dublincore.org/usage/documents/principles/#element-refinement",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isPartOf",
+      "en-us" : "Is Part Of"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en-us" : "The described resource is a physical or logical part of the\n            referenced resource."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "178"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isSampleOf",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "5",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isSampleOf",
+      "en" : "is sample of"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of."
+    },
+    "attributes" : [ "functional", "object", "allValues", "external" ],
+    "id" : "179"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "21",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isFeatureOfInterestOf",
+      "en" : "is feature of interest of"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "180"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isResultOf",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "109",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Result",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isResultOf",
+      "en" : "is result of"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "181"
+  }, {
+    "iri" : "http://example.org/mvikg/has_developmental_stage",
+    "baseIri" : "http://example.org/mvikg",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "has_developmental_stage",
+      "undefined" : "has developmental stage"
+    },
+    "domain" : "41",
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "182"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/isSampleOf",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "51",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isSampleOf",
+      "en" : "is sample of"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of."
+    },
+    "attributes" : [ "functional", "object", "allValues", "external" ],
+    "id" : "183"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeSampling",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "109",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a Sampler (sampling device or entity) and the Sampling act it performed.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampler",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeSampling",
+      "en" : "made sampling"
+    },
+    "domain" : "121",
+    "comment" : {
+      "en" : "Relation between a Sampler (sampling device or entity) and the Sampling act it performed."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "184"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasSample",
+    "inverse" : "108",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "41",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between a FeatureOfInterest and the Sample used to represent it.",
+        "type" : "label"
+      } ],
+      "rangeIncludes" : [ {
+        "identifier" : "rangeIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sample",
+        "type" : "iri"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasSample",
+      "en" : "has sample"
+    },
+    "domain" : "51",
+    "comment" : {
+      "en" : "Relation between a FeatureOfInterest and the Sample used to represent it."
+    },
+    "attributes" : [ "inverse functional", "object", "allValues", "external" ],
+    "id" : "185"
+  }, {
+    "iri" : "http://www.w3.org/ns/ssn/hasProperty",
+    "inverse" : "187",
+    "baseIri" : "http://www.w3.org/ns/ssn",
+    "range" : "76",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/ssn/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relation between an entity and a Property of that entity.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasProperty",
+      "en" : "has property"
+    },
+    "domain" : "51",
+    "comment" : {
+      "en" : "Relation between an entity and a Property of that entity."
+    },
+    "attributes" : [ "object", "allValues", "external" ],
+    "id" : "186"
+  }, {
+    "iri" : "https://w3id.org/biolink/vocab/agent_type",
+    "baseIri" : "https://w3id.org/biolink/vocab",
+    "range" : "35",
+    "annotations" : {
+      "editorialNote" : [ {
+        "identifier" : "editorialNote",
+        "language" : "undefined",
+        "value" : "Note that this property indicates the type of agent who produced a final statement of knowledge, which is often different from the agent oragents who produced information used as evidence to support generation of this knowledge. For example, if a human curator concludes that a particular gene variant causes a medical condition - based on their interpretation of information produced by computational modeling tools, automated data analysis pipelines, and robotic laboratory assay systems - the agent_type for this statement is 'manual agent' - despite all of the evidence being created by automated agents. But if any of these systems is programmed to generate knowledge statements directly and without human assistance, the statement would be attributed to an 'automated_agent'.",
+        "type" : "label"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "https://w3id.org/biolink/biolink-model",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Describes the high-level category of agent who originally generated a statement of knowledge or other type of information.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "agent_type",
+      "undefined" : "agent type"
+    },
+    "maxCardinality" : "1",
+    "minCardinality" : "1",
+    "domain" : "8",
+    "attributes" : [ "object", "external" ],
+    "id" : "188"
+  }, {
+    "range" : "35",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "189"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/resultTime",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "163",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed.",
+        "type" : "label"
+      } ],
+      "domainIncludes" : [ {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Actuation",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Sampling",
+        "type" : "iri"
+      }, {
+        "identifier" : "domainIncludes",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/Observation",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "resultTime",
+      "en" : "result time"
+    },
+    "cardinality" : "1",
+    "domain" : "137",
+    "comment" : {
+      "en" : "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "190"
+  }, {
+    "range" : "4",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "191"
+  }, {
+    "range" : "35",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "192"
+  }, {
+    "range" : "35",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "193"
+  }, {
+    "range" : "64",
+    "domain" : "49",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "194"
+  }, {
+    "range" : "64",
+    "domain" : "45",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "195"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "196"
+  }, {
+    "range" : "10",
+    "domain" : "80",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "197"
+  }, {
+    "range" : "64",
+    "domain" : "43",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "198"
+  }, {
+    "range" : "64",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "199"
+  }, {
+    "range" : "64",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "200"
+  }, {
+    "range" : "70",
+    "domain" : "71",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "201"
+  }, {
+    "range" : "3",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "202"
+  }, {
+    "range" : "64",
+    "domain" : "74",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "203"
+  }, {
+    "range" : "125",
+    "domain" : "41",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "204"
+  } ]
+}
