@@ -483,8 +483,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
-        <rdfs:range rdf:resource="https://w3id.org/biolink/vocab/GenomicEntity"/>
         <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
         <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
         <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
@@ -520,8 +518,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isSampleOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
-        <rdfs:range rdf:resource="https://w3id.org/biolink/vocab/OrganismTaxon"/>
         <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
         <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
         <rdfs:comment xml:lang="en">Relation from a Sample to the FeatureOfInterest that it is intended to be representative of.</rdfs:comment>
@@ -605,8 +601,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/form_or_variant_qualifier">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/biolink/vocab/qualifier"/>
-        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/Gene"/>
-        <rdfs:range rdf:resource="https://w3id.org/biolink/vocab/VariantToGeneAssociation"/>
     </owl:ObjectProperty>
 
 
@@ -616,7 +610,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/has_gene">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/biolink/vocab/has_gene_or_gene_product"/>
-        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/SequenceVariant"/>
         <rdfs:range rdf:resource="https://w3id.org/biolink/vocab/Gene"/>
         <rdfs:label>has gene</rdfs:label>
         <skos:definition>connects an entity associated with one or more genes</skos:definition>
@@ -670,7 +663,6 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/has_sequence_variant">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/biolink/vocab/related_to_at_instance_level"/>
         <owl:inverseOf rdf:resource="https://w3id.org/biolink/vocab/is_sequence_variant_of"/>
-        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/Gene"/>
         <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/GenomicEntity"/>
         <rdfs:range rdf:resource="https://w3id.org/biolink/vocab/SequenceVariant"/>
         <rdfs:label>has sequence variant</rdfs:label>
@@ -709,7 +701,6 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/is_sequence_variant_of">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/biolink/vocab/related_to_at_instance_level"/>
         <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/SequenceVariant"/>
-        <rdfs:range rdf:resource="https://w3id.org/biolink/vocab/Gene"/>
         <rdfs:range rdf:resource="https://w3id.org/biolink/vocab/GenomicEntity"/>
         <rdfs:label>is sequence variant of</rdfs:label>
         <skos:altLabel>allelic variant of</skos:altLabel>
@@ -1221,12 +1212,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/biolink/vocab/GenomicEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isResultOf"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
             </owl:Restriction>
@@ -1235,12 +1220,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isSampleOf"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isSampleOf"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/biolink/vocab/OrganismTaxon"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1674,24 +1653,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
                 <owl:someValuesFrom rdf:resource="https://w3id.org/biolink/vocab/PhysicalEssence"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/form_or_variant_qualifier"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/biolink/vocab/VariantToGeneAssociation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/has_phenotype"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/biolink/vocab/PhenotypicFeature"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/has_sequence_variant"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/biolink/vocab/SequenceVariant"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>In MVIKG: A gene that may have sequence variants and associated phenotypes</rdfs:comment>
         <rdfs:label>gene</rdfs:label>
         <skos:broadMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C45822"/>
@@ -1723,12 +1684,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 
     <owl:Class rdf:about="https://w3id.org/biolink/vocab/GenomicEntity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/ClassDefinition#Mixin"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label>genomic entity</rdfs:label>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <skos:narrowMatch rdf:resource="http://purl.bioontology.org/ontology/STY/T028"/>
@@ -1828,12 +1783,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 
     <owl:Class rdf:about="https://w3id.org/biolink/vocab/OrganismTaxon">
         <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/NamedThing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasSample"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>In MVIKG: The taxonomic classification of sampled organisms</rdfs:comment>
         <rdfs:label>organism taxon</rdfs:label>
         <skos:altLabel>taxon</skos:altLabel>
@@ -1938,12 +1887,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/has_gene"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/biolink/vocab/Gene"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/is_sequence_variant_of"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/biolink/vocab/Gene"/>
             </owl:Restriction>
         </rdfs:subClassOf>

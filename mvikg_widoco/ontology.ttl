@@ -287,8 +287,6 @@ xsd:string rdf:type rdfs:Datatype .
 
 ###  http://www.w3.org/ns/sosa/isFeatureOfInterestOf
 <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> rdf:type owl:ObjectProperty ;
-                                                  rdfs:domain <http://www.w3.org/ns/sosa/Sample> ;
-                                                  rdfs:range <https://w3id.org/biolink/vocab/GenomicEntity> ;
                                                   <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
                                                                                      <http://www.w3.org/ns/sosa/Sample> ;
                                                   <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Actuation> ,
@@ -316,8 +314,6 @@ xsd:string rdf:type rdfs:Datatype .
 ###  http://www.w3.org/ns/sosa/isSampleOf
 <http://www.w3.org/ns/sosa/isSampleOf> rdf:type owl:ObjectProperty ,
                                                 owl:FunctionalProperty ;
-                                       rdfs:domain <http://www.w3.org/ns/sosa/Sample> ;
-                                       rdfs:range <https://w3id.org/biolink/vocab/OrganismTaxon> ;
                                        <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sample> ;
                                        <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
                                        rdfs:comment "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of."@en ;
@@ -376,15 +372,12 @@ xsd:string rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/biolink/vocab/form_or_variant_qualifier
 <https://w3id.org/biolink/vocab/form_or_variant_qualifier> rdf:type owl:ObjectProperty ;
-                                                           rdfs:subPropertyOf <https://w3id.org/biolink/vocab/qualifier> ;
-                                                           rdfs:domain <https://w3id.org/biolink/vocab/Gene> ;
-                                                           rdfs:range <https://w3id.org/biolink/vocab/VariantToGeneAssociation> .
+                                                           rdfs:subPropertyOf <https://w3id.org/biolink/vocab/qualifier> .
 
 
 ###  https://w3id.org/biolink/vocab/has_gene
 <https://w3id.org/biolink/vocab/has_gene> rdf:type owl:ObjectProperty ;
                                           rdfs:subPropertyOf <https://w3id.org/biolink/vocab/has_gene_or_gene_product> ;
-                                          rdfs:domain <https://w3id.org/biolink/vocab/SequenceVariant> ;
                                           rdfs:range <https://w3id.org/biolink/vocab/Gene> ;
                                           rdfs:label "has gene" ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "connects an entity associated with one or more genes" ;
@@ -426,8 +419,7 @@ xsd:string rdf:type rdfs:Datatype .
 <https://w3id.org/biolink/vocab/has_sequence_variant> rdf:type owl:ObjectProperty ;
                                                       rdfs:subPropertyOf <https://w3id.org/biolink/vocab/related_to_at_instance_level> ;
                                                       owl:inverseOf <https://w3id.org/biolink/vocab/is_sequence_variant_of> ;
-                                                      rdfs:domain <https://w3id.org/biolink/vocab/Gene> ,
-                                                                  <https://w3id.org/biolink/vocab/GenomicEntity> ;
+                                                      rdfs:domain <https://w3id.org/biolink/vocab/GenomicEntity> ;
                                                       rdfs:range <https://w3id.org/biolink/vocab/SequenceVariant> ;
                                                       rdfs:label "has sequence variant" ;
                                                       <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
@@ -457,8 +449,7 @@ xsd:string rdf:type rdfs:Datatype .
 <https://w3id.org/biolink/vocab/is_sequence_variant_of> rdf:type owl:ObjectProperty ;
                                                         rdfs:subPropertyOf <https://w3id.org/biolink/vocab/related_to_at_instance_level> ;
                                                         rdfs:domain <https://w3id.org/biolink/vocab/SequenceVariant> ;
-                                                        rdfs:range <https://w3id.org/biolink/vocab/Gene> ,
-                                                                   <https://w3id.org/biolink/vocab/GenomicEntity> ;
+                                                        rdfs:range <https://w3id.org/biolink/vocab/GenomicEntity> ;
                                                         rdfs:label "is sequence variant of" ;
                                                         <http://www.w3.org/2004/02/skos/core#altLabel> "allelic variant of" ,
                                                                                                        "gene product sequence variation encoded by gene mutant" ,
@@ -841,20 +832,12 @@ xsd:string rdf:type rdfs:Datatype .
                                                      owl:allValuesFrom <http://purl.org/dc/dcmitype/Dataset>
                                                    ] ,
                                                    [ rdf:type owl:Restriction ;
-                                                     owl:onProperty <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> ;
-                                                     owl:allValuesFrom <https://w3id.org/biolink/vocab/GenomicEntity>
-                                                   ] ,
-                                                   [ rdf:type owl:Restriction ;
                                                      owl:onProperty <http://www.w3.org/ns/sosa/isResultOf> ;
                                                      owl:allValuesFrom <http://www.w3.org/ns/sosa/Sampling>
                                                    ] ,
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty <http://www.w3.org/ns/sosa/isSampleOf> ;
                                                      owl:allValuesFrom <http://www.w3.org/ns/sosa/FeatureOfInterest>
-                                                   ] ,
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty <http://www.w3.org/ns/sosa/isSampleOf> ;
-                                                     owl:allValuesFrom <https://w3id.org/biolink/vocab/OrganismTaxon>
                                                    ] ,
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty <http://www.w3.org/ns/sosa/isResultOf> ;
@@ -1157,18 +1140,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
                                                       [ rdf:type owl:Restriction ;
                                                         owl:onProperty <https://w3id.org/linkml/mixins> ;
                                                         owl:someValuesFrom <https://w3id.org/biolink/vocab/PhysicalEssence>
-                                                      ] ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty <https://w3id.org/biolink/vocab/form_or_variant_qualifier> ;
-                                                        owl:allValuesFrom <https://w3id.org/biolink/vocab/VariantToGeneAssociation>
-                                                      ] ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty <https://w3id.org/biolink/vocab/has_phenotype> ;
-                                                        owl:allValuesFrom <https://w3id.org/biolink/vocab/PhenotypicFeature>
-                                                      ] ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty <https://w3id.org/biolink/vocab/has_sequence_variant> ;
-                                                        owl:allValuesFrom <https://w3id.org/biolink/vocab/SequenceVariant>
                                                       ] ;
                                       rdfs:comment "In MVIKG: A gene that may have sequence variants and associated phenotypes" ;
                                       rdfs:label "gene" ;
@@ -1192,11 +1163,7 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 
 ###  https://w3id.org/biolink/vocab/GenomicEntity
 <https://w3id.org/biolink/vocab/GenomicEntity> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://w3id.org/linkml/ClassDefinition#Mixin> ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <http://www.w3.org/ns/sosa/hasFeatureOfInterest> ;
-                                                                 owl:allValuesFrom <http://www.w3.org/ns/sosa/Sample>
-                                                               ] ;
+                                               rdfs:subClassOf <https://w3id.org/linkml/ClassDefinition#Mixin> ;
                                                rdfs:label "genomic entity" ;
                                                <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> ;
                                                <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T028> ,
@@ -1268,11 +1235,7 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 
 ###  https://w3id.org/biolink/vocab/OrganismTaxon
 <https://w3id.org/biolink/vocab/OrganismTaxon> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://w3id.org/biolink/vocab/NamedThing> ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <http://www.w3.org/ns/sosa/hasSample> ;
-                                                                 owl:allValuesFrom <http://www.w3.org/ns/sosa/Sample>
-                                                               ] ;
+                                               rdfs:subClassOf <https://w3id.org/biolink/vocab/NamedThing> ;
                                                rdfs:comment "In MVIKG: The taxonomic classification of sampled organisms" ;
                                                rdfs:label "organism taxon" ;
                                                <http://www.w3.org/2004/02/skos/core#altLabel> "taxon" ,
@@ -1354,10 +1317,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
                                                                  ] ,
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty <https://w3id.org/biolink/vocab/has_gene> ;
-                                                                   owl:allValuesFrom <https://w3id.org/biolink/vocab/Gene>
-                                                                 ] ,
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty <https://w3id.org/biolink/vocab/is_sequence_variant_of> ;
                                                                    owl:allValuesFrom <https://w3id.org/biolink/vocab/Gene>
                                                                  ] ,
                                                                  [ rdf:type owl:Restriction ;
