@@ -661,8 +661,8 @@
                     <rdf:Description rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#text_mining_agent"/>
                 </owl:unionOf>
             </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:label>AgentTypeEnum</rdfs:label>
+    </owl:equivalentClass>
+    <rdfs:label>AgentTypeEnum</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/EnumDefinition"/>
         <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent"/>
         <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#computational_model"/>
@@ -987,8 +987,8 @@
                     <rdf:Description rdf:about="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#statistical_association"/>
                 </owl:unionOf>
             </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:label>KnowledgeLevelEnum</rdfs:label>
+    </owl:equivalentClass>
+    <rdfs:label>KnowledgeLevelEnum</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/EnumDefinition"/>
         <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#knowledge_assertion"/>
         <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#logical_entailment"/>
