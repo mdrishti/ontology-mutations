@@ -66,6 +66,12 @@ sh build-mvikg.sh
 java -jar widoco-1.4.25-jar-with-dependencies_JDK-17.jar -ontFile output/mvikg-reasoned.owl -getOntologyMetadata -webVowl -oops -outFolder mvikg_widoco
 ```
 
+### to view ontology on web (localhost)
+```bash
+cd mvikg_widoco
+python cors-http-server.py
+```
+
 
 # Notes
 #### Ontology by Open Mutation Miner (OMM)
