@@ -205,7 +205,7 @@ This section provides details for each class and property defined by MVIKG Ontol
   <h3>Developmental stage<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://example.org/mvikg/DevelopmentalStage</p>
   <div class="comment">
-   <span class="markdown">A developmental stage is a stage corresponding to a stage in bacteria's growth. e.g.: exponential, lag.</span>
+   <span class="markdown">A developmental stage is a stage corresponding to a stage in bacteria's growth. e.g.: exponential, lag, log, stationary.</span>
   </div>
   <div class="comment">
    <span class="markdown">Represents a specific point or period in an organism's life cycle</span>
@@ -321,7 +321,7 @@ This section provides details for each class and property defined by MVIKG Ontol
   <h3>gene<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/biolink/vocab/Gene</p>
   <div class="comment">
-   <span class="markdown">In MVIKG: A gene that may have sequence variants and associated phenotypes</span>
+   <span class="markdown">In MVIKG: A gene that may have sequence variants and associated phenotype, log, stationary. We recommend using NCBI gene ID.</span>
   </div>
   <div class="comment">
    <span class="markdown">A region (or regions) that includes all of the sequence elements necessary to encode a functional transcript. A gene locus may include regulatory regions, transcribed regions and/or other functional sequence regions.</span>
@@ -588,7 +588,7 @@ This section provides details for each class and property defined by MVIKG Ontol
   <h3>organism taxon<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/biolink/vocab/OrganismTaxon</p>
   <div class="comment">
-   <span class="markdown">In MVIKG: The taxonomic classification of sampled organisms</span>
+   <span class="markdown">In MVIKG: The taxonomic classification of sampled organisms. We recommend using NCBITaxon vocabulary.</span>
   </div>
   <div class="comment">
    <span class="markdown">A classification of a set of organisms. Example instances: NCBITaxon:9606 (Homo sapiens), NCBITaxon:2 (Bacteria). Can also be used to represent strains or subspecies.</span>
@@ -819,7 +819,7 @@ This section provides details for each class and property defined by MVIKG Ontol
   <h3>sequence variant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/biolink/vocab/SequenceVariant</p>
   <div class="comment">
-   <span class="markdown">In MVIKG: A genomic variant associated with a specific gene</span>
+   <span class="markdown">We recommend using the sequence ontology (http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label.</span>
   </div>
   <div class="comment">
    <span class="markdown">A sequence_variant is a non exact copy of a sequence_feature or genome exhibiting one or more sequence_alteration.</span>
@@ -1026,6 +1026,9 @@ This section provides details for each class and property defined by MVIKG Ontol
  <div class="entity" id="/has_developmental_stage">
   <h3>has developmental stage<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://example.org/mvikg/has_developmental_stage</p>
+  <div class="comment">
+   <span class="markdown">The growth stage of a bacterial life cycle - exponential, log, lag, stationary.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -1113,6 +1116,9 @@ This section provides details for each class and property defined by MVIKG Ontol
   <h3>has gene<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/biolink/vocab/has_gene</p>
   <div class="comment">
+   <span class="markdown">We recommend using NCBI gene IDs.</span>
+  </div>
+  <div class="comment">
    <span class="markdown">connects an entity associated with one or more genes</span>
   </div>
   <div class="description">
@@ -1165,7 +1171,7 @@ This section provides details for each class and property defined by MVIKG Ontol
   <h3>has habitat<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://example.org/mvikg/has_habitat</p>
   <div class="comment">
-   <span class="markdown">Relates a sample to its environmental habitat from GOLD</span>
+   <span class="markdown">Relates a sample to its environmental habitat from GOLD. We recommend using GOLD voacbulary</span>
   </div>
   <div class="description">
    <dl>
@@ -1360,6 +1366,9 @@ This section provides details for each class and property defined by MVIKG Ontol
  <div class="entity" id="https://w3id.org/biolink/vocab/has_sequence_variant">
   <h3>has sequence variant<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/biolink/vocab/has_sequence_variant</p>
+  <div class="comment">
+   <span class="markdown">We recommend using the sequence ontology (http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -1392,6 +1401,9 @@ This section provides details for each class and property defined by MVIKG Ontol
  <div class="entity" id="https://w3id.org/biolink/vocab/in_taxon">
   <h3>in taxon<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/biolink/vocab/in_taxon</p>
+  <div class="comment">
+   <span class="markdown">We recommend using NCBITaxon vocabulary.</span>
+  </div>
   <div class="comment">
    <span class="markdown">connects an entity to its taxonomic classification. Only certain kinds of entities can be taxonomically classified; see 'thing with taxon'</span>
   </div>
@@ -1588,6 +1600,9 @@ This section provides details for each class and property defined by MVIKG Ontol
  <div class="entity" id="https://w3id.org/biolink/vocab/is_sequence_variant_of">
   <h3>is sequence variant of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/biolink/vocab/is_sequence_variant_of</p>
+  <div class="comment">
+   <span class="markdown">We recommend using the sequence ontology (http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label.</span>
+  </div>
   <div class="comment">
    <span class="markdown">holds between a sequence variant and a nucleic acid entity</span>
   </div>
