@@ -233,7 +233,7 @@ mvikg:has_developmental_stage rdf:type owl:ObjectProperty ;
                               rdfs:domain sosa:Sample ;
                               rdfs:range mvikg:DevelopmentalStage ;
                               rdfs:label "has developmental stage" ;
-                       	      rdfs:comment "The growth stage of a bacterial life cycle - exponential, log, lag, stationary." ;
+                       	      rdfs:comment "The growth stage of a bacterial life cycle - exponential, log, lag, stationary." .
 
 
 ###  http://example.org/mvikg/has_habitat
