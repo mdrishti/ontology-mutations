@@ -232,7 +232,8 @@ xsd:string rdf:type rdfs:Datatype .
 mvikg:has_developmental_stage rdf:type owl:ObjectProperty ;
                               rdfs:domain sosa:Sample ;
                               rdfs:range mvikg:DevelopmentalStage ;
-                              rdfs:label "has developmental stage" .
+                              rdfs:label "has developmental stage" ;
+                       	      rdfs:comment "The growth stage of a bacterial life cycle - exponential, log, lag, stationary." ;
 
 
 ###  http://example.org/mvikg/has_habitat
@@ -243,7 +244,7 @@ mvikg:has_habitat rdf:type owl:ObjectProperty ;
                                             )
                               ] ;
                   rdfs:range mvikg:Biome ;
-                  rdfs:comment "Relates a sample to its environmental habitat from GOLD" ;
+                  rdfs:comment "Relates a sample to its environmental habitat from GOLD. We recommend using GOLD voacbulary" ;
                   rdfs:label "has habitat" .
 
 
@@ -397,7 +398,8 @@ biolink:has_gene rdf:type owl:ObjectProperty ;
                  rdfs:range biolink:Gene ;
                  rdfs:label "has gene" ;
                  skos:definition "connects an entity associated with one or more genes" ;
-                 skos:inScheme <https://w3id.org/biolink/biolink-model> .
+                 skos:inScheme <https://w3id.org/biolink/biolink-model> ;
+		 rdfs:comment "We recommend using NCBI gene IDs." .
 
 
 ###  https://w3id.org/biolink/vocab/has_gene_or_gene_product
@@ -438,6 +440,7 @@ biolink:has_sequence_variant rdf:type owl:ObjectProperty ;
                              rdfs:domain biolink:GenomicEntity ;
                              rdfs:range biolink:SequenceVariant ;
                              rdfs:label "has sequence variant" ;
+			     rdfs:comment "We recommend using HGVS variant naming convention." ;
                              skos:inScheme <https://w3id.org/biolink/biolink-model> .
 
 
@@ -447,6 +450,7 @@ biolink:in_taxon rdf:type owl:ObjectProperty ;
                  owl:inverseOf biolink:taxon_of ;
                  rdfs:domain biolink:ThingWithTaxon ;
                  rdfs:range biolink:OrganismTaxon ;
+		 rdfs:comment "We recommend using NCBITaxon vocabulary." ;
                  rdfs:label "in taxon" ;
                  skos:altLabel "gene found in organism" ,
                                "gene product has organism source" ,
@@ -786,7 +790,7 @@ mvikg:Biome rdf:type owl:Class ;
 
 ###  http://example.org/mvikg/DevelopmentalStage
 mvikg:DevelopmentalStage rdf:type owl:Class ;
-                         rdfs:comment "A developmental stage is a stage corresponding to a stage in bacteria's  growth. e.g.: exponential, lag." ;
+                         rdfs:comment "A developmental stage is a stage corresponding to a stage in bacteria's  growth. e.g.: exponential, lag, log, stationary." ;
                          rdfs:label "Developmental stage" ;
                          skos:closeMatch <http://www.ebi.ac.uk/efo/EFO_0000399> ;
                          skos:definition "Represents a specific point or period in an organism's life cycle" .
@@ -1092,7 +1096,7 @@ biolink:Gene rdf:type owl:Class ;
                                owl:onProperty linkml:mixins ;
                                owl:someValuesFrom biolink:PhysicalEssence
                              ] ;
-             rdfs:comment "In MVIKG: A gene that may have sequence variants and associated phenotypes" ;
+             rdfs:comment "In MVIKG: A gene that may have sequence variants and associated phenotype, log, stationary. We recommend using NCBI gene ID." ;
              rdfs:label "gene" ;
              skos:broadMatch <http://purl.obolibrary.org/obo/NCIT_C45822> ;
              skos:definition "A region (or regions) that includes all of the sequence elements necessary to encode a functional transcript. A gene locus may include regulatory regions, transcribed regions and/or other functional sequence regions." ;
@@ -1187,7 +1191,7 @@ biolink:OntologyClass rdf:type owl:Class ;
 ###  https://w3id.org/biolink/vocab/OrganismTaxon
 biolink:OrganismTaxon rdf:type owl:Class ;
                       rdfs:subClassOf biolink:NamedThing ;
-                      rdfs:comment "In MVIKG: The taxonomic classification of sampled organisms" ;
+                      rdfs:comment "In MVIKG: The taxonomic classification of sampled organisms. We recommend using NCBITaxon vocabulary." ;
                       rdfs:label "organism taxon" ;
                       skos:altLabel "taxon" ,
                                     "taxonomic classification" ;
@@ -1282,7 +1286,7 @@ biolink:SequenceVariant rdf:type owl:Class ;
                                           owl:onProperty biolink:id ;
                                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                         ] ;
-                        rdfs:comment "In MVIKG: A genomic variant associated with a specific gene" ;
+                        rdfs:comment "In MVIKG: A genomic variant associated with a specific gene. We recommend using HGVS variant naming convention." ;
                         rdfs:label "sequence variant" ;
                         skos:altLabel "allele" ;
                         skos:closeMatch <http://purl.obolibrary.org/obo/GENO_0000002> ,
