@@ -1,5 +1,7 @@
 1. MESH terms appear to be not extractable. However, MESH:GeneticFitness of an organism is a useful Class to be included in the ontology. There must be a way in something else from biolink. For the rest, I have downloaded the ontology files.
 
-2. Figure out a way to extract all gold.vocab terms i side the three main biome types. While the current model only offers 'suggestions' to use GOLD biomes, once these biomes are downloaded without full import of GOLD, one can restrict the the values for the range of object property "mvikg:has_habitat".
+2. Figure out a way to extract all gold.vocab terms i side the three main biome types. While the current model only offers 'suggestions' to use GOLD biomes, once these biomes are downloaded without full import of GOLD, one can restrict the the values for the range of object property "mvikg:has_habitat". UPDATE- Imported GOLD ontology, not sure if this is the best decision. It does have a range of biomes, that are useful.
 
-3. Use sequence ontology as recommendation for the identifiers of the Sequence variant.
+3. Add recommendations in comments wherever possible and required. Add comments for labels and IDs, wherever applicable.
+
+4. Resolve redundant stuff like biolink:broader/biolink:narrower, biolink:narrower/skos:narrower. Remove Sampler specific object/data properties.
