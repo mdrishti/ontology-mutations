@@ -20,6 +20,7 @@
 <http://example.org/mvikg> rdf:type owl:Ontology ;
                             owl:versionIRI <http://example.org/mvikg/0.0.1> ;
                             owl:imports <http://purl.obolibrary.org/obo/gold.owl> ;
+                            owl:imports <http://purl.obolibrary.org/obo/so.owl> ;
                             terms:creator "MVIKG" ;
                             terms:description "An integrated ontology combining BioLink, SOSA, ENVO, RO, GOLD and other established ontologies for bacterial variant data modeling" ;
                             terms:license "https://creativecommons.org/licenses/by/4.0/" ;
@@ -440,7 +441,7 @@ biolink:has_sequence_variant rdf:type owl:ObjectProperty ;
                              rdfs:domain biolink:GenomicEntity ;
                              rdfs:range biolink:SequenceVariant ;
                              rdfs:label "has sequence variant" ;
-			     rdfs:comment "We recommend using the sequence ontology (http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label." ;
+			     rdfs:comment "We recommend using the sequence ontology (e.g.: http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label." ;
                              skos:inScheme <https://w3id.org/biolink/biolink-model> .
 
 
@@ -469,7 +470,7 @@ biolink:in_taxon rdf:type owl:ObjectProperty ;
 biolink:is_sequence_variant_of rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf biolink:related_to_at_instance_level ;
                                rdfs:domain biolink:SequenceVariant ;
-			       rdfs:comment "We recommend using the sequence ontology (http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label." ;
+			       rdfs:comment "We recommend using the sequence ontology (e.g.: http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label." ;
                                rdfs:range biolink:GenomicEntity ;
                                rdfs:label "is sequence variant of" ;
                                skos:altLabel "allelic variant of" ,
@@ -1258,7 +1259,7 @@ biolink:PhysicalEssenceOrOccurrent rdf:type owl:Class ;
 
 ###  https://w3id.org/biolink/vocab/SequenceVariant
 biolink:SequenceVariant rdf:type owl:Class ;
-			rdfs:comment "We recommend using the sequence ontology (http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label." ;
+			rdfs:comment "We recommend using the sequence ontology (e.g.: http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label." ;
                         rdfs:subClassOf biolink:BiologicalEntity ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty linkml:mixins ;
