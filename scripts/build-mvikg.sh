@@ -15,6 +15,7 @@ robot merge \
   --input ../extracted/rdfs_star.owl \
   --input ../extracted/dcterms_star.owl \
   --input ../extracted/skos_star.owl \
+  --input ../extracted/eco_star.owl \
   --output ../output/temp-sources-merged.owl
 #  --input ../extracted/ro_star.owl \
 #  --input ../extracted/gold_bot.owl \

@@ -1,0 +1,13 @@
+Level	Rule Name	Subject	Property	Value
+WARN	missing_definition	oboInOwl:is_inferred	IAO:0000115
+WARN	missing_subset_declaration	obo:eco#valid_with_biological_process	rdfs:subPropertyOf
+WARN	missing_subset_declaration	obo:eco#valid_with_cellular_component	rdfs:subPropertyOf
+WARN	missing_subset_declaration	obo:eco#valid_with_gene	rdfs:subPropertyOf
+WARN	missing_subset_declaration	obo:eco#valid_with_molecular_function	rdfs:subPropertyOf
+WARN	missing_subset_declaration	obo:eco#valid_with_protein	rdfs:subPropertyOf
+WARN	missing_subset_declaration	obo:eco#valid_with_protein_complex	rdfs:subPropertyOf
+INFO	missing_superclass	ECO:0000000	rdfs:subClassOf
+INFO	missing_superclass	ECO:0000217	rdfs:subClassOf
+INFO	missing_superclass	IAO:0000078	rdfs:subClassOf
+INFO	missing_superclass	IAO:0000225	rdfs:subClassOf
+INFO	missing_superclass	IAO:0000409	rdfs:subClassOf
