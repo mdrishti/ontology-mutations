@@ -930,6 +930,8 @@
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
     "@id" : "http://purl.obolibrary.org/obo/gold.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/so.owl"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "http://example.org/mvikg/0.0.1"
@@ -1165,19 +1167,6 @@
   "@id" : "http://www.w3.org/2004/02/skos/core#broadMatch",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.w3.org/2004/02/skos/core#broader",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://vitro.mannlib.cornell.edu/ns/vitro/0.7#descriptionAnnot" : [ {
-    "@value" : "Public description modified from the information on this page: http://www.w3.org/TR/2005/WD-swbp-skos-core-guide-20050510/#sechierarchy ."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en-us",
-    "@value" : "broader term"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#narrower"
-  } ]
-}, {
   "@id" : "http://www.w3.org/2004/02/skos/core#closeMatch",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -1201,16 +1190,6 @@
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://www.w3.org/2004/02/skos/core#narrower",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://vitro.mannlib.cornell.edu/ns/vitro/0.7#descriptionAnnot" : [ {
-    "@value" : "Public description modified from the information on this page: http://www.w3.org/TR/2005/WD-swbp-skos-core-guide-20050510/#sechierarchy ."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en-us",
-    "@value" : "narrower term"
-  } ]
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#note",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -2282,7 +2261,7 @@
   "@id" : "https://w3id.org/biolink/vocab/SequenceVariant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "We recommend using the sequence ontology (http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label."
+    "@value" : "We recommend using the sequence ontology (e.g.: http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "sequence variant"
@@ -3104,7 +3083,7 @@
   "@id" : "https://w3id.org/biolink/vocab/has_sequence_variant",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "We recommend using the sequence ontology (http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label."
+    "@value" : "We recommend using the sequence ontology (e.g.: http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/biolink/vocab/GenomicEntity"
@@ -3222,7 +3201,7 @@
   "@id" : "https://w3id.org/biolink/vocab/is_sequence_variant_of",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "We recommend using the sequence ontology (http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label."
+    "@value" : "We recommend using the sequence ontology (e.g.: http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"

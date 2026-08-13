@@ -1,6 +1,7 @@
 <http://example.org/mvikg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://example.org/mvikg> <http://www.w3.org/2002/07/owl#versionIRI> <http://example.org/mvikg/0.0.1> .
 <http://example.org/mvikg> <http://www.w3.org/2002/07/owl#imports> <http://purl.obolibrary.org/obo/gold.owl> .
+<http://example.org/mvikg> <http://www.w3.org/2002/07/owl#imports> <http://purl.obolibrary.org/obo/so.owl> .
 <http://example.org/mvikg> <http://purl.org/dc/terms/creator> "MVIKG" .
 <http://example.org/mvikg> <http://purl.org/dc/terms/description> "An integrated ontology combining BioLink, SOSA, ENVO, RO, GOLD and other established ontologies for bacterial variant data modeling" .
 <http://example.org/mvikg> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" .
@@ -190,17 +191,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://purl.org/dc/terms/isPartOf
 <http://purl.org/dc/terms/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 #
-# http://www.w3.org/2004/02/skos/core#broader
-<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/2004/02/skos/core#narrower> .
-<http://www.w3.org/2004/02/skos/core#broader> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#descriptionAnnot> "Public description modified from the information on this page: http://www.w3.org/TR/2005/WD-swbp-skos-core-guide-20050510/#sechierarchy ." .
-<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2000/01/rdf-schema#label> "broader term"@en-us .
-#
-# http://www.w3.org/2004/02/skos/core#narrower
-<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/2004/02/skos/core#narrower> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#descriptionAnnot> "Public description modified from the information on this page: http://www.w3.org/TR/2005/WD-swbp-skos-core-guide-20050510/#sechierarchy ." .
-<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/2000/01/rdf-schema#label> "narrower term"@en-us .
-#
 # http://www.w3.org/ns/sosa/hasFeatureOfInterest
 <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> .
@@ -360,7 +350,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/biolink/vocab/has_sequence_variant> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/biolink/vocab/is_sequence_variant_of> .
 <https://w3id.org/biolink/vocab/has_sequence_variant> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/GenomicEntity> .
 <https://w3id.org/biolink/vocab/has_sequence_variant> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/biolink/vocab/SequenceVariant> .
-<https://w3id.org/biolink/vocab/has_sequence_variant> <http://www.w3.org/2000/01/rdf-schema#comment> "We recommend using the sequence ontology (http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label." .
+<https://w3id.org/biolink/vocab/has_sequence_variant> <http://www.w3.org/2000/01/rdf-schema#comment> "We recommend using the sequence ontology (e.g.: http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label." .
 <https://w3id.org/biolink/vocab/has_sequence_variant> <http://www.w3.org/2000/01/rdf-schema#label> "has sequence variant" .
 <https://w3id.org/biolink/vocab/has_sequence_variant> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 #
@@ -389,7 +379,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/biolink/vocab/is_sequence_variant_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/biolink/vocab/related_to_at_instance_level> .
 <https://w3id.org/biolink/vocab/is_sequence_variant_of> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
 <https://w3id.org/biolink/vocab/is_sequence_variant_of> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/biolink/vocab/GenomicEntity> .
-<https://w3id.org/biolink/vocab/is_sequence_variant_of> <http://www.w3.org/2000/01/rdf-schema#comment> "We recommend using the sequence ontology (http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label." .
+<https://w3id.org/biolink/vocab/is_sequence_variant_of> <http://www.w3.org/2000/01/rdf-schema#comment> "We recommend using the sequence ontology (e.g.: http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label." .
 <https://w3id.org/biolink/vocab/is_sequence_variant_of> <http://www.w3.org/2000/01/rdf-schema#label> "is sequence variant of" .
 <https://w3id.org/biolink/vocab/is_sequence_variant_of> <http://www.w3.org/2004/02/skos/core#altLabel> "allelic variant of" .
 <https://w3id.org/biolink/vocab/is_sequence_variant_of> <http://www.w3.org/2004/02/skos/core#altLabel> "gene product sequence variation encoded by gene mutant" .
@@ -1198,7 +1188,7 @@ _:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid71 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid71 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
 _:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#comment> "We recommend using the sequence ontology (http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label." .
+<https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#comment> "We recommend using the sequence ontology (e.g.: http://www.sequenceontology.org/miso/current_svn/term/SO:0001583) as the range and the HGVS variant naming convention as label." .
 <https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#label> "sequence variant" .
 <https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2004/02/skos/core#altLabel> "allele" .
 <https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.obolibrary.org/obo/GENO_0000002> .
