@@ -11,3 +11,5 @@ biolink:in_taxon
 biolink:has_sequence_variant
 biolink:has_phenotype
 biolink:form_or_variant_qualifier
+biolink:start_coordinate
+biolink:end_coordinate
