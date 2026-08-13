@@ -7,13 +7,11 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 
-# If a Sample has a habitat/location/biome, it CAN ONLY be a GOLD biome
-# (i.e., one of: AtomicElement, Engineered, Environmental, Host-associated, or their subclasses)
-sosa:Sample rdfs:subClassOf [
-    a owl:Restriction ;
-    owl:onProperty mvikg:has_habitat ;
-    owl:allValuesFrom mvikg:Biome
-] .
+# mvikg:has_biome (formerly mvikg:has_habitat) intentionally has no
+# owl:allValuesFrom restriction here: the KG builders fall back to a
+# free-text xsd:string literal when source text doesn't map to a GOLD biome
+# resource, and an allValuesFrom-to-mvikg:Biome restriction would make that
+# case unsatisfiable. See mvikg-property-constraints.ttl.
 
 # If a Sample has a developmental stage, it CAN ONLY be a mvikg:DevelopmentalStage
 sosa:Sample rdfs:subClassOf [
