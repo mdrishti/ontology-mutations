@@ -1,0 +1,12 @@
+Level	Rule Name	Subject	Property	Value
+WARN	duplicate_label_synonym	SO:0000667	oboInOwl:hasExactSynonym	insertion
+WARN	duplicate_label_synonym	SO:1000036	oboInOwl:hasExactSynonym	inversion
+WARN	missing_obsolete_label	SO:0000048	rdfs:label	substitute
+WARN	missing_subset_declaration	obo:so#DBVAR	rdfs:subPropertyOf
+WARN	missing_subset_declaration	obo:so#SOFA	rdfs:subPropertyOf
+WARN	missing_synonymtype_declaration	obo:so#VAR	rdfs:subPropertyOf
+WARN	missing_synonymtype_declaration	obo:so#dbsnp	rdfs:subPropertyOf
+WARN	missing_synonymtype_declaration	obo:so#dbvar	rdfs:subPropertyOf
+INFO	missing_superclass	SO:0000110	rdfs:subClassOf
+INFO	missing_superclass	SO:0000400	rdfs:subClassOf
+INFO	missing_superclass	SO:0001537	rdfs:subClassOf

@@ -1,18 +1,11 @@
 Level	Rule Name	Subject	Property	Value
 ERROR	duplicate_label	http://qudt.org/schema/qudt/DoublePrecisionEncoding	rdfs:label	Single Precision Real Encoding
 ERROR	duplicate_label	http://qudt.org/schema/qudt/SinglePrecisionRealEncoding	rdfs:label	Single Precision Real Encoding
-ERROR	duplicate_label	http://www.linkedmodel.org/schema/vaem#description	rdfs:label	description
-ERROR	duplicate_label	https://w3id.org/biolink/vocab/description	rdfs:label	description
+ERROR	duplicate_label	http://qudt.org/2.1/schema/qudt	rdfs:label	QUDT Schema - Version 2.1.47
+ERROR	duplicate_label	http://www.linkedmodel.org/schema/vaem#GMD_QUDT-SCHEMA	rdfs:label	QUDT Schema - Version 2.1.47
 ERROR	duplicate_label	http://qudt.org/schema/qudt/BitEncoding	rdfs:label	Bit Encoding
 ERROR	duplicate_label	http://qudt.org/schema/qudt/BitEncodingType	rdfs:label	Bit Encoding
 ERROR	missing_label	http://www.linkedmodel.org/schema/dtype	rdfs:label
-ERROR	multiple_labels	skos:broader	rdfs:label	broader term@en-us
-ERROR	multiple_labels	skos:broader	rdfs:label	has broader@en
-WARN	annotation_whitespace	dc:bibliographicCitation	dc11:description	"Recommended practice is to include sufficient
-            bibliographic detail to identify the resource as
-            unambiguously as possible, whether or not the
-            citation is in a standard form.
-            @en-us"
 WARN	annotation_whitespace	http://qudt.org/schema/qudt/CT_COUNTABLY-INFINITE	dc:description	"
   A set of numbers is called countably infinite if there is a way to enumerate them.
   Formally this is done with a bijection function that associates each number in the set with exactly one of the positive integers.
@@ -64,15 +57,6 @@ WARN	annotation_whitespace	http://www.linkedmodel.org/schema/vaem#GMD_QUDT-SCHEM
 
 THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
   "
-WARN	duplicate_label_synonym	SO:0000667	oboInOwl:hasExactSynonym	insertion
-WARN	duplicate_label_synonym	SO:1000036	oboInOwl:hasExactSynonym	inversion
-WARN	missing_definition	http://example.org/mvikg/Biome	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/DevelopmentalStage	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/comparedTo	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/has_biome	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/has_developmental_stage	IAO:0000115
-WARN	missing_definition	dc:bibliographicCitation	IAO:0000115
-WARN	missing_definition	dc:isPartOf	IAO:0000115
 WARN	missing_definition	dc:isReplacedBy	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/BitEncodingType	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/BooleanEncodingType	IAO:0000115
@@ -94,7 +78,6 @@ WARN	missing_definition	http://qudt.org/schema/qudt/dbpediaMatch	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/deprecated	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/numericValue	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/plainTextDescription	IAO:0000115
-WARN	missing_definition	oboInOwl:is_inferred	IAO:0000115
 WARN	missing_definition	http://www.linkedmodel.org/schema/dtype#EnumeratedValue	IAO:0000115
 WARN	missing_definition	http://www.linkedmodel.org/schema/dtype#literal	IAO:0000115
 WARN	missing_definition	http://www.linkedmodel.org/schema/dtype#value	IAO:0000115
@@ -119,102 +102,3 @@ WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#revision	IAO:0000
 WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#title	IAO:0000115
 WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#turtleFileURL	IAO:0000115
 WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#url	IAO:0000115
-WARN	missing_definition	skos:narrower	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/FeatureOfInterest	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/Result	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/Sample	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/Sampler	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/Sampling	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/hasFeatureOfInterest	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/hasResult	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/hasSample	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/isFeatureOfInterestOf	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/isResultOf	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/isSampleOf	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/madeBySampler	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/madeSampling	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/sosa/resultTime	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/ssn/Property	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/ssn/hasProperty	IAO:0000115
-WARN	missing_definition	http://www.w3.org/ns/ssn/isPropertyOf	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/AgentTypeEnum	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/AgentTypeEnum#computational_model	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/AgentTypeEnum#data_analysis_pipeline	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/AgentTypeEnum#image_processing_agent	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/AgentTypeEnum#manual_agent	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/AgentTypeEnum#manual_validation_of_automated_agent	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/AgentTypeEnum#not_provided	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/AgentTypeEnum#text_mining_agent	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/Association	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/BiologicalEntity	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/ChemicalEntityOrGeneOrGeneProduct	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/DiseaseOrPhenotypicFeature	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/Entity	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/Gene	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/GeneOrGeneProduct	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/GenomicEntity	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/KnowledgeLevelEnum	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/KnowledgeLevelEnum#knowledge_assertion	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/KnowledgeLevelEnum#logical_entailment	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/KnowledgeLevelEnum#not_provided	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/KnowledgeLevelEnum#observation	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/KnowledgeLevelEnum#prediction	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/KnowledgeLevelEnum#statistical_association	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/MacromolecularMachineMixin	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/NamedThing	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/OntologyClass	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/OrganismTaxon	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/PhenotypicFeature	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/PhysicalEssence	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/PhysicalEssenceOrOccurrent	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/SequenceVariant	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/ThingWithTaxon	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/VariantToGeneAssociation	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/agent_type	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/association_slot	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/category	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/description	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/form_or_variant_qualifier	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/has_gene	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/has_gene_or_gene_product	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/has_phenotype	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/has_sequence_variant	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/id	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/in_taxon	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/is_sequence_variant_of	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/knowledge_level	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/node_property	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/object	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/opposite_of	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/phenotype_of	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/predicate	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/qualifier	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/related_to	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/related_to_at_instance_level	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/subject	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/taxon_of	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/type	IAO:0000115
-WARN	missing_obsolete_label	SO:0000048	rdfs:label	substitute
-WARN	missing_subset_declaration	obo:eco#valid_with_biological_process	rdfs:subPropertyOf
-WARN	missing_subset_declaration	obo:eco#valid_with_cellular_component	rdfs:subPropertyOf
-WARN	missing_subset_declaration	obo:eco#valid_with_gene	rdfs:subPropertyOf
-WARN	missing_subset_declaration	obo:eco#valid_with_molecular_function	rdfs:subPropertyOf
-WARN	missing_subset_declaration	obo:eco#valid_with_protein	rdfs:subPropertyOf
-WARN	missing_subset_declaration	obo:eco#valid_with_protein_complex	rdfs:subPropertyOf
-WARN	missing_subset_declaration	obo:so#DBVAR	rdfs:subPropertyOf
-WARN	missing_subset_declaration	obo:so#SOFA	rdfs:subPropertyOf
-WARN	missing_synonymtype_declaration	obo:so#VAR	rdfs:subPropertyOf
-WARN	missing_synonymtype_declaration	obo:so#dbsnp	rdfs:subPropertyOf
-WARN	missing_synonymtype_declaration	obo:so#dbvar	rdfs:subPropertyOf
-INFO	missing_superclass	http://example.org/mvikg/Biome	rdfs:subClassOf
-INFO	missing_superclass	http://example.org/mvikg/DevelopmentalStage	rdfs:subClassOf
-INFO	missing_superclass	ECO:0000000	rdfs:subClassOf
-INFO	missing_superclass	ECO:0000217	rdfs:subClassOf
-INFO	missing_superclass	IAO:0000078	rdfs:subClassOf
-INFO	missing_superclass	IAO:0000225	rdfs:subClassOf
-INFO	missing_superclass	IAO:0000409	rdfs:subClassOf
-INFO	missing_superclass	SO:0000110	rdfs:subClassOf
-INFO	missing_superclass	SO:0000400	rdfs:subClassOf
-INFO	missing_superclass	SO:0001537	rdfs:subClassOf
