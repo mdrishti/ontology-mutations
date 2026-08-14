@@ -1,0 +1,1317 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/so.owl#"
+     xml:base="http://purl.obolibrary.org/obo/so.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/so.owl">
+        <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/SO_0000110"/>
+        <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/SO_0000400"/>
+        <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
+        <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/SO_0001260"/>
+        <terms:description>Extracted classifications from the Sequence Ontology</terms:description>
+        <terms:license>https://creativecommons.org/publicdomain/zero/1.0/</terms:license>
+        <terms:title>SO Ontology (Extracted)</terms:title>
+        <oboInOwl:date>18:11:2024 23:05</oboInOwl:date>
+        <oboInOwl:default-namespace>sequence</oboInOwl:default-namespace>
+        <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
+        <oboInOwl:saved-by>Evan Christensen</oboInOwl:saved-by>
+    </owl:Ontology>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000700 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000700"/>
+
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
+
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
+
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#date -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#date"/>
+
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#default-namespace -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#default-namespace"/>
+
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
+
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion"/>
+
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
+
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasSynonymType -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasSynonymType"/>
+
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#saved-by -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#saved-by"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000110"/>
+        <obo:IAO_0000115>A sequence_feature with an extent greater than zero. A nucleotide region is composed of bases and a polypeptide region is composed of amino acids.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>sequence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0000001</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:label>region</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence_feature with an extent greater than zero. A nucleotide region is composed of bases and a polypeptide region is composed of amino acids.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000048 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000048">
+        <obo:IAO_0000115>To substitute a subsection of sequence for another.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0000048</oboInOwl:id>
+        <rdfs:label>substitute</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000048"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>To substitute a subsection of sequence for another.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000110 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000110">
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/SO_0000400"/>
+        <obo:IAO_0000115>Any extent of continuous biological sequence.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>INSDC_feature:misc_feature</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>INSDC_note:other</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>INSDC_note:sequence_feature</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>located_sequence_feature</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sequence feature</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>located sequence feature</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>SO:0000110</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:label>sequence_feature</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000110"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any extent of continuous biological sequence.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>LAMHDI:mb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000159 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000159">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001411"/>
+        <obo:IAO_0000115>The point at which one or more contiguous nucleotides were excised.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>SO:1000033</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/Nucleotide_deletion</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>loinc:LA6692-3</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>deleted_sequence</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>nucleotide deletion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>nucleotide_deletion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0000159</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:label>deletion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000159"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The point at which one or more contiguous nucleotides were excised.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000159"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://en.wikipedia.org/wiki/Nucleotide_deletion</owl:annotatedTarget>
+        <rdfs:label>wiki</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000159"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>loinc:LA6692-3</owl:annotatedTarget>
+        <rdfs:label>Deletion</rdfs:label>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000400 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000400">
+        <obo:IAO_0000115>An attribute describes a quality of sequence.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>sequence attribute</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0000400</oboInOwl:id>
+        <rdfs:label>sequence_attribute</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000400"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An attribute describes a quality of sequence.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000667 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000667">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001411"/>
+        <obo:IAO_0000115>The sequence of one or more nucleotides added between two adjacent nucleotides in the sequence.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>SO:1000034</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>loinc:LA6687-3</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>insertion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>nucleotide insertion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>nucleotide_insertion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0000667</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#DBVAR"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:label>insertion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000667"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>insertion</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://www.ncbi.nlm.nih.gov/dbvar/</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#dbvar"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000667"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The sequence of one or more nucleotides added between two adjacent nucleotides in the sequence.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000667"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>loinc:LA6687-3</owl:annotatedTarget>
+        <rdfs:label>Insertion</rdfs:label>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000694 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000694">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001483"/>
+        <obo:IAO_0000115>SNPs are single base pair positions in genomic DNA at which different sequence alternatives exist in normal individuals in some population(s), wherein the least frequent variant has an abundance of 1% or greater.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>single nucleotide polymorphism</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0000694</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:label>SNP</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000694"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>SNPs are single base pair positions in genomic DNA at which different sequence alternatives exist in normal individuals in some population(s), wherein the least frequent variant has an abundance of 1% or greater.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:cb</oboInOwl:hasDbXref>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000733 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000733">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000400"/>
+        <obo:IAO_0000115>An attribute describing a located_sequence_feature.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>feature attribute</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0000733</oboInOwl:id>
+        <rdfs:label>feature_attribute</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000733"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An attribute describing a located_sequence_feature.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0000817 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0000817">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000733"/>
+        <obo:IAO_0000115>An attribute describing sequence with the genotype found in nature and/or standard laboratory stock.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/Wild_type</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>loinc:LA9658-1</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>wild type</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0000817</oboInOwl:id>
+        <rdfs:label>wild_type</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000817"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An attribute describing sequence with the genotype found in nature and/or standard laboratory stock.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000817"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://en.wikipedia.org/wiki/Wild_type</owl:annotatedTarget>
+        <rdfs:label>wiki</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0000817"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>loinc:LA9658-1</owl:annotatedTarget>
+        <rdfs:label>wild type</rdfs:label>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0002072"/>
+        <obo:IAO_0000115>A sequence_alteration is a sequence_feature whose extent is the deviation from another sequence.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>SO:1000004</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>SO:1000007</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasBroadSynonym>INSDC_feature:misc_feature</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym>INSDC_feature:variation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>INSDC_note:sequence_alteration</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sequence alteration</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>partially characterised change in DNA sequence</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>partially_characterised_change_in_DNA_sequence</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>uncharacterised_change_in_nucleotide_sequence</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>sequence variation</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>SO:0001059</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>Merged with partially characterized change in nucleotide sequence.</rdfs:comment>
+        <rdfs:label>sequence_alteration</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence_alteration is a sequence_feature whose extent is the deviation from another sequence.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001411 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001411">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000001"/>
+        <obo:IAO_0000115>A region defined by its disposition to be involved in a biological process.</obo:IAO_0000115>
+        <oboInOwl:hasBroadSynonym>INSDC_misc_feature</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym>INSDC_note:biological_region</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>biological region</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0001411</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:label>biological_region</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001411"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A region defined by its disposition to be involved in a biological process.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:cb</oboInOwl:hasDbXref>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001483 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001483">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000002"/>
+        <obo:IAO_0000115>SNVs are single nucleotide positions in genomic DNA at which different sequence alternatives exist.</obo:IAO_0000115>
+        <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
+        <oboInOwl:creation_date>2009-10-08T11:37:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>single nucleotide variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0001483</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:label>SNV</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001483"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>SNVs are single nucleotide positions in genomic DNA at which different sequence alternatives exist.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:bm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001537 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001537">
+        <obo:IAO_0000115>A sequence variant that changes one or more structural features.</obo:IAO_0000115>
+        <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
+        <oboInOwl:creation_date>2010-03-22T11:31:01Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>http://vat.gersteinlab.org/formats.php</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Jannovar:structural_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>VAT:svOverlap</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>structural variant</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>SO:0001537</oboInOwl:id>
+        <rdfs:label>structural_variant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001537"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence variant that changes one or more structural features.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001537"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://vat.gersteinlab.org/formats.php</owl:annotatedTarget>
+        <rdfs:label>VAT</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001537"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Jannovar:structural_variant</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://doc-openbio.readthedocs.org/projects/jannovar/en/master/var_effects.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001537"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>VAT:svOverlap</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001564 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001564">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001878"/>
+        <obo:IAO_0000115>A sequence variant where the structure of the gene is changed.</obo:IAO_0000115>
+        <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
+        <oboInOwl:creation_date>2010-03-22T02:28:01Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>http://snpeff.sourceforge.net/SnpEff_manual.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Jannovar:gene_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>VAAST:gene_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>gene structure variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>snpEff:GENE</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0001564</oboInOwl:id>
+        <rdfs:label>gene_variant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001564"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence variant where the structure of the gene is changed.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001564"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Jannovar:gene_variant</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://doc-openbio.readthedocs.org/projects/jannovar/en/master/var_effects.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001564"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>VAAST:gene_variant</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001564"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>snpEff:GENE</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001576 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001576">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001564"/>
+        <obo:IAO_0000115>A sequence variant that changes the structure of the transcript.</obo:IAO_0000115>
+        <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
+        <oboInOwl:creation_date>2010-03-22T02:32:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>http://snpeff.sourceforge.net/SnpEff_manual.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Jannovar:transcript_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>VAAST:transcript_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>snpEff:TRANSCRIPT</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>transcript variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0001576</oboInOwl:id>
+        <rdfs:label>transcript_variant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001576"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence variant that changes the structure of the transcript.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001576"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Jannovar:transcript_variant</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://doc-openbio.readthedocs.org/projects/jannovar/en/master/var_effects.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001576"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>VAAST:transcript_variant</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001576"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>snpEff:TRANSCRIPT</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001580 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001580">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001791"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001968"/>
+        <obo:IAO_0000115>A sequence variant that changes the coding sequence.</obo:IAO_0000115>
+        <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
+        <oboInOwl:creation_date>2010-03-22T02:34:36Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>SO:0001581</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>http://snp.gs.washington.edu/SeattleSeqAnnotation137/HelpHowToUse.jsp</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://snpeff.sourceforge.net/SnpEff_manual.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http:www.ensembl.org/info/genome/variation/predicted_data.html#consequences</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Jannovar:coding_sequence_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Seattleseq:coding</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>VAAST:coding_sequence_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>VEP:coding_sequence_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>coding sequence variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>coding variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>codon variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>codon_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>snpEff:CDS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>snpEff:CODON_CHANGE</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>SO:0001580</oboInOwl:id>
+        <rdfs:label>coding_sequence_variant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001580"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence variant that changes the coding sequence.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001580"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://snp.gs.washington.edu/SeattleSeqAnnotation137/HelpHowToUse.jsp</owl:annotatedTarget>
+        <rdfs:label>Seattleseq</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001580"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Jannovar:coding_sequence_variant</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://doc-openbio.readthedocs.org/projects/jannovar/en/master/var_effects.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001580"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Seattleseq:coding</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001580"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>VAAST:coding_sequence_variant</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001580"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>VEP:coding_sequence_variant</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001580"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>snpEff:CDS</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001580"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>snpEff:CODON_CHANGE</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001583 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001583">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001992"/>
+        <obo:IAO_0000115>A sequence variant, that changes one or more bases, resulting in a different amino acid sequence but where the length is preserved.</obo:IAO_0000115>
+        <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
+        <oboInOwl:creation_date>2010-03-22T02:35:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>SO:0001584</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>SO:0001783</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/Missense_mutation</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://snp.gs.washington.edu/SeattleSeqAnnotation137/HelpHowToUse.jsp</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://snpeff.sourceforge.net/SnpEff_manual.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://vat.gersteinlab.org/formats.php</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http:www.ensembl.org/info/genome/variation/predicted_data.html#consequences</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>loinc:LA6698-0</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Jannovar:missense_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Seattleseq:missense</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>VAAST:missense_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>VAT:nonsynonymous</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>VEP:missense_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>missense</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>missense codon</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>snpEff:NON_SYNONYMOUS_CODING</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>ANNOVAR:nonsynonymous SNV</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Seattleseq:missense-near-splice</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>VAAST:non_synonymous_codon</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>SO:0001583</oboInOwl:id>
+        <rdfs:comment>EBI term: Non-synonymous SNPs. SNPs that are located in the coding sequence and result in an amino acid change in the encoded peptide sequence. A change that causes a non_synonymous_codon can be more than 3 bases - for example 4 base substitution.</rdfs:comment>
+        <rdfs:label>missense_variant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001583"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence variant, that changes one or more bases, resulting in a different amino acid sequence but where the length is preserved.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EBI:fc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EBI:gr</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001583"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://snp.gs.washington.edu/SeattleSeqAnnotation137/HelpHowToUse.jsp</owl:annotatedTarget>
+        <rdfs:label>Seattleseq</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001583"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://vat.gersteinlab.org/formats.php</owl:annotatedTarget>
+        <rdfs:label>VAT</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001583"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>loinc:LA6698-0</owl:annotatedTarget>
+        <rdfs:label>Missense</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001583"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Jannovar:missense_variant</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://doc-openbio.readthedocs.org/projects/jannovar/en/master/var_effects.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001583"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Seattleseq:missense</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001583"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>VAAST:missense_variant</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001583"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>VAT:nonsynonymous</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001583"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>VEP:missense_variant</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001583"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>missense</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ftp://ftp.ncbi.nih.gov/snp/specs/docsum_3.1.xsd</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001583"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>snpEff:NON_SYNONYMOUS_CODING</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001583"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>ANNOVAR:nonsynonymous SNV</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://www.openbioinformatics.org/annovar/annovar_download.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001583"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>Seattleseq:missense-near-splice</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001583"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>VAAST:non_synonymous_codon</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001650 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001650">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001818"/>
+        <obo:IAO_0000115>A sequence variant which does not cause a disruption of the translational reading frame.</obo:IAO_0000115>
+        <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
+        <oboInOwl:creation_date>2010-07-19T01:24:44Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>VAAST:inframe_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>cds-indel</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>inframe variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>ANNOVAR:nonframeshift block substitution</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>ANNOVAR:nonframeshift substitution</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>SO:0001650</oboInOwl:id>
+        <rdfs:label>inframe_variant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001650"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence variant which does not cause a disruption of the translational reading frame.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001650"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>VAAST:inframe_variant</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001650"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>cds-indel</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#dbsnp"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001650"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>ANNOVAR:nonframeshift block substitution</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://www.openbioinformatics.org/annovar/annovar_download.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001650"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>ANNOVAR:nonframeshift substitution</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001791 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001791">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001576"/>
+        <obo:IAO_0000115>A sequence variant that changes exon sequence.</obo:IAO_0000115>
+        <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-05-06T01:51:17Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>http://snpeff.sourceforge.net/SnpEff_manual.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>ANNOVAR:exonic</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Jannovar:exon_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>VAAST:exon_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>exon variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>snpEff:EXON</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0001791</oboInOwl:id>
+        <rdfs:label>exon_variant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001791"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence variant that changes exon sequence.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001791"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>ANNOVAR:exonic</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://www.openbioinformatics.org/annovar/annovar_download.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001791"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Jannovar:exon_variant</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://doc-openbio.readthedocs.org/projects/jannovar/en/master/var_effects.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001791"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>VAAST:exon_variant</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001791"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>snpEff:EXON</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001818 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001818">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001580"/>
+        <obo:IAO_0000115>A sequence_variant which is predicted to change the protein encoded in the coding sequence.</obo:IAO_0000115>
+        <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-06-24T03:38:02Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>http:www.ensembl.org/info/genome/variation/predicted_data.html#consequences</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>VEP:protein_altering_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>protein altering variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0001818</oboInOwl:id>
+        <rdfs:label>protein_altering_variant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001818"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence_variant which is predicted to change the protein encoded in the coding sequence.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EBI:gr</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001818"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>VEP:protein_altering_variant</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001820 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001820">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001650"/>
+        <obo:IAO_0000115>A coding sequence variant where the change does not alter the frame of the transcript.</obo:IAO_0000115>
+        <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-06-27T11:25:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>inframe change in CDS length</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>inframe indel</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0001820</oboInOwl:id>
+        <rdfs:label>inframe_indel</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001820"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A coding sequence variant where the change does not alter the frame of the transcript.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001822 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001822">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001820"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001906"/>
+        <obo:IAO_0000115>An inframe non synonymous variant that deletes bases from the coding sequence.</obo:IAO_0000115>
+        <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-06-27T11:27:10Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>SO:0001652</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>http://snpeff.sourceforge.net/SnpEff_manual.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://vat.gersteinlab.org/formats.php</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http:www.ensembl.org/info/genome/variation/predicted_data.html#consequences</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>ANNOVAR:nonframeshift deletion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Jannovar:inframe_deletion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>VAT:deletionNFS</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>VEP:inframe_deletion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>inframe decrease in CDS length</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>inframe_codon_loss</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>inframe codon loss</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>inframe deletion</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>snpEff:CODON_DELETION</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>SO:0001822</oboInOwl:id>
+        <rdfs:label>inframe_deletion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001822"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An inframe non synonymous variant that deletes bases from the coding sequence.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EBI:gr</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001822"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://vat.gersteinlab.org/formats.php</owl:annotatedTarget>
+        <rdfs:label>VAT</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001822"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>ANNOVAR:nonframeshift deletion</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://www.openbioinformatics.org/annovar/annovar_download.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001822"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Jannovar:inframe_deletion</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://doc-openbio.readthedocs.org/projects/jannovar/en/master/var_effects.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001822"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>VAT:deletionNFS</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001822"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>VEP:inframe_deletion</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001822"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>snpEff:CODON_DELETION</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001878 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001878">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001537"/>
+        <obo:IAO_0000115>A sequence variant that falls entirely or partially within a genomic feature.</obo:IAO_0000115>
+        <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
+        <oboInOwl:creation_date>2012-04-03T11:27:27Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>feature alteration</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0001878</oboInOwl:id>
+        <rdfs:comment>Created in conjunction with the EBI.</rdfs:comment>
+        <rdfs:label>feature_variant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001878"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence variant that falls entirely or partially within a genomic feature.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EBI:fc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001906 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001906">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001878"/>
+        <obo:IAO_0000115>A sequence variant that causes the reduction of a genomic feature, with regard to the reference sequence.</obo:IAO_0000115>
+        <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
+        <oboInOwl:creation_date>2012-04-12T05:05:28Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>http:www.ensembl.org/info/genome/variation/predicted_data.html#consequences</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Jannovar:feature_truncation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>VEP:feature_truncation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>feature truncation</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0001906</oboInOwl:id>
+        <rdfs:label>feature_truncation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001906"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence variant that causes the reduction of a genomic feature, with regard to the reference sequence.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001906"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Jannovar:feature_truncation</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://doc-openbio.readthedocs.org/projects/jannovar/en/master/var_effects.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001906"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>VEP:feature_truncation</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001968 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001968">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001576"/>
+        <obo:IAO_0000115>A transcript variant of a protein coding gene.</obo:IAO_0000115>
+        <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
+        <oboInOwl:creation_date>2013-05-22T04:34:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>Jannovar:coding_transcript_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>coding transcript variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0001968</oboInOwl:id>
+        <rdfs:label>coding_transcript_variant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001968"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A transcript variant of a protein coding gene.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001968"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Jannovar:coding_transcript_variant</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://doc-openbio.readthedocs.org/projects/jannovar/en/master/var_effects.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0001992 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001992">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001650"/>
+        <obo:IAO_0000115>A non-synonymous variant is an inframe, protein altering variant, resulting in a codon change.</obo:IAO_0000115>
+        <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
+        <oboInOwl:creation_date>2013-10-16T11:47:51Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>non_synonymous_coding</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>nonsynonymous variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0001992</oboInOwl:id>
+        <rdfs:label>nonsynonymous_variant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001992"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A non-synonymous variant is an inframe, protein altering variant, resulting in a codon change.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001992"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>non_synonymous_coding</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://ensembl.org/info/docs/variation/index.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_0002072 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0002072">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000110"/>
+        <obo:IAO_0000115>A position or feature where two sequences have been compared.</obo:IAO_0000115>
+        <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
+        <oboInOwl:creation_date>2015-11-23T14:14:32Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>INSDC_feature:misc_feature</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym>INSDC_note:sequence_comparison</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sequence comparison</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:0002072</oboInOwl:id>
+        <rdfs:label>sequence_comparison</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001411"/>
+        <obo:IAO_0000115>A sequence alteration where the length of the change in the variant is the same as that of the reference.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>loinc:LA6690-7</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:1000002</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:label>substitution</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence alteration where the length of the change in the variant is the same as that of the reference.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000002"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>loinc:LA6690-7</owl:annotatedTarget>
+        <rdfs:label>Substitution</rdfs:label>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_1000002"/>
+        <obo:IAO_0000115>When no simple or well defined DNA mutation event describes the observed DNA change, the keyword &quot;complex&quot; should be used. Usually there are multiple equally plausible explanations for the change.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>complex substitution</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:1000005</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:label>complex_substitution</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000005"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>When no simple or well defined DNA mutation event describes the observed DNA change, the keyword &quot;complex&quot; should be used. Usually there are multiple equally plausible explanations for the change.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EBI:www.ebi.ac.uk/mutations/recommendations/mutevent.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000032">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <obo:IAO_0000115>A sequence alteration which included an insertion and a deletion, affecting 2 or more bases.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/Indel</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>loinc:LA9659-9</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>deletion-insertion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>indel</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:1000032</oboInOwl:id>
+        <rdfs:comment>Indels can have a different number of bases than the corresponding reference sequence. The term name was changed from indel to delins on 2/24/2019 to align with the HGVS nomenclature term for a deletion-insertion. Indel was causing confusion in the annotation community (github issue 445). The HGVS nomenclature definition of deletion-insertion (delins) is a sequence change where, compared to a reference sequence, one or more nucleotides are replaced by one or more other nucleotides and which is not a substitution, inversion or conversion.</rdfs:comment>
+        <rdfs:label>delins</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000032"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence alteration which included an insertion and a deletion, affecting 2 or more bases.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://varnomen.hgvs.org/recommendations/DNA/variant/delins/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000032"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>http://en.wikipedia.org/wiki/Indel</owl:annotatedTarget>
+        <rdfs:label>wiki</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000032"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>loinc:LA9659-9</owl:annotatedTarget>
+        <rdfs:label>Insertion and Deletion</rdfs:label>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0000667"/>
+        <obo:IAO_0000115>An insertion which derives from, or is identical in sequence to, nucleotides present at a known location in the genome.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>loinc:LA6686-5</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>nucleotide duplication</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>nucleotide_duplication</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>SO:1000035</oboInOwl:id>
+        <rdfs:label>duplication</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000035"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An insertion which derives from, or is identical in sequence to, nucleotides present at a known location in the genome.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EBI:www.ebi.ac.uk/mutations/recommendations/mutevent.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NCBI:th</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000035"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>loinc:LA6686-5</owl:annotatedTarget>
+        <rdfs:label>Duplication</rdfs:label>
+    </owl:Axiom>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/SO_1000036 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_1000036">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001059"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001411"/>
+        <obo:IAO_0000115>A continuous nucleotide sequence is inverted in the same position.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>loinc:LA6689-9</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>inversion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>SO:1000036</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#DBVAR"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:label>inversion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000036"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A continuous nucleotide sequence is inverted in the same position.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EBI:www.ebi.ac.uk/mutations/recommendations/mutevent.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000036"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>loinc:LA6689-9</owl:annotatedTarget>
+        <rdfs:label>Inversion</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000036"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>inversion</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://www.ncbi.nlm.nih.gov/dbvar/</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#dbvar"/>
+    </owl:Axiom>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
