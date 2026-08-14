@@ -6,29 +6,21 @@ Initial repo for building ontology for mutations (specific to microbes) includin
 ### install `robot`
 See here: [robot](https://github.com/ontodev/robot)
 
-### extract terms from biolink
+### extract terms from ontologies
 ```bash
-sh extract-biolink.sh
-```
-### extract terms from ro
-```
-bash
-sh extract-ro.sh
-```
-
-### extract terms from rdfs
-```
-bash
-sh extract-rdfs.sh
+sh scripts/extract-rdfs.sh
+sh scripts/extract-skos.sh
+sh scripts/extract-sosa.sh
+sh scripts/extract-biolink.sh
+sh scripts/extract-ro.sh
+sh scripts/extract-so.sh
+sh scripts/extract-eco.sh
+sh scripts/extract-qudt.sh
+sh scripts/extract-gold.sh
+sh scripts/extract-dcterms.sh
 ```
 
-### extract terms from skos
-```
-bash
-sh extract-skos.sh
-```
-
-### extract terms from dcterms
+### note on extracting terms from dcterms
 ```bash
 robot extract --input ontologies/dublin_core_terms.ttl --term-file termFiles/dctermsTermFile.txt --method BOT --output results/dcterms_bot.owl --prefix 'dcterms: http://purl.org/dc/terms/'
 ```
@@ -42,16 +34,6 @@ Ontology IRI cannot be null
 but works if the iri (owl format) is used
 ```bash
 robot extract --input-iri http://protege.stanford.edu/plugins/owl/dc/terms.owl --term-file termFiles/dctermsTermFile.txt --method BOT --output results/dcterms_bot.owl --prefix 'dcterms: http://purl.org/dc/terms/'
-```
-final script here:
-```bash
-sh extract-dcterms.sh
-```
-
-
-### extract terms from sosa
-```bash
-sh extract-sosa.sh
 ```
 
 
