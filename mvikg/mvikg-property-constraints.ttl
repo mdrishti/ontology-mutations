@@ -6,6 +6,7 @@
 @prefix goldvocab: <https://w3id.org/gold.vocab/> .
 @prefix mvikg: <http://example.org/mvikg/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 
 
 # Custom MVIKG properties (both restrictions and annotations)
@@ -31,6 +32,41 @@ mvikg:comparedTo rdf:type owl:DatatypeProperty ;
     rdfs:comment "Free-text description of the baseline/control a phenotype outcome was compared against." ;
     rdfs:domain biolink:PhenotypicFeature ;
     rdfs:range xsd:string .
+
+# Variant data properties (item 5) — used on biolink:SequenceVariant blank
+# nodes by all three KG builders (rdfLibMVIKG src/kgBuilder{Xls,BioC,ClaudeSkills}.py).
+# mvikg:sequenceVariantType/sequenceVariantTypeName/variantNameProtein/
+# variantNameNt from the original item-5 proposal were retired, not declared
+# here — superseded by rdf:type (SO term, or SO:0001059 sequence_alteration
+# as a generic fallback — see the SO import, item 9) for variant type, and by
+# biolink:hgvs_nomenclature / rdfs:label for variant names. See
+# rdfLibMVIKG/ITEM5-PLAN.md for the full design.
+mvikg:ref rdf:type owl:DatatypeProperty ;
+    rdfs:label "reference allele" ;
+    rdfs:domain biolink:SequenceVariant ;
+    rdfs:range xsd:string .
+
+mvikg:alt rdf:type owl:DatatypeProperty ;
+    rdfs:label "alternate allele" ;
+    rdfs:domain biolink:SequenceVariant ;
+    rdfs:range xsd:string .
+
+mvikg:length rdf:type owl:DatatypeProperty ;
+    rdfs:label "variant length" ;
+    rdfs:comment "Free-text length string — not all source rows give a clean integer." ;
+    rdfs:domain biolink:SequenceVariant ;
+    rdfs:range xsd:string .
+
+mvikg:effect rdf:type owl:DatatypeProperty ;
+    rdfs:label "variant effect" ;
+    rdfs:domain biolink:SequenceVariant ;
+    rdfs:range xsd:string .
+
+mvikg:frequency rdf:type owl:ObjectProperty ;
+    rdfs:label "frequency" ;
+    rdfs:comment "Points to a qudt:QuantityValue node (numericValue + unit, typically percent)." ;
+    rdfs:domain biolink:SequenceVariant ;
+    rdfs:range qudt:QuantityValue .
 
 # Define that mvikg:has_developmental_stage relates a sample to a developmental stage. Initially taken from UNIPROTRDFS, that definition did not fit here, hence removed.
 mvikg:has_developmental_stage rdf:type owl:ObjectProperty ;
