@@ -1,0 +1,3 @@
+qudt:QuantityValue
+qudt:numericValue
+qudt:hasUnit

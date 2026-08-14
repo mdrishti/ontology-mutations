@@ -1,0 +1,16 @@
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# unit:PERCENT declared by hand rather than via robot extract: QUDT's
+# vocab/unit.ttl is one densely interlinked graph (every unit points to
+# quantitykind/, systemsOfUnits/, dimensionVector/ resources and back), so a
+# STAR/BOT module extraction for a single individual pulls in most of the
+# 2.3MB source file and trips robot's duplicate_label QC check thousands of
+# times over unrelated multilingual labels elsewhere in the vocabulary. We
+# only need the identity and label for the frequency unit MVIKG actually
+# uses (rdfLibMVIKG src/kgBuilder{Xls,ClaudeSkills}.py, QUDTUNIT.PERCENT).
+unit:PERCENT a owl:NamedIndividual, qudt:Unit ;
+    rdfs:label "Percent"@en ;
+    qudt:symbol "%" .
