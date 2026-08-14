@@ -361,6 +361,14 @@ xsd:string rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  http://example.org/mvikg/frequency
+<http://example.org/mvikg/frequency> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <https://w3id.org/biolink/vocab/SequenceVariant> ;
+                                     rdfs:range <http://qudt.org/schema/qudt/QuantityValue> ;
+                                     rdfs:comment "Points to a qudt:QuantityValue node (numericValue + unit, typically percent)." ;
+                                     rdfs:label "frequency" .
+
+
 ###  http://example.org/mvikg/has_biome
 <http://example.org/mvikg/has_biome> rdf:type owl:ObjectProperty ;
                                      rdfs:domain [ rdf:type owl:Class ;
@@ -891,12 +899,41 @@ xsd:string rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
+###  http://example.org/mvikg/alt
+<http://example.org/mvikg/alt> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <https://w3id.org/biolink/vocab/SequenceVariant> ;
+                               rdfs:range xsd:string ;
+                               rdfs:label "alternate allele" .
+
+
 ###  http://example.org/mvikg/comparedTo
 <http://example.org/mvikg/comparedTo> rdf:type owl:DatatypeProperty ;
                                       rdfs:domain <https://w3id.org/biolink/vocab/PhenotypicFeature> ;
                                       rdfs:range xsd:string ;
                                       rdfs:comment "Free-text description of the baseline/control a phenotype outcome was compared against." ;
                                       rdfs:label "compared to" .
+
+
+###  http://example.org/mvikg/effect
+<http://example.org/mvikg/effect> rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain <https://w3id.org/biolink/vocab/SequenceVariant> ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:label "variant effect" .
+
+
+###  http://example.org/mvikg/length
+<http://example.org/mvikg/length> rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain <https://w3id.org/biolink/vocab/SequenceVariant> ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:comment "Free-text length string — not all source rows give a clean integer." ;
+                                  rdfs:label "variant length" .
+
+
+###  http://example.org/mvikg/ref
+<http://example.org/mvikg/ref> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <https://w3id.org/biolink/vocab/SequenceVariant> ;
+                               rdfs:range xsd:string ;
+                               rdfs:label "reference allele" .
 
 
 ###  http://qudt.org/schema/qudt/bits

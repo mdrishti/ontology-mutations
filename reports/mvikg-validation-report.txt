@@ -68,9 +68,14 @@ WARN	duplicate_label_synonym	SO:0000667	oboInOwl:hasExactSynonym	insertion
 WARN	duplicate_label_synonym	SO:1000036	oboInOwl:hasExactSynonym	inversion
 WARN	missing_definition	http://example.org/mvikg/Biome	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/DevelopmentalStage	IAO:0000115
+WARN	missing_definition	http://example.org/mvikg/alt	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/comparedTo	IAO:0000115
+WARN	missing_definition	http://example.org/mvikg/effect	IAO:0000115
+WARN	missing_definition	http://example.org/mvikg/frequency	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/has_biome	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/has_developmental_stage	IAO:0000115
+WARN	missing_definition	http://example.org/mvikg/length	IAO:0000115
+WARN	missing_definition	http://example.org/mvikg/ref	IAO:0000115
 WARN	missing_definition	dc:bibliographicCitation	IAO:0000115
 WARN	missing_definition	dc:isPartOf	IAO:0000115
 WARN	missing_definition	dc:isReplacedBy	IAO:0000115

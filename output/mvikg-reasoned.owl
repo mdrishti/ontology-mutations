@@ -583,6 +583,17 @@
 
 
 
+    <!-- http://example.org/mvikg/frequency -->
+
+    <owl:ObjectProperty rdf:about="http://example.org/mvikg/frequency">
+        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/SequenceVariant"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdfs:comment>Points to a qudt:QuantityValue node (numericValue + unit, typically percent).</rdfs:comment>
+        <rdfs:label>frequency</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
     <!-- http://example.org/mvikg/has_biome -->
 
     <owl:ObjectProperty rdf:about="http://example.org/mvikg/has_biome">
@@ -1244,6 +1255,16 @@
 
 
 
+    <!-- http://example.org/mvikg/alt -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/mvikg/alt">
+        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/SequenceVariant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>alternate allele</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
     <!-- http://example.org/mvikg/comparedTo -->
 
     <owl:DatatypeProperty rdf:about="http://example.org/mvikg/comparedTo">
@@ -1251,6 +1272,37 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Free-text description of the baseline/control a phenotype outcome was compared against.</rdfs:comment>
         <rdfs:label>compared to</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://example.org/mvikg/effect -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/mvikg/effect">
+        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/SequenceVariant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>variant effect</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://example.org/mvikg/length -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/mvikg/length">
+        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/SequenceVariant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Free-text length string — not all source rows give a clean integer.</rdfs:comment>
+        <rdfs:label>variant length</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://example.org/mvikg/ref -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/mvikg/ref">
+        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/SequenceVariant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>reference allele</rdfs:label>
     </owl:DatatypeProperty>
 
 

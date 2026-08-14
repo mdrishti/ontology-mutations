@@ -282,6 +282,13 @@
 # #################################################################
 #
 #
+# http://example.org/mvikg/frequency
+<http://example.org/mvikg/frequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/mvikg/frequency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
+<http://example.org/mvikg/frequency> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+<http://example.org/mvikg/frequency> <http://www.w3.org/2000/01/rdf-schema#comment> "Points to a qudt:QuantityValue node (numericValue + unit, typically percent)." .
+<http://example.org/mvikg/frequency> <http://www.w3.org/2000/01/rdf-schema#label> "frequency" .
+#
 # http://example.org/mvikg/has_biome
 <http://example.org/mvikg/has_biome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://example.org/mvikg/has_biome> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
@@ -775,12 +782,37 @@ _:genid5 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ECO:SN" .
 # #################################################################
 #
 #
+# http://example.org/mvikg/alt
+<http://example.org/mvikg/alt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/mvikg/alt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
+<http://example.org/mvikg/alt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/mvikg/alt> <http://www.w3.org/2000/01/rdf-schema#label> "alternate allele" .
+#
 # http://example.org/mvikg/comparedTo
 <http://example.org/mvikg/comparedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://example.org/mvikg/comparedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/PhenotypicFeature> .
 <http://example.org/mvikg/comparedTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://example.org/mvikg/comparedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Free-text description of the baseline/control a phenotype outcome was compared against." .
 <http://example.org/mvikg/comparedTo> <http://www.w3.org/2000/01/rdf-schema#label> "compared to" .
+#
+# http://example.org/mvikg/effect
+<http://example.org/mvikg/effect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/mvikg/effect> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
+<http://example.org/mvikg/effect> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/mvikg/effect> <http://www.w3.org/2000/01/rdf-schema#label> "variant effect" .
+#
+# http://example.org/mvikg/length
+<http://example.org/mvikg/length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/mvikg/length> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
+<http://example.org/mvikg/length> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/mvikg/length> <http://www.w3.org/2000/01/rdf-schema#comment> "Free-text length string — not all source rows give a clean integer." .
+<http://example.org/mvikg/length> <http://www.w3.org/2000/01/rdf-schema#label> "variant length" .
+#
+# http://example.org/mvikg/ref
+<http://example.org/mvikg/ref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/mvikg/ref> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
+<http://example.org/mvikg/ref> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/mvikg/ref> <http://www.w3.org/2000/01/rdf-schema#label> "reference allele" .
 #
 # http://qudt.org/schema/qudt/bits
 <http://qudt.org/schema/qudt/bits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
