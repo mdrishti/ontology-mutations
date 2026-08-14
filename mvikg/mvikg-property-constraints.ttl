@@ -5,6 +5,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix goldvocab: <https://w3id.org/gold.vocab/> .
 @prefix mvikg: <http://example.org/mvikg/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
 # Custom MVIKG properties (both restrictions and annotations)
@@ -22,6 +23,14 @@ mvikg:has_biome rdf:type owl:ObjectProperty ;
                             )
                 ] ;
     rdfs:label "has biome" .
+
+# mvikg:comparedTo — free-text description of the baseline/control a phenotype
+# outcome was compared against (rdfLibMVIKG kgBuilderClaudeSkills.py:640)
+mvikg:comparedTo rdf:type owl:DatatypeProperty ;
+    rdfs:label "compared to" ;
+    rdfs:comment "Free-text description of the baseline/control a phenotype outcome was compared against." ;
+    rdfs:domain biolink:PhenotypicFeature ;
+    rdfs:range xsd:string .
 
 # Define that mvikg:has_developmental_stage relates a sample to a developmental stage. Initially taken from UNIPROTRDFS, that definition did not fit here, hence removed.
 mvikg:has_developmental_stage rdf:type owl:ObjectProperty ;
