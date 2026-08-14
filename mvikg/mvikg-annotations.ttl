@@ -37,6 +37,9 @@ sosa:Sample
 biolink:Gene
     rdfs:comment "In MVIKG: A gene that may have sequence variants and associated phenotypes" .
 
+biolink:GenomicEntity
+    rdfs:comment "In MVIKG: instances are minted per-record (scoped to document + organism + gene symbol), not shared across papers/organisms, to avoid collisions when the same gene symbol denotes different genes in different organisms. The canonical resolved gene identity is reachable one hop away via dcterms:identifier. The same per-record blank-node pattern applies to biolink:SequenceVariant and biolink:PhenotypicFeature instances." .
+
 biolink:SequenceVariant
     rdfs:comment "In MVIKG: A genomic variant associated with a specific gene" .
 
