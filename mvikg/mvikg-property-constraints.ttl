@@ -97,3 +97,7 @@ sosa:isFeatureOfInterestOf
 sosa:hasSample
     rdfs:domain biolink:OrganismTaxon ;
     rdfs:range sosa:Sample .
+
+sosa:isSampleOf
+    rdfs:domain sosa:Sample ;
+    rdfs:range biolink:OrganismTaxon .
