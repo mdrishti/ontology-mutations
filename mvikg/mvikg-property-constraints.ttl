@@ -88,6 +88,10 @@ sosa:hasFeatureOfInterest
     rdfs:domain sosa:Sample ;
     rdfs:range biolink:GenomicEntity .
 
+sosa:isFeatureOfInterestOf
+    rdfs:domain biolink:GenomicEntity ;
+    rdfs:range sosa:Sample .
+
 
 
 sosa:hasSample
