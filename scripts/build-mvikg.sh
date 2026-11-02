@@ -84,13 +84,13 @@ echo "Step 7: Creating summary statistics..."
 echo "Classes:" > ../reports/summary.txt
 robot query \
   --input ../output/mvikg-reasoned.owl \
-  --query "SELECT (COUNT(DISTINCT ?c) AS ?count) WHERE { ?c a owl:Class . FILTER(!isBlank(?c)) }" \
+  --query ../mvikg/count-classes.rq \
   /dev/stdout >> ../reports/summary.txt
 
 echo "Object Properties:" >> ../reports/summary.txt
 robot query \
   --input ../output/mvikg-reasoned.owl \
-  --query "SELECT (COUNT(DISTINCT ?p) AS ?count) WHERE { ?p a owl:ObjectProperty }" \
+  --query ../mvikg/count-object-properties.rq \
   /dev/stdout >> ../reports/summary.txt
 
 #echo "Step 8: Cleanup temporary files..."
