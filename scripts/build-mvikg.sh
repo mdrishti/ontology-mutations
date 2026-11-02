@@ -2,6 +2,8 @@
 
 set -e  # Exit on error
 
+cd "$(dirname "$0")"  # always run relative to this script's directory
+
 echo "================================================"
 echo "Building MVIKG Ontology"
 echo "================================================"
@@ -26,6 +28,12 @@ robot merge \
 robot remove \
   --input ../output/temp-sources-merged.owl \
   --select ontology \
+  --output ../output/temp-sources-merged-removed.owl
+
+echo "Step 1b: Dropping confusing vendor SOSA annotation (sosa:Sample as a rangeIncludes value on hasFeatureOfInterest clashes with MVIKG's own domain/range for that property)..."
+robot query \
+  --input ../output/temp-sources-merged-removed.owl \
+  --update ../mvikg/remove-sample-range.ru \
   --output ../output/temp-sources-merged-removed.owl
 
 
