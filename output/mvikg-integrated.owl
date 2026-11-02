@@ -758,13 +758,12 @@
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
         <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
-        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/GenomicEntity"/>
-        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <rdfs:range rdf:resource="https://w3id.org/biolink/vocab/GenomicEntity"/>
         <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
         <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
         <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
         <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-        <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
         <rdfs:comment xml:lang="en">A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
         <rdfs:label xml:lang="en">has feature of interest</rdfs:label>
@@ -811,8 +810,9 @@
     <!-- http://www.w3.org/ns/sosa/isFeatureOfInterestOf -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
+        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/GenomicEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
         <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
         <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
         <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
         <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
@@ -957,6 +957,19 @@
         <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/BiologicalEntity"/>
         <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/Gene"/>
         <rdfs:range rdf:resource="https://w3id.org/biolink/vocab/PhenotypicFeature"/>
+        <rdfs:label>has phenotype</rdfs:label>
+        <skos:altLabel>disease presents symptom</skos:altLabel>
+        <skos:broadMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_R108"/>
+        <skos:broadMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_R115"/>
+        <skos:definition>holds between a biological entity and a phenotype, where a phenotype is construed broadly as any kind of quality of an organism part, a collection of these qualities, or a change in quality or qualities (e.g. abnormally increased temperature). In SNOMEDCT, disorders with keyword &apos;characterized by&apos; should translate into this predicate.</skos:definition>
+        <skos:editorialNote>check the range</skos:editorialNote>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002200"/>
+        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
+        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_R89"/>
+        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0004022"/>
+        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
+        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/doid#has_symptom"/>
+        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
     </owl:ObjectProperty>
 
 
@@ -1625,12 +1638,6 @@ none is specified.
     <!-- https://w3id.org/biolink/vocab/form_or_variant_qualifier -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/form_or_variant_qualifier"/>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/has_phenotype -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/has_phenotype"/>
 
 
 
@@ -6542,21 +6549,6 @@ THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDE
         <skos:definition>A qualifier that composes with a core subject/object concept to define a specific type, variant, alternative version of this concept. The composed concept remains a subtype or instance of the core concept. For example, the qualifier ‘mutation’ combines with the core concept ‘Gene X’ to express the compose concept ‘a mutation of Gene X’.</skos:definition>
         <skos:editorialNote>please see the ChemicalOrGeneOrGeneProductFormOrVariantEnum (below) for examples of &apos;form or variant qualifier&apos; terms in the gene-&gt;chemical association space. the qualifier ‘mutation’ combines with the core concept ‘Gene X’ to express the compose concept ‘Mutated forms of Gene X’. the qualifier ‘late stage’ combines with a core concept of ‘Disease X’ to express the  more specific concept ‘Late Stage forms of Disease X’ the qualifier ‘recombinant’ combines with a core concept of ‘FLT1 Gene’ to express the composed concept ‘Recombinant forms of the FLT1 gene’ the qualifier ‘chemical analog’ combines with a core concept of ‘Ditiocarb’ to express the composed concept ‘analog forms of Ditiocarb’</skos:editorialNote>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/has_phenotype">
-        <rdfs:label>has phenotype</rdfs:label>
-        <skos:altLabel>disease presents symptom</skos:altLabel>
-        <skos:broadMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_R108"/>
-        <skos:broadMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_R115"/>
-        <skos:definition>holds between a biological entity and a phenotype, where a phenotype is construed broadly as any kind of quality of an organism part, a collection of these qualities, or a change in quality or qualities (e.g. abnormally increased temperature). In SNOMEDCT, disorders with keyword &apos;characterized by&apos; should translate into this predicate.</skos:definition>
-        <skos:editorialNote>check the range</skos:editorialNote>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002200"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_R89"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0004022"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/doid#has_symptom"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
     </rdf:Description>
 
 
