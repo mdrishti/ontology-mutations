@@ -85,8 +85,8 @@ biolink:has_phenotype
 
 # Define domains and ranges for SOSA properties used in cross-links
 sosa:hasFeatureOfInterest
-    rdfs:domain biolink:GenomicEntity ;
-    rdfs:range sosa:Sample .
+    rdfs:domain sosa:Sample ;
+    rdfs:range biolink:GenomicEntity .
 
 
 
