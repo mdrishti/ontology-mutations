@@ -8398,15 +8398,13 @@
   } ],
   "http://schema.org/rangeIncludes" : [ {
     "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
-  }, {
-    "@id" : "http://www.w3.org/ns/sosa/Sample"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/GenomicEntity"
+    "@id" : "http://www.w3.org/ns/sosa/Sample"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://www.w3.org/ns/sosa/"
@@ -8416,7 +8414,7 @@
     "@value" : "has feature of interest"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Sample"
+    "@id" : "https://w3id.org/biolink/vocab/GenomicEntity"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "http://www.w3.org/ns/sosa/isFeatureOfInterestOf"
@@ -8465,9 +8463,6 @@
 }, {
   "@id" : "http://www.w3.org/ns/sosa/hasSample",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
-  "http://schema.org/domainIncludes" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
-  } ],
   "http://schema.org/rangeIncludes" : [ {
     "@id" : "http://www.w3.org/ns/sosa/Sample"
   } ],
@@ -8500,8 +8495,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://schema.org/domainIncludes" : [ {
     "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
-  }, {
-    "@id" : "http://www.w3.org/ns/sosa/Sample"
   } ],
   "http://schema.org/rangeIncludes" : [ {
     "@id" : "http://www.w3.org/ns/sosa/Actuation"
@@ -8514,12 +8507,18 @@
     "@language" : "en",
     "@value" : "A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/GenomicEntity"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://www.w3.org/ns/sosa/"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is feature of interest of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sample"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -8561,12 +8560,12 @@
   "http://schema.org/domainIncludes" : [ {
     "@id" : "http://www.w3.org/ns/sosa/Sample"
   } ],
-  "http://schema.org/rangeIncludes" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sample"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://www.w3.org/ns/sosa/"
@@ -8574,6 +8573,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is sample of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/OrganismTaxon"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -10130,7 +10132,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/biolink/vocab/has_phenotype",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/biolink/vocab/BiologicalEntity"
   }, {

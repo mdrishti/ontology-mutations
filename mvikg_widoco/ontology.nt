@@ -397,13 +397,12 @@ _:genid5 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ECO:SN" .
 # http://www.w3.org/ns/sosa/hasFeatureOfInterest
 <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> .
-<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/GenomicEntity> .
-<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Sample> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Sample> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/biolink/vocab/GenomicEntity> .
 <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> .
 <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> .
 <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampling> .
 <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
-<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Sample> .
 <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en .
 <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
 <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has feature of interest"@en .
@@ -429,7 +428,6 @@ _:genid5 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ECO:SN" .
 <http://www.w3.org/ns/sosa/hasSample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
 <http://www.w3.org/ns/sosa/hasSample> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/OrganismTaxon> .
 <http://www.w3.org/ns/sosa/hasSample> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Sample> .
-<http://www.w3.org/ns/sosa/hasSample> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
 <http://www.w3.org/ns/sosa/hasSample> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Sample> .
 <http://www.w3.org/ns/sosa/hasSample> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a FeatureOfInterest and the Sample used to represent it."@en .
 <http://www.w3.org/ns/sosa/hasSample> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
@@ -438,8 +436,9 @@ _:genid5 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ECO:SN" .
 #
 # http://www.w3.org/ns/sosa/isFeatureOfInterestOf
 <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/GenomicEntity> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Sample> .
 <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
-<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sample> .
 <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Actuation> .
 <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Observation> .
 <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Sampling> .
@@ -463,8 +462,9 @@ _:genid5 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ECO:SN" .
 # http://www.w3.org/ns/sosa/isSampleOf
 <http://www.w3.org/ns/sosa/isSampleOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/ns/sosa/isSampleOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.w3.org/ns/sosa/isSampleOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Sample> .
+<http://www.w3.org/ns/sosa/isSampleOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/biolink/vocab/OrganismTaxon> .
 <http://www.w3.org/ns/sosa/isSampleOf> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sample> .
-<http://www.w3.org/ns/sosa/isSampleOf> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
 <http://www.w3.org/ns/sosa/isSampleOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of."@en .
 <http://www.w3.org/ns/sosa/isSampleOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
 <http://www.w3.org/ns/sosa/isSampleOf> <http://www.w3.org/2000/01/rdf-schema#label> "is sample of"@en .
@@ -540,6 +540,19 @@ _:genid5 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ECO:SN" .
 <https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/BiologicalEntity> .
 <https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/Gene> .
 <https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/biolink/vocab/PhenotypicFeature> .
+<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2000/01/rdf-schema#label> "has phenotype" .
+<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#altLabel> "disease presents symptom" .
+<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://purl.obolibrary.org/obo/NCIT_R108> .
+<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://purl.obolibrary.org/obo/NCIT_R115> .
+<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#definition> "holds between a biological entity and a phenotype, where a phenotype is construed broadly as any kind of quality of an organism part, a collection of these qualities, or a change in quality or qualities (e.g. abnormally increased temperature). In SNOMEDCT, disorders with keyword 'characterized by' should translate into this predicate." .
+<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#editorialNote> "check the range" .
+<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/RO_0002200> .
+<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.obolibrary.org/obo/NCIT_R89> .
+<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.obolibrary.org/obo/RO_0004022> .
+<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.obolibrary.org/obo/RO_0004029> .
+<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.obolibrary.org/obo/doid#has_symptom> .
+<https://w3id.org/biolink/vocab/has_phenotype> <https://w3id.org/biolink/vocab/canonical_predicate> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 #
 # https://w3id.org/biolink/vocab/has_sequence_variant
 <https://w3id.org/biolink/vocab/has_sequence_variant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1019,9 +1032,6 @@ _:genid5 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ECO:SN" .
 #
 # https://w3id.org/biolink/vocab/form_or_variant_qualifier
 <https://w3id.org/biolink/vocab/form_or_variant_qualifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-#
-# https://w3id.org/biolink/vocab/has_phenotype
-<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 #
 # https://w3id.org/biolink/vocab/id
 <https://w3id.org/biolink/vocab/id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -4655,20 +4665,6 @@ _:genid328 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/biolink/vocab/form_or_variant_qualifier> <http://www.w3.org/2004/02/skos/core#definition> "A qualifier that composes with a core subject/object concept to define a specific type, variant, alternative version of this concept. The composed concept remains a subtype or instance of the core concept. For example, the qualifier ‘mutation’ combines with the core concept ‘Gene X’ to express the compose concept ‘a mutation of Gene X’." .
 <https://w3id.org/biolink/vocab/form_or_variant_qualifier> <http://www.w3.org/2004/02/skos/core#editorialNote> "please see the ChemicalOrGeneOrGeneProductFormOrVariantEnum (below) for examples of 'form or variant qualifier' terms in the gene->chemical association space. the qualifier ‘mutation’ combines with the core concept ‘Gene X’ to express the compose concept ‘Mutated forms of Gene X’. the qualifier ‘late stage’ combines with a core concept of ‘Disease X’ to express the  more specific concept ‘Late Stage forms of Disease X’ the qualifier ‘recombinant’ combines with a core concept of ‘FLT1 Gene’ to express the composed concept ‘Recombinant forms of the FLT1 gene’ the qualifier ‘chemical analog’ combines with a core concept of ‘Ditiocarb’ to express the composed concept ‘analog forms of Ditiocarb’" .
 <https://w3id.org/biolink/vocab/form_or_variant_qualifier> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
-#
-<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2000/01/rdf-schema#label> "has phenotype" .
-<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#altLabel> "disease presents symptom" .
-<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://purl.obolibrary.org/obo/NCIT_R108> .
-<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://purl.obolibrary.org/obo/NCIT_R115> .
-<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#definition> "holds between a biological entity and a phenotype, where a phenotype is construed broadly as any kind of quality of an organism part, a collection of these qualities, or a change in quality or qualities (e.g. abnormally increased temperature). In SNOMEDCT, disorders with keyword 'characterized by' should translate into this predicate." .
-<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#editorialNote> "check the range" .
-<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/RO_0002200> .
-<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
-<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.obolibrary.org/obo/NCIT_R89> .
-<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.obolibrary.org/obo/RO_0004022> .
-<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.obolibrary.org/obo/RO_0004029> .
-<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.obolibrary.org/obo/doid#has_symptom> .
-<https://w3id.org/biolink/vocab/has_phenotype> <https://w3id.org/biolink/vocab/canonical_predicate> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 #
 #
 #

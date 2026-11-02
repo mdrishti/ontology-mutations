@@ -491,13 +491,12 @@ xsd:string rdf:type rdfs:Datatype .
 ###  http://www.w3.org/ns/sosa/hasFeatureOfInterest
 <http://www.w3.org/ns/sosa/hasFeatureOfInterest> rdf:type owl:ObjectProperty ;
                                                  owl:inverseOf <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> ;
-                                                 rdfs:domain <https://w3id.org/biolink/vocab/GenomicEntity> ;
-                                                 rdfs:range <http://www.w3.org/ns/sosa/Sample> ;
+                                                 rdfs:domain <http://www.w3.org/ns/sosa/Sample> ;
+                                                 rdfs:range <https://w3id.org/biolink/vocab/GenomicEntity> ;
                                                  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> ,
                                                                                     <http://www.w3.org/ns/sosa/Observation> ,
                                                                                     <http://www.w3.org/ns/sosa/Sampling> ;
-                                                 <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
-                                                                                   <http://www.w3.org/ns/sosa/Sample> ;
+                                                 <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
                                                  rdfs:comment "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en ;
                                                  rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
                                                  rdfs:label "has feature of interest"@en ;
@@ -525,7 +524,6 @@ xsd:string rdf:type rdfs:Datatype .
                                       rdf:type owl:InverseFunctionalProperty ;
                                       rdfs:domain <https://w3id.org/biolink/vocab/OrganismTaxon> ;
                                       rdfs:range <http://www.w3.org/ns/sosa/Sample> ;
-                                      <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
                                       <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Sample> ;
                                       rdfs:comment "Relation between a FeatureOfInterest and the Sample used to represent it."@en ;
                                       rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
@@ -535,8 +533,9 @@ xsd:string rdf:type rdfs:Datatype .
 
 ###  http://www.w3.org/ns/sosa/isFeatureOfInterestOf
 <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> rdf:type owl:ObjectProperty ;
-                                                  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest> ,
-                                                                                     <http://www.w3.org/ns/sosa/Sample> ;
+                                                  rdfs:domain <https://w3id.org/biolink/vocab/GenomicEntity> ;
+                                                  rdfs:range <http://www.w3.org/ns/sosa/Sample> ;
+                                                  <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
                                                   <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Actuation> ,
                                                                                     <http://www.w3.org/ns/sosa/Observation> ,
                                                                                     <http://www.w3.org/ns/sosa/Sampling> ;
@@ -562,8 +561,9 @@ xsd:string rdf:type rdfs:Datatype .
 ###  http://www.w3.org/ns/sosa/isSampleOf
 <http://www.w3.org/ns/sosa/isSampleOf> rdf:type owl:ObjectProperty ,
                                                 owl:FunctionalProperty ;
+                                       rdfs:domain <http://www.w3.org/ns/sosa/Sample> ;
+                                       rdfs:range <https://w3id.org/biolink/vocab/OrganismTaxon> ;
                                        <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sample> ;
-                                       <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest> ;
                                        rdfs:comment "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of."@en ;
                                        rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
                                        rdfs:label "is sample of"@en ;
@@ -647,7 +647,20 @@ xsd:string rdf:type rdfs:Datatype .
                                                owl:inverseOf <https://w3id.org/biolink/vocab/phenotype_of> ;
                                                rdfs:domain <https://w3id.org/biolink/vocab/BiologicalEntity> ,
                                                            <https://w3id.org/biolink/vocab/Gene> ;
-                                               rdfs:range <https://w3id.org/biolink/vocab/PhenotypicFeature> .
+                                               rdfs:range <https://w3id.org/biolink/vocab/PhenotypicFeature> ;
+                                               rdfs:label "has phenotype" ;
+                                               <http://www.w3.org/2004/02/skos/core#altLabel> "disease presents symptom" ;
+                                               <http://www.w3.org/2004/02/skos/core#broadMatch> <http://purl.obolibrary.org/obo/NCIT_R108> ,
+                                                                                                <http://purl.obolibrary.org/obo/NCIT_R115> ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "holds between a biological entity and a phenotype, where a phenotype is construed broadly as any kind of quality of an organism part, a collection of these qualities, or a change in quality or qualities (e.g. abnormally increased temperature). In SNOMEDCT, disorders with keyword 'characterized by' should translate into this predicate." ;
+                                               <http://www.w3.org/2004/02/skos/core#editorialNote> "check the range" ;
+                                               <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/RO_0002200> ;
+                                               <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> ;
+                                               <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.obolibrary.org/obo/NCIT_R89> ,
+                                                                                                 <http://purl.obolibrary.org/obo/RO_0004022> ,
+                                                                                                 <http://purl.obolibrary.org/obo/RO_0004029> ,
+                                                                                                 <http://purl.obolibrary.org/obo/doid#has_symptom> ;
+                                               <https://w3id.org/biolink/vocab/canonical_predicate> "true"^^xsd:boolean .
 
 
 ###  https://w3id.org/biolink/vocab/has_sequence_variant
@@ -1176,10 +1189,6 @@ none is specified.
 
 ###  https://w3id.org/biolink/vocab/form_or_variant_qualifier
 <https://w3id.org/biolink/vocab/form_or_variant_qualifier> rdf:type owl:DatatypeProperty .
-
-
-###  https://w3id.org/biolink/vocab/has_phenotype
-<https://w3id.org/biolink/vocab/has_phenotype> rdf:type owl:DatatypeProperty .
 
 
 ###  https://w3id.org/biolink/vocab/id
@@ -5236,21 +5245,6 @@ rdfs:subClassOf rdfs:comment "The subject is a subclass of a class." ;
                                                            <http://www.w3.org/2004/02/skos/core#definition> "A qualifier that composes with a core subject/object concept to define a specific type, variant, alternative version of this concept. The composed concept remains a subtype or instance of the core concept. For example, the qualifier ‘mutation’ combines with the core concept ‘Gene X’ to express the compose concept ‘a mutation of Gene X’." ;
                                                            <http://www.w3.org/2004/02/skos/core#editorialNote> "please see the ChemicalOrGeneOrGeneProductFormOrVariantEnum (below) for examples of 'form or variant qualifier' terms in the gene->chemical association space. the qualifier ‘mutation’ combines with the core concept ‘Gene X’ to express the compose concept ‘Mutated forms of Gene X’. the qualifier ‘late stage’ combines with a core concept of ‘Disease X’ to express the  more specific concept ‘Late Stage forms of Disease X’ the qualifier ‘recombinant’ combines with a core concept of ‘FLT1 Gene’ to express the composed concept ‘Recombinant forms of the FLT1 gene’ the qualifier ‘chemical analog’ combines with a core concept of ‘Ditiocarb’ to express the composed concept ‘analog forms of Ditiocarb’" ;
                                                            <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
-
-
-<https://w3id.org/biolink/vocab/has_phenotype> rdfs:label "has phenotype" ;
-                                               <http://www.w3.org/2004/02/skos/core#altLabel> "disease presents symptom" ;
-                                               <http://www.w3.org/2004/02/skos/core#broadMatch> <http://purl.obolibrary.org/obo/NCIT_R108> ,
-                                                                                                <http://purl.obolibrary.org/obo/NCIT_R115> ;
-                                               <http://www.w3.org/2004/02/skos/core#definition> "holds between a biological entity and a phenotype, where a phenotype is construed broadly as any kind of quality of an organism part, a collection of these qualities, or a change in quality or qualities (e.g. abnormally increased temperature). In SNOMEDCT, disorders with keyword 'characterized by' should translate into this predicate." ;
-                                               <http://www.w3.org/2004/02/skos/core#editorialNote> "check the range" ;
-                                               <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/RO_0002200> ;
-                                               <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> ;
-                                               <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.obolibrary.org/obo/NCIT_R89> ,
-                                                                                                 <http://purl.obolibrary.org/obo/RO_0004022> ,
-                                                                                                 <http://purl.obolibrary.org/obo/RO_0004029> ,
-                                                                                                 <http://purl.obolibrary.org/obo/doid#has_symptom> ;
-                                               <https://w3id.org/biolink/vocab/canonical_predicate> "true"^^xsd:boolean .
 
 
 #################################################################
