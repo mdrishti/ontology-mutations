@@ -10,17 +10,16 @@ robot extract \
 	--prefix 'biolink: https://w3id.org/biolink/vocab/' \
 	--output ../extracted/biolink_bot_temp.owl
 
-#echo "Removing problematic terms..."
-#robot remove \
-#	--input ../extracted/biolink_bot_temp.owl \
-#	--term biolink:AgentTypeEnum#not_provided \
-#	--term biolink:KnowledgeLevelEnum#not_provided \
-#	--select "self" \
-#	--output ../extracted/biolink_bot_temp_removed.owl
+echo "Fixing known biolink extraction issues (see NOTES.md #4 and #8)..."
+robot query \
+	--input ../extracted/biolink_bot_temp.owl \
+	--update ../mvikg/remove-mentions-datatype-punning.ru \
+	--update ../mvikg/fix-biolink-enum-labels.ru \
+	--output ../extracted/biolink_bot_temp_fixed.owl
 
 echo "Annotating..."
 robot annotate \
-  --input ../extracted/biolink_bot_temp.owl \
+  --input ../extracted/biolink_bot_temp_fixed.owl \
   --annotation dc:source "BioLink Model" \
   --annotation dc:title "BioLink Ontology (Extracted)" \
   --annotation dc:description "Extracted ontology classes and properties from BioLink" \
