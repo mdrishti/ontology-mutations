@@ -1,3 +1,2 @@
 dcterms:identifier
-dcterms:isPartOf
 dcterms:bibliographicCitation
