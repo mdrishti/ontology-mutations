@@ -20,8 +20,16 @@ biolink:Gene biolink:form_or_variant_qualifier biolink:VariantToGeneAssociation 
 
 # Organism data modelling
 sosa:Sample sosa:isSampleOf biolink:OrganismTaxon .
-sosa:Sample dcterms:isPartOf dcmitype:Dataset .
 biolink:OrganismTaxon sosa:hasSample sosa:Sample .
+
+# Sample-to-publication provenance: the paper a sample is mentioned in.
+# Was modelled as sosa:Sample dcterms:isPartOf dcmitype:Dataset — wrong,
+# a sample isn't part of a dataset, it's mentioned in a paper. Domain/range
+# use biolink:Publication (not just biolink:Article) to cover all publication
+# types (Article, Book, BookChapter, DrugLabel, Patent, PreprintPublication,
+# Serial, WebPage) — see https://biolink.github.io/biolink-model/Publication/.
+biolink:Publication biolink:mentions sosa:Sample .
+sosa:Sample biolink:mentioned_by biolink:Publication .
 
 # Linking from Mutation data modelling to Phenotype data modelling
 biolink:Gene biolink:has_phenotype biolink:PhenotypicFeature .

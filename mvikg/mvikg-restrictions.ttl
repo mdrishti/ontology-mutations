@@ -21,9 +21,9 @@ sosa:Sample rdfs:subClassOf [
 ] .
 
 
-# If a Sample is part of something, it CAN ONLY be a Dataset
+# If a Sample is mentioned by something, it CAN ONLY be a Publication
 sosa:Sample rdfs:subClassOf [
     a owl:Restriction ;
-    owl:onProperty dcterms:isPartOf ;
-    owl:allValuesFrom dcmitype:Dataset
+    owl:onProperty biolink:mentioned_by ;
+    owl:allValuesFrom biolink:Publication
 ] .

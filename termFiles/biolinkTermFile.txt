@@ -13,3 +13,14 @@ biolink:has_phenotype
 biolink:form_or_variant_qualifier
 biolink:start_coordinate
 biolink:end_coordinate
+biolink:mentions
+biolink:mentioned_by
+biolink:Publication
+biolink:Article
+biolink:Book
+biolink:BookChapter
+biolink:DrugLabel
+biolink:Patent
+biolink:PreprintPublication
+biolink:Serial
+biolink:WebPage

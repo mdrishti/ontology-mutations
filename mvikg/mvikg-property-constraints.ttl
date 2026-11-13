@@ -101,3 +101,13 @@ sosa:hasSample
 sosa:isSampleOf
     rdfs:domain sosa:Sample ;
     rdfs:range biolink:OrganismTaxon .
+
+# Narrowed for MVIKG: a sample is mentioned by a publication (not just any
+# NamedThing, as biolink's generic domain/range would allow).
+biolink:mentions
+    rdfs:domain biolink:Publication ;
+    rdfs:range sosa:Sample .
+
+biolink:mentioned_by
+    rdfs:domain sosa:Sample ;
+    rdfs:range biolink:Publication .
