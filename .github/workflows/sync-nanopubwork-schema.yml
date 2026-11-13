@@ -1,0 +1,45 @@
+name: Sync ontology to nanopubWork
+
+# Pushes mvikg_widoco/ontology.owl (the Widoco-generated copy of the final
+# reasoned ontology) into mdrishti/nanopubWork's schema/ontology.owl,
+# whenever the Widoco output actually changes in this repo.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "mvikg_widoco/ontology.owl"
+  workflow_dispatch: {}
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout ontology-mutations
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            mvikg_widoco/ontology.owl
+          sparse-checkout-cone-mode: false
+
+      - name: Checkout nanopubWork
+        uses: actions/checkout@v4
+        with:
+          repository: mdrishti/nanopubWork
+          path: nanopubWork
+          token: ${{ secrets.NANOPUBWORK_PAT }}
+
+      - name: Copy updated ontology file
+        run: cp mvikg_widoco/ontology.owl nanopubWork/schema/ontology.owl
+
+      - name: Commit and push if changed
+        working-directory: nanopubWork
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- schema/ontology.owl; then
+            echo "No changes to schema/ontology.owl — nothing to push."
+            exit 0
+          fi
+          git add schema/ontology.owl
+          git commit -m "Sync ontology.owl from ontology-mutations (${{ github.sha }})"
+          git push
