@@ -2014,28 +2014,28 @@
   "@id" : "_:genid251",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://purl.org/dc/dcmitype/Dataset"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/dc/terms/isPartOf"
-  } ]
-}, {
-  "@id" : "_:genid252",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/ns/sosa/Sampling"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/sosa/isResultOf"
   } ]
 }, {
-  "@id" : "_:genid253",
+  "@id" : "_:genid252",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/sosa/isSampleOf"
+  } ]
+}, {
+  "@id" : "_:genid253",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/Publication"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/mentioned_by"
   } ]
 }, {
   "@id" : "_:genid254",
@@ -2176,6 +2176,26 @@
 }, {
   "@id" : "_:genid274",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/published_in"
+  } ]
+}, {
+  "@id" : "_:genid275",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/published_in"
+  } ]
+}, {
+  "@id" : "_:genid276",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/biolink/vocab/AgentTypeEnum"
   } ],
@@ -2183,7 +2203,7 @@
     "@id" : "https://w3id.org/biolink/vocab/agent_type"
   } ]
 }, {
-  "@id" : "_:genid275",
+  "@id" : "_:genid277",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum"
@@ -2192,7 +2212,7 @@
     "@id" : "https://w3id.org/biolink/vocab/knowledge_level"
   } ]
 }, {
-  "@id" : "_:genid276",
+  "@id" : "_:genid278",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/biolink/vocab/NamedThing"
@@ -2201,33 +2221,13 @@
     "@id" : "https://w3id.org/biolink/vocab/object"
   } ]
 }, {
-  "@id" : "_:genid277",
+  "@id" : "_:genid279",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/biolink/vocab/NamedThing"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/biolink/vocab/subject"
-  } ]
-}, {
-  "@id" : "_:genid278",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/agent_type"
-  } ]
-}, {
-  "@id" : "_:genid279",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/knowledge_level"
   } ]
 }, {
   "@id" : "_:genid280",
@@ -2237,7 +2237,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/object"
+    "@id" : "https://w3id.org/biolink/vocab/agent_type"
   } ]
 }, {
   "@id" : "_:genid281",
@@ -2247,27 +2247,27 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/subject"
+    "@id" : "https://w3id.org/biolink/vocab/knowledge_level"
   } ]
 }, {
   "@id" : "_:genid282",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/agent_type"
+    "@id" : "https://w3id.org/biolink/vocab/object"
   } ]
 }, {
   "@id" : "_:genid283",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/knowledge_level"
+    "@id" : "https://w3id.org/biolink/vocab/subject"
   } ]
 }, {
   "@id" : "_:genid284",
@@ -2277,7 +2277,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/object"
+    "@id" : "https://w3id.org/biolink/vocab/agent_type"
   } ]
 }, {
   "@id" : "_:genid285",
@@ -2287,7 +2287,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/qualifier"
+    "@id" : "https://w3id.org/biolink/vocab/knowledge_level"
   } ]
 }, {
   "@id" : "_:genid286",
@@ -2297,34 +2297,36 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/subject"
+    "@id" : "https://w3id.org/biolink/vocab/object"
   } ]
 }, {
   "@id" : "_:genid287",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/qualifier"
+  } ]
+}, {
+  "@id" : "_:genid288",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/subject"
+  } ]
+}, {
+  "@id" : "_:genid289",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/biolink/vocab/category"
-  } ]
-}, {
-  "@id" : "_:genid288",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/predicate"
-  } ]
-}, {
-  "@id" : "_:genid289",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/type"
   } ]
 }, {
   "@id" : "_:genid29",
@@ -2344,6 +2346,24 @@
 }, {
   "@id" : "_:genid290",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/predicate"
+  } ]
+}, {
+  "@id" : "_:genid291",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/type"
+  } ]
+}, {
+  "@id" : "_:genid292",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
@@ -2352,7 +2372,7 @@
     "@id" : "https://w3id.org/biolink/vocab/predicate"
   } ]
 }, {
-  "@id" : "_:genid291",
+  "@id" : "_:genid293",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -2362,7 +2382,7 @@
     "@id" : "https://w3id.org/biolink/vocab/predicate"
   } ]
 }, {
-  "@id" : "_:genid292",
+  "@id" : "_:genid294",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/linkml/mixins"
@@ -2371,34 +2391,7 @@
     "@id" : "https://w3id.org/biolink/vocab/ThingWithTaxon"
   } ]
 }, {
-  "@id" : "_:genid293",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/linkml/mixins"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/OntologyClass"
-  } ]
-}, {
-  "@id" : "_:genid294",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/category"
-  } ]
-}, {
   "@id" : "_:genid295",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/description"
-  } ]
-}, {
-  "@id" : "_:genid296",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -2407,7 +2400,7 @@
     "@id" : "https://w3id.org/biolink/vocab/id"
   } ]
 }, {
-  "@id" : "_:genid297",
+  "@id" : "_:genid296",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -2416,9 +2409,19 @@
     "@id" : "https://w3id.org/biolink/vocab/type"
   } ]
 }, {
-  "@id" : "_:genid298",
+  "@id" : "_:genid297",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/id"
+  } ]
+}, {
+  "@id" : "_:genid298",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
@@ -2428,12 +2431,12 @@
 }, {
   "@id" : "_:genid299",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/description"
+    "@id" : "https://w3id.org/biolink/vocab/published_in"
   } ]
 }, {
   "@id" : "_:genid30",
@@ -2458,7 +2461,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/id"
+    "@id" : "https://w3id.org/biolink/vocab/published_in"
   } ]
 }, {
   "@id" : "_:genid301",
@@ -2476,7 +2479,7 @@
     "@id" : "https://w3id.org/linkml/mixins"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/GeneOrGeneProduct"
+    "@id" : "https://w3id.org/biolink/vocab/ChemicalEntityOrProteinOrPolypeptide"
   } ]
 }, {
   "@id" : "_:genid303",
@@ -2485,7 +2488,7 @@
     "@id" : "https://w3id.org/linkml/mixins"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/GenomicEntity"
+    "@id" : "https://w3id.org/biolink/vocab/ChemicalOrDrugOrTreatment"
   } ]
 }, {
   "@id" : "_:genid304",
@@ -2494,7 +2497,7 @@
     "@id" : "https://w3id.org/linkml/mixins"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/OntologyClass"
+    "@id" : "https://w3id.org/biolink/vocab/PhysicalEssence"
   } ]
 }, {
   "@id" : "_:genid305",
@@ -2503,25 +2506,43 @@
     "@id" : "https://w3id.org/linkml/mixins"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/PhysicalEssence"
+    "@id" : "https://w3id.org/biolink/vocab/OntologyClass"
   } ]
 }, {
   "@id" : "_:genid306",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#knowledge_assertion"
-    }, {
-      "@id" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#logical_entailment"
-    }, {
-      "@id" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#not_provided"
-    }, {
-      "@id" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#observation"
-    }, {
-      "@id" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#prediction"
-    }, {
-      "@id" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#statistical_association"
-    } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/category"
+  } ]
+}, {
+  "@id" : "_:genid307",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/description"
+  } ]
+}, {
+  "@id" : "_:genid308",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/id"
+  } ]
+}, {
+  "@id" : "_:genid309",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/type"
   } ]
 }, {
   "@id" : "_:genid31",
@@ -2539,23 +2560,52 @@
     "@value" : "An inference that results when research finds no evidence information in the scientific literature, at reference databases, or from other resources that is used in an manual assertion."
   } ]
 }, {
-  "@id" : "_:genid313",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/category"
-  } ]
-}, {
-  "@id" : "_:genid314",
+  "@id" : "_:genid310",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/category"
+    "@id" : "https://w3id.org/biolink/vocab/id"
+  } ]
+}, {
+  "@id" : "_:genid311",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/description"
+  } ]
+}, {
+  "@id" : "_:genid312",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/id"
+  } ]
+}, {
+  "@id" : "_:genid313",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/ChemicalEntityOrGeneOrGeneProduct"
+  } ]
+}, {
+  "@id" : "_:genid314",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/GeneOrGeneProduct"
   } ]
 }, {
   "@id" : "_:genid315",
@@ -2588,19 +2638,19 @@
   "@id" : "_:genid318",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/Gene"
+    "@id" : "https://w3id.org/biolink/vocab/NucleicAcidEntity"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/has_gene"
+    "@id" : "https://w3id.org/biolink/vocab/object"
   } ]
 }, {
   "@id" : "_:genid319",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "https://w3id.org/biolink/vocab/NucleicAcidEntity"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/id"
+    "@id" : "https://w3id.org/biolink/vocab/subject"
   } ]
 }, {
   "@id" : "_:genid32",
@@ -2625,48 +2675,20 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/id"
-  } ]
-}, {
-  "@id" : "_:genid321",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/id"
-  } ]
-}, {
-  "@id" : "_:genid322",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/linkml/mixins"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
-  } ]
-}, {
-  "@id" : "_:genid323",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/Gene"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/biolink/vocab/object"
   } ]
 }, {
-  "@id" : "_:genid324",
+  "@id" : "_:genid321",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/object"
+    "@id" : "https://w3id.org/biolink/vocab/subject"
   } ]
 }, {
-  "@id" : "_:genid325",
+  "@id" : "_:genid322",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -2676,7 +2698,17 @@
     "@id" : "https://w3id.org/biolink/vocab/object"
   } ]
 }, {
-  "@id" : "_:genid326",
+  "@id" : "_:genid323",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/subject"
+  } ]
+}, {
+  "@id" : "_:genid324",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -2685,7 +2717,7 @@
     "@id" : "https://w3id.org/biolink/vocab/predicate"
   } ]
 }, {
-  "@id" : "_:genid327",
+  "@id" : "_:genid325",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -2695,7 +2727,7 @@
     "@id" : "https://w3id.org/biolink/vocab/predicate"
   } ]
 }, {
-  "@id" : "_:genid328",
+  "@id" : "_:genid326",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -2705,16 +2737,22 @@
     "@id" : "https://w3id.org/biolink/vocab/predicate"
   } ]
 }, {
-  "@id" : "_:genid329",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid330"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/linkml/mixins"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/OntologyClass"
+  "@id" : "_:genid327",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#knowledge_assertion"
+    }, {
+      "@id" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#logical_entailment"
+    }, {
+      "@id" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#not_provided"
+    }, {
+      "@id" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#observation"
+    }, {
+      "@id" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#prediction"
+    }, {
+      "@id" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#statistical_association"
+    } ]
   } ]
 }, {
   "@id" : "_:genid33",
@@ -2732,20 +2770,8 @@
     "@value" : "ND"
   } ]
 }, {
-  "@id" : "_:genid330",
+  "@id" : "_:genid334",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/id"
-  } ]
-}, {
-  "@id" : "_:genid331",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid332"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/linkml/mixins"
   } ],
@@ -2753,21 +2779,36 @@
     "@id" : "https://w3id.org/biolink/vocab/OntologyClass"
   } ]
 }, {
-  "@id" : "_:genid332",
+  "@id" : "_:genid335",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/category"
+  } ]
+}, {
+  "@id" : "_:genid336",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/id"
+    "@id" : "https://w3id.org/biolink/vocab/category"
   } ]
 }, {
-  "@id" : "_:genid333",
+  "@id" : "_:genid337",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid334"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
   } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/GenomicEntity"
+  } ]
+}, {
+  "@id" : "_:genid338",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/linkml/mixins"
   } ],
@@ -2775,69 +2816,13 @@
     "@id" : "https://w3id.org/biolink/vocab/OntologyClass"
   } ]
 }, {
-  "@id" : "_:genid334",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/id"
-  } ]
-}, {
-  "@id" : "_:genid335",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid336"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/linkml/mixins"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/ThingWithTaxon"
-  } ]
-}, {
-  "@id" : "_:genid336",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/OrganismTaxon"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/in_taxon"
-  } ]
-}, {
-  "@id" : "_:genid337",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid338"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/linkml/mixins"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/ThingWithTaxon"
-  } ]
-}, {
-  "@id" : "_:genid338",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/in_taxon"
-  } ]
-}, {
   "@id" : "_:genid339",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid340"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/linkml/mixins"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
+    "@id" : "https://w3id.org/biolink/vocab/PhysicalEssence"
   } ]
 }, {
   "@id" : "_:genid34",
@@ -2857,44 +2842,39 @@
 }, {
   "@id" : "_:genid340",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/NamedThing"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/object"
-  } ]
-}, {
-  "@id" : "_:genid341",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid342"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/linkml/mixins"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
+    "@id" : "https://w3id.org/biolink/vocab/ThingWithTaxon"
+  } ]
+}, {
+  "@id" : "_:genid341",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/id"
   } ]
 }, {
   "@id" : "_:genid342",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/subject"
+    "@id" : "https://w3id.org/biolink/vocab/publication_type"
   } ]
 }, {
   "@id" : "_:genid343",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid344"
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/linkml/mixins"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
+    "@id" : "https://w3id.org/biolink/vocab/id"
   } ]
 }, {
   "@id" : "_:genid344",
@@ -2904,63 +2884,53 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/object"
+    "@id" : "https://w3id.org/biolink/vocab/publication_type"
   } ]
 }, {
   "@id" : "_:genid345",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid346"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/linkml/mixins"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
-  } ]
-}, {
-  "@id" : "_:genid346",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/subject"
-  } ]
-}, {
-  "@id" : "_:genid347",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid348"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/linkml/mixins"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
-  } ]
-}, {
-  "@id" : "_:genid348",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/object"
+    "@id" : "https://w3id.org/biolink/vocab/id"
   } ]
 }, {
-  "@id" : "_:genid349",
+  "@id" : "_:genid346",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid350"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/linkml/mixins"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
+    "@id" : "https://w3id.org/biolink/vocab/GenomicEntity"
+  } ]
+}, {
+  "@id" : "_:genid347",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/OntologyClass"
+  } ]
+}, {
+  "@id" : "_:genid348",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/PhysicalEssence"
+  } ]
+}, {
+  "@id" : "_:genid349",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/Gene"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/has_gene"
   } ]
 }, {
   "@id" : "_:genid35",
@@ -2975,67 +2945,59 @@
 }, {
   "@id" : "_:genid350",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/subject"
-  } ]
-}, {
-  "@id" : "_:genid351",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid352"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/linkml/mixins"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
-  } ]
-}, {
-  "@id" : "_:genid352",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/predicate"
+    "@id" : "https://w3id.org/biolink/vocab/id"
   } ]
 }, {
-  "@id" : "_:genid353",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid354"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/linkml/mixins"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
-  } ]
-}, {
-  "@id" : "_:genid354",
+  "@id" : "_:genid351",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/predicate"
+    "@id" : "https://w3id.org/biolink/vocab/id"
+  } ]
+}, {
+  "@id" : "_:genid352",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/id"
+  } ]
+}, {
+  "@id" : "_:genid353",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/id"
+  } ]
+}, {
+  "@id" : "_:genid354",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/type"
   } ]
 }, {
   "@id" : "_:genid355",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid356"
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/linkml/mixins"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
+    "@id" : "https://w3id.org/biolink/vocab/id"
   } ]
 }, {
   "@id" : "_:genid356",
@@ -3045,7 +3007,139 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/id"
+  } ]
+}, {
+  "@id" : "_:genid357",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
+  } ]
+}, {
+  "@id" : "_:genid358",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/Gene"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/object"
+  } ]
+}, {
+  "@id" : "_:genid359",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/object"
+  } ]
+}, {
+  "@id" : "_:genid360",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/object"
+  } ]
+}, {
+  "@id" : "_:genid361",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/biolink/vocab/predicate"
+  } ]
+}, {
+  "@id" : "_:genid362",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/predicate"
+  } ]
+}, {
+  "@id" : "_:genid363",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/predicate"
+  } ]
+}, {
+  "@id" : "_:genid364",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid365"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/OntologyClass"
+  } ]
+}, {
+  "@id" : "_:genid365",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/id"
+  } ]
+}, {
+  "@id" : "_:genid366",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid367"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/OntologyClass"
+  } ]
+}, {
+  "@id" : "_:genid367",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/id"
+  } ]
+}, {
+  "@id" : "_:genid368",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid369"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/OntologyClass"
+  } ]
+}, {
+  "@id" : "_:genid369",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/id"
   } ]
 }, {
   "@id" : "_:genid37",
@@ -3055,6 +3149,222 @@
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://purl.obolibrary.org/obo/ECO_0000218"
+  } ]
+}, {
+  "@id" : "_:genid370",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid371"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/ThingWithTaxon"
+  } ]
+}, {
+  "@id" : "_:genid371",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/OrganismTaxon"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/in_taxon"
+  } ]
+}, {
+  "@id" : "_:genid372",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid373"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/ThingWithTaxon"
+  } ]
+}, {
+  "@id" : "_:genid373",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/in_taxon"
+  } ]
+}, {
+  "@id" : "_:genid374",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid375"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
+  } ]
+}, {
+  "@id" : "_:genid375",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/NamedThing"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/object"
+  } ]
+}, {
+  "@id" : "_:genid376",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid377"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
+  } ]
+}, {
+  "@id" : "_:genid377",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/subject"
+  } ]
+}, {
+  "@id" : "_:genid378",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid379"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
+  } ]
+}, {
+  "@id" : "_:genid379",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/object"
+  } ]
+}, {
+  "@id" : "_:genid380",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid381"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
+  } ]
+}, {
+  "@id" : "_:genid381",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/subject"
+  } ]
+}, {
+  "@id" : "_:genid382",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid383"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
+  } ]
+}, {
+  "@id" : "_:genid383",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/object"
+  } ]
+}, {
+  "@id" : "_:genid384",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid385"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
+  } ]
+}, {
+  "@id" : "_:genid385",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/subject"
+  } ]
+}, {
+  "@id" : "_:genid386",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid387"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
+  } ]
+}, {
+  "@id" : "_:genid387",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/predicate"
+  } ]
+}, {
+  "@id" : "_:genid388",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid389"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
+  } ]
+}, {
+  "@id" : "_:genid389",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/predicate"
   } ]
 }, {
   "@id" : "_:genid39",
@@ -3070,6 +3380,28 @@
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@id" : "http://purl.obolibrary.org/obo/ECO_0000000"
+  } ]
+}, {
+  "@id" : "_:genid390",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid391"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/linkml/mixins"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin"
+  } ]
+}, {
+  "@id" : "_:genid391",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/predicate"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -5563,9 +5895,6 @@
     "@id" : "http://purl.obolibrary.org/obo/SO_0001411"
   } ]
 }, {
-  "@id" : "http://purl.org/dc/dcmitype/Dataset",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "http://purl.org/dc/elements/1.1/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -5628,32 +5957,6 @@
 }, {
   "@id" : "http://purl.org/dc/terms/hasVersion",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/terms/isPartOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/elements/1.1/type" : [ {
-    "@id" : "http://dublincore.org/usage/documents/principles/#element-refinement"
-  } ],
-  "http://purl.org/dc/terms/hasVersion" : [ {
-    "@id" : "http://dublincore.org/usage/terms/history/#isPartOf-002"
-  } ],
-  "http://purl.org/dc/terms/issued" : [ {
-    "@value" : "2000-07-11"
-  } ],
-  "http://purl.org/dc/terms/modified" : [ {
-    "@value" : "2002-06-15"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en-us",
-    "@value" : "The described resource is a physical or logical part of the\n            referenced resource."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://purl.org/dc/terms/"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en-us",
-    "@value" : "Is Part Of"
-  } ]
 }, {
   "@id" : "http://purl.org/dc/terms/isReplacedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -8830,6 +9133,30 @@
     "@id" : "https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent"
   } ]
 }, {
+  "@id" : "https://w3id.org/biolink/vocab/Article",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "article"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/Publication"
+  }, {
+    "@id" : "_:genid274"
+  }, {
+    "@id" : "_:genid275"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a piece of writing on a particular topic presented as a stand-alone section of a larger publication"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.org/spar/fabio/article"
+  }, {
+    "@id" : "http://semanticscience.org/resource/SIO_000154"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ]
+}, {
   "@id" : "https://w3id.org/biolink/vocab/Association",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -8837,10 +9164,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/biolink/vocab/Entity"
-  }, {
-    "@id" : "_:genid274"
-  }, {
-    "@id" : "_:genid275"
   }, {
     "@id" : "_:genid276"
   }, {
@@ -8873,6 +9196,10 @@
     "@id" : "_:genid290"
   }, {
     "@id" : "_:genid291"
+  }, {
+    "@id" : "_:genid292"
+  }, {
+    "@id" : "_:genid293"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A typed association between two entities, supported by evidence"
@@ -8899,7 +9226,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/biolink/vocab/NamedThing"
   }, {
-    "@id" : "_:genid292"
+    "@id" : "_:genid294"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@value" : "bioentity"
@@ -8917,6 +9244,87 @@
     "@id" : "https://www.wikidata.org/entity/Q28845870"
   } ]
 }, {
+  "@id" : "https://w3id.org/biolink/vocab/Book",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "book"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/Publication"
+  }, {
+    "@id" : "_:genid295"
+  }, {
+    "@id" : "_:genid296"
+  }, {
+    "@id" : "_:genid297"
+  }, {
+    "@id" : "_:genid298"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "This class may rarely be instantiated except if use cases of a given knowledge graph support its utility."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/BookChapter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "book chapter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/Publication"
+  }, {
+    "@id" : "_:genid299"
+  }, {
+    "@id" : "_:genid300"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/ChemicalEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "chemical entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/NamedThing"
+  }, {
+    "@id" : "_:genid301"
+  }, {
+    "@id" : "_:genid302"
+  }, {
+    "@id" : "_:genid303"
+  }, {
+    "@id" : "_:genid304"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broadMatch" : [ {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T167"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "A chemical entity is a physical entity that pertains to chemistry or biochemistry."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T103"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/CHEBI_24431"
+  }, {
+    "@id" : "http://semanticscience.org/resource/SIO_010004"
+  }, {
+    "@id" : "https://www.wikidata.org/entity/Q79529"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T123"
+  }, {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T131"
+  }, {
+    "@id" : "https://www.wikidata.org/entity/Q43460564"
+  } ]
+}, {
   "@id" : "https://w3id.org/biolink/vocab/ChemicalEntityOrGeneOrGeneProduct",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -8932,6 +9340,33 @@
     "@id" : "https://w3id.org/biolink/biolink-model"
   } ]
 }, {
+  "@id" : "https://w3id.org/biolink/vocab/ChemicalEntityOrProteinOrPolypeptide",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "chemical entity or protein or polypeptide"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/linkml/ClassDefinition#Mixin"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "A union of chemical entities and children, and protein and polypeptide. This mixin is helpful to use when searching across chemical entities that must include genes and their children as chemical entities."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/ChemicalOrDrugOrTreatment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "chemical or drug or treatment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/linkml/ClassDefinition#Mixin"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ]
+}, {
   "@id" : "https://w3id.org/biolink/vocab/DiseaseOrPhenotypicFeature",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -8940,7 +9375,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/biolink/vocab/BiologicalEntity"
   }, {
-    "@id" : "_:genid293"
+    "@id" : "_:genid305"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@value" : "phenome"
@@ -8955,6 +9390,24 @@
     "@id" : "http://purl.bioontology.org/ontology/STY/T033"
   } ]
 }, {
+  "@id" : "https://w3id.org/biolink/vocab/DrugLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "drug label"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/Publication"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broadMatch" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/ncit#C41203"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a document accompanying a drug or its container that provides written, printed or graphic information about the drug, including drug contents, specific instructions or warnings for administration, storage and disposal instructions, etc."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ]
+}, {
   "@id" : "https://w3id.org/biolink/vocab/Entity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -8963,19 +9416,19 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/linkml/ClassDefinition"
   }, {
-    "@id" : "_:genid294"
+    "@id" : "_:genid306"
   }, {
-    "@id" : "_:genid295"
+    "@id" : "_:genid307"
   }, {
-    "@id" : "_:genid296"
+    "@id" : "_:genid308"
   }, {
-    "@id" : "_:genid297"
+    "@id" : "_:genid309"
   }, {
-    "@id" : "_:genid298"
+    "@id" : "_:genid310"
   }, {
-    "@id" : "_:genid299"
+    "@id" : "_:genid311"
   }, {
-    "@id" : "_:genid300"
+    "@id" : "_:genid312"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Root Biolink Model class for all things and informational relationships, real or imagined."
@@ -8995,15 +9448,15 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/biolink/vocab/BiologicalEntity"
   }, {
-    "@id" : "_:genid301"
+    "@id" : "_:genid313"
   }, {
-    "@id" : "_:genid302"
+    "@id" : "_:genid314"
   }, {
-    "@id" : "_:genid303"
+    "@id" : "_:genid315"
   }, {
-    "@id" : "_:genid304"
+    "@id" : "_:genid316"
   }, {
-    "@id" : "_:genid305"
+    "@id" : "_:genid317"
   } ],
   "http://www.w3.org/2004/02/skos/core#broadMatch" : [ {
     "@id" : "http://purl.obolibrary.org/obo/NCIT_C45822"
@@ -9062,6 +9515,95 @@
     "@id" : "http://purl.obolibrary.org/obo/GENO_0000897"
   } ]
 }, {
+  "@id" : "https://w3id.org/biolink/vocab/GenomicSequenceLocalization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "genomic sequence localization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/SequenceAssociation"
+  }, {
+    "@id" : "_:genid318"
+  }, {
+    "@id" : "_:genid319"
+  }, {
+    "@id" : "_:genid320"
+  }, {
+    "@id" : "_:genid321"
+  }, {
+    "@id" : "_:genid322"
+  }, {
+    "@id" : "_:genid323"
+  }, {
+    "@id" : "_:genid324"
+  }, {
+    "@id" : "_:genid325"
+  }, {
+    "@id" : "_:genid326"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broadMatch" : [ {
+    "@id" : "https://datacommons.org/browser/Chromosome"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "A relationship between a sequence feature and a nucleic acid entity it is localized to. The reference entity may be a chromosome, chromosome region or information entity such as a contig."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "https://datacommons.org/browser/GenomeAnnotation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/InformationContentEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "information content entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/NamedThing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "information"
+  }, {
+    "@value" : "information artefact"
+  }, {
+    "@value" : "information entity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a piece of information that typically describes some topic of discourse or is used as support."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T077"
+  }, {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T078"
+  }, {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T079"
+  }, {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T080"
+  }, {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T081"
+  }, {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T082"
+  }, {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T089"
+  }, {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T102"
+  }, {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T169"
+  }, {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T171"
+  }, {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T185"
+  }, {
+    "@id" : "https://lhncbc.nlm.nih.gov/semanticnetwork/download/sg_archive/SemGroups-v04.txtCONC"
+  } ]
+}, {
   "@id" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -9071,7 +9613,7 @@
     "@id" : "https://w3id.org/linkml/EnumDefinition"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid306"
+    "@id" : "_:genid327"
   } ],
   "https://w3id.org/linkml/permissible_values" : [ {
     "@id" : "https://w3id.org/biolink/vocab/KnowledgeLevelEnum#knowledge_assertion"
@@ -9168,6 +9710,32 @@
     "@id" : "https://w3id.org/biolink/biolink-model"
   } ]
 }, {
+  "@id" : "https://w3id.org/biolink/vocab/MolecularEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "molecular entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/ChemicalEntity"
+  }, {
+    "@id" : "_:genid334"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "A molecular entity is a chemical entity composed of individual or covalently bonded atoms."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T085"
+  }, {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T088"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/CHEBI_23367"
+  }, {
+    "@id" : "https://bioschemas.org/MolecularEntity"
+  } ]
+}, {
   "@id" : "https://w3id.org/biolink/vocab/NamedThing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -9176,9 +9744,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/biolink/vocab/Entity"
   }, {
-    "@id" : "_:genid313"
+    "@id" : "_:genid335"
   }, {
-    "@id" : "_:genid314"
+    "@id" : "_:genid336"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "a databased entity or concept/class"
@@ -9196,6 +9764,42 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
     "@id" : "https://w3id.org/biolink/biolink-model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/NucleicAcidEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "nucleic acid entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/MolecularEntity"
+  }, {
+    "@id" : "_:genid337"
+  }, {
+    "@id" : "_:genid338"
+  }, {
+    "@id" : "_:genid339"
+  }, {
+    "@id" : "_:genid340"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "genomic entity"
+  }, {
+    "@value" : "sequence feature"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "A nucleic acid entity is a molecular entity characterized by availability in gene databases of nucleotide-based sequence representations of its precise sequence; for convenience of representation, partial sequences of various kinds are included."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/SO_0000110"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T086"
+  }, {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T114"
   } ]
 }, {
   "@id" : "https://w3id.org/biolink/vocab/OntologyClass",
@@ -9257,6 +9861,28 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
     "@id" : "https://datacommons.org/browser/BiologicalSpecies"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/Patent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "patent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/Publication"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a legal document granted by a patent issuing authority which confers upon the patenter the sole right to make, use and sell an invention for a set period of time."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000313"
+  }, {
+    "@id" : "http://purl.org/spar/fabio/Patent"
+  }, {
+    "@id" : "http://semanticscience.org/resource/SIO_000153"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
   } ]
 }, {
   "@id" : "https://w3id.org/biolink/vocab/PhenotypicFeature",
@@ -9365,6 +9991,74 @@
     "@id" : "https://w3id.org/biolink/biolink-model"
   } ]
 }, {
+  "@id" : "https://w3id.org/biolink/vocab/PreprintPublication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "preprint publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/Publication"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a document reresenting an early version of an author's original scholarly work, such as a research paper or a review, prior to formal peer review and publication in a peer-reviewed scholarly or scientific journal."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.org/spar/fabio/Preprint"
+  }, {
+    "@id" : "http://www.ebi.ac.uk/efo/EFO_0010558"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/Publication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/InformationContentEntity"
+  }, {
+    "@id" : "_:genid341"
+  }, {
+    "@id" : "_:genid342"
+  }, {
+    "@id" : "_:genid343"
+  }, {
+    "@id" : "_:genid344"
+  }, {
+    "@id" : "_:genid345"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "Any ‘published’ piece of information. Publications are considered broadly to include any document or document part made available in print or on the web - which may include scientific journal issues, individual articles, and books - as well as things like pre-prints, white papers, patents, drug labels, web pages, protocol documents,  and even a part of a publication if of significant knowledge scope (e.g. a figure, figure legend, or section highlighted by NLP)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000311"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+    "@id" : "http://purl.bioontology.org/ontology/STY/T170"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000013"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/SequenceAssociation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sequence association"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/Association"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "An association between a sequence feature and a nucleic acid entity it is localized to."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ]
+}, {
   "@id" : "https://w3id.org/biolink/vocab/SequenceVariant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -9376,19 +10070,19 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/biolink/vocab/BiologicalEntity"
   }, {
-    "@id" : "_:genid315"
+    "@id" : "_:genid346"
   }, {
-    "@id" : "_:genid316"
+    "@id" : "_:genid347"
   }, {
-    "@id" : "_:genid317"
+    "@id" : "_:genid348"
   }, {
-    "@id" : "_:genid318"
+    "@id" : "_:genid349"
   }, {
-    "@id" : "_:genid319"
+    "@id" : "_:genid350"
   }, {
-    "@id" : "_:genid320"
+    "@id" : "_:genid351"
   }, {
-    "@id" : "_:genid321"
+    "@id" : "_:genid352"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@value" : "allele"
@@ -9415,6 +10109,32 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#note" : [ {
     "@value" : "This class is for modeling the specific state at a locus. A single DBSNP rs ID could correspond to more than one sequence variants (e.g CIViC:1252 and CIViC:1253, two distinct BRCA2 alleles for rs28897743)"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/Serial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "serial"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/Publication"
+  }, {
+    "@id" : "_:genid353"
+  }, {
+    "@id" : "_:genid354"
+  }, {
+    "@id" : "_:genid355"
+  }, {
+    "@id" : "_:genid356"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "journal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "This class may rarely be instantiated except if use cases of a given knowledge graph support its utility."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
   } ]
 }, {
   "@id" : "https://w3id.org/biolink/vocab/ThingWithTaxon",
@@ -9452,22 +10172,44 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/biolink/vocab/Association"
   }, {
-    "@id" : "_:genid322"
+    "@id" : "_:genid357"
   }, {
-    "@id" : "_:genid323"
+    "@id" : "_:genid358"
   }, {
-    "@id" : "_:genid324"
+    "@id" : "_:genid359"
   }, {
-    "@id" : "_:genid325"
+    "@id" : "_:genid360"
   }, {
-    "@id" : "_:genid326"
+    "@id" : "_:genid361"
   }, {
-    "@id" : "_:genid327"
+    "@id" : "_:genid362"
   }, {
-    "@id" : "_:genid328"
+    "@id" : "_:genid363"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "An association between a variant and a gene, where the variant has a genetic association with the gene (i.e. is in linkage disequilibrium)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/WebPage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "web page"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/Publication"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "a document that is published according to World Wide Web standards, which may incorporate text, graphics, sound, and/or other features."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/ncit#C142749"
+  }, {
+    "@id" : "http://purl.org/spar/fabio/WebPage"
+  }, {
+    "@id" : "http://semanticscience.org/resource/SIO_000302"
   } ],
   "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
     "@id" : "https://w3id.org/biolink/biolink-model"
@@ -9547,6 +10289,29 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "any slot that relates an association to another entity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/base_coordinate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "base coordinate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/sequence_localization_attribute"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "fully-closed"
+  }, {
+    "@value" : "one-based"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "A position in the base coordinate system.  Base coordinates start at position 1 instead of position 0."
   } ],
   "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
     "@id" : "https://w3id.org/biolink/biolink-model"
@@ -9724,6 +10489,30 @@
   } ],
   "https://w3id.org/biolink/vocab/opposite_of" : [ {
     "@value" : "prevented by"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/end_coordinate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "end coordinate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/base_coordinate"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "end"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://biohackathon.org/resource/faldo#end"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "The position at which the subject genomic entity ends on the chromosome or other entity to which it is located on."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md#end"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
   } ]
 }, {
   "@id" : "https://w3id.org/biolink/vocab/end_interbase_coordinate",
@@ -10379,6 +11168,57 @@
     "@value" : "has part"
   } ]
 }, {
+  "@id" : "https://w3id.org/biolink/vocab/mentioned_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sample"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "mentioned by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/related_to_at_instance_level"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/mentions"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "refers to is a relation between one named thing and the information content entity that it makes reference to."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/mentions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "mentions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sample"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/related_to_at_instance_level"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "refers to is a relation between one information content entity and the named thing that it makes reference to."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000142"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+    "@id" : "http://semanticscience.org/resource/SIO_000628"
+  } ]
+}, {
   "@id" : "https://w3id.org/biolink/vocab/narrow_match",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -10596,6 +11436,39 @@
   } ],
   "https://w3id.org/biolink/vocab/opposite_of" : [ {
     "@value" : "preventative for condition"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/publication_type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "publication type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "Ontology term for publication type may be drawn from Dublin Core types (https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/), FRBR-aligned Bibliographic Ontology (https://sparontologies.github.io/fabio/current/fabio.html), the MESH publication types (https://www.nlm.nih.gov/mesh/pubtypes.html), the Confederation of Open Access Repositories (COAR) Controlled Vocabulary for Resource Type Genres (http://vocabularies.coar-repositories.org/documentation/resource_types/), Wikidata (https://www.wikidata.org/wiki/Wikidata:Publication_types), or equivalent publication type ontology. When a given publication type ontology term is used within a given knowledge graph, then the CURIE identified term must be documented in the graph as a concept node of biolink:category biolink:OntologyClass."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/published_in",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/Publication"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "published in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/node_property"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "CURIE identifier of a broader publication context within which the publication may be placed, e.g. a specified book or journal."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "https://www.wikidata.org/prop/P1433"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
   } ]
 }, {
   "@id" : "https://w3id.org/biolink/vocab/qualifier",
@@ -10870,6 +11743,48 @@
   "https://w3id.org/biolink/vocab/canonical_predicate" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/sequence_localization_attribute",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/GenomicSequenceLocalization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "sequence localization attribute"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/association_slot"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "An attribute that can be applied to a genome sequence localization edge. These edges connect a nucleic acid entity such as an exon to an entity such as a chromosome. Edge properties are used to ascribe specific positional information and other metadata to the localization. In pragmatic terms this can be thought of as columns in a GFF3 line."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
+  } ]
+}, {
+  "@id" : "https://w3id.org/biolink/vocab/start_coordinate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "start coordinate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/base_coordinate"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "start"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://biohackathon.org/resource/faldo#begin"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "The position at which the subject genomic entity starts on the chromosome or other entity to which it is located on. (ie: the start of the sequence being referenced is 1)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md#start"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/biolink/biolink-model"
   } ]
 }, {
   "@id" : "https://w3id.org/biolink/vocab/start_interbase_coordinate",

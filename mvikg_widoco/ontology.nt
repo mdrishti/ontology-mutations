@@ -71,9 +71,6 @@
 # http://purl.org/dc/terms/hasVersion
 <http://purl.org/dc/terms/hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 #
-# http://purl.org/dc/terms/isPartOf
-<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-#
 # http://purl.org/dc/terms/issued
 <http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 #
@@ -343,9 +340,6 @@ _:genid5 <http://www.w3.org/2002/07/owl#annotatedProperty> <http://purl.obolibra
 _:genid5 <http://www.w3.org/2002/07/owl#annotatedTarget> "A relation that is an inverse of \"used_in\" relation." .
 _:genid5 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ECO:SN" .
 #
-# http://purl.org/dc/terms/isPartOf
-<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-#
 # http://purl.org/dc/terms/isReplacedBy
 <http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/dc/terms/isReplacedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is replaced by" .
@@ -606,6 +600,27 @@ _:genid5 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ECO:SN" .
 <https://w3id.org/biolink/vocab/knowledge_level> <http://www.w3.org/2004/02/skos/core#editorialNote> "The notion of a 'level' of knowledge can in one sense relate to the strength of a statement - i.e. how confident we are that it says something true about our domain of discourse. Here, we can generally consider Assertions to be stronger than Entailments to be stronger than Predictions. But in another sense, 'level' of knowledge can refer to the scope or specificity of what a statement expresses - on a spectrum from context-specific results of a data analysis, to generalized assertions of knowledge or fact. Here, Statistical Associations and  Observations represent more foundational statements that are only slightly removed from the data on which they are based (the former reporting the direct results of  an analysis in terms of correlations between variables in the data, and the latter describing phenomena that were observed/reported to have occurred)." .
 <https://w3id.org/biolink/vocab/knowledge_level> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 #
+# https://w3id.org/biolink/vocab/mentioned_by
+<https://w3id.org/biolink/vocab/mentioned_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/biolink/vocab/mentioned_by> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/biolink/vocab/related_to_at_instance_level> .
+<https://w3id.org/biolink/vocab/mentioned_by> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/biolink/vocab/mentions> .
+<https://w3id.org/biolink/vocab/mentioned_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Sample> .
+<https://w3id.org/biolink/vocab/mentioned_by> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/biolink/vocab/Publication> .
+<https://w3id.org/biolink/vocab/mentioned_by> <http://www.w3.org/2000/01/rdf-schema#label> "mentioned by" .
+<https://w3id.org/biolink/vocab/mentioned_by> <http://www.w3.org/2004/02/skos/core#definition> "refers to is a relation between one named thing and the information content entity that it makes reference to." .
+<https://w3id.org/biolink/vocab/mentioned_by> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
+# https://w3id.org/biolink/vocab/mentions
+<https://w3id.org/biolink/vocab/mentions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/biolink/vocab/mentions> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/biolink/vocab/related_to_at_instance_level> .
+<https://w3id.org/biolink/vocab/mentions> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/Publication> .
+<https://w3id.org/biolink/vocab/mentions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Sample> .
+<https://w3id.org/biolink/vocab/mentions> <http://www.w3.org/2000/01/rdf-schema#label> "mentions" .
+<https://w3id.org/biolink/vocab/mentions> <http://www.w3.org/2004/02/skos/core#definition> "refers to is a relation between one information content entity and the named thing that it makes reference to." .
+<https://w3id.org/biolink/vocab/mentions> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/IAO_0000142> .
+<https://w3id.org/biolink/vocab/mentions> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+<https://w3id.org/biolink/vocab/mentions> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://semanticscience.org/resource/SIO_000628> .
+#
 # https://w3id.org/biolink/vocab/node_property
 <https://w3id.org/biolink/vocab/node_property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/biolink/vocab/node_property> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/NamedThing> .
@@ -630,6 +645,15 @@ _:genid5 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ECO:SN" .
 <https://w3id.org/biolink/vocab/phenotype_of> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/biolink/vocab/BiologicalEntity> .
 <https://w3id.org/biolink/vocab/phenotype_of> <http://www.w3.org/2000/01/rdf-schema#label> "phenotype of" .
 <https://w3id.org/biolink/vocab/phenotype_of> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
+# https://w3id.org/biolink/vocab/published_in
+<https://w3id.org/biolink/vocab/published_in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/biolink/vocab/published_in> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/biolink/vocab/node_property> .
+<https://w3id.org/biolink/vocab/published_in> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/Publication> .
+<https://w3id.org/biolink/vocab/published_in> <http://www.w3.org/2000/01/rdf-schema#label> "published in" .
+<https://w3id.org/biolink/vocab/published_in> <http://www.w3.org/2004/02/skos/core#definition> "CURIE identifier of a broader publication context within which the publication may be placed, e.g. a specified book or journal." .
+<https://w3id.org/biolink/vocab/published_in> <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/prop/P1433> .
+<https://w3id.org/biolink/vocab/published_in> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 #
 # https://w3id.org/biolink/vocab/qualifier
 <https://w3id.org/biolink/vocab/qualifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1010,6 +1034,16 @@ _:genid5 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ECO:SN" .
 <https://w3id.org/biolink/vocab/association_slot> <http://www.w3.org/2004/02/skos/core#definition> "any slot that relates an association to another entity" .
 <https://w3id.org/biolink/vocab/association_slot> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 #
+# https://w3id.org/biolink/vocab/base_coordinate
+<https://w3id.org/biolink/vocab/base_coordinate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/biolink/vocab/base_coordinate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/biolink/vocab/sequence_localization_attribute> .
+<https://w3id.org/biolink/vocab/base_coordinate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/biolink/vocab/base_coordinate> <http://www.w3.org/2000/01/rdf-schema#label> "base coordinate" .
+<https://w3id.org/biolink/vocab/base_coordinate> <http://www.w3.org/2004/02/skos/core#altLabel> "fully-closed" .
+<https://w3id.org/biolink/vocab/base_coordinate> <http://www.w3.org/2004/02/skos/core#altLabel> "one-based" .
+<https://w3id.org/biolink/vocab/base_coordinate> <http://www.w3.org/2004/02/skos/core#definition> "A position in the base coordinate system.  Base coordinates start at position 1 instead of position 0." .
+<https://w3id.org/biolink/vocab/base_coordinate> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
 # https://w3id.org/biolink/vocab/category
 <https://w3id.org/biolink/vocab/category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/biolink/vocab/category> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/biolink/vocab/type> .
@@ -1029,6 +1063,16 @@ _:genid5 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ECO:SN" .
 <https://w3id.org/biolink/vocab/description> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/2004/02/skos/core#definitions> .
 <https://w3id.org/biolink/vocab/description> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 <https://w3id.org/biolink/vocab/description> <http://www.w3.org/2004/02/skos/core#narrowMatch> <https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md#Description> .
+#
+# https://w3id.org/biolink/vocab/end_coordinate
+<https://w3id.org/biolink/vocab/end_coordinate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/biolink/vocab/end_coordinate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/biolink/vocab/base_coordinate> .
+<https://w3id.org/biolink/vocab/end_coordinate> <http://www.w3.org/2000/01/rdf-schema#label> "end coordinate" .
+<https://w3id.org/biolink/vocab/end_coordinate> <http://www.w3.org/2004/02/skos/core#altLabel> "end" .
+<https://w3id.org/biolink/vocab/end_coordinate> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://biohackathon.org/resource/faldo#end> .
+<https://w3id.org/biolink/vocab/end_coordinate> <http://www.w3.org/2004/02/skos/core#definition> "The position at which the subject genomic entity ends on the chromosome or other entity to which it is located on." .
+<https://w3id.org/biolink/vocab/end_coordinate> <http://www.w3.org/2004/02/skos/core#exactMatch> <https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md#end> .
+<https://w3id.org/biolink/vocab/end_coordinate> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 #
 # https://w3id.org/biolink/vocab/form_or_variant_qualifier
 <https://w3id.org/biolink/vocab/form_or_variant_qualifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -1064,6 +1108,30 @@ _:genid5 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ECO:SN" .
 <https://w3id.org/biolink/vocab/predicate> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.org/oban/association_has_predicate> .
 <https://w3id.org/biolink/vocab/predicate> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/2002/07/owl#annotatedProperty> .
 <https://w3id.org/biolink/vocab/predicate> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
+# https://w3id.org/biolink/vocab/publication_type
+<https://w3id.org/biolink/vocab/publication_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/biolink/vocab/publication_type> <http://www.w3.org/2000/01/rdf-schema#label> "publication type" .
+<https://w3id.org/biolink/vocab/publication_type> <http://www.w3.org/2004/02/skos/core#definition> "Ontology term for publication type may be drawn from Dublin Core types (https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/), FRBR-aligned Bibliographic Ontology (https://sparontologies.github.io/fabio/current/fabio.html), the MESH publication types (https://www.nlm.nih.gov/mesh/pubtypes.html), the Confederation of Open Access Repositories (COAR) Controlled Vocabulary for Resource Type Genres (http://vocabularies.coar-repositories.org/documentation/resource_types/), Wikidata (https://www.wikidata.org/wiki/Wikidata:Publication_types), or equivalent publication type ontology. When a given publication type ontology term is used within a given knowledge graph, then the CURIE identified term must be documented in the graph as a concept node of biolink:category biolink:OntologyClass." .
+<https://w3id.org/biolink/vocab/publication_type> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
+# https://w3id.org/biolink/vocab/sequence_localization_attribute
+<https://w3id.org/biolink/vocab/sequence_localization_attribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/biolink/vocab/sequence_localization_attribute> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/biolink/vocab/association_slot> .
+<https://w3id.org/biolink/vocab/sequence_localization_attribute> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/GenomicSequenceLocalization> .
+<https://w3id.org/biolink/vocab/sequence_localization_attribute> <http://www.w3.org/2000/01/rdf-schema#label> "sequence localization attribute" .
+<https://w3id.org/biolink/vocab/sequence_localization_attribute> <http://www.w3.org/2004/02/skos/core#definition> "An attribute that can be applied to a genome sequence localization edge. These edges connect a nucleic acid entity such as an exon to an entity such as a chromosome. Edge properties are used to ascribe specific positional information and other metadata to the localization. In pragmatic terms this can be thought of as columns in a GFF3 line." .
+<https://w3id.org/biolink/vocab/sequence_localization_attribute> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
+# https://w3id.org/biolink/vocab/start_coordinate
+<https://w3id.org/biolink/vocab/start_coordinate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/biolink/vocab/start_coordinate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/biolink/vocab/base_coordinate> .
+<https://w3id.org/biolink/vocab/start_coordinate> <http://www.w3.org/2000/01/rdf-schema#label> "start coordinate" .
+<https://w3id.org/biolink/vocab/start_coordinate> <http://www.w3.org/2004/02/skos/core#altLabel> "start" .
+<https://w3id.org/biolink/vocab/start_coordinate> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://biohackathon.org/resource/faldo#begin> .
+<https://w3id.org/biolink/vocab/start_coordinate> <http://www.w3.org/2004/02/skos/core#definition> "The position at which the subject genomic entity starts on the chromosome or other entity to which it is located on. (ie: the start of the sequence being referenced is 1)." .
+<https://w3id.org/biolink/vocab/start_coordinate> <http://www.w3.org/2004/02/skos/core#exactMatch> <https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md#start> .
+<https://w3id.org/biolink/vocab/start_coordinate> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 #
 # https://w3id.org/biolink/vocab/type
 <https://w3id.org/biolink/vocab/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2564,9 +2632,6 @@ _:genid189 <http://www.w3.org/2002/07/owl#annotatedTarget> "inversion" .
 _:genid189 <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.ncbi.nlm.nih.gov/dbvar/" .
 _:genid189 <http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http://purl.obolibrary.org/obo/so#dbvar> .
 #
-# http://purl.org/dc/dcmitype/Dataset
-<http://purl.org/dc/dcmitype/Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-#
 # http://qudt.org/schema/qudt/BitEncodingType
 <http://qudt.org/schema/qudt/BitEncodingType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://qudt.org/schema/qudt/BitEncodingType> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid190 .
@@ -2943,16 +3008,16 @@ _:genid250 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/mvi
 _:genid250 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/mvikg/has_developmental_stage> .
 _:genid250 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid251 .
-_:genid251 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/dc/dcmitype/Dataset> .
-_:genid251 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/isPartOf> .
+_:genid251 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Sampling> .
+_:genid251 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isResultOf> .
 _:genid251 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid252 .
-_:genid252 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Sampling> .
-_:genid252 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isResultOf> .
+_:genid252 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+_:genid252 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
 _:genid252 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid253 .
-_:genid253 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
-_:genid253 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
+_:genid253 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/Publication> .
+_:genid253 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/mentioned_by> .
 _:genid253 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid254 .
 _:genid254 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
@@ -3084,81 +3149,98 @@ _:genid265 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/biolink/vocab/AgentTypeEnum> <https://w3id.org/linkml/permissible_values> <https://w3id.org/biolink/vocab/AgentTypeEnum#not_provided> .
 <https://w3id.org/biolink/vocab/AgentTypeEnum> <https://w3id.org/linkml/permissible_values> <https://w3id.org/biolink/vocab/AgentTypeEnum#text_mining_agent> .
 #
+# https://w3id.org/biolink/vocab/Article
+<https://w3id.org/biolink/vocab/Article> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/Publication> .
+<https://w3id.org/biolink/vocab/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid274 .
+_:genid274 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid274 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/published_in> .
+_:genid274 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid275 .
+_:genid275 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid275 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/published_in> .
+_:genid275 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Article> <http://www.w3.org/2000/01/rdf-schema#label> "article" .
+<https://w3id.org/biolink/vocab/Article> <http://www.w3.org/2004/02/skos/core#definition> "a piece of writing on a particular topic presented as a stand-alone section of a larger publication" .
+<https://w3id.org/biolink/vocab/Article> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.org/spar/fabio/article> .
+<https://w3id.org/biolink/vocab/Article> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://semanticscience.org/resource/SIO_000154> .
+<https://w3id.org/biolink/vocab/Article> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
 # https://w3id.org/biolink/vocab/Association
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/Entity> .
-<https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid274 .
-_:genid274 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/AgentTypeEnum> .
-_:genid274 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/agent_type> .
-_:genid274 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid275 .
-_:genid275 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/KnowledgeLevelEnum> .
-_:genid275 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/knowledge_level> .
-_:genid275 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid276 .
-_:genid276 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/NamedThing> .
-_:genid276 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
+_:genid276 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/AgentTypeEnum> .
+_:genid276 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/agent_type> .
 _:genid276 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid277 .
-_:genid277 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/NamedThing> .
-_:genid277 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/subject> .
+_:genid277 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/KnowledgeLevelEnum> .
+_:genid277 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/knowledge_level> .
 _:genid277 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid278 .
-_:genid278 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid278 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/agent_type> .
+_:genid278 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/NamedThing> .
+_:genid278 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
 _:genid278 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid279 .
-_:genid279 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid279 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/knowledge_level> .
+_:genid279 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/NamedThing> .
+_:genid279 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/subject> .
 _:genid279 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid280 .
 _:genid280 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid280 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
+_:genid280 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/agent_type> .
 _:genid280 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid281 .
 _:genid281 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid281 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/subject> .
+_:genid281 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/knowledge_level> .
 _:genid281 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid282 .
-_:genid282 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid282 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/agent_type> .
+_:genid282 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid282 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
 _:genid282 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid283 .
-_:genid283 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid283 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/knowledge_level> .
+_:genid283 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid283 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/subject> .
 _:genid283 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid284 .
 _:genid284 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid284 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
+_:genid284 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/agent_type> .
 _:genid284 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid285 .
 _:genid285 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid285 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/qualifier> .
+_:genid285 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/knowledge_level> .
 _:genid285 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid286 .
 _:genid286 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid286 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/subject> .
+_:genid286 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
 _:genid286 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid287 .
-_:genid287 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
-_:genid287 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/category> .
+_:genid287 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid287 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/qualifier> .
 _:genid287 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid288 .
-_:genid288 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid288 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
+_:genid288 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid288 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/subject> .
 _:genid288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid289 .
-_:genid289 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid289 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/type> .
+_:genid289 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid289 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/category> .
 _:genid289 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid290 .
-_:genid290 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid290 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 _:genid290 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
 _:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid291 .
-_:genid291 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid291 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
+_:genid291 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid291 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/type> .
 _:genid291 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid292 .
+_:genid292 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid292 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
+_:genid292 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid293 .
+_:genid293 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid293 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
+_:genid293 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2000/01/rdf-schema#label> "association" .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2004/02/skos/core#definition> "A typed association between two entities, supported by evidence" .
 <https://w3id.org/biolink/vocab/Association> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.org/oban/association> .
@@ -3170,10 +3252,10 @@ _:genid291 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://w3id.org/biolink/vocab/BiologicalEntity
 <https://w3id.org/biolink/vocab/BiologicalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/biolink/vocab/BiologicalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/NamedThing> .
-<https://w3id.org/biolink/vocab/BiologicalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid292 .
-_:genid292 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/ThingWithTaxon> .
-_:genid292 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid292 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/BiologicalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid294 .
+_:genid294 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/ThingWithTaxon> .
+_:genid294 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid294 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/BiologicalEntity> <http://www.w3.org/2000/01/rdf-schema#label> "biological entity" .
 <https://w3id.org/biolink/vocab/BiologicalEntity> <http://www.w3.org/2004/02/skos/core#altLabel> "bioentity" .
 <https://w3id.org/biolink/vocab/BiologicalEntity> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
@@ -3182,6 +3264,74 @@ _:genid292 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/biolink/vocab/BiologicalEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://semanticscience.org/resource/SIO_010046> .
 <https://w3id.org/biolink/vocab/BiologicalEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <https://www.wikidata.org/entity/Q28845870> .
 #
+# https://w3id.org/biolink/vocab/Book
+<https://w3id.org/biolink/vocab/Book> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/Book> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/Publication> .
+<https://w3id.org/biolink/vocab/Book> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid295 .
+_:genid295 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid295 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid295 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Book> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid296 .
+_:genid296 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid296 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/type> .
+_:genid296 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Book> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid297 .
+_:genid297 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid297 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid297 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Book> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid298 .
+_:genid298 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid298 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid298 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Book> <http://www.w3.org/2000/01/rdf-schema#label> "book" .
+<https://w3id.org/biolink/vocab/Book> <http://www.w3.org/2004/02/skos/core#definition> "This class may rarely be instantiated except if use cases of a given knowledge graph support its utility." .
+<https://w3id.org/biolink/vocab/Book> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
+# https://w3id.org/biolink/vocab/BookChapter
+<https://w3id.org/biolink/vocab/BookChapter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/BookChapter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/Publication> .
+<https://w3id.org/biolink/vocab/BookChapter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid299 .
+_:genid299 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid299 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/published_in> .
+_:genid299 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/BookChapter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid300 .
+_:genid300 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid300 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/published_in> .
+_:genid300 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/BookChapter> <http://www.w3.org/2000/01/rdf-schema#label> "book chapter" .
+<https://w3id.org/biolink/vocab/BookChapter> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
+# https://w3id.org/biolink/vocab/ChemicalEntity
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/NamedThing> .
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid301 .
+_:genid301 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/ChemicalEntityOrGeneOrGeneProduct> .
+_:genid301 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid301 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid302 .
+_:genid302 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/ChemicalEntityOrProteinOrPolypeptide> .
+_:genid302 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid302 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid303 .
+_:genid303 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/ChemicalOrDrugOrTreatment> .
+_:genid303 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid303 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid304 .
+_:genid304 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/PhysicalEssence> .
+_:genid304 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid304 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/2000/01/rdf-schema#label> "chemical entity" .
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://purl.bioontology.org/ontology/STY/T167> .
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/2004/02/skos/core#definition> "A chemical entity is a physical entity that pertains to chemistry or biochemistry." .
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.bioontology.org/ontology/STY/T103> .
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/CHEBI_24431> .
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://semanticscience.org/resource/SIO_010004> .
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/entity/Q79529> .
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T123> .
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T131> .
+<https://w3id.org/biolink/vocab/ChemicalEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <https://www.wikidata.org/entity/Q43460564> .
+#
 # https://w3id.org/biolink/vocab/ChemicalEntityOrGeneOrGeneProduct
 <https://w3id.org/biolink/vocab/ChemicalEntityOrGeneOrGeneProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/biolink/vocab/ChemicalEntityOrGeneOrGeneProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/linkml/ClassDefinition#Mixin> .
@@ -3189,50 +3339,71 @@ _:genid292 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/biolink/vocab/ChemicalEntityOrGeneOrGeneProduct> <http://www.w3.org/2004/02/skos/core#definition> "A union of chemical entities and children, and gene or gene product. This mixin is helpful to use when searching across chemical entities that must include genes and their children as chemical entities." .
 <https://w3id.org/biolink/vocab/ChemicalEntityOrGeneOrGeneProduct> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 #
+# https://w3id.org/biolink/vocab/ChemicalEntityOrProteinOrPolypeptide
+<https://w3id.org/biolink/vocab/ChemicalEntityOrProteinOrPolypeptide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/ChemicalEntityOrProteinOrPolypeptide> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/linkml/ClassDefinition#Mixin> .
+<https://w3id.org/biolink/vocab/ChemicalEntityOrProteinOrPolypeptide> <http://www.w3.org/2000/01/rdf-schema#label> "chemical entity or protein or polypeptide" .
+<https://w3id.org/biolink/vocab/ChemicalEntityOrProteinOrPolypeptide> <http://www.w3.org/2004/02/skos/core#definition> "A union of chemical entities and children, and protein and polypeptide. This mixin is helpful to use when searching across chemical entities that must include genes and their children as chemical entities." .
+<https://w3id.org/biolink/vocab/ChemicalEntityOrProteinOrPolypeptide> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
+# https://w3id.org/biolink/vocab/ChemicalOrDrugOrTreatment
+<https://w3id.org/biolink/vocab/ChemicalOrDrugOrTreatment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/ChemicalOrDrugOrTreatment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/linkml/ClassDefinition#Mixin> .
+<https://w3id.org/biolink/vocab/ChemicalOrDrugOrTreatment> <http://www.w3.org/2000/01/rdf-schema#label> "chemical or drug or treatment" .
+<https://w3id.org/biolink/vocab/ChemicalOrDrugOrTreatment> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
 # https://w3id.org/biolink/vocab/DiseaseOrPhenotypicFeature
 <https://w3id.org/biolink/vocab/DiseaseOrPhenotypicFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/biolink/vocab/DiseaseOrPhenotypicFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/BiologicalEntity> .
-<https://w3id.org/biolink/vocab/DiseaseOrPhenotypicFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid293 .
-_:genid293 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/OntologyClass> .
-_:genid293 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid293 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/DiseaseOrPhenotypicFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid305 .
+_:genid305 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/OntologyClass> .
+_:genid305 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid305 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/DiseaseOrPhenotypicFeature> <http://www.w3.org/2000/01/rdf-schema#label> "disease or phenotypic feature" .
 <https://w3id.org/biolink/vocab/DiseaseOrPhenotypicFeature> <http://www.w3.org/2004/02/skos/core#altLabel> "phenome" .
 <https://w3id.org/biolink/vocab/DiseaseOrPhenotypicFeature> <http://www.w3.org/2004/02/skos/core#definition> "Either one of a disease or an individual phenotypic feature. Some knowledge resources such as Monarch treat these as distinct, others such as MESH conflate.  Please see definitions of phenotypic feature and disease in this model for their independent descriptions.  This class is helpful to enforce domains and ranges that may involve either a disease or a phenotypic feature." .
 <https://w3id.org/biolink/vocab/DiseaseOrPhenotypicFeature> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 <https://w3id.org/biolink/vocab/DiseaseOrPhenotypicFeature> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T033> .
 #
+# https://w3id.org/biolink/vocab/DrugLabel
+<https://w3id.org/biolink/vocab/DrugLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/DrugLabel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/Publication> .
+<https://w3id.org/biolink/vocab/DrugLabel> <http://www.w3.org/2000/01/rdf-schema#label> "drug label" .
+<https://w3id.org/biolink/vocab/DrugLabel> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://purl.obolibrary.org/obo/ncit#C41203> .
+<https://w3id.org/biolink/vocab/DrugLabel> <http://www.w3.org/2004/02/skos/core#definition> "a document accompanying a drug or its container that provides written, printed or graphic information about the drug, including drug contents, specific instructions or warnings for administration, storage and disposal instructions, etc." .
+<https://w3id.org/biolink/vocab/DrugLabel> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
 # https://w3id.org/biolink/vocab/Entity
 <https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/linkml/ClassDefinition> .
-<https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid294 .
-_:genid294 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
-_:genid294 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/category> .
-_:genid294 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid295 .
-_:genid295 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid295 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/description> .
-_:genid295 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid296 .
-_:genid296 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid296 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
-_:genid296 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid297 .
-_:genid297 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid297 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/type> .
-_:genid297 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid298 .
-_:genid298 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid298 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
-_:genid298 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid299 .
-_:genid299 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid299 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/description> .
-_:genid299 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid300 .
-_:genid300 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid300 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
-_:genid300 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid306 .
+_:genid306 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid306 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/category> .
+_:genid306 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid307 .
+_:genid307 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid307 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/description> .
+_:genid307 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid308 .
+_:genid308 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid308 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid308 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid309 .
+_:genid309 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid309 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/type> .
+_:genid309 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid310 .
+_:genid310 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid310 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid310 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid311 .
+_:genid311 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid311 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/description> .
+_:genid311 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid312 .
+_:genid312 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid312 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid312 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2000/01/rdf-schema#label> "entity" .
 <https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2004/02/skos/core#definition> "Root Biolink Model class for all things and informational relationships, real or imagined." .
 <https://w3id.org/biolink/vocab/Entity> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
@@ -3240,26 +3411,26 @@ _:genid300 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://w3id.org/biolink/vocab/Gene
 <https://w3id.org/biolink/vocab/Gene> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/biolink/vocab/Gene> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/BiologicalEntity> .
-<https://w3id.org/biolink/vocab/Gene> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid301 .
-_:genid301 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/ChemicalEntityOrGeneOrGeneProduct> .
-_:genid301 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid301 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/Gene> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid302 .
-_:genid302 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/GeneOrGeneProduct> .
-_:genid302 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid302 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/Gene> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid303 .
-_:genid303 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/GenomicEntity> .
-_:genid303 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid303 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/Gene> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid304 .
-_:genid304 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/OntologyClass> .
-_:genid304 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid304 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/Gene> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid305 .
-_:genid305 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/PhysicalEssence> .
-_:genid305 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid305 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Gene> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid313 .
+_:genid313 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/ChemicalEntityOrGeneOrGeneProduct> .
+_:genid313 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid313 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Gene> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid314 .
+_:genid314 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/GeneOrGeneProduct> .
+_:genid314 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid314 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Gene> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid315 .
+_:genid315 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/GenomicEntity> .
+_:genid315 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid315 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Gene> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid316 .
+_:genid316 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/OntologyClass> .
+_:genid316 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid316 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Gene> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid317 .
+_:genid317 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/PhysicalEssence> .
+_:genid317 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid317 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/Gene> <http://www.w3.org/2000/01/rdf-schema#comment> "In MVIKG: A gene that may have sequence variants and associated phenotypes" .
 <https://w3id.org/biolink/vocab/Gene> <http://www.w3.org/2000/01/rdf-schema#label> "gene" .
 <https://w3id.org/biolink/vocab/Gene> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://purl.obolibrary.org/obo/NCIT_C45822> .
@@ -3287,29 +3458,97 @@ _:genid305 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/biolink/vocab/GenomicEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T028> .
 <https://w3id.org/biolink/vocab/GenomicEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.obolibrary.org/obo/GENO_0000897> .
 #
+# https://w3id.org/biolink/vocab/GenomicSequenceLocalization
+<https://w3id.org/biolink/vocab/GenomicSequenceLocalization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/GenomicSequenceLocalization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/SequenceAssociation> .
+<https://w3id.org/biolink/vocab/GenomicSequenceLocalization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid318 .
+_:genid318 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/NucleicAcidEntity> .
+_:genid318 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
+_:genid318 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/GenomicSequenceLocalization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid319 .
+_:genid319 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/NucleicAcidEntity> .
+_:genid319 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/subject> .
+_:genid319 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/GenomicSequenceLocalization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid320 .
+_:genid320 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid320 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
+_:genid320 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/GenomicSequenceLocalization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid321 .
+_:genid321 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid321 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/subject> .
+_:genid321 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/GenomicSequenceLocalization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid322 .
+_:genid322 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid322 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
+_:genid322 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/GenomicSequenceLocalization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid323 .
+_:genid323 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid323 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/subject> .
+_:genid323 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/GenomicSequenceLocalization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid324 .
+_:genid324 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid324 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
+_:genid324 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/GenomicSequenceLocalization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid325 .
+_:genid325 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid325 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
+_:genid325 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/GenomicSequenceLocalization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid326 .
+_:genid326 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid326 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
+_:genid326 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/GenomicSequenceLocalization> <http://www.w3.org/2000/01/rdf-schema#label> "genomic sequence localization" .
+<https://w3id.org/biolink/vocab/GenomicSequenceLocalization> <http://www.w3.org/2004/02/skos/core#broadMatch> <https://datacommons.org/browser/Chromosome> .
+<https://w3id.org/biolink/vocab/GenomicSequenceLocalization> <http://www.w3.org/2004/02/skos/core#definition> "A relationship between a sequence feature and a nucleic acid entity it is localized to. The reference entity may be a chromosome, chromosome region or information entity such as a contig." .
+<https://w3id.org/biolink/vocab/GenomicSequenceLocalization> <http://www.w3.org/2004/02/skos/core#exactMatch> <https://datacommons.org/browser/GenomeAnnotation> .
+<https://w3id.org/biolink/vocab/GenomicSequenceLocalization> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
+# https://w3id.org/biolink/vocab/InformationContentEntity
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/NamedThing> .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2000/01/rdf-schema#label> "information content entity" .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#altLabel> "information" .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#altLabel> "information artefact" .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#altLabel> "information entity" .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#definition> "a piece of information that typically describes some topic of discourse or is used as support." .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/IAO_0000030> .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T077> .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T078> .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T079> .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T080> .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T081> .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T082> .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T089> .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T102> .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T169> .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T171> .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T185> .
+<https://w3id.org/biolink/vocab/InformationContentEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <https://lhncbc.nlm.nih.gov/semanticnetwork/download/sg_archive/SemGroups-v04.txtCONC> .
+#
 # https://w3id.org/biolink/vocab/KnowledgeLevelEnum
 <https://w3id.org/biolink/vocab/KnowledgeLevelEnum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/biolink/vocab/KnowledgeLevelEnum> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid306 .
-_:genid306 <http://www.w3.org/2002/07/owl#unionOf> _:genid312 .
-_:genid312 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid311 .
-_:genid311 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid310 .
-_:genid310 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid309 .
-_:genid309 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid308 .
-_:genid308 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid307 .
-_:genid307 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid307 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/KnowledgeLevelEnum#statistical_association> .
-_:genid307 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid308 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/KnowledgeLevelEnum#prediction> .
-_:genid308 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid309 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/KnowledgeLevelEnum#observation> .
-_:genid309 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid310 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/KnowledgeLevelEnum#not_provided> .
-_:genid310 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid311 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/KnowledgeLevelEnum#logical_entailment> .
-_:genid311 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid312 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/KnowledgeLevelEnum#knowledge_assertion> .
-_:genid312 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid306 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/KnowledgeLevelEnum> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid327 .
+_:genid327 <http://www.w3.org/2002/07/owl#unionOf> _:genid333 .
+_:genid333 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid332 .
+_:genid332 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid331 .
+_:genid331 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid330 .
+_:genid330 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid329 .
+_:genid329 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid328 .
+_:genid328 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid328 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/KnowledgeLevelEnum#statistical_association> .
+_:genid328 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid329 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/KnowledgeLevelEnum#prediction> .
+_:genid329 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid330 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/KnowledgeLevelEnum#observation> .
+_:genid330 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid331 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/KnowledgeLevelEnum#not_provided> .
+_:genid331 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid332 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/KnowledgeLevelEnum#logical_entailment> .
+_:genid332 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid333 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/KnowledgeLevelEnum#knowledge_assertion> .
+_:genid333 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/biolink/vocab/KnowledgeLevelEnum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/linkml/EnumDefinition> .
 <https://w3id.org/biolink/vocab/KnowledgeLevelEnum> <http://www.w3.org/2000/01/rdf-schema#label> "KnowledgeLevelEnum" .
 <https://w3id.org/biolink/vocab/KnowledgeLevelEnum> <https://w3id.org/linkml/permissible_values> <https://w3id.org/biolink/vocab/KnowledgeLevelEnum#knowledge_assertion> .
@@ -3326,17 +3565,32 @@ _:genid306 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/biolink/vocab/MacromolecularMachineMixin> <http://www.w3.org/2004/02/skos/core#definition> "A union of gene locus, gene product, and macromolecular complex. These are the basic units of function in a cell. They either carry out individual biological activities, or they encode molecules which do this." .
 <https://w3id.org/biolink/vocab/MacromolecularMachineMixin> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 #
+# https://w3id.org/biolink/vocab/MolecularEntity
+<https://w3id.org/biolink/vocab/MolecularEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/MolecularEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/ChemicalEntity> .
+<https://w3id.org/biolink/vocab/MolecularEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid334 .
+_:genid334 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/OntologyClass> .
+_:genid334 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid334 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/MolecularEntity> <http://www.w3.org/2000/01/rdf-schema#label> "molecular entity" .
+<https://w3id.org/biolink/vocab/MolecularEntity> <http://www.w3.org/2004/02/skos/core#definition> "A molecular entity is a chemical entity composed of individual or covalently bonded atoms." .
+<https://w3id.org/biolink/vocab/MolecularEntity> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+<https://w3id.org/biolink/vocab/MolecularEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T085> .
+<https://w3id.org/biolink/vocab/MolecularEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T088> .
+<https://w3id.org/biolink/vocab/MolecularEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.obolibrary.org/obo/CHEBI_23367> .
+<https://w3id.org/biolink/vocab/MolecularEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <https://bioschemas.org/MolecularEntity> .
+#
 # https://w3id.org/biolink/vocab/NamedThing
 <https://w3id.org/biolink/vocab/NamedThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/biolink/vocab/NamedThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/Entity> .
-<https://w3id.org/biolink/vocab/NamedThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid313 .
-_:genid313 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid313 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/category> .
-_:genid313 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/NamedThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid314 .
-_:genid314 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid314 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/category> .
-_:genid314 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/NamedThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid335 .
+_:genid335 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid335 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/category> .
+_:genid335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/NamedThing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid336 .
+_:genid336 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid336 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/category> .
+_:genid336 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/NamedThing> <http://www.w3.org/2000/01/rdf-schema#label> "named thing" .
 <https://w3id.org/biolink/vocab/NamedThing> <http://www.w3.org/2004/02/skos/core#definition> "a databased entity or concept/class" .
 <https://w3id.org/biolink/vocab/NamedThing> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.bioontology.org/ontology/STY/T071> .
@@ -3345,6 +3599,34 @@ _:genid314 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/biolink/vocab/NamedThing> <http://www.w3.org/2004/02/skos/core#exactMatch> <https://lhncbc.nlm.nih.gov/semanticnetwork/download/sg_archive/SemGroups-v04.txtOBJC> .
 <https://w3id.org/biolink/vocab/NamedThing> <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/entity/Q35120> .
 <https://w3id.org/biolink/vocab/NamedThing> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
+# https://w3id.org/biolink/vocab/NucleicAcidEntity
+<https://w3id.org/biolink/vocab/NucleicAcidEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/NucleicAcidEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/MolecularEntity> .
+<https://w3id.org/biolink/vocab/NucleicAcidEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid337 .
+_:genid337 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/GenomicEntity> .
+_:genid337 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid337 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/NucleicAcidEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid338 .
+_:genid338 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/OntologyClass> .
+_:genid338 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid338 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/NucleicAcidEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid339 .
+_:genid339 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/PhysicalEssence> .
+_:genid339 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid339 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/NucleicAcidEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid340 .
+_:genid340 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/ThingWithTaxon> .
+_:genid340 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid340 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/NucleicAcidEntity> <http://www.w3.org/2000/01/rdf-schema#label> "nucleic acid entity" .
+<https://w3id.org/biolink/vocab/NucleicAcidEntity> <http://www.w3.org/2004/02/skos/core#altLabel> "genomic entity" .
+<https://w3id.org/biolink/vocab/NucleicAcidEntity> <http://www.w3.org/2004/02/skos/core#altLabel> "sequence feature" .
+<https://w3id.org/biolink/vocab/NucleicAcidEntity> <http://www.w3.org/2004/02/skos/core#definition> "A nucleic acid entity is a molecular entity characterized by availability in gene databases of nucleotide-based sequence representations of its precise sequence; for convenience of representation, partial sequences of various kinds are included." .
+<https://w3id.org/biolink/vocab/NucleicAcidEntity> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/SO_0000110> .
+<https://w3id.org/biolink/vocab/NucleicAcidEntity> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+<https://w3id.org/biolink/vocab/NucleicAcidEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T086> .
+<https://w3id.org/biolink/vocab/NucleicAcidEntity> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T114> .
 #
 # https://w3id.org/biolink/vocab/OntologyClass
 <https://w3id.org/biolink/vocab/OntologyClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -3371,6 +3653,16 @@ _:genid314 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/biolink/vocab/OrganismTaxon> <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/entity/Q16521> .
 <https://w3id.org/biolink/vocab/OrganismTaxon> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 <https://w3id.org/biolink/vocab/OrganismTaxon> <http://www.w3.org/2004/02/skos/core#narrowMatch> <https://datacommons.org/browser/BiologicalSpecies> .
+#
+# https://w3id.org/biolink/vocab/Patent
+<https://w3id.org/biolink/vocab/Patent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/Patent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/Publication> .
+<https://w3id.org/biolink/vocab/Patent> <http://www.w3.org/2000/01/rdf-schema#label> "patent" .
+<https://w3id.org/biolink/vocab/Patent> <http://www.w3.org/2004/02/skos/core#definition> "a legal document granted by a patent issuing authority which confers upon the patenter the sole right to make, use and sell an invention for a set period of time." .
+<https://w3id.org/biolink/vocab/Patent> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/IAO_0000313> .
+<https://w3id.org/biolink/vocab/Patent> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.org/spar/fabio/Patent> .
+<https://w3id.org/biolink/vocab/Patent> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://semanticscience.org/resource/SIO_000153> .
+<https://w3id.org/biolink/vocab/Patent> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 #
 # https://w3id.org/biolink/vocab/PhenotypicFeature
 <https://w3id.org/biolink/vocab/PhenotypicFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -3421,37 +3713,83 @@ _:genid314 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/biolink/vocab/PhysicalEssenceOrOccurrent> <http://www.w3.org/2004/02/skos/core#definition> "Either a physical or processual entity." .
 <https://w3id.org/biolink/vocab/PhysicalEssenceOrOccurrent> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 #
+# https://w3id.org/biolink/vocab/PreprintPublication
+<https://w3id.org/biolink/vocab/PreprintPublication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/PreprintPublication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/Publication> .
+<https://w3id.org/biolink/vocab/PreprintPublication> <http://www.w3.org/2000/01/rdf-schema#label> "preprint publication" .
+<https://w3id.org/biolink/vocab/PreprintPublication> <http://www.w3.org/2004/02/skos/core#definition> "a document reresenting an early version of an author's original scholarly work, such as a research paper or a review, prior to formal peer review and publication in a peer-reviewed scholarly or scientific journal." .
+<https://w3id.org/biolink/vocab/PreprintPublication> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.org/spar/fabio/Preprint> .
+<https://w3id.org/biolink/vocab/PreprintPublication> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.ebi.ac.uk/efo/EFO_0010558> .
+<https://w3id.org/biolink/vocab/PreprintPublication> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
+# https://w3id.org/biolink/vocab/Publication
+<https://w3id.org/biolink/vocab/Publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/Publication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/InformationContentEntity> .
+<https://w3id.org/biolink/vocab/Publication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid341 .
+_:genid341 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid341 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid341 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Publication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid342 .
+_:genid342 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid342 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/publication_type> .
+_:genid342 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Publication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid343 .
+_:genid343 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid343 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid343 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Publication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid344 .
+_:genid344 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid344 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/publication_type> .
+_:genid344 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Publication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid345 .
+_:genid345 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid345 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid345 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Publication> <http://www.w3.org/2000/01/rdf-schema#label> "publication" .
+<https://w3id.org/biolink/vocab/Publication> <http://www.w3.org/2004/02/skos/core#definition> "Any ‘published’ piece of information. Publications are considered broadly to include any document or document part made available in print or on the web - which may include scientific journal issues, individual articles, and books - as well as things like pre-prints, white papers, patents, drug labels, web pages, protocol documents,  and even a part of a publication if of significant knowledge scope (e.g. a figure, figure legend, or section highlighted by NLP)." .
+<https://w3id.org/biolink/vocab/Publication> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/IAO_0000311> .
+<https://w3id.org/biolink/vocab/Publication> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+<https://w3id.org/biolink/vocab/Publication> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.bioontology.org/ontology/STY/T170> .
+<https://w3id.org/biolink/vocab/Publication> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://purl.obolibrary.org/obo/IAO_0000013> .
+#
+# https://w3id.org/biolink/vocab/SequenceAssociation
+<https://w3id.org/biolink/vocab/SequenceAssociation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/SequenceAssociation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/Association> .
+<https://w3id.org/biolink/vocab/SequenceAssociation> <http://www.w3.org/2000/01/rdf-schema#label> "sequence association" .
+<https://w3id.org/biolink/vocab/SequenceAssociation> <http://www.w3.org/2004/02/skos/core#definition> "An association between a sequence feature and a nucleic acid entity it is localized to." .
+<https://w3id.org/biolink/vocab/SequenceAssociation> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
 # https://w3id.org/biolink/vocab/SequenceVariant
 <https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/BiologicalEntity> .
-<https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid315 .
-_:genid315 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/GenomicEntity> .
-_:genid315 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid315 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid316 .
-_:genid316 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/OntologyClass> .
-_:genid316 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid316 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid317 .
-_:genid317 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/PhysicalEssence> .
-_:genid317 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid317 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid318 .
-_:genid318 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/Gene> .
-_:genid318 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/has_gene> .
-_:genid318 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid319 .
-_:genid319 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid319 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
-_:genid319 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid320 .
-_:genid320 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid320 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
-_:genid320 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid321 .
-_:genid321 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid321 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
-_:genid321 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid346 .
+_:genid346 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/GenomicEntity> .
+_:genid346 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid346 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid347 .
+_:genid347 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/OntologyClass> .
+_:genid347 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid347 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid348 .
+_:genid348 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/PhysicalEssence> .
+_:genid348 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid348 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid349 .
+_:genid349 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/Gene> .
+_:genid349 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/has_gene> .
+_:genid349 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid350 .
+_:genid350 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid350 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid350 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid351 .
+_:genid351 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid351 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid351 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid352 .
+_:genid352 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid352 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid352 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#comment> "In MVIKG: A genomic variant associated with a specific gene" .
 <https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2000/01/rdf-schema#label> "sequence variant" .
 <https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2004/02/skos/core#altLabel> "allele" .
@@ -3464,6 +3802,30 @@ _:genid321 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2004/02/skos/core#exactMatch> <https://www.wikidata.org/entity/Q15304597> .
 <https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 <https://w3id.org/biolink/vocab/SequenceVariant> <http://www.w3.org/2004/02/skos/core#note> "This class is for modeling the specific state at a locus. A single DBSNP rs ID could correspond to more than one sequence variants (e.g CIViC:1252 and CIViC:1253, two distinct BRCA2 alleles for rs28897743)" .
+#
+# https://w3id.org/biolink/vocab/Serial
+<https://w3id.org/biolink/vocab/Serial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/Serial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/Publication> .
+<https://w3id.org/biolink/vocab/Serial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid353 .
+_:genid353 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid353 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid353 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Serial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid354 .
+_:genid354 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid354 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/type> .
+_:genid354 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Serial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid355 .
+_:genid355 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid355 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid355 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Serial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid356 .
+_:genid356 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid356 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid356 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/Serial> <http://www.w3.org/2000/01/rdf-schema#label> "serial" .
+<https://w3id.org/biolink/vocab/Serial> <http://www.w3.org/2004/02/skos/core#altLabel> "journal" .
+<https://w3id.org/biolink/vocab/Serial> <http://www.w3.org/2004/02/skos/core#definition> "This class may rarely be instantiated except if use cases of a given knowledge graph support its utility." .
+<https://w3id.org/biolink/vocab/Serial> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 #
 # https://w3id.org/biolink/vocab/ThingWithTaxon
 <https://w3id.org/biolink/vocab/ThingWithTaxon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -3481,37 +3843,47 @@ _:genid321 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://w3id.org/biolink/vocab/VariantToGeneAssociation
 <https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/Association> .
-<https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid322 .
-_:genid322 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
-_:genid322 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid322 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid323 .
-_:genid323 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/Gene> .
-_:genid323 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
-_:genid323 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid324 .
-_:genid324 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid324 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
-_:genid324 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid325 .
-_:genid325 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid325 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
-_:genid325 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid326 .
-_:genid326 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid326 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
-_:genid326 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid327 .
-_:genid327 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid327 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
-_:genid327 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid328 .
-_:genid328 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid328 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
-_:genid328 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid357 .
+_:genid357 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
+_:genid357 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid357 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid358 .
+_:genid358 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/Gene> .
+_:genid358 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
+_:genid358 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid359 .
+_:genid359 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid359 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
+_:genid359 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid360 .
+_:genid360 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid360 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
+_:genid360 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid361 .
+_:genid361 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid361 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
+_:genid361 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid362 .
+_:genid362 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid362 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
+_:genid362 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid363 .
+_:genid363 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid363 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
+_:genid363 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2000/01/rdf-schema#label> "variant to gene association" .
 <https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2004/02/skos/core#definition> "An association between a variant and a gene, where the variant has a genetic association with the gene (i.e. is in linkage disequilibrium)" .
 <https://w3id.org/biolink/vocab/VariantToGeneAssociation> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
+#
+# https://w3id.org/biolink/vocab/WebPage
+<https://w3id.org/biolink/vocab/WebPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/WebPage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/biolink/vocab/Publication> .
+<https://w3id.org/biolink/vocab/WebPage> <http://www.w3.org/2000/01/rdf-schema#label> "web page" .
+<https://w3id.org/biolink/vocab/WebPage> <http://www.w3.org/2004/02/skos/core#definition> "a document that is published according to World Wide Web standards, which may incorporate text, graphics, sound, and/or other features." .
+<https://w3id.org/biolink/vocab/WebPage> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/ncit#C142749> .
+<https://w3id.org/biolink/vocab/WebPage> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.org/spar/fabio/WebPage> .
+<https://w3id.org/biolink/vocab/WebPage> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://semanticscience.org/resource/SIO_000302> .
+<https://w3id.org/biolink/vocab/WebPage> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 #
 # https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent
 <https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -4616,14 +4988,6 @@ _:genid328 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # #################################################################
 #
 #
-<http://purl.org/dc/terms/isPartOf> <http://purl.org/dc/elements/1.1/type> <http://dublincore.org/usage/documents/principles/#element-refinement> .
-<http://purl.org/dc/terms/isPartOf> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#isPartOf-002> .
-<http://purl.org/dc/terms/isPartOf> <http://purl.org/dc/terms/issued> "2000-07-11" .
-<http://purl.org/dc/terms/isPartOf> <http://purl.org/dc/terms/modified> "2002-06-15" .
-<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The described resource is a physical or logical part of the\n            referenced resource."@en-us .
-<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
-<http://purl.org/dc/terms/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "Is Part Of"@en-us .
-#
 <http://qudt.org/schema/qudt/CardinalityType> <http://purl.org/dc/terms/description> "\n  In mathematics, the cardinality of a set is a measure of the number of elements of the set.\n  For example, the set $A = {2, 4, 6}$ contains 3 elements, and therefore $A$ has a cardinality of 3.\n  There are two approaches to cardinality: one which compares sets directly using bijections and injections,\n   and another which uses cardinal numbers.\n  "^^<http://qudt.org/schema/qudt/LatexString> .
 <http://qudt.org/schema/qudt/CardinalityType> <http://qudt.org/schema/qudt/informativeReference> "http://en.wikipedia.org/wiki/Cardinal_number"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://qudt.org/schema/qudt/CardinalityType> <http://qudt.org/schema/qudt/informativeReference> "http://en.wikipedia.org/wiki/Cardinality"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
@@ -4675,116 +5039,116 @@ _:genid328 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # #################################################################
 #
 #
-_:genid329 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid329 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid329 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/OntologyClass> .
-_:genid329 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid330 .
-_:genid330 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid330 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
-_:genid330 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid364 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid364 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid364 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/OntologyClass> .
+_:genid364 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid365 .
+_:genid365 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid365 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid365 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 #
-_:genid331 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid331 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid331 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/OntologyClass> .
-_:genid331 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid332 .
-_:genid332 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid332 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
-_:genid332 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid366 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid366 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid366 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/OntologyClass> .
+_:genid366 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid367 .
+_:genid367 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid367 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid367 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 #
-_:genid333 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid333 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid333 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/OntologyClass> .
-_:genid333 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid334 .
-_:genid334 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid334 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
-_:genid334 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid368 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid368 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid368 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/OntologyClass> .
+_:genid368 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid369 .
+_:genid369 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid369 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/id> .
+_:genid369 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 #
-_:genid335 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid335 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid335 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/ThingWithTaxon> .
-_:genid335 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid336 .
-_:genid336 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/OrganismTaxon> .
-_:genid336 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/in_taxon> .
-_:genid336 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid370 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid370 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid370 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/ThingWithTaxon> .
+_:genid370 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid371 .
+_:genid371 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/OrganismTaxon> .
+_:genid371 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/in_taxon> .
+_:genid371 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 #
-_:genid337 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid337 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid337 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/ThingWithTaxon> .
-_:genid337 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid338 .
-_:genid338 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid338 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/in_taxon> .
-_:genid338 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid372 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid372 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid372 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/ThingWithTaxon> .
+_:genid372 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid373 .
+_:genid373 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid373 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/in_taxon> .
+_:genid373 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 #
-_:genid339 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid339 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid339 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
-_:genid339 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid340 .
-_:genid340 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/NamedThing> .
-_:genid340 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
-_:genid340 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid374 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid374 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid374 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
+_:genid374 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid375 .
+_:genid375 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/NamedThing> .
+_:genid375 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
+_:genid375 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 #
-_:genid341 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid341 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid341 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
-_:genid341 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid342 .
-_:genid342 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/SequenceVariant> .
-_:genid342 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/subject> .
-_:genid342 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid376 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid376 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid376 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
+_:genid376 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid377 .
+_:genid377 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/SequenceVariant> .
+_:genid377 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/subject> .
+_:genid377 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 #
-_:genid343 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid343 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid343 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
-_:genid343 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid344 .
-_:genid344 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid344 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
-_:genid344 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid378 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid378 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid378 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
+_:genid378 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid379 .
+_:genid379 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid379 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
+_:genid379 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 #
-_:genid345 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid345 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid345 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
-_:genid345 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid346 .
-_:genid346 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid346 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/subject> .
-_:genid346 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid380 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid380 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid380 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
+_:genid380 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid381 .
+_:genid381 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid381 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/subject> .
+_:genid381 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 #
-_:genid347 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid347 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid347 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
-_:genid347 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid348 .
-_:genid348 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid348 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
-_:genid348 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid382 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid382 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid382 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
+_:genid382 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid383 .
+_:genid383 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid383 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/object> .
+_:genid383 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 #
-_:genid349 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid349 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid349 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
-_:genid349 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid350 .
-_:genid350 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid350 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/subject> .
-_:genid350 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid384 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid384 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
+_:genid384 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid385 .
+_:genid385 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid385 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/subject> .
+_:genid385 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 #
-_:genid351 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid351 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid351 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
-_:genid351 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid352 .
-_:genid352 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid352 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
-_:genid352 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid386 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid386 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid386 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
+_:genid386 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid387 .
+_:genid387 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid387 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
+_:genid387 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 #
-_:genid353 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid353 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid353 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
-_:genid353 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid354 .
-_:genid354 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid354 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
-_:genid354 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid388 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid388 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid388 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
+_:genid388 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid389 .
+_:genid389 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid389 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
+_:genid389 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 #
-_:genid355 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid355 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
-_:genid355 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
-_:genid355 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid356 .
-_:genid356 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid356 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
-_:genid356 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid390 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid390 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/linkml/mixins> .
+_:genid390 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin> .
+_:genid390 <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid391 .
+_:genid391 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid391 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/predicate> .
+_:genid391 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 #
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
