@@ -104,21 +104,6 @@
 
 
 
-    <!-- http://purl.org/dc/terms/isPartOf -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isPartOf">
-        <dc:type rdf:resource="http://dublincore.org/usage/documents/principles/#element-refinement"/>
-        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#isPartOf-002"/>
-        <terms:issued>2000-07-11</terms:issued>
-        <terms:modified>2002-06-15</terms:modified>
-        <rdfs:comment xml:lang="en-us">The described resource is a physical or logical part of the
-            referenced resource.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-        <rdfs:label xml:lang="en-us">Is Part Of</rdfs:label>
-    </owl:AnnotationProperty>
-
-
-
     <!-- http://purl.org/dc/terms/issued -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
