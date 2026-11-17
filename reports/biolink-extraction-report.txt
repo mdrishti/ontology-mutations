@@ -48,8 +48,6 @@ WARN	missing_definition	https://w3id.org/biolink/vocab/SequenceAssociation	IAO:0
 WARN	missing_definition	https://w3id.org/biolink/vocab/SequenceVariant	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/Serial	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/ThingWithTaxon	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/VariantToGeneAssociation	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/WebPage	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/agent_type	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/association_slot	IAO:0000115
@@ -57,9 +55,6 @@ WARN	missing_definition	https://w3id.org/biolink/vocab/base_coordinate	IAO:00001
 WARN	missing_definition	https://w3id.org/biolink/vocab/category	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/description	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/end_coordinate	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/form_or_variant_qualifier	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/has_gene	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/has_gene_or_gene_product	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/has_phenotype	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/has_sequence_variant	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/id	IAO:0000115
@@ -75,7 +70,6 @@ WARN	missing_definition	https://w3id.org/biolink/vocab/phenotype_of	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/predicate	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/publication_type	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/published_in	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/qualifier	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/related_to	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/related_to_at_instance_level	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/sequence_localization_attribute	IAO:0000115
