@@ -15,7 +15,8 @@ mvikg:DevelopmentalStage rdf:type owl:Class ;
 
 mvikg:Biome a owl:Class ;
     rdfs:label "GOLD Biome" ;
-    rdfs:comment "We recommend any biome class from the GOLD ontology" .
+    rdfs:comment "We recommend any biome class from the GOLD ontology" ;
+    skos:definition "A biome classification describing a sample's environmental context, typically drawn from the GOLD biome vocabulary." .
 #    owl:equivalentClass [
 #        a owl:Class ;
 #        owl:unionOf (

@@ -618,6 +618,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
         <rdfs:range rdf:resource="http://example.org/mvikg/DevelopmentalStage"/>
         <rdfs:label>has developmental stage</rdfs:label>
+        <skos:definition>Relates a sample to the developmental stage (e.g. exponential, lag) of the organism it was taken from.</skos:definition>
     </owl:ObjectProperty>
 
 
@@ -1255,6 +1256,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/SequenceVariant"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>alternate allele</rdfs:label>
+        <skos:definition>The alternate (variant) allele observed at a given sequence position.</skos:definition>
     </owl:DatatypeProperty>
 
 
@@ -1276,6 +1278,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/SequenceVariant"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>variant effect</rdfs:label>
+        <skos:definition>A free-text description of the functional effect of a sequence variant, as reported in the source.</skos:definition>
     </owl:DatatypeProperty>
 
 
@@ -1308,6 +1311,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/SequenceVariant"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>reference allele</rdfs:label>
+        <skos:definition>The reference allele reported at a given sequence position, prior to the observed variant.</skos:definition>
     </owl:DatatypeProperty>
 
 
@@ -1757,6 +1761,7 @@ none is specified.
     <owl:Class rdf:about="http://example.org/mvikg/Biome">
         <rdfs:comment>We recommend any biome class from the GOLD ontology</rdfs:comment>
         <rdfs:label>GOLD Biome</rdfs:label>
+        <skos:definition>A biome classification describing a sample&apos;s environmental context, typically drawn from the GOLD biome vocabulary.</skos:definition>
     </owl:Class>
 
 

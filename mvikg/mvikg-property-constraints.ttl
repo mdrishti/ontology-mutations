@@ -46,12 +46,14 @@ mvikg:comparedTo rdf:type owl:DatatypeProperty ;
 mvikg:ref rdf:type owl:DatatypeProperty ;
     rdfs:label "reference allele" ;
     rdfs:domain biolink:SequenceVariant ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    skos:definition "The reference allele reported at a given sequence position, prior to the observed variant." .
 
 mvikg:alt rdf:type owl:DatatypeProperty ;
     rdfs:label "alternate allele" ;
     rdfs:domain biolink:SequenceVariant ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    skos:definition "The alternate (variant) allele observed at a given sequence position." .
 
 mvikg:length rdf:type owl:DatatypeProperty ;
     rdfs:label "variant length" ;
@@ -62,7 +64,8 @@ mvikg:length rdf:type owl:DatatypeProperty ;
 mvikg:effect rdf:type owl:DatatypeProperty ;
     rdfs:label "variant effect" ;
     rdfs:domain biolink:SequenceVariant ;
-    rdfs:range xsd:string .
+    rdfs:range xsd:string ;
+    skos:definition "A free-text description of the functional effect of a sequence variant, as reported in the source." .
 
 # Replaces the old mvikg:frequency -> qudt:QuantityValue blank-node pattern:
 # nanopub tooling (Nanodash) can't author blank nodes, and the published MVIKG
@@ -85,7 +88,8 @@ mvikg:frequencyUnit rdf:type owl:ObjectProperty ;
 mvikg:has_developmental_stage rdf:type owl:ObjectProperty ;
     rdfs:domain sosa:Sample ;
     rdfs:range mvikg:DevelopmentalStage ;
-    rdfs:label "has developmental stage" .
+    rdfs:label "has developmental stage" ;
+    skos:definition "Relates a sample to the developmental stage (e.g. exponential, lag) of the organism it was taken from." .
 
 
 
