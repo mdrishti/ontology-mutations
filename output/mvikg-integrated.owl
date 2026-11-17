@@ -608,6 +608,7 @@
         </rdfs:domain>
         <rdfs:comment>Relates a sample or organism taxon to its environmental biome — either a resolved GOLD biome resource or, when the source text doesn&apos;t map to a controlled term, a free-text literal.</rdfs:comment>
         <rdfs:label>has biome</rdfs:label>
+        <skos:definition>Relates a sample or organism taxon to its environmental biome, either a resolved controlled-vocabulary term or a free-text literal.</skos:definition>
     </owl:ObjectProperty>
 
 
@@ -1268,6 +1269,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Free-text description of the baseline/control a phenotype outcome was compared against.</rdfs:comment>
         <rdfs:label>compared to</rdfs:label>
+        <skos:definition>A free-text description of the baseline or control a phenotype outcome was compared against.</skos:definition>
     </owl:DatatypeProperty>
 
 
@@ -1301,6 +1303,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Free-text length string — not all source rows give a clean integer.</rdfs:comment>
         <rdfs:label>variant length</rdfs:label>
+        <skos:definition>The length of a sequence variant, reported as free text.</skos:definition>
     </owl:DatatypeProperty>
 
 
