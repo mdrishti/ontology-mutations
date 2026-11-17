@@ -7,6 +7,8 @@
 @prefix mvikg: <http://example.org/mvikg/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 
 # Custom MVIKG properties (both restrictions and annotations)
@@ -62,11 +64,22 @@ mvikg:effect rdf:type owl:DatatypeProperty ;
     rdfs:domain biolink:SequenceVariant ;
     rdfs:range xsd:string .
 
-mvikg:frequency rdf:type owl:ObjectProperty ;
-    rdfs:label "frequency" ;
-    rdfs:comment "Points to a qudt:QuantityValue node (numericValue + unit, typically percent)." ;
+# Replaces the old mvikg:frequency -> qudt:QuantityValue blank-node pattern:
+# nanopub tooling (Nanodash) can't author blank nodes, and the published MVIKG
+# observation nanopub template (https://w3id.org/np/RAcqzGi4BvDYxi0Dxoe4gBqLF5CpL02PVrTZBsP91iJXs)
+# already models this as two flat, paired statements (freqValue + freqUnit) —
+# matching that here instead of the QUDT reification pattern.
+mvikg:frequencyValue rdf:type owl:DatatypeProperty ;
+    rdfs:label "frequency value" ;
     rdfs:domain biolink:SequenceVariant ;
-    rdfs:range qudt:QuantityValue .
+    rdfs:range xsd:decimal ;
+    skos:definition "The numeric frequency value of a sequence variant or allele within a population; interpreted together with mvikg:frequencyUnit." .
+
+mvikg:frequencyUnit rdf:type owl:ObjectProperty ;
+    rdfs:label "frequency unit" ;
+    rdfs:domain biolink:SequenceVariant ;
+    rdfs:range [ rdf:type owl:Class ; owl:oneOf ( unit:PERCENT unit:UNITLESS ) ] ;
+    skos:definition "The unit — percent or unitless — in which a sequence variant's mvikg:frequencyValue is expressed." .
 
 # Define that mvikg:has_developmental_stage relates a sample to a developmental stage. Initially taken from UNIPROTRDFS, that definition did not fit here, hence removed.
 mvikg:has_developmental_stage rdf:type owl:ObjectProperty ;

@@ -14,3 +14,9 @@
 unit:PERCENT a owl:NamedIndividual, qudt:Unit ;
     rdfs:label "Percent"@en ;
     qudt:symbol "%" .
+
+# unit:UNITLESS declared by hand for the same reason as unit:PERCENT above —
+# used as the alternative mvikg:frequencyUnit value for a frequency reported
+# without a percent (e.g. a raw ratio or count).
+unit:UNITLESS a owl:NamedIndividual, qudt:Unit ;
+    rdfs:label "Unitless"@en .

@@ -71,7 +71,8 @@ WARN	missing_definition	http://example.org/mvikg/DevelopmentalStage	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/alt	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/comparedTo	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/effect	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/frequency	IAO:0000115
+WARN	missing_definition	http://example.org/mvikg/frequencyUnit	IAO:0000115
+WARN	missing_definition	http://example.org/mvikg/frequencyValue	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/has_biome	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/has_developmental_stage	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/length	IAO:0000115
@@ -87,16 +88,12 @@ WARN	missing_definition	http://qudt.org/schema/qudt/Encoding	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/EnumeratedValue	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/FloatingPointEncodingType	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/IntegerEncodingType	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/NumericUnion	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/OrderedType	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/Quantifiable	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/QuantityValue	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/Unit	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/bits	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/bytes	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/dbpediaMatch	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/deprecated	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/numericValue	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/plainTextDescription	IAO:0000115
 WARN	missing_definition	oboInOwl:is_inferred	IAO:0000115
 WARN	missing_definition	http://www.linkedmodel.org/schema/dtype#EnumeratedValue	IAO:0000115
