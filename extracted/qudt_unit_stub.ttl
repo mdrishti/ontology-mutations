@@ -3,6 +3,15 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
+# qudt:Unit declared by hand rather than via robot extract: it's entangled
+# in QUDT's own self-describing meta-model (encoding/cardinality/ordering
+# types, graph-role documentation individuals) via shared axioms, so a
+# BOT or STAR module for just this one class pulls in dozens of unrelated
+# classes from qudt-schema.ttl. We only need the bare class identity so
+# unit:PERCENT/unit:UNITLESS below can be typed as qudt:Unit.
+qudt:Unit a owl:Class ;
+    rdfs:label "Unit"@en .
+
 # unit:PERCENT declared by hand rather than via robot extract: QUDT's
 # vocab/unit.ttl is one densely interlinked graph (every unit points to
 # quantitykind/, systemsOfUnits/, dimensionVector/ resources and back), so a

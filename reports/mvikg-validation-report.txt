@@ -1,69 +1,9 @@
 Level	Rule Name	Subject	Property	Value
-ERROR	duplicate_label	http://qudt.org/schema/qudt/DoublePrecisionEncoding	rdfs:label	Single Precision Real Encoding
-ERROR	duplicate_label	http://qudt.org/schema/qudt/SinglePrecisionRealEncoding	rdfs:label	Single Precision Real Encoding
-ERROR	duplicate_label	http://www.linkedmodel.org/schema/vaem#description	rdfs:label	description
-ERROR	duplicate_label	https://w3id.org/biolink/vocab/description	rdfs:label	description
-ERROR	duplicate_label	http://qudt.org/schema/qudt/BitEncoding	rdfs:label	Bit Encoding
-ERROR	duplicate_label	http://qudt.org/schema/qudt/BitEncodingType	rdfs:label	Bit Encoding
-ERROR	missing_label	http://www.linkedmodel.org/schema/dtype	rdfs:label
-ERROR	multiple_labels	skos:broader	rdfs:label	broader term@en-us
-ERROR	multiple_labels	skos:broader	rdfs:label	has broader@en
 WARN	annotation_whitespace	dc:bibliographicCitation	dc11:description	"Recommended practice is to include sufficient
             bibliographic detail to identify the resource as
             unambiguously as possible, whether or not the
             citation is in a standard form.
             @en-us"
-WARN	annotation_whitespace	http://qudt.org/schema/qudt/CT_COUNTABLY-INFINITE	dc:description	"
-  A set of numbers is called countably infinite if there is a way to enumerate them.
-  Formally this is done with a bijection function that associates each number in the set with exactly one of the positive integers.
-  The set of all fractions is also countably infinite.
-  In other words, any set $X$ that has the same cardinality as the set of the natural numbers,
-   or $| X | \; =  \; | \mathbb N | \; = \; \aleph0$, is said to be a countably infinite set.
-  ^^http://qudt.org/schema/qudt/LatexString"
-WARN	annotation_whitespace	http://qudt.org/schema/qudt/CardinalityType	dc:description	"
-  In mathematics, the cardinality of a set is a measure of the number of elements of the set.
-  For example, the set $A = {2, 4, 6}$ contains 3 elements, and therefore $A$ has a cardinality of 3.
-  There are two approaches to cardinality: one which compares sets directly using bijections and injections,
-   and another which uses cardinal numbers.
-  ^^http://qudt.org/schema/qudt/LatexString"
-WARN	annotation_whitespace	http://qudt.org/schema/qudt/Unit	dc:description	"
-  A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension).
-  For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures).
-  Any measurement of the length can be expressed as a number multiplied by the unit meter.
-  More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  $Q = nU$.
-  ^^http://qudt.org/schema/qudt/LatexString"
-WARN	annotation_whitespace	http://qudt.org/schema/qudt/coherentUnitOfSystem	dc:description	"
-  A coherent unit of measurement for a unit system is a defined unit that may be expressed as a product of powers of the system's base units with the proportionality factor of one.
-  A system of units is coherent with respect to a system of quantities and equations if the system of units is chosen in such a way
-   that the equations between numerical values have exactly the same form (including the numerical factors) as the corresponding equations between the quantities.
-  For example, the 'newton' and the 'joule'.
-  These two are, respectively, the force that causes one kilogram to be accelerated at 1 metre per second per second,
-   and the work done by 1 newton acting over 1 metre.
-  Being coherent refers to this consistent use of 1.
-  In the old c.g.s. system , with its base units the centimetre and the gram, the corresponding coherent units were the dyne and the erg,
-   respectively the force that causes 1 gram to be accelerated at 1 centimetre per second per second, and the work done by 1 dyne acting over 1 centimetre.
-  So $1 newton = 10^5\,dyne$, $1 joule = 10^7\,erg$, making each of the four compatible in a decimal sense within its respective other system, but not coherent therein.
-  ^^http://qudt.org/schema/qudt/LatexString"
-WARN	annotation_whitespace	http://www.linkedmodel.org/schema/dtype#EnumeratedValue	dc:description	"
-The base class for datatypes that have values that are restriced to a set of literals or tokens.
-The members of the restriction may themselves be restriced by facets that apply to scalar data types.
-"
-WARN	annotation_whitespace	http://www.linkedmodel.org/schema/dtype#literal	dc:description	"
-A general purpose property for holding string literals as a machine-readable string for how the
-enumerated value can be referred to.
-This can be used when the code value is numeric, as an alternative to using a code.
-Literal is not the same as label which is intended for human readable display.
-For example, a code for January may be 1, the literal may be 'J' or 'jan' and the label 'January'.
-"
-WARN	annotation_whitespace	http://www.linkedmodel.org/schema/dtype#value	dc:description	"
-The property \""dtype:value\"" is a general property for specifying a literal value in situations where
-none is specified.
-"
-WARN	annotation_whitespace	http://www.linkedmodel.org/schema/vaem#GMD_QUDT-SCHEMA	dc:rights	"
-  This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved.
-
-THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
-  "
 WARN	duplicate_label_synonym	SO:0000667	oboInOwl:hasExactSynonym	insertion
 WARN	duplicate_label_synonym	SO:1000036	oboInOwl:hasExactSynonym	inversion
 WARN	missing_definition	http://example.org/mvikg/Biome	IAO:0000115
@@ -78,48 +18,9 @@ WARN	missing_definition	http://example.org/mvikg/has_developmental_stage	IAO:000
 WARN	missing_definition	http://example.org/mvikg/length	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/ref	IAO:0000115
 WARN	missing_definition	dc:bibliographicCitation	IAO:0000115
-WARN	missing_definition	dc:isReplacedBy	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/BitEncodingType	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/BooleanEncodingType	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/ByteEncodingType	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/CharEncodingType	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/Concept	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/Encoding	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/EnumeratedValue	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/FloatingPointEncodingType	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/IntegerEncodingType	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/OrderedType	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/Unit	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/bits	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/bytes	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/dbpediaMatch	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/deprecated	IAO:0000115
-WARN	missing_definition	http://qudt.org/schema/qudt/plainTextDescription	IAO:0000115
 WARN	missing_definition	oboInOwl:is_inferred	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/dtype#EnumeratedValue	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/dtype#literal	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/dtype#value	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#GraphMetaData	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#GraphRole	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#Party	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#description	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#filePrefix	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#hasGraphRole	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#hasLicenseType	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#hasOwner	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#hasSteward	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#intent	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#latestPublishedVersion	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#name	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#namespace	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#namespacePrefix	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#owner	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#previousPublishedVersion	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#rdfxmlFileURL	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#revision	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#title	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#turtleFileURL	IAO:0000115
-WARN	missing_definition	http://www.linkedmodel.org/schema/vaem#url	IAO:0000115
+WARN	missing_definition	skos:broader	IAO:0000115
 WARN	missing_definition	skos:narrower	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/FeatureOfInterest	IAO:0000115
 WARN	missing_definition	http://www.w3.org/ns/sosa/Result	IAO:0000115
@@ -238,3 +139,4 @@ INFO	missing_superclass	IAO:0000409	rdfs:subClassOf
 INFO	missing_superclass	SO:0000110	rdfs:subClassOf
 INFO	missing_superclass	SO:0000400	rdfs:subClassOf
 INFO	missing_superclass	SO:0001537	rdfs:subClassOf
+INFO	missing_superclass	http://qudt.org/schema/qudt/Unit	rdfs:subClassOf
