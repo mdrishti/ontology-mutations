@@ -129,8 +129,6 @@ This section provides details for each class and property defined by MVIKG Ontol
   <li><a href="#https://w3id.org/biolink/vocab/ThingWithTaxon" title="https://w3id.org/biolink/vocab/ThingWithTaxon">thing with taxon</a></li>
   <li><a href="#http://purl.obolibrary.org/obo/SO_0001576" title="http://purl.obolibrary.org/obo/SO_0001576">transcript_variant</a></li>
   <li><a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a></li>
-  <li><a href="#https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin" title="https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin">variant to entity association mixin</a></li>
-  <li><a href="#https://w3id.org/biolink/vocab/VariantToGeneAssociation" title="https://w3id.org/biolink/vocab/VariantToGeneAssociation">variant to gene association</a></li>
   <li><a href="#https://w3id.org/biolink/vocab/WebPage" title="https://w3id.org/biolink/vocab/WebPage">web page</a></li>
   <li><a href="#http://purl.obolibrary.org/obo/SO_0000817" title="http://purl.obolibrary.org/obo/SO_0000817">wild_type</a></li>
  </ul>
@@ -241,7 +239,7 @@ This section provides details for each class and property defined by MVIKG Ontol
     has sub-classes
    </dt>
    <dd>
-    <a href="#https://w3id.org/biolink/vocab/SequenceAssociation" title="https://w3id.org/biolink/vocab/SequenceAssociation">sequence association</a> <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/biolink/vocab/VariantToGeneAssociation" title="https://w3id.org/biolink/vocab/VariantToGeneAssociation">variant to gene association</a> <sup class="type-c" title="class">c</sup>
+    <a href="#https://w3id.org/biolink/vocab/SequenceAssociation" title="https://w3id.org/biolink/vocab/SequenceAssociation">sequence association</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -1278,12 +1276,6 @@ This section provides details for each class and property defined by MVIKG Ontol
    </dt>
    <dd>
     <a href="#https://w3id.org/biolink/vocab/has_phenotype" title="https://w3id.org/biolink/vocab/has_phenotype">has phenotype</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#https://w3id.org/biolink/vocab/has_gene" title="https://w3id.org/biolink/vocab/has_gene">has gene</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/biolink/vocab/has_gene_or_gene_product" title="https://w3id.org/biolink/vocab/has_gene_or_gene_product">has gene or gene product</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -2985,33 +2977,6 @@ This section provides details for each class and property defined by MVIKG Ontol
    </dd>
   </dl>
  </div>
- <div class="entity" id="https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin">
-  <h3>variant to entity association mixin<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/biolink/vocab/VariantToEntityAssociationMixin</p>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="https://w3id.org/linkml/ClassDefinition#Mixin" target="_blank" title="https://w3id.org/linkml/ClassDefinition#Mixin">Mixin</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="https://w3id.org/biolink/vocab/VariantToGeneAssociation">
-  <h3>variant to gene association<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/biolink/vocab/VariantToGeneAssociation</p>
-  <div class="comment">
-   <span class="markdown">An association between a variant and a gene, where the variant has a genetic association with the gene (i.e. is in linkage disequilibrium)</span>
-  </div>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="#https://w3id.org/biolink/vocab/Association" title="https://w3id.org/biolink/vocab/Association">association</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="https://w3id.org/biolink/vocab/WebPage">
   <h3>web page<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/biolink/vocab/WebPage</p>
@@ -3046,14 +3011,11 @@ This section provides details for each class and property defined by MVIKG Ontol
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
   <li><a href="#https://w3id.org/biolink/vocab/agent_type" title="https://w3id.org/biolink/vocab/agent_type">agent type</a></li>
-  <li><a href="#https://w3id.org/biolink/vocab/form_or_variant_qualifier" title="https://w3id.org/biolink/vocab/form_or_variant_qualifier"> <span>form or variant qualifier</span> </a></li>
   <li><a href="#/frequency" title="http://example.org/mvikg/frequency">frequency</a></li>
   <li><a href="#/has_biome" title="http://example.org/mvikg/has_biome">has biome</a></li>
   <li><a href="#http://www.w3.org/2004/02/skos/core#broader" title="http://www.w3.org/2004/02/skos/core#broader"> <span>has broader</span> </a></li>
   <li><a href="#/has_developmental_stage" title="http://example.org/mvikg/has_developmental_stage">has developmental stage</a></li>
   <li><a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a></li>
-  <li><a href="#https://w3id.org/biolink/vocab/has_gene" title="https://w3id.org/biolink/vocab/has_gene">has gene</a></li>
-  <li><a href="#https://w3id.org/biolink/vocab/has_gene_or_gene_product" title="https://w3id.org/biolink/vocab/has_gene_or_gene_product">has gene or gene product</a></li>
   <li><a href="#http://www.linkedmodel.org/schema/vaem#hasGraphRole" title="http://www.linkedmodel.org/schema/vaem#hasGraphRole">has graph role</a></li>
   <li><a href="#http://www.linkedmodel.org/schema/vaem#hasLicenseType" title="http://www.linkedmodel.org/schema/vaem#hasLicenseType">has license type</a></li>
   <li><a href="#http://www.linkedmodel.org/schema/vaem#hasOwner" title="http://www.linkedmodel.org/schema/vaem#hasOwner">has owner</a></li>
@@ -3081,7 +3043,6 @@ This section provides details for each class and property defined by MVIKG Ontol
   <li><a href="#https://w3id.org/biolink/vocab/object" title="https://w3id.org/biolink/vocab/object">object</a></li>
   <li><a href="#https://w3id.org/biolink/vocab/phenotype_of" title="https://w3id.org/biolink/vocab/phenotype_of">phenotype of</a></li>
   <li><a href="#https://w3id.org/biolink/vocab/published_in" title="https://w3id.org/biolink/vocab/published_in">published in</a></li>
-  <li><a href="#https://w3id.org/biolink/vocab/qualifier" title="https://w3id.org/biolink/vocab/qualifier">qualifier</a></li>
   <li><a href="#https://w3id.org/biolink/vocab/related_to" title="https://w3id.org/biolink/vocab/related_to">related to</a></li>
   <li><a href="#https://w3id.org/biolink/vocab/related_to_at_instance_level" title="https://w3id.org/biolink/vocab/related_to_at_instance_level">related to at instance level</a></li>
   <li><a href="#https://w3id.org/biolink/vocab/subject" title="https://w3id.org/biolink/vocab/subject">subject</a></li>
@@ -3116,26 +3077,6 @@ This section provides details for each class and property defined by MVIKG Ontol
     </dt>
     <dd>
      <a href="#https://w3id.org/biolink/vocab/AgentTypeEnum" title="https://w3id.org/biolink/vocab/AgentTypeEnum">AgentTypeEnum</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="https://w3id.org/biolink/vocab/form_or_variant_qualifier">
-  <h3>form or variant qualifier<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/biolink/vocab/form_or_variant_qualifier</p>
-  <div class="description">
-   <dl>
-    <dt>
-     has super-properties
-    </dt>
-    <dd>
-     <a href="#https://w3id.org/biolink/vocab/qualifier" title="https://w3id.org/biolink/vocab/qualifier">qualifier</a> <sup class="type-op" title="object property">op</sup>
-    </dd>
-    <dt>
-     is also defined as
-    </dt>
-    <dd>
-     data property
     </dd>
    </dl>
   </div>
@@ -3282,58 +3223,6 @@ This section provides details for each class and property defined by MVIKG Ontol
     </dt>
     <dd>
      <a href="#http://www.w3.org/ns/sosa/isFeatureOfInterestOf" title="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">is feature of interest of</a> <sup class="type-op" title="object property">op</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="https://w3id.org/biolink/vocab/has_gene">
-  <h3>has gene<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/biolink/vocab/has_gene</p>
-  <div class="comment">
-   <span class="markdown">connects an entity associated with one or more genes</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has super-properties
-    </dt>
-    <dd>
-     <a href="#https://w3id.org/biolink/vocab/has_gene_or_gene_product" title="https://w3id.org/biolink/vocab/has_gene_or_gene_product">has gene or gene product</a> <sup class="type-op" title="object property">op</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#https://w3id.org/biolink/vocab/Gene" title="https://w3id.org/biolink/vocab/Gene">gene</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="https://w3id.org/biolink/vocab/has_gene_or_gene_product">
-  <h3>has gene or gene product<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/biolink/vocab/has_gene_or_gene_product</p>
-  <div class="comment">
-   <span class="markdown">connects an entity with one or more gene or gene products</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has super-properties
-    </dt>
-    <dd>
-     <a href="#https://w3id.org/biolink/vocab/node_property" title="https://w3id.org/biolink/vocab/node_property">node property</a> <sup class="type-op" title="object property">op</sup>
-    </dd>
-    <dt>
-     has sub-properties
-    </dt>
-    <dd>
-     <a href="#https://w3id.org/biolink/vocab/has_gene" title="https://w3id.org/biolink/vocab/has_gene">has gene</a> <sup class="type-op" title="object property">op</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#https://w3id.org/biolink/vocab/Gene" title="https://w3id.org/biolink/vocab/Gene">gene</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -4073,7 +3962,7 @@ This section provides details for each class and property defined by MVIKG Ontol
      has sub-properties
     </dt>
     <dd>
-     <a href="#https://w3id.org/biolink/vocab/has_gene_or_gene_product" title="https://w3id.org/biolink/vocab/has_gene_or_gene_product">has gene or gene product</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/biolink/vocab/published_in" title="https://w3id.org/biolink/vocab/published_in">published in</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#https://w3id.org/biolink/vocab/published_in" title="https://w3id.org/biolink/vocab/published_in">published in</a> <sup class="type-op" title="object property">op</sup>
     </dd>
     <dt>
      has domain
@@ -4178,23 +4067,6 @@ This section provides details for each class and property defined by MVIKG Ontol
     </dt>
     <dd>
      <a href="#https://w3id.org/biolink/vocab/Publication" title="https://w3id.org/biolink/vocab/Publication">publication</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="https://w3id.org/biolink/vocab/qualifier">
-  <h3>qualifier<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/biolink/vocab/qualifier</p>
-  <div class="comment">
-   <span class="markdown">grouping slot for all qualifiers on an edge. useful for testing compliance with association classes</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has sub-properties
-    </dt>
-    <dd>
-     <a href="#https://w3id.org/biolink/vocab/form_or_variant_qualifier" title="https://w3id.org/biolink/vocab/form_or_variant_qualifier">form or variant qualifier</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -8237,7 +8109,7 @@ This section provides details for each class and property defined by MVIKG Ontol
     has facts
    </dt>
    <dd>
-    <a href="#http://purl.org/dc/terms/isReplacedBy" title="http://purl.org/dc/terms/isReplacedBy">is replaced by</a> <sup class="type-op" title="object property">op</sup> <a href="#d4e11454" title="http://qudt.org/schema/qudt/hasUnit">has unit</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#http://purl.org/dc/terms/isReplacedBy" title="http://purl.org/dc/terms/isReplacedBy">is replaced by</a> <sup class="type-op" title="object property">op</sup> <a href="#d4e11270" title="http://qudt.org/schema/qudt/hasUnit">has unit</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="#http://qudt.org/schema/qudt/deprecated" title="http://qudt.org/schema/qudt/deprecated">deprecated</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"true"^^<a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a> </span>
