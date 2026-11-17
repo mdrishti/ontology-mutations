@@ -11,10 +11,8 @@
 sosa:Sample sosa:hasFeatureOfInterest biolink:GenomicEntity .
 biolink:GenomicEntity sosa:isFeatureOfInterestOf sosa:Sample .
 biolink:Gene rdf:type biolink:GenomicEntity .
-biolink:SequenceVariant biolink:has_gene biolink:Gene .
 biolink:SequenceVariant biolink:has_sequence_variant biolink:Gene .
 biolink:Gene biolink:is_sequence_variant_of biolink:SequenceVariant .
-biolink:Gene biolink:form_or_variant_qualifier biolink:VariantToGeneAssociation .
 
 # Organism data modelling
 sosa:Sample sosa:isSampleOf biolink:OrganismTaxon .
@@ -33,9 +31,8 @@ sosa:Sample biolink:mentioned_by biolink:Publication .
 biolink:Gene biolink:has_phenotype biolink:PhenotypicFeature .
 
 # Sample to GOLD biome habitat relationship
-# Changed from ENVO:01000254 to mvikg:GoldBiome
-sosa:Sample RO:0002303 mvikg:GoldBiome .
+sosa:Sample RO:0002303 mvikg:Biome .
     # RO:hasHabitat
-    # mvikg:GoldBiome encompasses all GOLD biome classes
+    # mvikg:Biome encompasses all GOLD biome classes
 
 sosa:Sample mvikg:hasDevelopmentalStage mvikg:DevelopmentalStage .
