@@ -1,0 +1,25 @@
+@prefix ECO: <http://purl.obolibrary.org/obo/ECO_> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+# ECO:0000305/ECO:0000035 declared by hand rather than via robot extract:
+# ECO:0000305 is defined via a complex owl:equivalentClass intersection
+# (ECO:0000205 + a restriction referencing ECO:9000000/ECO:0000218), so a
+# STAR/BOT module for it alone pulls in a large chunk of ECO's own internal
+# structure (same problem QUDT's Unit had — see qudt_unit_stub.ttl). We only
+# need the bare identity and label for the two evidence codes mvikg actually
+# uses as biolink:has_evidence values (per the MVIKG drawio diagram).
+#
+# Declared as owl:NamedIndividual, not owl:Class: mvikg-property-
+# constraints.ttl uses these as nominals in an owl:oneOf restriction (the
+# range of biolink:has_evidence), which requires individuals, not classes —
+# declaring them as classes there caused the same Class/NamedIndividual
+# punning problem mentions/mentioned_by had (see NOTES.md #8).
+ECO:0000305 a owl:NamedIndividual ;
+    rdfs:label "curator inference used in manual assertion"@en ;
+    skos:definition "A type of curator inference used when a curator reviewed the literature and made a manual evidence assertion."@en .
+
+ECO:0000035 a owl:NamedIndividual ;
+    rdfs:label "no evidence data found"@en ;
+    skos:definition "A type of curator inference that results when research finds no evidence information in the scientific literature, at reference databases, or from other resources."@en .

@@ -8,6 +8,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix ECO: <http://purl.obolibrary.org/obo/ECO_> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 
@@ -100,6 +101,18 @@ mvikg:has_developmental_stage rdf:type owl:ObjectProperty ;
 biolink:has_phenotype
     rdfs:domain biolink:Gene ;
     rdfs:range biolink:PhenotypicFeature .
+
+# biolink:has_evidence, narrowed for MVIKG (per the drawio diagram): declared
+# directly here rather than via robot extract, since biolink's own
+# declaration routes it through association_slot/EvidenceType -- the
+# Association-cluster bookkeeping deliberately pruned from the biolink
+# extract (see NOTES.md #9). Range is ECO:0000305/ECO:0000035 directly, not
+# the generic EvidenceType indirection.
+biolink:has_evidence a owl:ObjectProperty ;
+    rdfs:label "has evidence" ;
+    rdfs:domain biolink:PhenotypicFeature ;
+    rdfs:range [ a owl:Class ; owl:oneOf ( ECO:0000305 ECO:0000035 ) ] ;
+    skos:definition "Connects a phenotypic feature assertion to the type of evidence (ECO) supporting it." .
 
 
 

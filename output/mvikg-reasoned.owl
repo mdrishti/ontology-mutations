@@ -44,12 +44,6 @@
 
 
 
-    <!-- http://purl.obolibrary.org/obo/ECO_9000002 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ECO_9000002"/>
-
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -321,23 +315,9 @@
 
 
 
-    <!-- http://www.geneontology.org/formats/oboInOwl#is_inferred -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#is_inferred">
-        <rdfs:label>is_inferred</rdfs:label>
-    </owl:AnnotationProperty>
-
-
-
     <!-- http://www.geneontology.org/formats/oboInOwl#saved-by -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#saved-by"/>
-
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#shorthand -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#shorthand"/>
 
 
 
@@ -450,12 +430,6 @@
 
 
 
-    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral -->
-
-    <rdfs:Datatype rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
-
-
-
     <!-- http://www.w3.org/2001/XMLSchema#date -->
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
@@ -523,50 +497,6 @@
         <rdfs:label>has developmental stage</rdfs:label>
         <skos:definition>Relates a sample to the developmental stage (e.g. exponential, lag) of the organism it was taken from.</skos:definition>
     </owl:ObjectProperty>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_9000000 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/ECO_9000000">
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/ECO_9000001"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/ECO_0000000"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/ECO_0000217"/>
-        <obo:IAO_0000115>A relation connecting an evidence type to an assertion method where the assertion method describes the type of process employed to evaluate the evidence.</obo:IAO_0000115>
-        <oboInOwl:created_by>mchibucos</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-12-09T05:00:20Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>ECO:9000000</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>used_in</oboInOwl:id>
-        <oboInOwl:shorthand>used_in</oboInOwl:shorthand>
-        <rdfs:comment>In the future we may use a more generic relation with weaker domain and range constraints taken from IAO, RO or OBI.</rdfs:comment>
-        <rdfs:label>used_in</rdfs:label>
-    </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A relation connecting an evidence type to an assertion method where the assertion method describes the type of process employed to evaluate the evidence.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ECO:SN</oboInOwl:hasDbXref>
-    </owl:Axiom>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_9000001 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/ECO_9000001">
-        <obo:IAO_0000115>A relation that is an inverse of &quot;used_in&quot; relation.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>ECO:9000001</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>uses</oboInOwl:id>
-        <oboInOwl:shorthand>uses</oboInOwl:shorthand>
-        <rdfs:label>uses</rdfs:label>
-    </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_9000001"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A relation that is an inverse of &quot;used_in&quot; relation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ECO:SN</oboInOwl:hasDbXref>
-    </owl:Axiom>
 
 
 
@@ -739,15 +669,20 @@
 
 
 
-    <!-- https://w3id.org/biolink/vocab/agent_type -->
+    <!-- https://w3id.org/biolink/vocab/has_evidence -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/agent_type">
-        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/Association"/>
-        <rdfs:range rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum"/>
-        <rdfs:label>agent type</rdfs:label>
-        <skos:definition>Describes the high-level category of agent who originally generated a statement of knowledge or other type of information.</skos:definition>
-        <skos:editorialNote>Note that this property indicates the type of agent who produced a final statement of knowledge, which is often different from the agent oragents who produced information used as evidence to support generation of this knowledge. For example, if a human curator concludes that a particular gene variant causes a medical condition - based on their interpretation of information produced by computational modeling tools, automated data analysis pipelines, and robotic laboratory assay systems - the agent_type for this statement is &apos;manual agent&apos; - despite all of the evidence being created by automated agents. But if any of these systems is programmed to generate knowledge statements directly and without human assistance, the statement would be attributed to an &apos;automated_agent&apos;.</skos:editorialNote>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/has_evidence">
+        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/PhenotypicFeature"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0000035"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0000305"/>
+                </owl:oneOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>has evidence</rdfs:label>
+        <skos:definition>Connects a phenotypic feature assertion to the type of evidence (ECO) supporting it.</skos:definition>
     </owl:ObjectProperty>
 
 
@@ -831,20 +766,6 @@
 
 
 
-    <!-- https://w3id.org/biolink/vocab/knowledge_level -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/knowledge_level">
-        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/Association"/>
-        <rdfs:range rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum"/>
-        <rdfs:label>knowledge level</rdfs:label>
-        <skos:altLabel>knowledge type</skos:altLabel>
-        <skos:definition>Describes the level of knowledge expressed in a statement, based on the reasoning or analysis methods used to generate the statement, or the scope or specificity of what the statement expresses to be true.</skos:definition>
-        <skos:editorialNote>The notion of a &apos;level&apos; of knowledge can in one sense relate to the strength of a statement - i.e. how confident we are that it says something true about our domain of discourse. Here, we can generally consider Assertions to be stronger than Entailments to be stronger than Predictions. But in another sense, &apos;level&apos; of knowledge can refer to the scope or specificity of what a statement expresses - on a spectrum from context-specific results of a data analysis, to generalized assertions of knowledge or fact. Here, Statistical Associations and  Observations represent more foundational statements that are only slightly removed from the data on which they are based (the former reporting the direct results of  an analysis in terms of correlations between variables in the data, and the latter describing phenomena that were observed/reported to have occurred).</skos:editorialNote>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-    </owl:ObjectProperty>
-
-
-
     <!-- https://w3id.org/biolink/vocab/mentioned_by -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/mentioned_by">
@@ -880,20 +801,6 @@
         <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/NamedThing"/>
         <rdfs:label>node property</rdfs:label>
         <skos:definition>A grouping for any property that holds between a node and a value</skos:definition>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-    </owl:ObjectProperty>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/object -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/object">
-        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/Association"/>
-        <rdfs:range rdf:resource="https://w3id.org/biolink/vocab/NamedThing"/>
-        <rdfs:label>object</rdfs:label>
-        <skos:definition>connects an association to the object of the association. For example, in a gene-to-phenotype association, the gene is subject and phenotype is object.</skos:definition>
-        <skos:exactMatch rdf:resource="http://purl.org/oban/association_has_object"/>
-        <skos:exactMatch rdf:resource="http://www.w3.org/2002/07/owl#annotatedTarget"/>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:ObjectProperty>
 
@@ -1060,20 +967,6 @@
 
 
 
-    <!-- https://w3id.org/biolink/vocab/subject -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/subject">
-        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/Association"/>
-        <rdfs:range rdf:resource="https://w3id.org/biolink/vocab/NamedThing"/>
-        <rdfs:label>subject</rdfs:label>
-        <skos:definition>connects an association to the subject of the association. For example, in a gene-to-phenotype association, the gene is subject and phenotype is object.</skos:definition>
-        <skos:exactMatch rdf:resource="http://purl.org/oban/association_has_subject"/>
-        <skos:exactMatch rdf:resource="http://www.w3.org/2002/07/owl#annotatedSource"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-    </owl:ObjectProperty>
-
-
-
     <!-- https://w3id.org/biolink/vocab/taxon_of -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/taxon_of">
@@ -1186,22 +1079,6 @@
 
 
 
-    <!-- https://w3id.org/biolink/vocab/association_slot -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/association_slot">
-        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/Association"/>
-        <rdfs:label>association slot</rdfs:label>
-        <skos:altLabel>edge property</skos:altLabel>
-        <skos:altLabel>edge qualifier</skos:altLabel>
-        <skos:altLabel>node qualifier</skos:altLabel>
-        <skos:altLabel>statement property</skos:altLabel>
-        <skos:altLabel>statement qualifier</skos:altLabel>
-        <skos:definition>any slot that relates an association to another entity</skos:definition>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-    </owl:DatatypeProperty>
-
-
-
     <!-- https://w3id.org/biolink/vocab/base_coordinate -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/base_coordinate">
@@ -1286,22 +1163,6 @@
 
 
 
-    <!-- https://w3id.org/biolink/vocab/predicate -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/predicate">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/biolink/vocab/association_slot"/>
-        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/Association"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>predicate</rdfs:label>
-        <skos:definition>A high-level grouping for the relationship type. AKA minimal predicate. This is analogous to category for nodes.</skos:definition>
-        <skos:editorialNote>Has a value from the Biolink related_to hierarchy. In RDF,  this corresponds to rdf:predicate and in Neo4j this corresponds to the relationship type. The convention is for an edge label in snake_case form. For example, biolink:related_to, biolink:causes, biolink:treats</skos:editorialNote>
-        <skos:exactMatch rdf:resource="http://purl.org/oban/association_has_predicate"/>
-        <skos:exactMatch rdf:resource="http://www.w3.org/2002/07/owl#annotatedProperty"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-    </owl:DatatypeProperty>
-
-
-
     <!-- https://w3id.org/biolink/vocab/publication_type -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/publication_type">
@@ -1315,8 +1176,6 @@
     <!-- https://w3id.org/biolink/vocab/sequence_localization_attribute -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/sequence_localization_attribute">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/biolink/vocab/association_slot"/>
-        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/GenomicSequenceLocalization"/>
         <rdfs:label>sequence localization attribute</rdfs:label>
         <skos:definition>An attribute that can be applied to a genome sequence localization edge. These edges connect a nucleic acid entity such as an exon to an entity such as a chromosome. Edge properties are used to ascribe specific positional information and other metadata to the localization. In pragmatic terms this can be thought of as columns in a GFF3 line.</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
@@ -1378,631 +1237,6 @@
         <rdfs:label>Developmental stage</rdfs:label>
         <skos:closeMatch rdf:resource="http://www.ebi.ac.uk/efo/EFO_0000399"/>
         <skos:definition>Represents a specific point or period in an organism&apos;s life cycle</skos:definition>
-    </owl:Class>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_0000000 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000000">
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ECO_0000217"/>
-        <obo:IAO_0000115>A type of information that is used to support an assertion.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym>evidence code</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>evidence_code</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:id>ECO:0000000</oboInOwl:id>
-        <rdfs:label>evidence</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000000"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A type of information that is used to support an assertion.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ECO:MCC</oboInOwl:hasDbXref>
-    </owl:Axiom>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_0000035 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000035">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000205"/>
-        <obo:IAO_0000115>A type of curator inference that results when research finds no evidence information in the scientific literature, at reference databases, or from other resources.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>ECO:0000035</oboInOwl:id>
-        <rdfs:comment>An assertion of &quot;no evidence data found&quot; carries the assumption that a more-or-less exhaustive search has been conducted.</rdfs:comment>
-        <rdfs:label>no evidence data found</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000035"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A type of curator inference that results when research finds no evidence information in the scientific literature, at reference databases, or from other resources.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ECO:SN</oboInOwl:hasDbXref>
-    </owl:Axiom>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_0000203 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000203">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000217"/>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
-        <obo:IAO_0000115>An assertion method that does not involve human review.</obo:IAO_0000115>
-        <oboInOwl:created_by>mchibucos</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-03-18T12:36:04Z</oboInOwl:creation_date>
-        <oboInOwl:hasAlternativeId>ECO:00000067</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>ECO:0000203</oboInOwl:id>
-        <rdfs:comment>An automatic assertion is based on computationally generated information that is not reviewed by a person prior to making the assertion. For example, one common type of automatic assertion involves creating an association of evidence with an entity based on commonness of attributes of that entity and another entity for which an assertion already exists. The commonness is determined algorithmically.</rdfs:comment>
-        <rdfs:label>automatic assertion</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An assertion method that does not involve human review.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ECO:MCC</oboInOwl:hasDbXref>
-    </owl:Axiom>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_0000205 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000205">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000361"/>
-        <obo:IAO_0000115>A type of inferential evidence that is based on a conclusion drawn by a curator.</obo:IAO_0000115>
-        <oboInOwl:created_by>mchibucos</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-08-18T05:55:12Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>ECO:0000205</oboInOwl:id>
-        <rdfs:label>curator inference</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000205"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A type of inferential evidence that is based on a conclusion drawn by a curator.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ECO:MCC</oboInOwl:hasDbXref>
-    </owl:Axiom>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_0000217 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000217">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0000203"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0000218"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115>A means by which a statement is made about an entity.</obo:IAO_0000115>
-        <oboInOwl:created_by>mchibucos</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-11-12T04:17:37Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>ECO:0000217</oboInOwl:id>
-        <rdfs:label>assertion method</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000217"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A means by which a statement is made about an entity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ECO:MCC</oboInOwl:hasDbXref>
-    </owl:Axiom>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_0000218 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000218">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000217"/>
-        <obo:IAO_0000115>An assertion method that involves human review.</obo:IAO_0000115>
-        <oboInOwl:created_by>mchibucos</oboInOwl:created_by>
-        <oboInOwl:creation_date>2010-11-12T04:20:02Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>ECO:0000218</oboInOwl:id>
-        <rdfs:comment>A manual assertion could be based on evidence that is generated by and interpreted by a human or it could involve human review of computationally generated information.</rdfs:comment>
-        <rdfs:label>manual assertion</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An assertion method that involves human review.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ECO:MCC</oboInOwl:hasDbXref>
-    </owl:Axiom>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_0000305 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000305">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0000205"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000205"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007751"/>
-        <obo:ECO_9000002>IC</obo:ECO_9000002>
-        <obo:IAO_0000115>A type of curator inference that is used in a manual assertion.</obo:IAO_0000115>
-        <oboInOwl:created_by>mchibucos</oboInOwl:created_by>
-        <oboInOwl:creation_date>2011-01-20T02:33:32Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>GOECO:IC</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>IC</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>inferred by curator</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>ECO:0000305</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_biological_process"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_cellular_component"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_molecular_function"/>
-        <rdfs:label>curator inference used in manual assertion</rdfs:label>
-        <rdfs:seeAlso>http://geneontology.org/page/ic-inferred-curator</rdfs:seeAlso>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000305"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0007751"/>
-        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000305"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000002"/>
-        <owl:annotatedTarget>IC</owl:annotatedTarget>
-        <rdfs:comment>Default</rdfs:comment>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000305"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A type of curator inference that is used in a manual assertion.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ECO:MCC</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000305"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>GOECO:IC</owl:annotatedTarget>
-        <rdfs:label>inferred by curator</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000305"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>IC</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOECO:IC</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000305"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>inferred by curator</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOECO:IC</oboInOwl:hasDbXref>
-    </owl:Axiom>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_0000307 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000307">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0000035"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000035"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000305"/>
-        <obo:ECO_9000002>ND</obo:ECO_9000002>
-        <obo:IAO_0000115>An inference that results when research finds no evidence information in the scientific literature, at reference databases, or from other resources that is used in an manual assertion.</obo:IAO_0000115>
-        <oboInOwl:created_by>mchibucos</oboInOwl:created_by>
-        <oboInOwl:creation_date>2011-01-20T02:43:18Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>GOECO:ND</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>ND</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>no biological data available</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>ECO:0000307</oboInOwl:id>
-        <rdfs:label>no evidence data found used in manual assertion</rdfs:label>
-        <rdfs:seeAlso>http://geneontology.org/page/nd-no-biological-data-available</rdfs:seeAlso>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000307"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000305"/>
-        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000307"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000002"/>
-        <owl:annotatedTarget>ND</owl:annotatedTarget>
-        <rdfs:comment>Default</rdfs:comment>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000307"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An inference that results when research finds no evidence information in the scientific literature, at reference databases, or from other resources that is used in an manual assertion.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ECO:MCC</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000307"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>GOECO:ND</owl:annotatedTarget>
-        <rdfs:label>no biological data available</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000307"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>ND</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOECO:ND</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000307"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>no biological data available</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOECO:ND</oboInOwl:hasDbXref>
-    </owl:Axiom>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_0000352 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000352">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0000000"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000000"/>
-        <rdfs:subClassOf rdf:nodeID="genid43"/>
-        <obo:IAO_0000115>A type of evidence that is used in an manual assertion.</obo:IAO_0000115>
-        <oboInOwl:created_by>mchibucos</oboInOwl:created_by>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>ECO:0000352</oboInOwl:id>
-        <rdfs:label>evidence used in manual assertion</rdfs:label>
-    </owl:Class>
-    <owl:Restriction rdf:nodeID="genid43">
-        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
-        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
-    </owl:Restriction>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000352"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000000"/>
-        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000352"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid43"/>
-        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000352"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A type of evidence that is used in an manual assertion.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ECO:MCC</oboInOwl:hasDbXref>
-    </owl:Axiom>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_0000361 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000361">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000000"/>
-        <obo:IAO_0000115>A type of evidence where an assertion is derived from another assertion via logical inference or some non-logical but rational means.</obo:IAO_0000115>
-        <oboInOwl:created_by>mchibucos</oboInOwl:created_by>
-        <oboInOwl:creation_date>2015-07-14T11:19:37Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>ECO:0000361</oboInOwl:id>
-        <rdfs:comment>Inference is the process of deriving logical conclusions from premises known or assumed to be true, or alternatively, arriving at conclusions via some non-logical means of observation of patterns of facts, which can result in identifying new meanings and contexts for understanding. Given the evidence provided by a set of premises, deductive reasoning involves drawing conclusions that necessarily follow, i.e. are certain, whereas inductive reasoning generates conclusions that are likely to be, but are not necessarily, true.</rdfs:comment>
-        <rdfs:label>inferential evidence</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000361"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A type of evidence where an assertion is derived from another assertion via logical inference or some non-logical but rational means.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ECO:MCC</oboInOwl:hasDbXref>
-    </owl:Axiom>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_0000501 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0000501">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0000000"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000000"/>
-        <rdfs:subClassOf rdf:nodeID="genid52"/>
-        <obo:ECO_9000002>IEA</obo:ECO_9000002>
-        <obo:IAO_0000115>A type of evidence that is used in an automatic assertion.</obo:IAO_0000115>
-        <oboInOwl:created_by>cjm</oboInOwl:created_by>
-        <oboInOwl:hasDbXref>GOECO:IEA</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>IEA</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>inferred from electronic annotation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>ECO:0000501</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_gene"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/eco#valid_with_protein_complex"/>
-        <rdfs:label>evidence used in automatic assertion</rdfs:label>
-        <rdfs:seeAlso>http://geneontology.org/page/automatically-assigned-evidence-codes</rdfs:seeAlso>
-    </owl:Class>
-    <owl:Restriction rdf:nodeID="genid52">
-        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
-        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
-    </owl:Restriction>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000501"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000000"/>
-        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000501"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid52"/>
-        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000501"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000002"/>
-        <owl:annotatedTarget>IEA</owl:annotatedTarget>
-        <rdfs:comment>Default</rdfs:comment>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000501"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A type of evidence that is used in an automatic assertion.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ECO:cjm</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000501"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-        <owl:annotatedTarget>GOECO:IEA</owl:annotatedTarget>
-        <rdfs:label>inferred from electronic annotation</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000501"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>IEA</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOECO:IEA</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0000501"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>inferred from electronic annotation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOECO:IEA</oboInOwl:hasDbXref>
-    </owl:Axiom>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_0007322 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0007322">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0000205"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000205"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007832"/>
-        <obo:ECO_9000002>IEA</obo:ECO_9000002>
-        <obo:IAO_0000115>A type of curator inference that is used in an automatic assertion.</obo:IAO_0000115>
-        <oboInOwl:created_by>rctauber</oboInOwl:created_by>
-        <oboInOwl:creation_date>2018-05-14T09:47:55Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>ECO:0007322</oboInOwl:id>
-        <rdfs:label>curator inference used in automatic assertion</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007322"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0007832"/>
-        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007322"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A type of curator inference that is used in an automatic assertion.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ECO:RCT</oboInOwl:hasDbXref>
-    </owl:Axiom>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_0007324 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0007324">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0000035"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000035"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0007322"/>
-        <obo:ECO_9000002>IEA</obo:ECO_9000002>
-        <obo:IAO_0000115>An inference that results when research finds no evidence information in the scientific literature, at reference databases, or from other resources that is used in an automatic assertion.</obo:IAO_0000115>
-        <oboInOwl:created_by>rctauber</oboInOwl:created_by>
-        <oboInOwl:creation_date>2018-05-14T09:47:55Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>ECO:0007324</oboInOwl:id>
-        <rdfs:label>no evidence data found used in automatic assertion</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007324"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000035"/>
-        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007324"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0007322"/>
-        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007324"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An inference that results when research finds no evidence information in the scientific literature, at reference databases, or from other resources that is used in an automatic assertion.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ECO:RCT</oboInOwl:hasDbXref>
-    </owl:Axiom>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_0007751 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0007751">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0000361"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000218"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000352"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000361"/>
-        <obo:IAO_0000115>A type of inferential evidence that is used in a manual assertion.</obo:IAO_0000115>
-        <oboInOwl:created_by>rctauber</oboInOwl:created_by>
-        <oboInOwl:creation_date>2019-03-20T12:27:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>ECO:0007751</oboInOwl:id>
-        <rdfs:label>inferential evidence used in manual assertion</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007751"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000352"/>
-        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
-    </owl:Axiom>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/ECO_0007832 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECO_0007832">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ECO_0000361"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ECO_9000000"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ECO_0000203"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000361"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECO_0000501"/>
-        <obo:ECO_9000002>IEA</obo:ECO_9000002>
-        <obo:IAO_0000115>A type of inferential evidence that is used in an automatic assertion.</obo:IAO_0000115>
-        <oboInOwl:created_by>rctauber</oboInOwl:created_by>
-        <oboInOwl:creation_date>2019-03-20T13:02:00Z</oboInOwl:creation_date>
-        <oboInOwl:hasOBONamespace>eco</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>ECO:0007832</oboInOwl:id>
-        <rdfs:label>inferential evidence used in automatic assertion</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ECO_0007832"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ECO_0000501"/>
-        <oboInOwl:is_inferred>true</oboInOwl:is_inferred>
-    </owl:Axiom>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000078 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000078">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000002"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000120"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000121"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000122"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000123"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000124"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000125"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000423"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000428"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 xml:lang="en">The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">curation status specification</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000225 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000225">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000103"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000226"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000227"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000228"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000229"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 xml:lang="en">The reason for which a term has been deprecated. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">obsolescence reason specification</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000409 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000409">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000410"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000420"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000421"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 xml:lang="en">A denotator type indicates how a term should be interpreted from an ontological perspective.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">denotator type</rdfs:label>
     </owl:Class>
 
 
@@ -3127,6 +2361,13 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000036"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>inversion</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://www.ncbi.nlm.nih.gov/dbvar/</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#dbvar"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000036"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A continuous nucleotide sequence is inverted in the same position.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>EBI:www.ebi.ac.uk/mutations/recommendations/mutevent.html</oboInOwl:hasDbXref>
@@ -3136,13 +2377,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>loinc:LA6689-9</owl:annotatedTarget>
         <rdfs:label>Inversion</rdfs:label>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000036"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>inversion</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>http://www.ncbi.nlm.nih.gov/dbvar/</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#dbvar"/>
     </owl:Axiom>
 
 
@@ -3361,37 +2595,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 
 
 
-    <!-- https://w3id.org/biolink/vocab/AgentTypeEnum -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent"/>
-                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#computational_model"/>
-                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#data_analysis_pipeline"/>
-                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#image_processing_agent"/>
-                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#manual_agent"/>
-                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#manual_validation_of_automated_agent"/>
-                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#not_provided"/>
-                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#text_mining_agent"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/EnumDefinition"/>
-        <rdfs:label>AgentTypeEnum</rdfs:label>
-        <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent"/>
-        <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#computational_model"/>
-        <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#data_analysis_pipeline"/>
-        <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#image_processing_agent"/>
-        <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#manual_agent"/>
-        <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#manual_validation_of_automated_agent"/>
-        <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#not_provided"/>
-        <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#text_mining_agent"/>
-    </owl:Class>
-
-
-
     <!-- https://w3id.org/biolink/vocab/Article -->
 
     <owl:Class rdf:about="https://w3id.org/biolink/vocab/Article">
@@ -3413,123 +2616,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <skos:exactMatch rdf:resource="http://purl.org/spar/fabio/article"/>
         <skos:exactMatch rdf:resource="http://semanticscience.org/resource/SIO_000154"/>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/Association -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/Association">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/Entity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/agent_type"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/knowledge_level"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/object"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/biolink/vocab/NamedThing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/subject"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/biolink/vocab/NamedThing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/agent_type"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/knowledge_level"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/object"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/subject"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/agent_type"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/knowledge_level"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/object"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/subject"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/category"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/predicate"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/type"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/predicate"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/predicate"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>association</rdfs:label>
-        <skos:definition>A typed association between two entities, supported by evidence</skos:definition>
-        <skos:exactMatch rdf:resource="http://purl.org/oban/association"/>
-        <skos:exactMatch rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
-        <skos:exactMatch rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <skos:note>This is roughly the model used by biolink and ontobio at the moment</skos:note>
     </owl:Class>
 
 
@@ -3843,73 +2929,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 
 
 
-    <!-- https://w3id.org/biolink/vocab/GenomicSequenceLocalization -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/GenomicSequenceLocalization">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/SequenceAssociation"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/object"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/biolink/vocab/NucleicAcidEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/subject"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/biolink/vocab/NucleicAcidEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/object"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/subject"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/object"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/subject"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/predicate"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/predicate"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/biolink/vocab/predicate"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>genomic sequence localization</rdfs:label>
-        <skos:broadMatch rdf:resource="https://datacommons.org/browser/Chromosome"/>
-        <skos:definition>A relationship between a sequence feature and a nucleic acid entity it is localized to. The reference entity may be a chromosome, chromosome region or information entity such as a contig.</skos:definition>
-        <skos:exactMatch rdf:resource="https://datacommons.org/browser/GenomeAnnotation"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-    </owl:Class>
-
-
-
     <!-- https://w3id.org/biolink/vocab/InformationContentEntity -->
 
     <owl:Class rdf:about="https://w3id.org/biolink/vocab/InformationContentEntity">
@@ -3933,33 +2952,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <skos:narrowMatch rdf:resource="http://purl.bioontology.org/ontology/STY/T171"/>
         <skos:narrowMatch rdf:resource="http://purl.bioontology.org/ontology/STY/T185"/>
         <skos:narrowMatch rdf:resource="https://lhncbc.nlm.nih.gov/semanticnetwork/download/sg_archive/SemGroups-v04.txtCONC"/>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/KnowledgeLevelEnum -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/KnowledgeLevelEnum">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#knowledge_assertion"/>
-                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#logical_entailment"/>
-                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#not_provided"/>
-                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#observation"/>
-                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#prediction"/>
-                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#statistical_association"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/EnumDefinition"/>
-        <rdfs:label>KnowledgeLevelEnum</rdfs:label>
-        <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#knowledge_assertion"/>
-        <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#logical_entailment"/>
-        <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#not_provided"/>
-        <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#observation"/>
-        <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#prediction"/>
-        <linkml:permissible_values rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#statistical_association"/>
     </owl:Class>
 
 
@@ -4230,17 +3222,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 
 
 
-    <!-- https://w3id.org/biolink/vocab/SequenceAssociation -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/SequenceAssociation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/Association"/>
-        <rdfs:label>sequence association</rdfs:label>
-        <skos:definition>An association between a sequence feature and a nucleic acid entity it is localized to.</skos:definition>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-    </owl:Class>
-
-
-
     <!-- https://w3id.org/biolink/vocab/SequenceVariant -->
 
     <owl:Class rdf:about="https://w3id.org/biolink/vocab/SequenceVariant">
@@ -4358,142 +3339,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 
 
 
-    <!-- https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
-        <rdfs:label>automated_agent</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/AgentTypeEnum#computational_model -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#computational_model">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent"/>
-        <rdfs:label>computational_model</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/AgentTypeEnum#data_analysis_pipeline -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#data_analysis_pipeline">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent"/>
-        <rdfs:label>data_analysis_pipeline</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/AgentTypeEnum#image_processing_agent -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#image_processing_agent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent"/>
-        <rdfs:label>image_processing_agent</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/AgentTypeEnum#manual_agent -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#manual_agent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
-        <rdfs:label>manual_agent</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/AgentTypeEnum#manual_validation_of_automated_agent -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#manual_validation_of_automated_agent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
-        <rdfs:label>manual_validation_of_automated_agent</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/AgentTypeEnum#not_provided -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#not_provided">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
-        <rdfs:label>AgentTypeEnum not_provided</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/AgentTypeEnum#text_mining_agent -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/AgentTypeEnum#text_mining_agent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/AgentTypeEnum#automated_agent"/>
-        <rdfs:label>text_mining_agent</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/KnowledgeLevelEnum#knowledge_assertion -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#knowledge_assertion">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
-        <rdfs:label>knowledge_assertion</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/KnowledgeLevelEnum#logical_entailment -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#logical_entailment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
-        <rdfs:label>logical_entailment</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/KnowledgeLevelEnum#not_provided -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#not_provided">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
-        <rdfs:label>KnowledgeLevelEnum not_provided</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/KnowledgeLevelEnum#observation -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#observation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
-        <rdfs:label>observation</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/KnowledgeLevelEnum#prediction -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#prediction">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
-        <rdfs:label>prediction</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/KnowledgeLevelEnum#statistical_association -->
-
-    <owl:Class rdf:about="https://w3id.org/biolink/vocab/KnowledgeLevelEnum#statistical_association">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/biolink/vocab/KnowledgeLevelEnum"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/linkml/PermissibleValue"/>
-        <rdfs:label>statistical_association</rdfs:label>
-    </owl:Class>
-
-
-
     <!-- https://w3id.org/linkml/ClassDefinition -->
 
     <owl:Class rdf:about="https://w3id.org/linkml/ClassDefinition"/>
@@ -4529,149 +3374,20 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000002 -->
+    <!-- http://purl.obolibrary.org/obo/ECO_0000035 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000002">
-        <rdfs:label xml:lang="en">example to be eventually removed</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ECO_0000035">
+        <rdfs:label xml:lang="en">no evidence data found</rdfs:label>
+        <skos:definition xml:lang="en">A type of curator inference that results when research finds no evidence information in the scientific literature, at reference databases, or from other resources.</skos:definition>
     </owl:NamedIndividual>
 
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000103 -->
+    <!-- http://purl.obolibrary.org/obo/ECO_0000305 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000103">
-        <obo:IAO_0000115 xml:lang="en">The term was used in an attempt to structure part of the ontology but in retrospect failed to do a good job</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">failed exploratory term</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000120 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000120">
-        <obo:IAO_0000115 xml:lang="en">Class has all its metadata, but is either not guaranteed to be in its final location in the asserted IS_A hierarchy or refers to another class that is not complete.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">metadata complete</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000121 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000121">
-        <obo:IAO_0000115 xml:lang="en">Term created to ease viewing/sort terms for development purpose, and will not be included in a release</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">organizational term</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000122 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000122">
-        <obo:IAO_0000115 xml:lang="en">Class has undergone final review, is ready for use, and will be included in the next release. Any class lacking &quot;ready_for_release&quot; should be considered likely to change place in hierarchy, have its definition refined, or be obsoleted in the next release.  Those classes deemed &quot;ready_for_release&quot; will also derived from a chain of ancestor classes that are also &quot;ready_for_release.&quot;</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">ready for release</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000123 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000123">
-        <obo:IAO_0000115 xml:lang="en">Class is being worked on; however, the metadata (including definition) are not complete or sufficiently clear to the branch editors.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">metadata incomplete</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000124 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000124">
-        <obo:IAO_0000115 xml:lang="en">Nothing done yet beyond assigning a unique class ID and proposing a preferred term.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">uncurated</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000125 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000125">
-        <obo:IAO_0000115 xml:lang="en">All definitions, placement in the asserted IS_A hierarchy and required minimal metadata are complete. The class is awaiting a final review by someone other than the term editor.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">pending final vetting</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000226 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000226">
-        <rdfs:label xml:lang="en">placeholder removed</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000227 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000227">
-        <rdfs:label xml:lang="en">terms merged</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000228 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000228">
-        <rdfs:label xml:lang="en">term imported</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000229 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000229">
-        <rdfs:label xml:lang="en">term split</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000410 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000410">
-        <rdfs:label xml:lang="en">universal</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000420 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000420">
-        <obo:IAO_0000115 xml:lang="en">A defined class is a class that is defined by a set of logically necessary and sufficient conditions but is not a universal</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">defined class</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000421 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000421">
-        <obo:IAO_0000115 xml:lang="en">A named class expression is a logical expression that is given a name. The name can be used in place of the expression.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">named class expression</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000423 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000423">
-        <obo:IAO_0000115 xml:lang="en">Terms with this status should eventually replaced with a term from another ontology.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">to be replaced with external ontology term</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000428 -->
-
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000428">
-        <obo:IAO_0000115 xml:lang="en">A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">requires discussion</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ECO_0000305">
+        <rdfs:label xml:lang="en">curator inference used in manual assertion</rdfs:label>
+        <skos:definition xml:lang="en">A type of curator inference used when a curator reviewed the literature and made a manual evidence assertion.</skos:definition>
     </owl:NamedIndividual>
 
 
@@ -4691,397 +3407,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
     <owl:NamedIndividual rdf:about="http://qudt.org/vocab/unit/UNITLESS">
         <rdf:type rdf:resource="http://qudt.org/schema/qudt/Unit"/>
         <rdfs:label xml:lang="en">Unitless</rdfs:label>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/ameliorates_condition -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/ameliorates_condition">
-        <biolink:opposite_of>exacerbates condition</biolink:opposite_of>
-        <rdfs:label>ameliorates condition</rdfs:label>
-        <skos:altLabel>ameliorates</skos:altLabel>
-        <skos:altLabel>beneficial for condition</skos:altLabel>
-        <skos:altLabel>therapeutic for condition</skos:altLabel>
-        <skos:definition>Holds between an entity and an existing medical condition (disease or phenotypic feature) where the entity is able to ameliorate symptoms, stabilize progression, or cure the condition.</skos:definition>
-        <skos:editorialNote>This predicate describes a narrower view of &apos;treats&apos; - that covers interventions that are beneficial for existing disease, and excludes interventions that prevent/reduce risk of developing a condition in the future.</skos:editorialNote>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0003307"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/broad_match -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/broad_match">
-        <biolink:opposite_of>narrow match</biolink:opposite_of>
-        <rdfs:label>broad match</rdfs:label>
-        <skos:definition>a list of terms from different schemas or terminology systems that have a broader, more general meaning. Broader terms are typically shown as parents in a hierarchy or tree.</skos:definition>
-        <skos:exactMatch rdf:resource="http://www.w3.org/2004/02/skos/core#broadMatch"/>
-        <skos:exactMatch rdf:resource="https://www.wikidata.org/entity/Q39894595"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/contraindicated_in -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/contraindicated_in">
-        <biolink:opposite_of>treats</biolink:opposite_of>
-        <rdfs:label>contraindicated in</rdfs:label>
-        <skos:definition>Holds between a substance, procedure, or activity and a medical condition or circumstance, where an authority has established that the substance, procedure, or activity should not be applied as an intervention in patients with the condition or circumstance because it can result in detrimental outcomes.</skos:definition>
-        <skos:editorialNote>This predicate relates the intervention with a specific disease, phenotype, or other medical circumstance that puts patients at high risk for detrimental outcomes.  This may be a different condition from the one that the drug would be used to treat (e.g. pseudoephedrine is contraindicated in people with high-blood pressure as a treatment for nasal congestion), a biological state (e.g. isotretinoin is contraindicated in people who are pregnant as a treatment for acne), or being on a different medication (e.g. aspirin is contraindicated in people taking warfarin as a preventative treatment for stroke).</skos:editorialNote>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_C37933"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/decreases_sensitivity_to -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/decreases_sensitivity_to">
-        <biolink:opposite_of>increases sensitivity to</biolink:opposite_of>
-        <rdfs:label>decreases sensitivity to</rdfs:label>
-        <skos:definition>holds between two chemical entities or genes or gene products where the action or effect of one decreases the susceptibility/sensitivity of a biological entity or system (e.g. an organism, cell, cellular component, macromolecular machine mixin, biological or pathological process) to the other</skos:definition>
-        <skos:exactMatch rdf:resource="http://ctdbase.org/decreases_response_to"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <skos:narrowMatch rdf:resource="http://ctdbase.org/decreases_response_to_substance"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/disrupts -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/disrupts">
-        <biolink:opposite_of>enables</biolink:opposite_of>
-        <rdfs:label>disrupts</rdfs:label>
-        <skos:altLabel>disease causes disruption of</skos:altLabel>
-        <skos:definition>describes a relationship where one entity degrades or interferes with the structure, function, or occurrence of another.</skos:definition>
-        <skos:exactMatch rdf:resource="https://skr3.nlm.nih.gov/SemMedDBDISRUPTS"/>
-        <skos:exactMatch rdf:resource="https://www.ebi.ac.uk/chembl/mechanism/inspect/disrupting_agent"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0004024"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0004025"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/enabled_by -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/enabled_by">
-        <biolink:opposite_of>prevented by</biolink:opposite_of>
-        <rdfs:label>enabled by</rdfs:label>
-        <skos:definition>holds between a process and a physical entity, where the physical entity executes the process</skos:definition>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002333"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/end_interbase_coordinate -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/end_interbase_coordinate">
-        <biolink:opposite_of>start interbase coordinate</biolink:opposite_of>
-        <rdfs:label>end interbase coordinate</rdfs:label>
-        <skos:closeMatch rdf:resource="http://biohackathon.org/resource/faldo#end"/>
-        <skos:definition>The position at which the subject nucleic acid entity ends on the chromosome or other entity to which it is located on.</skos:definition>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/exacerbates_condition -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/exacerbates_condition">
-        <biolink:opposite_of>ameliorates condition</biolink:opposite_of>
-        <rdfs:label>exacerbates condition</rdfs:label>
-        <skos:altLabel>detrimental for condition</skos:altLabel>
-        <skos:altLabel>exacerbates</skos:altLabel>
-        <skos:broadMatch rdf:resource="https://skr3.nlm.nih.gov/SemMedDBCOMPLICATES"/>
-        <skos:definition>Holds between a substance, procedure, or activity and an existing medical condition (disease or phenotypic
- feature) where the substance, procedure, or activity worsens some or all aspects of the condition.</skos:definition>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0003309"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/genetically_associated_with -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/genetically_associated_with">
-        <biolink:description>Co-occurrence of a certain allele of a genetic marker and the phenotype of interest in the same individuals at above-chance level</biolink:description>
-        <rdfs:label>genetically associated with</rdfs:label>
-        <skos:exactMatch rdf:resource="https://www.wikidata.org/prop/P2293"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/has_active_ingredient -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/has_active_ingredient">
-        <biolink:opposite_of>is excipient of</biolink:opposite_of>
-        <rdfs:label>has active ingredient</rdfs:label>
-        <skos:definition>holds between a drug and a molecular entity in which the latter is a part of the former, and is a biologically active component</skos:definition>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <skos:mappingRelation rdf:resource="http://purl.obolibrary.org/obo/RO_0002248"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/has_completed -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/has_completed">
-        <biolink:opposite_of>has not completed</biolink:opposite_of>
-        <rdfs:label>has completed</rdfs:label>
-        <skos:definition>holds between an entity and a process that the entity is capable of and has completed</skos:definition>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/CL_has_completed"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/has_decreased_amount -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/has_decreased_amount">
-        <biolink:opposite_of>has increased amount</biolink:opposite_of>
-        <rdfs:label>has decreased amount</rdfs:label>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/CL_has_low_plasma_membrane_amount"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/has_increased_amount -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/has_increased_amount">
-        <biolink:opposite_of>has decreased amount</biolink:opposite_of>
-        <rdfs:label>has increased amount</rdfs:label>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/CL_has_high_plasma_membrane_amount"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/has_input -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/has_input">
-        <biolink:opposite_of>has output</biolink:opposite_of>
-        <rdfs:label>has input</rdfs:label>
-        <skos:definition>holds between a process and a continuant, where the continuant is an input into the process</skos:definition>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-        <skos:exactMatch rdf:resource="https://skr3.nlm.nih.gov/SemMedDBUSES"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <skos:narrowMatch rdf:resource="http://loinc.org/rdf/has_fragments_for_synonyms"/>
-        <skos:narrowMatch rdf:resource="http://loinc.org/rdf/has_system"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002590"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0004009"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/SNOMED_has_finding_method"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/SNOMED_has_precondition"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/SNOMED_has_specimen_source_identity"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/SNOMED_has_specimen_substance"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/SNOMED_uses_access_device"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/SNOMED_uses_device"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/SNOMED_uses_energy"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/SNOMED_uses_substance"/>
-        <skos:narrowMatch rdf:resource="http://smpdb.ca/pathways/#has_left_element"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/has_not_completed -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/has_not_completed">
-        <biolink:opposite_of>has completed</biolink:opposite_of>
-        <rdfs:label>has not completed</rdfs:label>
-        <skos:definition>holds between an entity and a process that the entity is capable of, but has not completed</skos:definition>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/CL_has_not_completed"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/has_output -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/has_output">
-        <biolink:opposite_of>has input</biolink:opposite_of>
-        <rdfs:label>has output</rdfs:label>
-        <skos:definition>holds between a process and a continuant, where the continuant is an output of the process</skos:definition>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_R31"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002296"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002297"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002298"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002299"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002588"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0004008"/>
-        <skos:narrowMatch rdf:resource="http://smpdb.ca/pathways/#has_right_element"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/has_part -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/has_part">
-        <biolink:opposite_of>lacks part</biolink:opposite_of>
-        <rdfs:label>has part</rdfs:label>
-        <skos:broadMatch rdf:resource="http://purl.bioontology.org/ontology/RXNORM/contains"/>
-        <skos:broadMatch rdf:resource="http://purl.obolibrary.org/obo/FMA_contains"/>
-        <skos:broadMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0001019"/>
-        <skos:definition>holds between wholes and their parts (material entities or processes)</skos:definition>
-        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/RXNORM/consists_of"/>
-        <skos:exactMatch rdf:resource="http://purl.bioontology.org/ontology/RXNORM/has_part"/>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0001019"/>
-        <skos:exactMatch rdf:resource="https://www.wikidata.org/prop/P527"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <skos:narrowMatch rdf:resource="http://identifiers.org/meddra/has_member"/>
-        <skos:narrowMatch rdf:resource="http://identifiers.org/umls/has_component"/>
-        <skos:narrowMatch rdf:resource="http://loinc.org/rdf/has_component"/>
-        <skos:narrowMatch rdf:resource="http://loinc.org/rdf/has_member"/>
-        <skos:narrowMatch rdf:resource="http://purl.bioontology.org/ontology/NDDF/has_ingredient"/>
-        <skos:narrowMatch rdf:resource="http://purl.bioontology.org/ontology/RXNORM/has_ingredient"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/FMA_has_constitutional_part"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/FMA_has_member"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/FMA_has_part"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001563"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002420"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/MONDO_disease_has_major_feature"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_R50"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/NCIT_complex_has_physical_part"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002104"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002180"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002524"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002551"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/SNOMED_has_component"/>
-        <skos:narrowMatch rdf:resource="http://smpdb.ca/pathways/#has_element_in_bound"/>
-        <skos:narrowMatch rdf:resource="http://smpdb.ca/pathways/#has_protein_in_complex"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/increases_sensitivity_to -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/increases_sensitivity_to">
-        <biolink:opposite_of>decreases sensitivity to</biolink:opposite_of>
-        <rdfs:label>increases sensitivity to</rdfs:label>
-        <skos:definition>holds between two chemical entities or genes or gene products where the action or effect of one increases the susceptibility/sensitivity of a biological entity or system (e.g. an organism, cell, cellular component, macromolecular machine mixin, biological or pathological process) to the other</skos:definition>
-        <skos:exactMatch rdf:resource="http://ctdbase.org/increases_response_to"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/lacks_part -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/lacks_part">
-        <biolink:opposite_of>has part</biolink:opposite_of>
-        <rdfs:label>lacks part</rdfs:label>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/CL_lacks_part"/>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/PR_lacks_part"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/CL_lacks_plasma_membrane_part"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/narrow_match -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/narrow_match">
-        <biolink:opposite_of>broad match</biolink:opposite_of>
-        <rdfs:label>narrow match</rdfs:label>
-        <skos:definition>a list of terms from different schemas or terminology systems that have a narrower, more specific meaning. Narrower terms are typically shown as children in a hierarchy or tree.</skos:definition>
-        <skos:exactMatch rdf:resource="http://www.w3.org/2004/02/skos/core#narrowMatch"/>
-        <skos:exactMatch rdf:resource="https://www.wikidata.org/entity/Q39893967"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/negatively_correlated_with -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/negatively_correlated_with">
-        <biolink:opposite_of>positively correlated with</biolink:opposite_of>
-        <rdfs:label>negatively correlated with</rdfs:label>
-        <skos:definition>A relationship that holds between two concepts represented by variables for which a statistical correlation is demonstrated, wherein variable values move in opposite directions (i.e. increased in one or presence of one correlates with a decrease or absence of the other).</skos:definition>
-        <skos:exactMatch rdf:resource="http://ctdbase.org/negative_correlation"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/positively_correlated_with -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/positively_correlated_with">
-        <biolink:opposite_of>negatively correlated with</biolink:opposite_of>
-        <rdfs:label>positively correlated with</rdfs:label>
-        <skos:definition>A relationship that holds between two concepts represented by variables for which a statistical correlation is demonstrated, wherein variable values move together in the same direction (i.e. increased in one or presence of one correlates with an increase or presence of the other).</skos:definition>
-        <skos:exactMatch rdf:resource="http://ctdbase.org/positive_correlation"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/preventative_for_condition -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/preventative_for_condition">
-        <biolink:opposite_of>promotes condition</biolink:opposite_of>
-        <rdfs:label>preventative for condition</rdfs:label>
-        <skos:altLabel>prevents</skos:altLabel>
-        <skos:altLabel>prophylactic for</skos:altLabel>
-        <skos:broadMatch rdf:resource="https://skr3.nlm.nih.gov/SemMedDBPREVENTS"/>
-        <skos:definition>Holds between a substance, procedure, or activity and a medical condition (disease or phenotypic feature), and states that the  substance, procedure, or activity is able to prevent it manifesting in the first place.</skos:definition>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/promotes_condition -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/promotes_condition">
-        <biolink:opposite_of>preventative for condition</biolink:opposite_of>
-        <rdfs:label>promotes condition</rdfs:label>
-        <skos:definition>Holds between a substance, procedure, or activity and a medical condition (disease or phenotypic feature), and states that the  substance, procedure, or activity is able to promote it manifesting in the first place.</skos:definition>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
-    </owl:NamedIndividual>
-
-
-
-    <!-- https://w3id.org/biolink/vocab/start_interbase_coordinate -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/biolink/vocab/start_interbase_coordinate">
-        <biolink:opposite_of>end interbase coordinate</biolink:opposite_of>
-        <rdfs:label>start interbase coordinate</rdfs:label>
-        <skos:closeMatch rdf:resource="http://biohackathon.org/resource/faldo#begin"/>
-        <skos:definition>The position at which the subject nucleic acid entity starts on the chromosome or other entity to which it is located on. (ie: the start of the sequence being referenced is 0).</skos:definition>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:NamedIndividual>
 
 
