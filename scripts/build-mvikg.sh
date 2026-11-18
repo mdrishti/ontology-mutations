@@ -34,6 +34,7 @@ echo "Step 1b: Dropping confusing vendor SOSA annotation (sosa:Sample as a range
 robot query \
   --input ../output/temp-sources-merged-removed.owl \
   --update ../mvikg/remove-sample-range.ru \
+  --update ../mvikg/remove-has-phenotype-biologicalentity.ru \
   --output ../output/temp-sources-merged-removed.owl
 
 

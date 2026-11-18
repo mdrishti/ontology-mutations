@@ -692,8 +692,16 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/has_phenotype">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/biolink/vocab/related_to_at_instance_level"/>
         <owl:inverseOf rdf:resource="https://w3id.org/biolink/vocab/phenotype_of"/>
-        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/BiologicalEntity"/>
-        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/Gene"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample"/>
+                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/Gene"/>
+                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/GenomicEntity"/>
+                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/SequenceVariant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/biolink/vocab/PhenotypicFeature"/>
         <rdfs:label>has phenotype</rdfs:label>
         <skos:altLabel>disease presents symptom</skos:altLabel>
@@ -811,7 +819,16 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/phenotype_of">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/biolink/vocab/related_to_at_instance_level"/>
         <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/PhenotypicFeature"/>
-        <rdfs:range rdf:resource="https://w3id.org/biolink/vocab/BiologicalEntity"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample"/>
+                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/Gene"/>
+                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/GenomicEntity"/>
+                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/SequenceVariant"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:label>phenotype of</rdfs:label>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:ObjectProperty>
@@ -2361,13 +2378,6 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000036"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>inversion</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>http://www.ncbi.nlm.nih.gov/dbvar/</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#dbvar"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000036"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A continuous nucleotide sequence is inverted in the same position.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>EBI:www.ebi.ac.uk/mutations/recommendations/mutevent.html</oboInOwl:hasDbXref>
@@ -2377,6 +2387,13 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>loinc:LA6689-9</owl:annotatedTarget>
         <rdfs:label>Inversion</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_1000036"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>inversion</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://www.ncbi.nlm.nih.gov/dbvar/</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#dbvar"/>
     </owl:Axiom>
 
 
