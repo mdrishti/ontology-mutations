@@ -159,7 +159,6 @@ In particular, (a) the scope is extended to include actuation and sampling; (b) 
         <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
         <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
         <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
-        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
         <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
         <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
         <rdfs:comment xml:lang="en">A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.</rdfs:comment>
@@ -167,23 +166,6 @@ In particular, (a) the scope is extended to include actuation and sampling; (b) 
         <rdfs:label xml:lang="en">has feature of interest</rdfs:label>
         <skos:definition xml:lang="en">A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.</skos:definition>
         <skos:example xml:lang="en">For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.</skos:example>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/hasResult -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasResult">
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isResultOf"/>
-        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
-        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
-        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
-        <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Result"/>
-        <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
-        <rdfs:comment xml:lang="en">Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-        <rdfs:label xml:lang="en">has result</rdfs:label>
-        <skos:definition xml:lang="en">Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.</skos:definition>
     </owl:ObjectProperty>
 
 
@@ -210,27 +192,10 @@ In particular, (a) the scope is extended to include actuation and sampling; (b) 
         <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
         <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
         <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
-        <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
         <rdfs:comment xml:lang="en">A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
         <rdfs:label xml:lang="en">is feature of interest of</rdfs:label>
         <skos:definition xml:lang="en">A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it.</skos:definition>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/isResultOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isResultOf">
-        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Result"/>
-        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
-        <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
-        <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
-        <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
-        <rdfs:comment xml:lang="en">Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-        <rdfs:label xml:lang="en">is result of</rdfs:label>
-        <skos:definition xml:lang="en">Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it.</skos:definition>
     </owl:ObjectProperty>
 
 
@@ -246,82 +211,6 @@ In particular, (a) the scope is extended to include actuation and sampling; (b) 
         <rdfs:label xml:lang="en">is sample of</rdfs:label>
         <skos:definition xml:lang="en">Relation from a Sample to the FeatureOfInterest that it is intended to be representative of.</skos:definition>
     </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/madeBySampler -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeBySampler">
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/madeSampling"/>
-        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
-        <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
-        <rdfs:comment xml:lang="en">Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-        <rdfs:label xml:lang="en">made by sampler</rdfs:label>
-        <skos:definition xml:lang="en">Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.</skos:definition>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/madeSampling -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeSampling">
-        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
-        <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
-        <rdfs:comment xml:lang="en">Relation between a Sampler (sampling device or entity) and the Sampling act it performed.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-        <rdfs:label xml:lang="en">made sampling</rdfs:label>
-        <skos:definition xml:lang="en">Relation between a Sampler (sampling device or entity) and the Sampling act it performed.</skos:definition>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/hasProperty -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasProperty">
-        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/isPropertyOf"/>
-        <rdfs:comment xml:lang="en">Relation between an entity and a Property of that entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">has property</rdfs:label>
-        <skos:definition xml:lang="en">Relation between an entity and a Property of that entity.</skos:definition>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/isPropertyOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/isPropertyOf">
-        <rdfs:comment xml:lang="en">Relation between a Property and the entity it belongs to.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">is property of</rdfs:label>
-        <skos:definition xml:lang="en">Relation between a Property and the entity it belongs to.</skos:definition>
-    </owl:ObjectProperty>
-
-
-
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-
-
-    <!-- http://www.w3.org/ns/sosa/resultTime -->
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/sosa/resultTime">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
-        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
-        <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
-        <rdfs:comment xml:lang="en">The result time is the instant of time when the Observation, Actuation or Sampling activity was completed.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-        <rdfs:label xml:lang="en">result time</rdfs:label>
-        <skos:definition xml:lang="en">The result time is the instant of time when the Observation, Actuation or Sampling activity was completed.</skos:definition>
-    </owl:DatatypeProperty>
 
 
 
@@ -345,18 +234,6 @@ In particular, (a) the scope is extended to include actuation and sampling; (b) 
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Property"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasProperty"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
         <rdfs:label xml:lang="en">Feature Of Interest</rdfs:label>
@@ -369,12 +246,6 @@ In particular, (a) the scope is extended to include actuation and sampling; (b) 
     <!-- http://www.w3.org/ns/sosa/Result -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/sosa/Result">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isResultOf"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The Result of an Observation, Actuation, or act of Sampling. To store an observation&apos;s simple result value one can use the hasSimpleResult property.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
         <rdfs:label xml:lang="en">Result</rdfs:label>
@@ -391,20 +262,8 @@ In particular, (a) the scope is extended to include actuation and sampling; (b) 
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Result"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isResultOf"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isSampleOf"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isResultOf"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -425,105 +284,6 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <skos:example xml:lang="en">A &apos;station&apos; is essentially an identifiable locality where a sensor system or Procedure may be deployed and an observation made. In the context of the observation model, it connotes the &apos;world in the vicinity of the station&apos;, so the observed properties relate to the physical medium at the station, and not to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc.</skos:example>
         <skos:example xml:lang="en">A statistical sample is often designed to be characteristic of an entire population, so that observations can be made regarding the sample that provide a good estimate of the properties of the population.</skos:example>
         <skos:note xml:lang="en">A transient sample, such as a ships-track or flight-line, might be identified and described, but is unlikely to be revisited exactly.</skos:note>
-    </owl:Class>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/Sampler -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sampler">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeSampling"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-        <rdfs:label xml:lang="en">Sampler</rdfs:label>
-        <skos:definition xml:lang="en">A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples.</skos:definition>
-        <skos:example xml:lang="en">A ball mill, diamond drill, hammer, hypodermic syringe and needle, image Sensor or a soil auger can all act as sampling devices (i.e., be Samplers). However, sometimes the distinction between the Sampler and the Sensor is not evident, as they are packaged as a unit. A Sampler need not be a physical device.</skos:example>
-    </owl:Class>
-
-
-
-    <!-- http://www.w3.org/ns/sosa/Sampling -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sampling">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySampler"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySampler"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/resultTime"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">An act of Sampling carries out a sampling Procedure to create or transform one or more samples.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/"/>
-        <rdfs:label xml:lang="en">Sampling</rdfs:label>
-        <skos:definition xml:lang="en">An act of Sampling carries out a sampling Procedure to create or transform one or more samples.</skos:definition>
-        <skos:example xml:lang="en">Crushing a rock sample in a ball mill.</skos:example>
-        <skos:example xml:lang="en">Digging a pit through a soil sequence.</skos:example>
-        <skos:example xml:lang="en">Dividing a field site into quadrants.</skos:example>
-        <skos:example xml:lang="en">Drawing blood from a patient.</skos:example>
-        <skos:example xml:lang="en">Drilling an observation well.</skos:example>
-        <skos:example xml:lang="en">Establishing a station for environmental monitoring.</skos:example>
-        <skos:example xml:lang="en">Registering an image of the landscape.</skos:example>
-        <skos:example xml:lang="en">Selecting a subset of a population.</skos:example>
-        <skos:example xml:lang="en">Sieving a powder to separate the subset finer than 100-mesh.</skos:example>
-        <skos:example xml:lang="en">Splitting a piece of drill-core to create two new samples.</skos:example>
-        <skos:example xml:lang="en">Taking a diamond-drill core from a rock outcrop.</skos:example>
-    </owl:Class>
-
-
-
-    <!-- http://www.w3.org/ns/ssn/Property -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Property">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/isPropertyOf"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/"/>
-        <rdfs:label xml:lang="en">Property</rdfs:label>
-        <skos:definition xml:lang="en">A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</skos:definition>
     </owl:Class>
 </rdf:RDF>
 
