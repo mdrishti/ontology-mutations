@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://example.org/mvikg#"
      xml:base="http://example.org/mvikg"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:efo="http://www.ebi.ac.uk/efo/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:pav="http://purl.org/pav/"
@@ -11,14 +12,13 @@
      xmlns:qudt="http://qudt.org/schema/qudt/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:sosa="http://www.w3.org/ns/sosa/"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:mvikg="http://example.org/mvikg/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+     xmlns:vocab="https://w3id.org/biolink/vocab/"
      xmlns:linkml="https://w3id.org/linkml/"
      xmlns:schema="http://schema.org/"
-     xmlns:biolink="https://w3id.org/biolink/vocab/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://example.org/mvikg">
         <owl:versionIRI rdf:resource="http://example.org/mvikg/0.0.1"/>
@@ -471,9 +471,9 @@
 
 
 
-    <!-- http://example.org/mvikg/has_biome -->
+    <!-- http://example.org/mvikg/has_biome_term -->
 
-    <owl:ObjectProperty rdf:about="http://example.org/mvikg/has_biome">
+    <owl:ObjectProperty rdf:about="http://example.org/mvikg/has_biome_term">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -482,9 +482,11 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:comment>Relates a sample or organism taxon to its environmental biome — either a resolved GOLD biome resource or, when the source text doesn&apos;t map to a controlled term, a free-text literal.</rdfs:comment>
-        <rdfs:label>has biome</rdfs:label>
-        <skos:definition>Relates a sample or organism taxon to its environmental biome, either a resolved controlled-vocabulary term or a free-text literal.</skos:definition>
+        <rdfs:range rdf:resource="http://example.org/mvikg/Biome"/>
+        <rdfs:label>has_biome_term</rdfs:label>
+        <skos:definition>Relates a sample or organism taxon to a resolved, curated biome term (typically from GOLD). Use mvikg:has_biome_text instead when the source text does not map to a controlled term.</skos:definition>
+        <skos:inScheme rdf:resource="http://example.org/mvikg/linkml"/>
+        <skos:note>Dual-predicate split of the former single-valued mvikg:has_biome, per the Case A (IRI-or-free-text) pattern.</skos:note>
     </owl:ObjectProperty>
 
 
@@ -496,6 +498,8 @@
         <rdfs:range rdf:resource="http://example.org/mvikg/DevelopmentalStage"/>
         <rdfs:label>has developmental stage</rdfs:label>
         <skos:definition>Relates a sample to the developmental stage (e.g. exponential, lag) of the organism it was taken from.</skos:definition>
+        <skos:inScheme rdf:resource="http://example.org/mvikg/linkml"/>
+        <skos:note>Domain (sosa:Sample) is external — see mvikg-restrictions.ttl. No inverse declared (same resolution as frequencyUnit).</skos:note>
     </owl:ObjectProperty>
 
 
@@ -630,7 +634,7 @@
         <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0004022"/>
         <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0004029"/>
         <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/doid#has_symptom"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
+        <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:ObjectProperty>
 
 
@@ -666,7 +670,7 @@
         <skos:exactMatch rdf:resource="https://www.wikidata.org/prop/P703"/>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <skos:narrowMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002160"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
+        <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:ObjectProperty>
 
 
@@ -684,7 +688,7 @@
         <skos:definition>holds between a sequence variant and a nucleic acid entity</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
         <skos:narrowMatch rdf:resource="https://www.wikidata.org/entity/P3433"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
+        <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:ObjectProperty>
 
 
@@ -877,7 +881,7 @@
         <skos:narrowMatch rdf:resource="https://skr3.nlm.nih.gov/SemMedDBlower_than"/>
         <skos:narrowMatch rdf:resource="https://www.ama-assn.org/practice-management/cpt/has_add_on_code"/>
         <skos:narrowMatch rdf:resource="https://www.ama-assn.org/practice-management/cpt/mapped_to"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
+        <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:ObjectProperty>
 
 
@@ -890,7 +894,7 @@
         <rdfs:label>related to at instance level</rdfs:label>
         <skos:definition>Represents a relationship held between two instances of a data classes.  Much like an assertion component, in an ABox, these represent facts associated with the conceptual model.</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
+        <vocab:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</vocab:canonical_predicate>
     </owl:ObjectProperty>
 
 
@@ -931,6 +935,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>alternate allele</rdfs:label>
         <skos:definition>The alternate (variant) allele observed at a given sequence position.</skos:definition>
+        <skos:inScheme rdf:resource="http://example.org/mvikg/linkml"/>
+        <skos:note>Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl.</skos:note>
     </owl:DatatypeProperty>
 
 
@@ -940,9 +946,10 @@
     <owl:DatatypeProperty rdf:about="http://example.org/mvikg/comparedTo">
         <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/PhenotypicFeature"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Free-text description of the baseline/control a phenotype outcome was compared against.</rdfs:comment>
         <rdfs:label>compared to</rdfs:label>
         <skos:definition>A free-text description of the baseline or control a phenotype outcome was compared against.</skos:definition>
+        <skos:inScheme rdf:resource="http://example.org/mvikg/linkml"/>
+        <skos:note>Free-text description of the baseline/control a phenotype outcome was compared against. Domain (biolink:PhenotypicFeature) is external — see mvikg-restrictions.ttl.</skos:note>
     </owl:DatatypeProperty>
 
 
@@ -954,6 +961,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>variant effect</rdfs:label>
         <skos:definition>A free-text description of the functional effect of a sequence variant, as reported in the source.</skos:definition>
+        <skos:inScheme rdf:resource="http://example.org/mvikg/linkml"/>
+        <skos:note>Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl.</skos:note>
     </owl:DatatypeProperty>
 
 
@@ -965,6 +974,28 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:label>frequency value</rdfs:label>
         <skos:definition>The numeric frequency value of a sequence variant or allele within a population; interpreted together with mvikg:frequencyUnit.</skos:definition>
+        <skos:inScheme rdf:resource="http://example.org/mvikg/linkml"/>
+        <skos:note>Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl.</skos:note>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://example.org/mvikg/has_biome_text -->
+
+    <owl:DatatypeProperty rdf:about="http://example.org/mvikg/has_biome_text">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample"/>
+                    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/OrganismTaxon"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>has_biome_text</rdfs:label>
+        <skos:definition>Free-text description of a sample or organism taxon&apos;s environmental biome, used when the source text could not be mapped to a controlled GOLD biome term. If a value was normalized into mvikg:has_biome_term, the original text should still be retained here for provenance.</skos:definition>
+        <skos:inScheme rdf:resource="http://example.org/mvikg/linkml"/>
+        <skos:note>Dual-predicate split of the former single-valued mvikg:has_biome, per the Case A (IRI-or-free-text) pattern.</skos:note>
     </owl:DatatypeProperty>
 
 
@@ -974,9 +1005,11 @@
     <owl:DatatypeProperty rdf:about="http://example.org/mvikg/length">
         <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/SequenceVariant"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Free-text length string — not all source rows give a clean integer.</rdfs:comment>
         <rdfs:label>variant length</rdfs:label>
         <skos:definition>The length of a sequence variant.</skos:definition>
+        <skos:inScheme rdf:resource="http://example.org/mvikg/linkml"/>
+        <skos:note>Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl.</skos:note>
+        <skos:note>Free-text length string — not all source rows give a clean integer.</skos:note>
     </owl:DatatypeProperty>
 
 
@@ -988,6 +1021,8 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>reference allele</rdfs:label>
         <skos:definition>The reference allele reported at a given sequence position, prior to the observed variant.</skos:definition>
+        <skos:inScheme rdf:resource="http://example.org/mvikg/linkml"/>
+        <skos:note>Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl.</skos:note>
     </owl:DatatypeProperty>
 
 
@@ -1140,9 +1175,11 @@
     <!-- http://example.org/mvikg/Biome -->
 
     <owl:Class rdf:about="http://example.org/mvikg/Biome">
-        <rdfs:comment>We recommend any biome class from the GOLD ontology</rdfs:comment>
-        <rdfs:label>GOLD Biome</rdfs:label>
+        <rdfs:label>Biome</rdfs:label>
         <skos:definition>A biome classification describing a sample&apos;s environmental context, typically drawn from the GOLD biome vocabulary.</skos:definition>
+        <skos:exactMatch rdf:resource="http://example.org/mvikg/Biome"/>
+        <skos:inScheme rdf:resource="http://example.org/mvikg/linkml"/>
+        <skos:note>We recommend any biome class from the GOLD ontology</skos:note>
     </owl:Class>
 
 
@@ -1150,10 +1187,12 @@
     <!-- http://example.org/mvikg/DevelopmentalStage -->
 
     <owl:Class rdf:about="http://example.org/mvikg/DevelopmentalStage">
-        <rdfs:comment>A developmental stage is a stage corresponding to a stage in bacteria&apos;s  growth. e.g.: exponential, lag.</rdfs:comment>
-        <rdfs:label>Developmental stage</rdfs:label>
+        <rdfs:label>DevelopmentalStage</rdfs:label>
         <skos:closeMatch rdf:resource="http://www.ebi.ac.uk/efo/EFO_0000399"/>
         <skos:definition>Represents a specific point or period in an organism&apos;s life cycle</skos:definition>
+        <skos:exactMatch rdf:resource="http://example.org/mvikg/DevelopmentalStage"/>
+        <skos:inScheme rdf:resource="http://example.org/mvikg/linkml"/>
+        <skos:note>A developmental stage is a stage corresponding to a stage in bacteria&apos;s growth. e.g.: exponential, lag.</skos:note>
     </owl:Class>
 
 
@@ -1167,6 +1206,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000001</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>A sequence_feature with an extent greater than zero. A nucleotide region is composed of bases and a polypeptide region is composed of amino acids.</rdfs:comment>
         <rdfs:label>region</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1184,6 +1224,7 @@
         <obo:IAO_0000115>To substitute a subsection of sequence for another.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000048</oboInOwl:id>
+        <rdfs:comment>To substitute a subsection of sequence for another.</rdfs:comment>
         <rdfs:label>substitute</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
@@ -1210,6 +1251,7 @@
         <oboInOwl:hasRelatedSynonym>located sequence feature</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>SO:0000110</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>Any extent of continuous biological sequence.</rdfs:comment>
         <rdfs:label>sequence_feature</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1237,6 +1279,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000159</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>The point at which one or more contiguous nucleotides were excised.</rdfs:comment>
         <rdfs:label>deletion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1267,6 +1310,7 @@
         <oboInOwl:hasExactSynonym>sequence attribute</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000400</oboInOwl:id>
+        <rdfs:comment>An attribute describes a quality of sequence.</rdfs:comment>
         <rdfs:label>sequence_attribute</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1293,6 +1337,7 @@
         <oboInOwl:id>SO:0000667</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#DBVAR"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>The sequence of one or more nucleotides added between two adjacent nucleotides in the sequence.</rdfs:comment>
         <rdfs:label>insertion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1326,6 +1371,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000694</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>SNPs are single base pair positions in genomic DNA at which different sequence alternatives exist in normal individuals in some population(s), wherein the least frequent variant has an abundance of 1% or greater.</rdfs:comment>
         <rdfs:label>SNP</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1345,6 +1391,7 @@
         <oboInOwl:hasExactSynonym>feature attribute</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000733</oboInOwl:id>
+        <rdfs:comment>An attribute describing a located_sequence_feature.</rdfs:comment>
         <rdfs:label>feature_attribute</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1366,6 +1413,7 @@
         <oboInOwl:hasExactSynonym>wild type</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000817</oboInOwl:id>
+        <rdfs:comment>An attribute describing sequence with the genotype found in nature and/or standard laboratory stock.</rdfs:comment>
         <rdfs:label>wild_type</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1419,6 +1467,48 @@
 
 
 
+    <!-- http://purl.obolibrary.org/obo/SO_0001060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001060">
+        <obo:IAO_0000115>A sequence_variant is a non exact copy of a sequence_feature or genome exhibiting one or more sequence_alteration.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>Jannovar:sequence_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>VAAST:sequence_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sequence variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>ANNOVAR:unknown</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>SO:0001060</oboInOwl:id>
+        <rdfs:comment>A sequence_variant is a non exact copy of a sequence_feature or genome exhibiting one or more sequence_alteration.</rdfs:comment>
+        <rdfs:label>sequence_variant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence_variant is a non exact copy of a sequence_feature or genome exhibiting one or more sequence_alteration.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Jannovar:sequence_variant</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://doc-openbio.readthedocs.org/projects/jannovar/en/master/var_effects.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>VAAST:sequence_variant</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>ANNOVAR:unknown</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://www.openbioinformatics.org/annovar/annovar_download.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+
+
+
     <!-- http://purl.obolibrary.org/obo/SO_0001411 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001411">
@@ -1430,6 +1520,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001411</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>A region defined by its disposition to be involved in a biological process.</rdfs:comment>
         <rdfs:label>biological_region</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1452,6 +1543,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001483</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>SNVs are single nucleotide positions in genomic DNA at which different sequence alternatives exist.</rdfs:comment>
         <rdfs:label>SNV</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1466,6 +1558,7 @@
     <!-- http://purl.obolibrary.org/obo/SO_0001537 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001537">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
         <obo:IAO_0000115>A sequence variant that changes one or more structural features.</obo:IAO_0000115>
         <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-22T11:31:01Z</oboInOwl:creation_date>
@@ -1475,6 +1568,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>structural variant</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>SO:0001537</oboInOwl:id>
+        <rdfs:comment>A sequence variant that changes one or more structural features.</rdfs:comment>
         <rdfs:label>structural_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1519,6 +1613,7 @@
         <oboInOwl:hasExactSynonym>snpEff:GENE</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001564</oboInOwl:id>
+        <rdfs:comment>A sequence variant where the structure of the gene is changed.</rdfs:comment>
         <rdfs:label>gene_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1563,6 +1658,7 @@
         <oboInOwl:hasExactSynonym>transcript variant</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001576</oboInOwl:id>
+        <rdfs:comment>A sequence variant that changes the structure of the transcript.</rdfs:comment>
         <rdfs:label>transcript_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1617,6 +1713,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>snpEff:CODON_CHANGE</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>SO:0001580</oboInOwl:id>
+        <rdfs:comment>A sequence variant that changes the coding sequence.</rdfs:comment>
         <rdfs:label>coding_sequence_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1807,6 +1904,7 @@
         <oboInOwl:hasRelatedSynonym>ANNOVAR:nonframeshift block substitution</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>ANNOVAR:nonframeshift substitution</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>SO:0001650</oboInOwl:id>
+        <rdfs:comment>A sequence variant which does not cause a disruption of the translational reading frame.</rdfs:comment>
         <rdfs:label>inframe_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1858,6 +1956,7 @@
         <oboInOwl:hasExactSynonym>snpEff:EXON</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001791</oboInOwl:id>
+        <rdfs:comment>A sequence variant that changes exon sequence.</rdfs:comment>
         <rdfs:label>exon_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1907,6 +2006,7 @@
         <oboInOwl:hasExactSynonym>protein altering variant</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001818</oboInOwl:id>
+        <rdfs:comment>A sequence_variant which is predicted to change the protein encoded in the coding sequence.</rdfs:comment>
         <rdfs:label>protein_altering_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1935,6 +2035,7 @@
         <oboInOwl:hasExactSynonym>inframe indel</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001820</oboInOwl:id>
+        <rdfs:comment>A coding sequence variant where the change does not alter the frame of the transcript.</rdfs:comment>
         <rdfs:label>inframe_indel</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1969,6 +2070,7 @@
         <oboInOwl:hasRelatedSynonym>inframe deletion</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>snpEff:CODON_DELETION</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>SO:0001822</oboInOwl:id>
+        <rdfs:comment>An inframe non synonymous variant that deletes bases from the coding sequence.</rdfs:comment>
         <rdfs:label>inframe_deletion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -2054,6 +2156,7 @@
         <oboInOwl:hasExactSynonym>feature truncation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001906</oboInOwl:id>
+        <rdfs:comment>A sequence variant that causes the reduction of a genomic feature, with regard to the reference sequence.</rdfs:comment>
         <rdfs:label>feature_truncation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -2089,6 +2192,7 @@
         <oboInOwl:hasExactSynonym>coding transcript variant</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001968</oboInOwl:id>
+        <rdfs:comment>A transcript variant of a protein coding gene.</rdfs:comment>
         <rdfs:label>coding_transcript_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -2118,6 +2222,7 @@
         <oboInOwl:hasExactSynonym>nonsynonymous variant</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001992</oboInOwl:id>
+        <rdfs:comment>A non-synonymous variant is an inframe, protein altering variant, resulting in a codon change.</rdfs:comment>
         <rdfs:label>nonsynonymous_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -2147,6 +2252,7 @@
         <oboInOwl:hasExactSynonym>sequence comparison</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0002072</oboInOwl:id>
+        <rdfs:comment>A position or feature where two sequences have been compared.</rdfs:comment>
         <rdfs:label>sequence_comparison</rdfs:label>
     </owl:Class>
 
@@ -2162,6 +2268,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:1000002</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>A sequence alteration where the length of the change in the variant is the same as that of the reference.</rdfs:comment>
         <rdfs:label>substitution</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -2188,6 +2295,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:1000005</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>When no simple or well defined DNA mutation event describes the observed DNA change, the keyword &quot;complex&quot; should be used. Usually there are multiple equally plausible explanations for the change.</rdfs:comment>
         <rdfs:label>complex_substitution</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -2244,6 +2352,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>nucleotide_duplication</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>SO:1000035</oboInOwl:id>
+        <rdfs:comment>An insertion which derives from, or is identical in sequence to, nucleotides present at a known location in the genome.</rdfs:comment>
         <rdfs:label>duplication</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -2274,6 +2383,7 @@
         <oboInOwl:id>SO:1000036</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#DBVAR"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>A continuous nucleotide sequence is inverted in the same position.</rdfs:comment>
         <rdfs:label>inversion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -2301,6 +2411,7 @@
     <!-- http://qudt.org/schema/qudt/Unit -->
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit">
+        <rdfs:comment xml:lang="en">A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities of the same kind.</rdfs:comment>
         <rdfs:label xml:lang="en">Unit</rdfs:label>
     </owl:Class>
 

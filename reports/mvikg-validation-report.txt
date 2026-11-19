@@ -6,6 +6,7 @@ WARN	annotation_whitespace	dc:bibliographicCitation	dc11:description	"Recommende
             @en-us"
 WARN	duplicate_label_synonym	SO:0000667	oboInOwl:hasExactSynonym	insertion
 WARN	duplicate_label_synonym	SO:1000036	oboInOwl:hasExactSynonym	inversion
+WARN	duplicate_label_synonym	https://w3id.org/biolink/vocab/SequenceVariant	oboInOwl:hasExactSynonym	sequence variant
 WARN	missing_definition	http://example.org/mvikg/Biome	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/DevelopmentalStage	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/alt	IAO:0000115
@@ -13,7 +14,8 @@ WARN	missing_definition	http://example.org/mvikg/comparedTo	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/effect	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/frequencyUnit	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/frequencyValue	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/has_biome	IAO:0000115
+WARN	missing_definition	http://example.org/mvikg/has_biome_term	IAO:0000115
+WARN	missing_definition	http://example.org/mvikg/has_biome_text	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/has_developmental_stage	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/length	IAO:0000115
 WARN	missing_definition	http://example.org/mvikg/ref	IAO:0000115
@@ -91,6 +93,6 @@ INFO	missing_superclass	http://example.org/mvikg/Biome	rdfs:subClassOf
 INFO	missing_superclass	http://example.org/mvikg/DevelopmentalStage	rdfs:subClassOf
 INFO	missing_superclass	SO:0000110	rdfs:subClassOf
 INFO	missing_superclass	SO:0000400	rdfs:subClassOf
-INFO	missing_superclass	SO:0001537	rdfs:subClassOf
+INFO	missing_superclass	SO:0001060	rdfs:subClassOf
 INFO	missing_superclass	http://qudt.org/schema/qudt/Unit	rdfs:subClassOf
 INFO	missing_superclass	http://www.w3.org/ns/sosa/Result	rdfs:subClassOf
