@@ -38,8 +38,18 @@ robot query \
   --output ../output/temp-sources-merged-removed.owl
 
 
+echo "Step 1c: Generating LinkML-authored portion of the MVIKG schema..."
+cd .. && pipenv run gen-owl --no-use-native-uris linkml/mvikg.yaml > mvikg/mvikg-generated.ttl && cd scripts
+
+echo "Step 1d: Stripping the LinkML schema's own ontology-level metadata (robot merge flattens every input's owl:Ontology header onto the final ontology IRI otherwise)..."
+robot remove \
+  --input ../mvikg/mvikg-generated.ttl \
+  --select ontology \
+  --output ../mvikg/mvikg-generated-removed.ttl
+
 echo "Step 2: Merging schema files..."
 robot merge \
+  --input ../mvikg/mvikg-generated-removed.ttl \
   --input ../mvikg/mvikg-annotations.ttl \
   --input ../mvikg/mvikg-property-constraints.ttl \
   --input ../mvikg/mvikg-restrictions.ttl \
@@ -80,6 +90,19 @@ robot report \
   --input ../output/mvikg-reasoned.owl \
   --output ../reports/mvikg-validation-report.txt \
   --fail-on none
+
+echo "Step 6b: Running SHACL validation (linkml/mvikg-shapes.ttl)..."
+# mvikg-reasoned.owl is TBox-only (no individuals), so this will report 0
+# focus nodes for every shape until real KG instance data is validated
+# against it -- that's expected, not a bug. The shapes themselves are
+# exercised against synthetic fixtures in linkml/mvikg-shapes-test-data.ttl
+# (not part of the build; run manually with pyshacl when editing shapes).
+pipenv run pyshacl \
+  --shacl ../linkml/mvikg-shapes.ttl \
+  --data-file-format auto \
+  --format human \
+  ../output/mvikg-reasoned.owl \
+  > ../reports/mvikg-shacl-report.txt 2>&1 || true
 
 echo "Step 7: Creating summary statistics..."
 echo "Classes:" > ../reports/summary.txt
