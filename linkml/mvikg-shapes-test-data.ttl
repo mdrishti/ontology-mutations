@@ -1,0 +1,49 @@
+@prefix mvikg: <http://example.org/mvikg/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix biolink: <https://w3id.org/biolink/vocab/> .
+
+# Fixtures for validating linkml/mvikg-shapes.ttl with pyshacl. Not part of
+# the real build graph -- these are synthetic examples only.
+
+# NOTE: sh:class requires the value to be explicitly asserted as rdf:type
+# mvikg:Biome in the data graph -- SHACL does not perform OWL reasoning.
+# mvikg:Biome has no owl:equivalentClass/unionOf linking it to the real GOLD
+# biome class hierarchy (see the commented-out note in mvikg-annotations.ttl),
+# so KG builders must assert this type directly on every biome individual
+# they emit; reasoning over the TBox alone will not produce it.
+<https://w3id.org/gold.vocab/Environmental.Aquatic.Marine> a mvikg:Biome .
+mvikg:example_exponential_stage a mvikg:DevelopmentalStage .
+
+# --- Valid: curated biome term resolved, original text kept for provenance ---
+mvikg:example_valid_sample a sosa:Sample ;
+    mvikg:has_biome_term <https://w3id.org/gold.vocab/Environmental.Aquatic.Marine> ;
+    mvikg:has_biome_text "marine water sample, surface" ;
+    mvikg:has_developmental_stage mvikg:example_exponential_stage .
+
+# --- Valid: no controlled biome term available, free text only ---
+mvikg:example_valid_sample_textonly a sosa:Sample ;
+    mvikg:has_biome_text "unidentified soil sample from submitter notes" .
+
+# --- Valid: sequence variant with the migrated datatype properties ---
+mvikg:example_valid_variant a biolink:SequenceVariant ;
+    mvikg:ref "A" ;
+    mvikg:alt "G" ;
+    mvikg:length "1" ;
+    mvikg:effect "missense" ;
+    mvikg:frequencyValue "0.42"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+
+# --- Valid: phenotypic feature with comparedTo ---
+mvikg:example_valid_phenotype a biolink:PhenotypicFeature ;
+    mvikg:comparedTo "wild-type control" .
+
+# --- Invalid: violates sh:class (has_biome_term points to a string, not a Biome IRI) ---
+mvikg:example_invalid_sample_biome a sosa:Sample ;
+    mvikg:has_biome_term "marine" .
+
+# --- Invalid: violates sh:datatype (frequencyValue is a string, not xsd:decimal) ---
+mvikg:example_invalid_variant a biolink:SequenceVariant ;
+    mvikg:frequencyValue "not-a-number" .
+
+# --- Invalid: violates sh:class (has_developmental_stage points to a string, not a DevelopmentalStage IRI) ---
+mvikg:example_invalid_sample_stage a sosa:Sample ;
+    mvikg:has_developmental_stage "exponential" .
