@@ -70,6 +70,7 @@ robot remove \
 	--term biolink:preventative_for_condition \
 	--term biolink:promotes_condition \
 	--term biolink:start_interbase_coordinate \
+	--term biolink:opposite_of \
 	--select "self" \
 	--prefix 'biolink: https://w3id.org/biolink/vocab/' \
 	--output ../extracted/biolink_bot_temp_pruned2.owl

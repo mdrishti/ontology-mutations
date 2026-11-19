@@ -42,7 +42,6 @@ WARN	missing_definition	https://w3id.org/biolink/vocab/is_sequence_variant_of	IA
 WARN	missing_definition	https://w3id.org/biolink/vocab/mentioned_by	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/mentions	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/node_property	IAO:0000115
-WARN	missing_definition	https://w3id.org/biolink/vocab/opposite_of	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/phenotype_of	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/publication_type	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/published_in	IAO:0000115

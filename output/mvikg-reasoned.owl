@@ -755,10 +755,6 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/biolink/vocab/published_in">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/biolink/vocab/node_property"/>
         <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/Publication"/>
-        <rdfs:label>published in</rdfs:label>
-        <skos:definition>CURIE identifier of a broader publication context within which the publication may be placed, e.g. a specified book or journal.</skos:definition>
-        <skos:exactMatch rdf:resource="https://www.wikidata.org/prop/P1433"/>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </owl:ObjectProperty>
 
 
@@ -1000,6 +996,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/base_coordinate">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/biolink/vocab/sequence_localization_attribute"/>
+        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/SequenceVariant"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:label>base coordinate</rdfs:label>
         <skos:altLabel>fully-closed</skos:altLabel>
@@ -1026,6 +1023,7 @@
     <!-- https://w3id.org/biolink/vocab/description -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/description">
+        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/Entity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:label>description</rdfs:label>
         <skos:altLabel>definition</skos:altLabel>
@@ -1042,6 +1040,8 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/end_coordinate">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/biolink/vocab/base_coordinate"/>
+        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/SequenceVariant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:label>end coordinate</rdfs:label>
         <skos:altLabel>end</skos:altLabel>
         <skos:closeMatch rdf:resource="http://biohackathon.org/resource/faldo#end"/>
@@ -1056,6 +1056,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/id">
         <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:label>id</rdfs:label>
         <skos:definition>A unique identifier for an entity. Must be either a CURIE shorthand for a URI or a complete URI</skos:definition>
         <skos:exactMatch rdf:resource="https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md#ID"/>
@@ -1066,26 +1067,22 @@
 
 
 
-    <!-- https://w3id.org/biolink/vocab/opposite_of -->
+    <!-- https://w3id.org/biolink/vocab/publication_type -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/opposite_of">
-        <rdfs:label>opposite of</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://doi.org/10.1101/108977"/>
-        <rdfs:seeAlso rdf:resource="https://github.com/biolink/biolink-model/issues/657"/>
-        <skos:definition>x is the opposite of y if there exists some distance metric M, and there exists no z such as M(x,z) &lt;= M(x,y) or M(y,z) &lt;= M(y,x). (This description is from RO. Needs to be rephrased).</skos:definition>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/RO_0002604"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/publication_type">
+        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/Publication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:label>publication type</rdfs:label>
+        <skos:definition>Ontology term for publication type may be drawn from Dublin Core types (https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/), FRBR-aligned Bibliographic Ontology (https://sparontologies.github.io/fabio/current/fabio.html), the MESH publication types (https://www.nlm.nih.gov/mesh/pubtypes.html), the Confederation of Open Access Repositories (COAR) Controlled Vocabulary for Resource Type Genres (http://vocabularies.coar-repositories.org/documentation/resource_types/), Wikidata (https://www.wikidata.org/wiki/Wikidata:Publication_types), or equivalent publication type ontology. When a given publication type ontology term is used within a given knowledge graph, then the CURIE identified term must be documented in the graph as a concept node of biolink:category biolink:OntologyClass.</skos:definition>
         <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
-        <biolink:canonical_predicate rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</biolink:canonical_predicate>
     </owl:DatatypeProperty>
 
 
 
-    <!-- https://w3id.org/biolink/vocab/publication_type -->
+    <!-- https://w3id.org/biolink/vocab/published_in -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/publication_type">
-        <rdfs:label>publication type</rdfs:label>
-        <skos:definition>Ontology term for publication type may be drawn from Dublin Core types (https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/), FRBR-aligned Bibliographic Ontology (https://sparontologies.github.io/fabio/current/fabio.html), the MESH publication types (https://www.nlm.nih.gov/mesh/pubtypes.html), the Confederation of Open Access Repositories (COAR) Controlled Vocabulary for Resource Type Genres (http://vocabularies.coar-repositories.org/documentation/resource_types/), Wikidata (https://www.wikidata.org/wiki/Wikidata:Publication_types), or equivalent publication type ontology. When a given publication type ontology term is used within a given knowledge graph, then the CURIE identified term must be documented in the graph as a concept node of biolink:category biolink:OntologyClass.</skos:definition>
-        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/published_in">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
     </owl:DatatypeProperty>
 
 
@@ -1104,6 +1101,8 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/start_coordinate">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/biolink/vocab/base_coordinate"/>
+        <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/SequenceVariant"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:label>start coordinate</rdfs:label>
         <skos:altLabel>start</skos:altLabel>
         <skos:closeMatch rdf:resource="http://biohackathon.org/resource/faldo#begin"/>
@@ -1118,6 +1117,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/biolink/vocab/type">
         <rdfs:domain rdf:resource="https://w3id.org/biolink/vocab/Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:label>type</rdfs:label>
         <skos:exactMatch rdf:resource="https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md#type"/>
         <skos:exactMatch rdf:resource="https://github.com/geneontology/go-annotation/blob/master/specs/gpad-gpi-2-0.md#DB_Object_Type"/>
@@ -3211,6 +3211,12 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
         <rdfs:comment>The subject is a subclass of a class.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/>
         <rdfs:label>subClassOf</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/biolink/vocab/published_in">
+        <rdfs:label>published in</rdfs:label>
+        <skos:definition>CURIE identifier of a broader publication context within which the publication may be placed, e.g. a specified book or journal.</skos:definition>
+        <skos:exactMatch rdf:resource="https://www.wikidata.org/prop/P1433"/>
+        <skos:inScheme rdf:resource="https://w3id.org/biolink/biolink-model"/>
     </rdf:Description>
 
 
