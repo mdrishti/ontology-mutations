@@ -5,30 +5,10 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-# Custom MVIKG classes
-mvikg:DevelopmentalStage rdf:type owl:Class ;
-                       rdfs:comment "A developmental stage is a stage corresponding to a stage in bacteria's  growth. e.g.: exponential, lag.";
-                       rdfs:label "Developmental stage" ;
-    		       skos:definition "Represents a specific point or period in an organism's life cycle" ;
-                       skos:closeMatch <http://www.ebi.ac.uk/efo/EFO_0000399> .
-
-
-mvikg:Biome a owl:Class ;
-    rdfs:label "GOLD Biome" ;
-    rdfs:comment "We recommend any biome class from the GOLD ontology" ;
-    skos:definition "A biome classification describing a sample's environmental context, typically drawn from the GOLD biome vocabulary." .
-#    owl:equivalentClass [
-#        a owl:Class ;
-#        owl:unionOf (
-#            goldvocab:Engineered
-#            goldvocab:Environmental
-#            goldvocab:Host-associated
-#        )
-#    ] .
-#
-
-
-
+# mvikg:DevelopmentalStage and mvikg:Biome migrated to linkml/mvikg.yaml.
+# (Biome's commented-out owl:equivalentClass/unionOf-to-GOLD block, never
+# finalized, is preserved in git history at this file's prior revision, not
+# carried into the LinkML source.)
 
 # Add context-specific annotations to imported classes
 sosa:Sample

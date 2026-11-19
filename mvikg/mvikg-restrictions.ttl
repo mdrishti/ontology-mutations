@@ -4,12 +4,61 @@
 @prefix mvikg: <http://example.org/mvikg/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ECO: <http://purl.obolibrary.org/obo/ECO_> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-# mvikg:has_biome (formerly mvikg:has_habitat) intentionally has no
-# owl:allValuesFrom restriction here: the KG builders fall back to a
-# free-text xsd:string literal when source text doesn't map to a GOLD biome
-# resource, and an allValuesFrom-to-mvikg:Biome restriction would make that
-# case unsatisfiable. See mvikg-property-constraints.ttl.
+# This file holds every rdfs:domain/rdfs:range (and owl:Restriction)
+# assertion that lands on an EXTERNALLY extracted class or property
+# (biolink:*, sosa:*) — whether the property itself is mvikg-owned
+# (has_developmental_stage's domain) or fully external (has_phenotype,
+# has_evidence, etc). This is a structural split, not leftovers: LinkML
+# (linkml/mvikg.yaml) cannot express cross-ontology domain/range patches —
+# its domain model is implicit (derived from which LinkML-defined class
+# declares a slot), which requires LinkML to own the class. Patching
+# rdfs:domain onto a class we don't own and don't want to redefine has to
+# stay hand-authored here. See NOTES.md item 15.
+
+# mvikg:has_biome_term/has_biome_text (formerly the single mvikg:has_biome,
+# retired 20261119) carry the same domain the old predicate had: sosa:Sample
+# union biolink:OrganismTaxon. Intentionally no owl:allValuesFrom restriction
+# tying either one to mvikg:Biome only: has_biome_text is free text by
+# design, and constraining it would make that case unsatisfiable. See
+# linkml/mvikg.yaml.
+mvikg:has_biome_term rdf:type owl:ObjectProperty ;
+    rdfs:domain [ rdf:type owl:Class ; owl:unionOf ( sosa:Sample biolink:OrganismTaxon ) ] .
+
+mvikg:has_biome_text rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ rdf:type owl:Class ; owl:unionOf ( sosa:Sample biolink:OrganismTaxon ) ] .
+
+# Domains for mvikg:comparedTo/ref/alt/length/effect/frequencyValue (ranges +
+# labels + definitions now generated from linkml/mvikg.yaml into
+# mvikg/mvikg-generated.ttl) -- domain classes are external, so they stay here.
+# rdf:type is repeated here (matching mvikg-generated.ttl) even though it's
+# redundant once merged: robot/OWLAPI types each input file independently
+# before merging axioms, so a domain-only triple with no local rdf:type gets
+# typed owl:AnnotationProperty by default and punning follows (same bug class
+# as NOTES.md item 13).
+mvikg:comparedTo rdf:type owl:DatatypeProperty ;
+    rdfs:domain biolink:PhenotypicFeature .
+
+mvikg:ref rdf:type owl:DatatypeProperty ;
+    rdfs:domain biolink:SequenceVariant .
+
+mvikg:alt rdf:type owl:DatatypeProperty ;
+    rdfs:domain biolink:SequenceVariant .
+
+mvikg:length rdf:type owl:DatatypeProperty ;
+    rdfs:domain biolink:SequenceVariant .
+
+mvikg:effect rdf:type owl:DatatypeProperty ;
+    rdfs:domain biolink:SequenceVariant .
+
+mvikg:frequencyValue rdf:type owl:DatatypeProperty ;
+    rdfs:domain biolink:SequenceVariant .
+
+mvikg:has_developmental_stage rdf:type owl:ObjectProperty ;
+    rdfs:domain sosa:Sample .
 
 # If a Sample has a developmental stage, it CAN ONLY be a mvikg:DevelopmentalStage
 sosa:Sample rdfs:subClassOf [
@@ -25,3 +74,100 @@ sosa:Sample rdfs:subClassOf [
     owl:onProperty biolink:mentioned_by ;
     owl:allValuesFrom biolink:Publication
 ] .
+
+# start_coordinate/end_coordinate/base_coordinate came in from biolink with
+# no explicit domain (base_coordinate has range xsd:integer upstream, but
+# start/end only inherit it via subPropertyOf -- OOPS's P11 check doesn't
+# credit inherited range/domain, only explicit declarations). Narrowed to
+# SequenceVariant to match mvikg:ref/alt/length/effect.
+biolink:start_coordinate
+    rdfs:domain biolink:SequenceVariant ;
+    rdfs:range xsd:integer .
+
+biolink:end_coordinate
+    rdfs:domain biolink:SequenceVariant ;
+    rdfs:range xsd:integer .
+
+biolink:base_coordinate rdf:type owl:DatatypeProperty ;
+    rdfs:domain biolink:SequenceVariant .
+
+# Define that has_phenotype relates the things MVIKG models as
+# phenotype-bearers (sample, gene, genomic entity, sequence variant) to
+# phenotypes. An explicit owl:unionOf, not biolink:BiologicalEntity: sosa:Sample
+# has no formal relationship to BiologicalEntity in this ontology, and using
+# that class as the domain would make a reasoner infer every Sample/Variant
+# that ever gets a has_phenotype triple to also be a BiologicalEntity.
+biolink:has_phenotype
+    rdfs:domain [ a owl:Class ; owl:unionOf ( sosa:Sample biolink:Gene biolink:GenomicEntity biolink:SequenceVariant ) ] ;
+    rdfs:range biolink:PhenotypicFeature .
+
+# Mirror the same union onto phenotype_of (has_phenotype's declared inverse):
+# biolink's own phenotype_of keeps range biolink:BiologicalEntity, which no
+# longer matches has_phenotype's domain once narrowed above. Without this,
+# OOPS flags the pair as "may not be inverse" (P05) since an inverseOf pair's
+# domain/range should mirror each other.
+biolink:phenotype_of
+    rdfs:domain biolink:PhenotypicFeature ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( sosa:Sample biolink:Gene biolink:GenomicEntity biolink:SequenceVariant ) ] .
+
+# biolink:has_evidence, narrowed for MVIKG (per the drawio diagram): declared
+# directly here rather than via robot extract, since biolink's own
+# declaration routes it through association_slot/EvidenceType -- the
+# Association-cluster bookkeeping deliberately pruned from the biolink
+# extract (see NOTES.md #9). Range is ECO:0000305/ECO:0000035 directly, not
+# the generic EvidenceType indirection.
+biolink:has_evidence a owl:ObjectProperty ;
+    rdfs:label "has evidence" ;
+    rdfs:domain biolink:PhenotypicFeature ;
+    rdfs:range [ a owl:Class ; owl:oneOf ( ECO:0000305 ECO:0000035 ) ] ;
+    skos:definition "Connects a phenotypic feature assertion to the type of evidence (ECO) supporting it." .
+
+# Define domains and ranges for SOSA properties used in cross-links
+sosa:hasFeatureOfInterest
+    rdfs:domain sosa:Sample ;
+    rdfs:range biolink:GenomicEntity .
+
+sosa:isFeatureOfInterestOf
+    rdfs:domain biolink:GenomicEntity ;
+    rdfs:range sosa:Sample .
+
+sosa:hasSample
+    rdfs:domain biolink:OrganismTaxon ;
+    rdfs:range sosa:Sample .
+
+sosa:isSampleOf
+    rdfs:domain sosa:Sample ;
+    rdfs:range biolink:OrganismTaxon .
+
+# Narrowed for MVIKG: a sample is mentioned by a publication (not just any
+# NamedThing, as biolink's generic domain/range would allow).
+biolink:mentions
+    rdfs:domain biolink:Publication ;
+    rdfs:range sosa:Sample .
+
+biolink:mentioned_by
+    rdfs:domain sosa:Sample ;
+    rdfs:range biolink:Publication .
+
+# published_in/publication_type/id/type/description all came in from
+# biolink with domain and/or range missing (some have one, some neither).
+# published_in/publication_type are used via real cardinality restrictions
+# on Publication subtypes (Article, BookChapter, etc.); id/type/description
+# are Entity-level slots that Gene/SequenceVariant/Publication all inherit.
+# range xsd:anyURI matches sibling property category's declared range for
+# the same kind of CURIE/term-reference value.
+biolink:published_in
+    rdfs:range xsd:anyURI .
+
+biolink:publication_type
+    rdfs:domain biolink:Publication ;
+    rdfs:range xsd:anyURI .
+
+biolink:id
+    rdfs:range xsd:anyURI .
+
+biolink:type
+    rdfs:range xsd:anyURI .
+
+biolink:description rdf:type owl:DatatypeProperty ;
+    rdfs:domain biolink:Entity .
