@@ -9,4 +9,4 @@ WARN	missing_synonymtype_declaration	obo:so#dbsnp	rdfs:subPropertyOf
 WARN	missing_synonymtype_declaration	obo:so#dbvar	rdfs:subPropertyOf
 INFO	missing_superclass	SO:0000110	rdfs:subClassOf
 INFO	missing_superclass	SO:0000400	rdfs:subClassOf
-INFO	missing_superclass	SO:0001537	rdfs:subClassOf
+INFO	missing_superclass	SO:0001060	rdfs:subClassOf
