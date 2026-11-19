@@ -182,6 +182,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000001</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>A sequence_feature with an extent greater than zero. A nucleotide region is composed of bases and a polypeptide region is composed of amino acids.</rdfs:comment>
         <rdfs:label>region</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -199,6 +200,7 @@
         <obo:IAO_0000115>To substitute a subsection of sequence for another.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000048</oboInOwl:id>
+        <rdfs:comment>To substitute a subsection of sequence for another.</rdfs:comment>
         <rdfs:label>substitute</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
@@ -225,6 +227,7 @@
         <oboInOwl:hasRelatedSynonym>located sequence feature</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>SO:0000110</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>Any extent of continuous biological sequence.</rdfs:comment>
         <rdfs:label>sequence_feature</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -252,6 +255,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000159</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>The point at which one or more contiguous nucleotides were excised.</rdfs:comment>
         <rdfs:label>deletion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -282,6 +286,7 @@
         <oboInOwl:hasExactSynonym>sequence attribute</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000400</oboInOwl:id>
+        <rdfs:comment>An attribute describes a quality of sequence.</rdfs:comment>
         <rdfs:label>sequence_attribute</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -308,6 +313,7 @@
         <oboInOwl:id>SO:0000667</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#DBVAR"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>The sequence of one or more nucleotides added between two adjacent nucleotides in the sequence.</rdfs:comment>
         <rdfs:label>insertion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -341,6 +347,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000694</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>SNPs are single base pair positions in genomic DNA at which different sequence alternatives exist in normal individuals in some population(s), wherein the least frequent variant has an abundance of 1% or greater.</rdfs:comment>
         <rdfs:label>SNP</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -360,6 +367,7 @@
         <oboInOwl:hasExactSynonym>feature attribute</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000733</oboInOwl:id>
+        <rdfs:comment>An attribute describing a located_sequence_feature.</rdfs:comment>
         <rdfs:label>feature_attribute</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -381,6 +389,7 @@
         <oboInOwl:hasExactSynonym>wild type</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0000817</oboInOwl:id>
+        <rdfs:comment>An attribute describing sequence with the genotype found in nature and/or standard laboratory stock.</rdfs:comment>
         <rdfs:label>wild_type</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -434,6 +443,48 @@
 
 
 
+    <!-- http://purl.obolibrary.org/obo/SO_0001060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001060">
+        <obo:IAO_0000115>A sequence_variant is a non exact copy of a sequence_feature or genome exhibiting one or more sequence_alteration.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>Jannovar:sequence_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>VAAST:sequence_variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>sequence variant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>ANNOVAR:unknown</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>SO:0001060</oboInOwl:id>
+        <rdfs:comment>A sequence_variant is a non exact copy of a sequence_feature or genome exhibiting one or more sequence_alteration.</rdfs:comment>
+        <rdfs:label>sequence_variant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A sequence_variant is a non exact copy of a sequence_feature or genome exhibiting one or more sequence_alteration.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>SO:ke</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Jannovar:sequence_variant</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://doc-openbio.readthedocs.org/projects/jannovar/en/master/var_effects.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>VAAST:sequence_variant</owl:annotatedTarget>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>ANNOVAR:unknown</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://www.openbioinformatics.org/annovar/annovar_download.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/so#VAR"/>
+    </owl:Axiom>
+
+
+
     <!-- http://purl.obolibrary.org/obo/SO_0001411 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001411">
@@ -445,6 +496,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001411</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>A region defined by its disposition to be involved in a biological process.</rdfs:comment>
         <rdfs:label>biological_region</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -467,6 +519,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001483</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>SNVs are single nucleotide positions in genomic DNA at which different sequence alternatives exist.</rdfs:comment>
         <rdfs:label>SNV</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -481,6 +534,7 @@
     <!-- http://purl.obolibrary.org/obo/SO_0001537 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/SO_0001537">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SO_0001060"/>
         <obo:IAO_0000115>A sequence variant that changes one or more structural features.</obo:IAO_0000115>
         <oboInOwl:created_by>kareneilbeck</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-22T11:31:01Z</oboInOwl:creation_date>
@@ -490,6 +544,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>structural variant</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>SO:0001537</oboInOwl:id>
+        <rdfs:comment>A sequence variant that changes one or more structural features.</rdfs:comment>
         <rdfs:label>structural_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -534,6 +589,7 @@
         <oboInOwl:hasExactSynonym>snpEff:GENE</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001564</oboInOwl:id>
+        <rdfs:comment>A sequence variant where the structure of the gene is changed.</rdfs:comment>
         <rdfs:label>gene_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -578,6 +634,7 @@
         <oboInOwl:hasExactSynonym>transcript variant</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001576</oboInOwl:id>
+        <rdfs:comment>A sequence variant that changes the structure of the transcript.</rdfs:comment>
         <rdfs:label>transcript_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -632,6 +689,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>snpEff:CODON_CHANGE</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>SO:0001580</oboInOwl:id>
+        <rdfs:comment>A sequence variant that changes the coding sequence.</rdfs:comment>
         <rdfs:label>coding_sequence_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -822,6 +880,7 @@
         <oboInOwl:hasRelatedSynonym>ANNOVAR:nonframeshift block substitution</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>ANNOVAR:nonframeshift substitution</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>SO:0001650</oboInOwl:id>
+        <rdfs:comment>A sequence variant which does not cause a disruption of the translational reading frame.</rdfs:comment>
         <rdfs:label>inframe_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -873,6 +932,7 @@
         <oboInOwl:hasExactSynonym>snpEff:EXON</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001791</oboInOwl:id>
+        <rdfs:comment>A sequence variant that changes exon sequence.</rdfs:comment>
         <rdfs:label>exon_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -922,6 +982,7 @@
         <oboInOwl:hasExactSynonym>protein altering variant</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001818</oboInOwl:id>
+        <rdfs:comment>A sequence_variant which is predicted to change the protein encoded in the coding sequence.</rdfs:comment>
         <rdfs:label>protein_altering_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -950,6 +1011,7 @@
         <oboInOwl:hasExactSynonym>inframe indel</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001820</oboInOwl:id>
+        <rdfs:comment>A coding sequence variant where the change does not alter the frame of the transcript.</rdfs:comment>
         <rdfs:label>inframe_indel</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -984,6 +1046,7 @@
         <oboInOwl:hasRelatedSynonym>inframe deletion</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>snpEff:CODON_DELETION</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>SO:0001822</oboInOwl:id>
+        <rdfs:comment>An inframe non synonymous variant that deletes bases from the coding sequence.</rdfs:comment>
         <rdfs:label>inframe_deletion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1069,6 +1132,7 @@
         <oboInOwl:hasExactSynonym>feature truncation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001906</oboInOwl:id>
+        <rdfs:comment>A sequence variant that causes the reduction of a genomic feature, with regard to the reference sequence.</rdfs:comment>
         <rdfs:label>feature_truncation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1104,6 +1168,7 @@
         <oboInOwl:hasExactSynonym>coding transcript variant</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001968</oboInOwl:id>
+        <rdfs:comment>A transcript variant of a protein coding gene.</rdfs:comment>
         <rdfs:label>coding_transcript_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1133,6 +1198,7 @@
         <oboInOwl:hasExactSynonym>nonsynonymous variant</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0001992</oboInOwl:id>
+        <rdfs:comment>A non-synonymous variant is an inframe, protein altering variant, resulting in a codon change.</rdfs:comment>
         <rdfs:label>nonsynonymous_variant</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1162,6 +1228,7 @@
         <oboInOwl:hasExactSynonym>sequence comparison</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:0002072</oboInOwl:id>
+        <rdfs:comment>A position or feature where two sequences have been compared.</rdfs:comment>
         <rdfs:label>sequence_comparison</rdfs:label>
     </owl:Class>
 
@@ -1177,6 +1244,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:1000002</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>A sequence alteration where the length of the change in the variant is the same as that of the reference.</rdfs:comment>
         <rdfs:label>substitution</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1203,6 +1271,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:id>SO:1000005</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>When no simple or well defined DNA mutation event describes the observed DNA change, the keyword &quot;complex&quot; should be used. Usually there are multiple equally plausible explanations for the change.</rdfs:comment>
         <rdfs:label>complex_substitution</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1259,6 +1328,7 @@
         <oboInOwl:hasOBONamespace>sequence</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>nucleotide_duplication</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>SO:1000035</oboInOwl:id>
+        <rdfs:comment>An insertion which derives from, or is identical in sequence to, nucleotides present at a known location in the genome.</rdfs:comment>
         <rdfs:label>duplication</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1289,6 +1359,7 @@
         <oboInOwl:id>SO:1000036</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#DBVAR"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/so#SOFA"/>
+        <rdfs:comment>A continuous nucleotide sequence is inverted in the same position.</rdfs:comment>
         <rdfs:label>inversion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
