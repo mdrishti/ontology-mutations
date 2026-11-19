@@ -24,10 +24,19 @@ robot extract \
 	--prefix 'SO: http://purl.obolibrary.org/obo/SO_'
 
 
+# Copy obo:IAO_0000115 definitions to rdfs:comment where no rdfs:comment
+# exists yet (OOPS's P08 check doesn't recognize IAO_0000115 as a
+# "defining" annotation -- see NOTES.md item 20).
+echo "Copying IAO_0000115 definitions to rdfs:comment..."
+robot query \
+  --input ../extracted/so_star_temp.owl \
+  --update ../mvikg/copy-iao-definition-to-comment.ru \
+  --output ../extracted/so_star_temp_commented.owl
+
 # Add missing ontology metadata
 echo "Annotating..."
 robot annotate \
-  --input ../extracted/so_star_temp.owl \
+  --input ../extracted/so_star_temp_commented.owl \
   --ontology-iri "http://purl.obolibrary.org/obo/so.owl" \
   --annotation dc:title "SO Ontology (Extracted)" \
   --annotation dc:description "Extracted classifications from the Sequence Ontology" \
