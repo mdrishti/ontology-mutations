@@ -1,0 +1,111 @@
+id: http://example.org/mvikg/linkml
+name: mvikg
+description: >-
+  LinkML source for the hand-authored MVIKG schema layer (properties and
+  classes we author ourselves). Domain restrictions against externally
+  extracted classes (sosa:Sample, biolink:OrganismTaxon) are intentionally
+  NOT modeled here — LinkML's OWL generator mints a new local class node for
+  any class_uri stub, which would duplicate rather than reference the real
+  extracted IRIs. Those domains stay hand-authored in mvikg-restrictions.ttl
+  and are merged in the same build step as this file's generated output.
+
+prefixes:
+  mvikg: http://example.org/mvikg/
+  skos: http://www.w3.org/2004/02/skos/core#
+  linkml: https://w3id.org/linkml/
+  efo: http://www.ebi.ac.uk/efo/
+
+default_prefix: mvikg
+default_range: string
+
+imports:
+  - linkml:types
+
+classes:
+  Biome:
+    class_uri: mvikg:Biome
+    description: >-
+      A biome classification describing a sample's environmental context,
+      typically drawn from the GOLD biome vocabulary.
+    comments:
+      - "We recommend any biome class from the GOLD ontology"
+
+  DevelopmentalStage:
+    class_uri: mvikg:DevelopmentalStage
+    description: "Represents a specific point or period in an organism's life cycle"
+    comments:
+      - "A developmental stage is a stage corresponding to a stage in bacteria's growth. e.g.: exponential, lag."
+    close_mappings:
+      - efo:EFO_0000399
+
+slots:
+  has_biome_term:
+    slot_uri: mvikg:has_biome_term
+    range: Biome
+    description: >-
+      Relates a sample or organism taxon to a resolved, curated biome term
+      (typically from GOLD). Use mvikg:has_biome_text instead when the source
+      text does not map to a controlled term.
+    comments:
+      - "Dual-predicate split of the former single-valued mvikg:has_biome, per the Case A (IRI-or-free-text) pattern."
+
+  has_biome_text:
+    slot_uri: mvikg:has_biome_text
+    range: string
+    description: >-
+      Free-text description of a sample or organism taxon's environmental
+      biome, used when the source text could not be mapped to a controlled
+      GOLD biome term. If a value was normalized into mvikg:has_biome_term,
+      the original text should still be retained here for provenance.
+    comments:
+      - "Dual-predicate split of the former single-valued mvikg:has_biome, per the Case A (IRI-or-free-text) pattern."
+
+  compared to:
+    slot_uri: mvikg:comparedTo
+    range: string
+    description: "A free-text description of the baseline or control a phenotype outcome was compared against."
+    comments:
+      - "Free-text description of the baseline/control a phenotype outcome was compared against. Domain (biolink:PhenotypicFeature) is external — see mvikg-restrictions.ttl."
+
+  reference allele:
+    slot_uri: mvikg:ref
+    range: string
+    description: "The reference allele reported at a given sequence position, prior to the observed variant."
+    comments:
+      - "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl."
+
+  alternate allele:
+    slot_uri: mvikg:alt
+    range: string
+    description: "The alternate (variant) allele observed at a given sequence position."
+    comments:
+      - "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl."
+
+  variant length:
+    slot_uri: mvikg:length
+    range: string
+    description: "The length of a sequence variant."
+    comments:
+      - "Free-text length string — not all source rows give a clean integer."
+      - "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl."
+
+  variant effect:
+    slot_uri: mvikg:effect
+    range: string
+    description: "A free-text description of the functional effect of a sequence variant, as reported in the source."
+    comments:
+      - "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl."
+
+  frequency value:
+    slot_uri: mvikg:frequencyValue
+    range: decimal
+    description: "The numeric frequency value of a sequence variant or allele within a population; interpreted together with mvikg:frequencyUnit."
+    comments:
+      - "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl."
+
+  has developmental stage:
+    slot_uri: mvikg:has_developmental_stage
+    range: DevelopmentalStage
+    description: "Relates a sample to the developmental stage (e.g. exponential, lag) of the organism it was taken from."
+    comments:
+      - "Domain (sosa:Sample) is external — see mvikg-restrictions.ttl. No inverse declared (same resolution as frequencyUnit)."
