@@ -19,6 +19,8 @@ CLAUDE.md
 ontologies
 linkml/gen-owl.log
 linkml/gen-shacl.log
+linkml/mvikg-generated.owl.ttl
+linkml/mvikg-generated.shacl.ttl
 
 # softwares
 *jar
