@@ -4,7 +4,7 @@
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos:    <http://www.w3.org/2008/05/skos#> .
 @prefix ENVO:    <http://purl.obolibrary.org/obo/ENVO_> .
-@prefix mvikg:    <http://example.org/mvikg/> .
+@prefix mvikg:    <https://w3id.org/mvikg#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 # Mutation data modelling
