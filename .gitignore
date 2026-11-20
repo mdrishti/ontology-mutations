@@ -17,6 +17,8 @@ CLAUDE.md
 
 # big individual ontology files
 ontologies
+linkml/gen-owl.log
+linkml/gen-shacl.log
 
 # softwares
 *jar
