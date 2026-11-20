@@ -1,4 +1,4 @@
-@prefix mvikg: <http://example.org/mvikg/> .
+@prefix mvikg: <https://w3id.org/mvikg#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix biolink: <https://w3id.org/biolink/vocab/> .
 

@@ -7,18 +7,6 @@ WARN	annotation_whitespace	dc:bibliographicCitation	dc11:description	"Recommende
 WARN	duplicate_label_synonym	SO:0000667	oboInOwl:hasExactSynonym	insertion
 WARN	duplicate_label_synonym	SO:1000036	oboInOwl:hasExactSynonym	inversion
 WARN	duplicate_label_synonym	https://w3id.org/biolink/vocab/SequenceVariant	oboInOwl:hasExactSynonym	sequence variant
-WARN	missing_definition	http://example.org/mvikg/Biome	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/DevelopmentalStage	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/alt	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/comparedTo	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/effect	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/frequencyUnit	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/frequencyValue	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/has_biome_term	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/has_biome_text	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/has_developmental_stage	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/length	IAO:0000115
-WARN	missing_definition	http://example.org/mvikg/ref	IAO:0000115
 WARN	missing_definition	dc:bibliographicCitation	IAO:0000115
 WARN	missing_definition	http://qudt.org/schema/qudt/Unit	IAO:0000115
 WARN	missing_definition	skos:broader	IAO:0000115
@@ -83,16 +71,28 @@ WARN	missing_definition	https://w3id.org/biolink/vocab/sequence_localization_att
 WARN	missing_definition	https://w3id.org/biolink/vocab/start_coordinate	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/taxon_of	IAO:0000115
 WARN	missing_definition	https://w3id.org/biolink/vocab/type	IAO:0000115
+WARN	missing_definition	https://w3id.org/mvikg#Biome	IAO:0000115
+WARN	missing_definition	https://w3id.org/mvikg#DevelopmentalStage	IAO:0000115
+WARN	missing_definition	https://w3id.org/mvikg#alt	IAO:0000115
+WARN	missing_definition	https://w3id.org/mvikg#comparedTo	IAO:0000115
+WARN	missing_definition	https://w3id.org/mvikg#effect	IAO:0000115
+WARN	missing_definition	https://w3id.org/mvikg#frequencyUnit	IAO:0000115
+WARN	missing_definition	https://w3id.org/mvikg#frequencyValue	IAO:0000115
+WARN	missing_definition	https://w3id.org/mvikg#has_biome_term	IAO:0000115
+WARN	missing_definition	https://w3id.org/mvikg#has_biome_text	IAO:0000115
+WARN	missing_definition	https://w3id.org/mvikg#has_developmental_stage	IAO:0000115
+WARN	missing_definition	https://w3id.org/mvikg#length	IAO:0000115
+WARN	missing_definition	https://w3id.org/mvikg#ref	IAO:0000115
 WARN	missing_obsolete_label	SO:0000048	rdfs:label	substitute
 WARN	missing_subset_declaration	obo:so#DBVAR	rdfs:subPropertyOf
 WARN	missing_subset_declaration	obo:so#SOFA	rdfs:subPropertyOf
 WARN	missing_synonymtype_declaration	obo:so#VAR	rdfs:subPropertyOf
 WARN	missing_synonymtype_declaration	obo:so#dbsnp	rdfs:subPropertyOf
 WARN	missing_synonymtype_declaration	obo:so#dbvar	rdfs:subPropertyOf
-INFO	missing_superclass	http://example.org/mvikg/Biome	rdfs:subClassOf
-INFO	missing_superclass	http://example.org/mvikg/DevelopmentalStage	rdfs:subClassOf
 INFO	missing_superclass	SO:0000110	rdfs:subClassOf
 INFO	missing_superclass	SO:0000400	rdfs:subClassOf
 INFO	missing_superclass	SO:0001060	rdfs:subClassOf
 INFO	missing_superclass	http://qudt.org/schema/qudt/Unit	rdfs:subClassOf
 INFO	missing_superclass	http://www.w3.org/ns/sosa/Result	rdfs:subClassOf
+INFO	missing_superclass	https://w3id.org/mvikg#Biome	rdfs:subClassOf
+INFO	missing_superclass	https://w3id.org/mvikg#DevelopmentalStage	rdfs:subClassOf

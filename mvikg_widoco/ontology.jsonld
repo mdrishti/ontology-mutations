@@ -3,23 +3,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
-      "@id" : "http://qudt.org/vocab/unit/PERCENT"
+      "@id" : "http://purl.obolibrary.org/obo/ECO_0000035"
     }, {
-      "@id" : "http://qudt.org/vocab/unit/UNITLESS"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/ns/sosa/Sample"
-    }, {
-      "@id" : "https://w3id.org/biolink/vocab/Gene"
-    }, {
-      "@id" : "https://w3id.org/biolink/vocab/GenomicEntity"
-    }, {
-      "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
+      "@id" : "http://purl.obolibrary.org/obo/ECO_0000305"
     } ]
   } ]
 }, {
@@ -316,28 +302,28 @@
   "@id" : "_:genid119",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://example.org/mvikg/DevelopmentalStage"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://example.org/mvikg/has_developmental_stage"
-  } ]
-}, {
-  "@id" : "_:genid120",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/ns/sosa/isSampleOf"
   } ]
 }, {
-  "@id" : "_:genid121",
+  "@id" : "_:genid120",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/biolink/vocab/Publication"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/biolink/vocab/mentioned_by"
+  } ]
+}, {
+  "@id" : "_:genid121",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/mvikg#DevelopmentalStage"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/mvikg#has_developmental_stage"
   } ]
 }, {
   "@id" : "_:genid122",
@@ -509,6 +495,16 @@
     "@id" : "https://w3id.org/biolink/vocab/id"
   } ]
 }, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://qudt.org/vocab/unit/PERCENT"
+    }, {
+      "@id" : "http://qudt.org/vocab/unit/UNITLESS"
+    } ]
+  } ]
+}, {
   "@id" : "_:genid140",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
@@ -600,20 +596,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/biolink/vocab/OntologyClass"
-  } ]
-}, {
-  "@id" : "_:genid15",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/ns/sosa/Sample"
-    }, {
-      "@id" : "https://w3id.org/biolink/vocab/Gene"
-    }, {
-      "@id" : "https://w3id.org/biolink/vocab/GenomicEntity"
-    }, {
-      "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
-    } ]
   } ]
 }, {
   "@id" : "_:genid150",
@@ -801,6 +783,16 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/biolink/vocab/id"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/ns/sosa/Sample"
+    }, {
+      "@id" : "https://w3id.org/biolink/vocab/OrganismTaxon"
+    } ]
   } ]
 }, {
   "@id" : "_:genid170",
@@ -1197,7 +1189,11 @@
     "@list" : [ {
       "@id" : "http://www.w3.org/ns/sosa/Sample"
     }, {
-      "@id" : "https://w3id.org/biolink/vocab/OrganismTaxon"
+      "@id" : "https://w3id.org/biolink/vocab/Gene"
+    }, {
+      "@id" : "https://w3id.org/biolink/vocab/GenomicEntity"
+    }, {
+      "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
     } ]
   } ]
 }, {
@@ -1676,16 +1672,6 @@
     "@value" : "Jannovar:missense_variant"
   } ]
 }, {
-  "@id" : "_:genid7",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
-    "@list" : [ {
-      "@id" : "http://purl.obolibrary.org/obo/ECO_0000035"
-    }, {
-      "@id" : "http://purl.obolibrary.org/obo/ECO_0000305"
-    } ]
-  } ]
-}, {
   "@id" : "_:genid70",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://www.geneontology.org/formats/oboInOwl#hasSynonymType" : [ {
@@ -1998,6 +1984,20 @@
     "@value" : "A sequence_variant which is predicted to change the protein encoded in the coding sequence."
   } ]
 }, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.w3.org/ns/sosa/Sample"
+    }, {
+      "@id" : "https://w3id.org/biolink/vocab/Gene"
+    }, {
+      "@id" : "https://w3id.org/biolink/vocab/GenomicEntity"
+    }, {
+      "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
+    } ]
+  } ]
+}, {
   "@id" : "_:genid90",
   "@type" : [ "http://www.w3.org/2002/07/owl#Axiom" ],
   "http://www.geneontology.org/formats/oboInOwl#hasSynonymType" : [ {
@@ -2154,278 +2154,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#annotatedTarget" : [ {
     "@value" : "A sequence variant that falls entirely or partially within a genomic feature."
-  } ]
-}, {
-  "@id" : "http://example.org/mvikg",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "MVIKG"
-  } ],
-  "http://purl.org/dc/terms/description" : [ {
-    "@value" : "An integrated ontology combining BioLink, SOSA, ENVO, RO, GOLD and other established ontologies for bacterial variant data modeling"
-  } ],
-  "http://purl.org/dc/terms/license" : [ {
-    "@value" : "https://creativecommons.org/licenses/by/4.0/"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
-    "@value" : "MVIKG: Multi-Variant Integration Knowledge Graph"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A schema for bacterial genotype-phenotype data integration"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "MVIKG Ontology"
-  } ],
-  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://example.org/mvikg/0.0.1"
-  } ],
-  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.0.1"
-  } ]
-}, {
-  "@id" : "http://example.org/mvikg/Biome",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Biome"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "A biome classification describing a sample's environmental context, typically drawn from the GOLD biome vocabulary."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
-    "@id" : "http://example.org/mvikg/Biome"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "http://example.org/mvikg/linkml"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#note" : [ {
-    "@value" : "We recommend any biome class from the GOLD ontology"
-  } ]
-}, {
-  "@id" : "http://example.org/mvikg/DevelopmentalStage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "DevelopmentalStage"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
-    "@id" : "http://www.ebi.ac.uk/efo/EFO_0000399"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "Represents a specific point or period in an organism's life cycle"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
-    "@id" : "http://example.org/mvikg/DevelopmentalStage"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "http://example.org/mvikg/linkml"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#note" : [ {
-    "@value" : "A developmental stage is a stage corresponding to a stage in bacteria's growth. e.g.: exponential, lag."
-  } ]
-}, {
-  "@id" : "http://example.org/mvikg/alt",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "alternate allele"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "The alternate (variant) allele observed at a given sequence position."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "http://example.org/mvikg/linkml"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#note" : [ {
-    "@value" : "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl."
-  } ]
-}, {
-  "@id" : "http://example.org/mvikg/comparedTo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/PhenotypicFeature"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "compared to"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "A free-text description of the baseline or control a phenotype outcome was compared against."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "http://example.org/mvikg/linkml"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#note" : [ {
-    "@value" : "Free-text description of the baseline/control a phenotype outcome was compared against. Domain (biolink:PhenotypicFeature) is external — see mvikg-restrictions.ttl."
-  } ]
-}, {
-  "@id" : "http://example.org/mvikg/effect",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "variant effect"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "A free-text description of the functional effect of a sequence variant, as reported in the source."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "http://example.org/mvikg/linkml"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#note" : [ {
-    "@value" : "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl."
-  } ]
-}, {
-  "@id" : "http://example.org/mvikg/frequencyUnit",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "frequency unit"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid1"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "The unit — percent or unitless — in which a sequence variant's mvikg:frequencyValue is expressed."
-  } ]
-}, {
-  "@id" : "http://example.org/mvikg/frequencyValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "frequency value"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "The numeric frequency value of a sequence variant or allele within a population; interpreted together with mvikg:frequencyUnit."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "http://example.org/mvikg/linkml"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#note" : [ {
-    "@value" : "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl."
-  } ]
-}, {
-  "@id" : "http://example.org/mvikg/has_biome_term",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid4"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has_biome_term"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/mvikg/Biome"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "Relates a sample or organism taxon to a resolved, curated biome term (typically from GOLD). Use mvikg:has_biome_text instead when the source text does not map to a controlled term."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "http://example.org/mvikg/linkml"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#note" : [ {
-    "@value" : "Dual-predicate split of the former single-valued mvikg:has_biome, per the Case A (IRI-or-free-text) pattern."
-  } ]
-}, {
-  "@id" : "http://example.org/mvikg/has_biome_text",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid20"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has_biome_text"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "Free-text description of a sample or organism taxon's environmental biome, used when the source text could not be mapped to a controlled GOLD biome term. If a value was normalized into mvikg:has_biome_term, the original text should still be retained here for provenance."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "http://example.org/mvikg/linkml"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#note" : [ {
-    "@value" : "Dual-predicate split of the former single-valued mvikg:has_biome, per the Case A (IRI-or-free-text) pattern."
-  } ]
-}, {
-  "@id" : "http://example.org/mvikg/has_developmental_stage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Sample"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has developmental stage"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/mvikg/DevelopmentalStage"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "Relates a sample to the developmental stage (e.g. exponential, lag) of the organism it was taken from."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "http://example.org/mvikg/linkml"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#note" : [ {
-    "@value" : "Domain (sosa:Sample) is external — see mvikg-restrictions.ttl. No inverse declared (same resolution as frequencyUnit)."
-  } ]
-}, {
-  "@id" : "http://example.org/mvikg/length",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "variant length"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "The length of a sequence variant."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "http://example.org/mvikg/linkml"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#note" : [ {
-    "@value" : "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl."
-  }, {
-    "@value" : "Free-text length string — not all source rows give a clean integer."
-  } ]
-}, {
-  "@id" : "http://example.org/mvikg/ref",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "reference allele"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "The reference allele reported at a given sequence position, prior to the observed variant."
-  } ],
-  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
-    "@id" : "http://example.org/mvikg/linkml"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#note" : [ {
-    "@value" : "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl."
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/ECO_0000035",
@@ -3860,6 +3588,9 @@
   "@id" : "http://www.w3.org/2001/XMLSchema#string",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -5097,7 +4828,7 @@
     "@value" : "has evidence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid7"
+    "@id" : "_:genid1"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Connects a phenotypic feature assertion to the type of evidence (ECO) supporting it."
@@ -5106,7 +4837,7 @@
   "@id" : "https://w3id.org/biolink/vocab/has_phenotype",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid10"
+    "@id" : "_:genid4"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has phenotype"
@@ -5357,7 +5088,7 @@
     "@value" : "phenotype of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid15"
+    "@id" : "_:genid9"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/biolink/vocab/related_to_at_instance_level"
@@ -5767,4 +5498,288 @@
 }, {
   "@id" : "https://w3id.org/linkml/permissible_values",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mvikg",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "MVIKG"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "An integrated ontology combining BioLink, SOSA, ENVO, RO, GOLD and other established ontologies for bacterial variant data modeling"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@value" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "MVIKG: Multi-Variant Integration Knowledge Graph"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A schema for bacterial genotype-phenotype data integration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MVIKG Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://w3id.org/mvikg/0.1.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.0.1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mvikg#Biome",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Biome"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "A biome classification describing a sample's environmental context, typically drawn from the GOLD biome vocabulary."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "https://w3id.org/mvikg#Biome"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/mvikg/linkml"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@value" : "We recommend any biome class from the GOLD ontology"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mvikg#DevelopmentalStage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DevelopmentalStage"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://www.ebi.ac.uk/efo/EFO_0000399"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "Represents a specific point or period in an organism's life cycle"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "https://w3id.org/mvikg#DevelopmentalStage"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/mvikg/linkml"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@value" : "A developmental stage is a stage corresponding to a stage in bacteria's growth. e.g.: exponential, lag."
+  } ]
+}, {
+  "@id" : "https://w3id.org/mvikg#alt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "alternate allele"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "The alternate (variant) allele observed at a given sequence position."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/mvikg/linkml"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@value" : "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl."
+  } ]
+}, {
+  "@id" : "https://w3id.org/mvikg#comparedTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/PhenotypicFeature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "compared to"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "A free-text description of the baseline or control a phenotype outcome was compared against."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/mvikg/linkml"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@value" : "Free-text description of the baseline/control a phenotype outcome was compared against. Domain (biolink:PhenotypicFeature) is external — see mvikg-restrictions.ttl."
+  } ]
+}, {
+  "@id" : "https://w3id.org/mvikg#effect",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "variant effect"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "A free-text description of the functional effect of a sequence variant, as reported in the source."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/mvikg/linkml"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@value" : "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl."
+  } ]
+}, {
+  "@id" : "https://w3id.org/mvikg#frequencyUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "frequency unit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid14"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "The unit — percent or unitless — in which a sequence variant's mvikg:frequencyValue is expressed."
+  } ]
+}, {
+  "@id" : "https://w3id.org/mvikg#frequencyValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "frequency value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "The numeric frequency value of a sequence variant or allele within a population; interpreted together with mvikg:frequencyUnit."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/mvikg/linkml"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@value" : "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl."
+  } ]
+}, {
+  "@id" : "https://w3id.org/mvikg#has_biome_term",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid17"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has_biome_term"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/mvikg#Biome"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "Relates a sample or organism taxon to a resolved, curated biome term (typically from GOLD). Use mvikg:has_biome_text instead when the source text does not map to a controlled term."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/mvikg/linkml"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@value" : "Dual-predicate split of the former single-valued mvikg:has_biome, per the Case A (IRI-or-free-text) pattern."
+  } ]
+}, {
+  "@id" : "https://w3id.org/mvikg#has_biome_text",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid20"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has_biome_text"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "Free-text description of a sample or organism taxon's environmental biome, used when the source text could not be mapped to a controlled GOLD biome term. If a value was normalized into mvikg:has_biome_term, the original text should still be retained here for provenance."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/mvikg/linkml"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@value" : "Dual-predicate split of the former single-valued mvikg:has_biome, per the Case A (IRI-or-free-text) pattern."
+  } ]
+}, {
+  "@id" : "https://w3id.org/mvikg#has_developmental_stage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Sample"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has developmental stage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/mvikg#DevelopmentalStage"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "Relates a sample to the developmental stage (e.g. exponential, lag) of the organism it was taken from."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/mvikg/linkml"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@value" : "Domain (sosa:Sample) is external — see mvikg-restrictions.ttl. No inverse declared (same resolution as frequencyUnit)."
+  } ]
+}, {
+  "@id" : "https://w3id.org/mvikg#length",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "variant length"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "The length of a sequence variant."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/mvikg/linkml"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@value" : "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl."
+  }, {
+    "@value" : "Free-text length string — not all source rows give a clean integer."
+  } ]
+}, {
+  "@id" : "https://w3id.org/mvikg#ref",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/biolink/vocab/SequenceVariant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "reference allele"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "The reference allele reported at a given sequence position, prior to the observed variant."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/mvikg/linkml"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#note" : [ {
+    "@value" : "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl."
+  } ]
+}, {
+  "@id" : "https://w3id.org/mvikg/linkml",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Identifies the LinkML-generated subset of the MVIKG schema."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MVIKG LinkML-generated schema subset"
+  } ]
 } ]

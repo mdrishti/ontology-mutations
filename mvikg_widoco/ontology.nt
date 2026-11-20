@@ -1,12 +1,12 @@
-<http://example.org/mvikg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://example.org/mvikg> <http://www.w3.org/2002/07/owl#versionIRI> <http://example.org/mvikg/0.0.1> .
-<http://example.org/mvikg> <http://purl.org/dc/terms/creator> "MVIKG" .
-<http://example.org/mvikg> <http://purl.org/dc/terms/description> "An integrated ontology combining BioLink, SOSA, ENVO, RO, GOLD and other established ontologies for bacterial variant data modeling" .
-<http://example.org/mvikg> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" .
-<http://example.org/mvikg> <http://purl.org/dc/terms/title> "MVIKG: Multi-Variant Integration Knowledge Graph" .
-<http://example.org/mvikg> <http://www.w3.org/2000/01/rdf-schema#comment> "A schema for bacterial genotype-phenotype data integration" .
-<http://example.org/mvikg> <http://www.w3.org/2000/01/rdf-schema#label> "MVIKG Ontology" .
-<http://example.org/mvikg> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+<https://w3id.org/mvikg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/mvikg> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/mvikg/0.1.0> .
+<https://w3id.org/mvikg> <http://purl.org/dc/terms/creator> "MVIKG" .
+<https://w3id.org/mvikg> <http://purl.org/dc/terms/description> "An integrated ontology combining BioLink, SOSA, ENVO, RO, GOLD and other established ontologies for bacterial variant data modeling" .
+<https://w3id.org/mvikg> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" .
+<https://w3id.org/mvikg> <http://purl.org/dc/terms/title> "MVIKG: Multi-Variant Integration Knowledge Graph" .
+<https://w3id.org/mvikg> <http://www.w3.org/2000/01/rdf-schema#comment> "A schema for bacterial genotype-phenotype data integration" .
+<https://w3id.org/mvikg> <http://www.w3.org/2000/01/rdf-schema#label> "MVIKG Ontology" .
+<https://w3id.org/mvikg> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
 #
 #
 # #################################################################
@@ -218,47 +218,6 @@
 # #################################################################
 #
 #
-# http://example.org/mvikg/frequencyUnit
-<http://example.org/mvikg/frequencyUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/mvikg/frequencyUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
-<http://example.org/mvikg/frequencyUnit> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
-_:genid1 <http://www.w3.org/2002/07/owl#oneOf> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://qudt.org/vocab/unit/UNITLESS> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://qudt.org/vocab/unit/PERCENT> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/mvikg/frequencyUnit> <http://www.w3.org/2000/01/rdf-schema#label> "frequency unit" .
-<http://example.org/mvikg/frequencyUnit> <http://www.w3.org/2004/02/skos/core#definition> "The unit — percent or unitless — in which a sequence variant's mvikg:frequencyValue is expressed." .
-#
-# http://example.org/mvikg/has_biome_term
-<http://example.org/mvikg/has_biome_term> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/mvikg/has_biome_term> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
-_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/OrganismTaxon> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Sample> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/mvikg/has_biome_term> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/mvikg/Biome> .
-<http://example.org/mvikg/has_biome_term> <http://www.w3.org/2000/01/rdf-schema#label> "has_biome_term" .
-<http://example.org/mvikg/has_biome_term> <http://www.w3.org/2004/02/skos/core#definition> "Relates a sample or organism taxon to a resolved, curated biome term (typically from GOLD). Use mvikg:has_biome_text instead when the source text does not map to a controlled term." .
-<http://example.org/mvikg/has_biome_term> <http://www.w3.org/2004/02/skos/core#inScheme> <http://example.org/mvikg/linkml> .
-<http://example.org/mvikg/has_biome_term> <http://www.w3.org/2004/02/skos/core#note> "Dual-predicate split of the former single-valued mvikg:has_biome, per the Case A (IRI-or-free-text) pattern." .
-#
-# http://example.org/mvikg/has_developmental_stage
-<http://example.org/mvikg/has_developmental_stage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/mvikg/has_developmental_stage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Sample> .
-<http://example.org/mvikg/has_developmental_stage> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/mvikg/DevelopmentalStage> .
-<http://example.org/mvikg/has_developmental_stage> <http://www.w3.org/2000/01/rdf-schema#label> "has developmental stage" .
-<http://example.org/mvikg/has_developmental_stage> <http://www.w3.org/2004/02/skos/core#definition> "Relates a sample to the developmental stage (e.g. exponential, lag) of the organism it was taken from." .
-<http://example.org/mvikg/has_developmental_stage> <http://www.w3.org/2004/02/skos/core#inScheme> <http://example.org/mvikg/linkml> .
-<http://example.org/mvikg/has_developmental_stage> <http://www.w3.org/2004/02/skos/core#note> "Domain (sosa:Sample) is external — see mvikg-restrictions.ttl. No inverse declared (same resolution as frequencyUnit)." .
-#
 # http://www.w3.org/2004/02/skos/core#broader
 <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/2004/02/skos/core#narrower> .
@@ -322,15 +281,15 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/biolink/vocab/has_evidence
 <https://w3id.org/biolink/vocab/has_evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/biolink/vocab/has_evidence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/PhenotypicFeature> .
-<https://w3id.org/biolink/vocab/has_evidence> <http://www.w3.org/2000/01/rdf-schema#range> _:genid7 .
-_:genid7 <http://www.w3.org/2002/07/owl#oneOf> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.obolibrary.org/obo/ECO_0000305> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.obolibrary.org/obo/ECO_0000035> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/has_evidence> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#oneOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.obolibrary.org/obo/ECO_0000305> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.obolibrary.org/obo/ECO_0000035> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/biolink/vocab/has_evidence> <http://www.w3.org/2000/01/rdf-schema#label> "has evidence" .
 <https://w3id.org/biolink/vocab/has_evidence> <http://www.w3.org/2004/02/skos/core#definition> "Connects a phenotypic feature assertion to the type of evidence (ECO) supporting it." .
 #
@@ -338,21 +297,21 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/biolink/vocab/related_to_at_instance_level> .
 <https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/biolink/vocab/phenotype_of> .
-<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid10 .
-_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/SequenceVariant> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/GenomicEntity> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/Gene> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Sample> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/SequenceVariant> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/GenomicEntity> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/Gene> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Sample> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/biolink/vocab/PhenotypicFeature> .
 <https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2000/01/rdf-schema#label> "has phenotype" .
 <https://w3id.org/biolink/vocab/has_phenotype> <http://www.w3.org/2004/02/skos/core#altLabel> "disease presents symptom" .
@@ -442,21 +401,21 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/biolink/vocab/phenotype_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/biolink/vocab/phenotype_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/biolink/vocab/related_to_at_instance_level> .
 <https://w3id.org/biolink/vocab/phenotype_of> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/PhenotypicFeature> .
-<https://w3id.org/biolink/vocab/phenotype_of> <http://www.w3.org/2000/01/rdf-schema#range> _:genid15 .
-_:genid15 <http://www.w3.org/2002/07/owl#unionOf> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/SequenceVariant> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/GenomicEntity> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/Gene> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Sample> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/biolink/vocab/phenotype_of> <http://www.w3.org/2000/01/rdf-schema#range> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/SequenceVariant> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/GenomicEntity> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/Gene> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Sample> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/biolink/vocab/phenotype_of> <http://www.w3.org/2000/01/rdf-schema#label> "phenotype of" .
 <https://w3id.org/biolink/vocab/phenotype_of> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 #
@@ -604,6 +563,47 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/linkml/mixins
 <https://w3id.org/linkml/mixins> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 #
+# https://w3id.org/mvikg#frequencyUnit
+<https://w3id.org/mvikg#frequencyUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mvikg#frequencyUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
+<https://w3id.org/mvikg#frequencyUnit> <http://www.w3.org/2000/01/rdf-schema#range> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#oneOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://qudt.org/vocab/unit/UNITLESS> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://qudt.org/vocab/unit/PERCENT> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mvikg#frequencyUnit> <http://www.w3.org/2000/01/rdf-schema#label> "frequency unit" .
+<https://w3id.org/mvikg#frequencyUnit> <http://www.w3.org/2004/02/skos/core#definition> "The unit — percent or unitless — in which a sequence variant's mvikg:frequencyValue is expressed." .
+#
+# https://w3id.org/mvikg#has_biome_term
+<https://w3id.org/mvikg#has_biome_term> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mvikg#has_biome_term> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#unionOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/OrganismTaxon> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Sample> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mvikg#has_biome_term> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mvikg#Biome> .
+<https://w3id.org/mvikg#has_biome_term> <http://www.w3.org/2000/01/rdf-schema#label> "has_biome_term" .
+<https://w3id.org/mvikg#has_biome_term> <http://www.w3.org/2004/02/skos/core#definition> "Relates a sample or organism taxon to a resolved, curated biome term (typically from GOLD). Use mvikg:has_biome_text instead when the source text does not map to a controlled term." .
+<https://w3id.org/mvikg#has_biome_term> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/mvikg/linkml> .
+<https://w3id.org/mvikg#has_biome_term> <http://www.w3.org/2004/02/skos/core#note> "Dual-predicate split of the former single-valued mvikg:has_biome, per the Case A (IRI-or-free-text) pattern." .
+#
+# https://w3id.org/mvikg#has_developmental_stage
+<https://w3id.org/mvikg#has_developmental_stage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mvikg#has_developmental_stage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Sample> .
+<https://w3id.org/mvikg#has_developmental_stage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mvikg#DevelopmentalStage> .
+<https://w3id.org/mvikg#has_developmental_stage> <http://www.w3.org/2000/01/rdf-schema#label> "has developmental stage" .
+<https://w3id.org/mvikg#has_developmental_stage> <http://www.w3.org/2004/02/skos/core#definition> "Relates a sample to the developmental stage (e.g. exponential, lag) of the organism it was taken from." .
+<https://w3id.org/mvikg#has_developmental_stage> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/mvikg/linkml> .
+<https://w3id.org/mvikg#has_developmental_stage> <http://www.w3.org/2004/02/skos/core#note> "Domain (sosa:Sample) is external — see mvikg-restrictions.ttl. No inverse declared (same resolution as frequencyUnit)." .
+#
 #
 #
 # #################################################################
@@ -612,78 +612,6 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #
 # #################################################################
 #
-#
-# http://example.org/mvikg/alt
-<http://example.org/mvikg/alt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/mvikg/alt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
-<http://example.org/mvikg/alt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/mvikg/alt> <http://www.w3.org/2000/01/rdf-schema#label> "alternate allele" .
-<http://example.org/mvikg/alt> <http://www.w3.org/2004/02/skos/core#definition> "The alternate (variant) allele observed at a given sequence position." .
-<http://example.org/mvikg/alt> <http://www.w3.org/2004/02/skos/core#inScheme> <http://example.org/mvikg/linkml> .
-<http://example.org/mvikg/alt> <http://www.w3.org/2004/02/skos/core#note> "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
-#
-# http://example.org/mvikg/comparedTo
-<http://example.org/mvikg/comparedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/mvikg/comparedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/PhenotypicFeature> .
-<http://example.org/mvikg/comparedTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/mvikg/comparedTo> <http://www.w3.org/2000/01/rdf-schema#label> "compared to" .
-<http://example.org/mvikg/comparedTo> <http://www.w3.org/2004/02/skos/core#definition> "A free-text description of the baseline or control a phenotype outcome was compared against." .
-<http://example.org/mvikg/comparedTo> <http://www.w3.org/2004/02/skos/core#inScheme> <http://example.org/mvikg/linkml> .
-<http://example.org/mvikg/comparedTo> <http://www.w3.org/2004/02/skos/core#note> "Free-text description of the baseline/control a phenotype outcome was compared against. Domain (biolink:PhenotypicFeature) is external — see mvikg-restrictions.ttl." .
-#
-# http://example.org/mvikg/effect
-<http://example.org/mvikg/effect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/mvikg/effect> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
-<http://example.org/mvikg/effect> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/mvikg/effect> <http://www.w3.org/2000/01/rdf-schema#label> "variant effect" .
-<http://example.org/mvikg/effect> <http://www.w3.org/2004/02/skos/core#definition> "A free-text description of the functional effect of a sequence variant, as reported in the source." .
-<http://example.org/mvikg/effect> <http://www.w3.org/2004/02/skos/core#inScheme> <http://example.org/mvikg/linkml> .
-<http://example.org/mvikg/effect> <http://www.w3.org/2004/02/skos/core#note> "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
-#
-# http://example.org/mvikg/frequencyValue
-<http://example.org/mvikg/frequencyValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/mvikg/frequencyValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
-<http://example.org/mvikg/frequencyValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-<http://example.org/mvikg/frequencyValue> <http://www.w3.org/2000/01/rdf-schema#label> "frequency value" .
-<http://example.org/mvikg/frequencyValue> <http://www.w3.org/2004/02/skos/core#definition> "The numeric frequency value of a sequence variant or allele within a population; interpreted together with mvikg:frequencyUnit." .
-<http://example.org/mvikg/frequencyValue> <http://www.w3.org/2004/02/skos/core#inScheme> <http://example.org/mvikg/linkml> .
-<http://example.org/mvikg/frequencyValue> <http://www.w3.org/2004/02/skos/core#note> "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
-#
-# http://example.org/mvikg/has_biome_text
-<http://example.org/mvikg/has_biome_text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/mvikg/has_biome_text> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid20 .
-_:genid20 <http://www.w3.org/2002/07/owl#unionOf> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/OrganismTaxon> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Sample> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/mvikg/has_biome_text> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/mvikg/has_biome_text> <http://www.w3.org/2000/01/rdf-schema#label> "has_biome_text" .
-<http://example.org/mvikg/has_biome_text> <http://www.w3.org/2004/02/skos/core#definition> "Free-text description of a sample or organism taxon's environmental biome, used when the source text could not be mapped to a controlled GOLD biome term. If a value was normalized into mvikg:has_biome_term, the original text should still be retained here for provenance." .
-<http://example.org/mvikg/has_biome_text> <http://www.w3.org/2004/02/skos/core#inScheme> <http://example.org/mvikg/linkml> .
-<http://example.org/mvikg/has_biome_text> <http://www.w3.org/2004/02/skos/core#note> "Dual-predicate split of the former single-valued mvikg:has_biome, per the Case A (IRI-or-free-text) pattern." .
-#
-# http://example.org/mvikg/length
-<http://example.org/mvikg/length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/mvikg/length> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
-<http://example.org/mvikg/length> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/mvikg/length> <http://www.w3.org/2000/01/rdf-schema#label> "variant length" .
-<http://example.org/mvikg/length> <http://www.w3.org/2004/02/skos/core#definition> "The length of a sequence variant." .
-<http://example.org/mvikg/length> <http://www.w3.org/2004/02/skos/core#inScheme> <http://example.org/mvikg/linkml> .
-<http://example.org/mvikg/length> <http://www.w3.org/2004/02/skos/core#note> "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
-<http://example.org/mvikg/length> <http://www.w3.org/2004/02/skos/core#note> "Free-text length string — not all source rows give a clean integer." .
-#
-# http://example.org/mvikg/ref
-<http://example.org/mvikg/ref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/mvikg/ref> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
-<http://example.org/mvikg/ref> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/mvikg/ref> <http://www.w3.org/2000/01/rdf-schema#label> "reference allele" .
-<http://example.org/mvikg/ref> <http://www.w3.org/2004/02/skos/core#definition> "The reference allele reported at a given sequence position, prior to the observed variant." .
-<http://example.org/mvikg/ref> <http://www.w3.org/2004/02/skos/core#inScheme> <http://example.org/mvikg/linkml> .
-<http://example.org/mvikg/ref> <http://www.w3.org/2004/02/skos/core#note> "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
 #
 # https://w3id.org/biolink/vocab/base_coordinate
 <https://w3id.org/biolink/vocab/base_coordinate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -779,6 +707,78 @@ _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/biolink/vocab/type> <http://www.w3.org/2004/02/skos/core#exactMatch> <https://github.com/geneontology/go-annotation/blob/master/specs/gpad-gpi-2-0.md#DB_Object_Type> .
 <https://w3id.org/biolink/vocab/type> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/biolink/biolink-model> .
 #
+# https://w3id.org/mvikg#alt
+<https://w3id.org/mvikg#alt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mvikg#alt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
+<https://w3id.org/mvikg#alt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mvikg#alt> <http://www.w3.org/2000/01/rdf-schema#label> "alternate allele" .
+<https://w3id.org/mvikg#alt> <http://www.w3.org/2004/02/skos/core#definition> "The alternate (variant) allele observed at a given sequence position." .
+<https://w3id.org/mvikg#alt> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/mvikg/linkml> .
+<https://w3id.org/mvikg#alt> <http://www.w3.org/2004/02/skos/core#note> "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
+#
+# https://w3id.org/mvikg#comparedTo
+<https://w3id.org/mvikg#comparedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mvikg#comparedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/PhenotypicFeature> .
+<https://w3id.org/mvikg#comparedTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mvikg#comparedTo> <http://www.w3.org/2000/01/rdf-schema#label> "compared to" .
+<https://w3id.org/mvikg#comparedTo> <http://www.w3.org/2004/02/skos/core#definition> "A free-text description of the baseline or control a phenotype outcome was compared against." .
+<https://w3id.org/mvikg#comparedTo> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/mvikg/linkml> .
+<https://w3id.org/mvikg#comparedTo> <http://www.w3.org/2004/02/skos/core#note> "Free-text description of the baseline/control a phenotype outcome was compared against. Domain (biolink:PhenotypicFeature) is external — see mvikg-restrictions.ttl." .
+#
+# https://w3id.org/mvikg#effect
+<https://w3id.org/mvikg#effect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mvikg#effect> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
+<https://w3id.org/mvikg#effect> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mvikg#effect> <http://www.w3.org/2000/01/rdf-schema#label> "variant effect" .
+<https://w3id.org/mvikg#effect> <http://www.w3.org/2004/02/skos/core#definition> "A free-text description of the functional effect of a sequence variant, as reported in the source." .
+<https://w3id.org/mvikg#effect> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/mvikg/linkml> .
+<https://w3id.org/mvikg#effect> <http://www.w3.org/2004/02/skos/core#note> "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
+#
+# https://w3id.org/mvikg#frequencyValue
+<https://w3id.org/mvikg#frequencyValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mvikg#frequencyValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
+<https://w3id.org/mvikg#frequencyValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mvikg#frequencyValue> <http://www.w3.org/2000/01/rdf-schema#label> "frequency value" .
+<https://w3id.org/mvikg#frequencyValue> <http://www.w3.org/2004/02/skos/core#definition> "The numeric frequency value of a sequence variant or allele within a population; interpreted together with mvikg:frequencyUnit." .
+<https://w3id.org/mvikg#frequencyValue> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/mvikg/linkml> .
+<https://w3id.org/mvikg#frequencyValue> <http://www.w3.org/2004/02/skos/core#note> "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
+#
+# https://w3id.org/mvikg#has_biome_text
+<https://w3id.org/mvikg#has_biome_text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mvikg#has_biome_text> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#unionOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/biolink/vocab/OrganismTaxon> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Sample> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mvikg#has_biome_text> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mvikg#has_biome_text> <http://www.w3.org/2000/01/rdf-schema#label> "has_biome_text" .
+<https://w3id.org/mvikg#has_biome_text> <http://www.w3.org/2004/02/skos/core#definition> "Free-text description of a sample or organism taxon's environmental biome, used when the source text could not be mapped to a controlled GOLD biome term. If a value was normalized into mvikg:has_biome_term, the original text should still be retained here for provenance." .
+<https://w3id.org/mvikg#has_biome_text> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/mvikg/linkml> .
+<https://w3id.org/mvikg#has_biome_text> <http://www.w3.org/2004/02/skos/core#note> "Dual-predicate split of the former single-valued mvikg:has_biome, per the Case A (IRI-or-free-text) pattern." .
+#
+# https://w3id.org/mvikg#length
+<https://w3id.org/mvikg#length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mvikg#length> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
+<https://w3id.org/mvikg#length> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mvikg#length> <http://www.w3.org/2000/01/rdf-schema#label> "variant length" .
+<https://w3id.org/mvikg#length> <http://www.w3.org/2004/02/skos/core#definition> "The length of a sequence variant." .
+<https://w3id.org/mvikg#length> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/mvikg/linkml> .
+<https://w3id.org/mvikg#length> <http://www.w3.org/2004/02/skos/core#note> "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
+<https://w3id.org/mvikg#length> <http://www.w3.org/2004/02/skos/core#note> "Free-text length string — not all source rows give a clean integer." .
+#
+# https://w3id.org/mvikg#ref
+<https://w3id.org/mvikg#ref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mvikg#ref> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/biolink/vocab/SequenceVariant> .
+<https://w3id.org/mvikg#ref> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mvikg#ref> <http://www.w3.org/2000/01/rdf-schema#label> "reference allele" .
+<https://w3id.org/mvikg#ref> <http://www.w3.org/2004/02/skos/core#definition> "The reference allele reported at a given sequence position, prior to the observed variant." .
+<https://w3id.org/mvikg#ref> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/mvikg/linkml> .
+<https://w3id.org/mvikg#ref> <http://www.w3.org/2004/02/skos/core#note> "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
+#
 #
 #
 # #################################################################
@@ -787,23 +787,6 @@ _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #
 # #################################################################
 #
-#
-# http://example.org/mvikg/Biome
-<http://example.org/mvikg/Biome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/mvikg/Biome> <http://www.w3.org/2000/01/rdf-schema#label> "Biome" .
-<http://example.org/mvikg/Biome> <http://www.w3.org/2004/02/skos/core#definition> "A biome classification describing a sample's environmental context, typically drawn from the GOLD biome vocabulary." .
-<http://example.org/mvikg/Biome> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://example.org/mvikg/Biome> .
-<http://example.org/mvikg/Biome> <http://www.w3.org/2004/02/skos/core#inScheme> <http://example.org/mvikg/linkml> .
-<http://example.org/mvikg/Biome> <http://www.w3.org/2004/02/skos/core#note> "We recommend any biome class from the GOLD ontology" .
-#
-# http://example.org/mvikg/DevelopmentalStage
-<http://example.org/mvikg/DevelopmentalStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/mvikg/DevelopmentalStage> <http://www.w3.org/2000/01/rdf-schema#label> "DevelopmentalStage" .
-<http://example.org/mvikg/DevelopmentalStage> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.ebi.ac.uk/efo/EFO_0000399> .
-<http://example.org/mvikg/DevelopmentalStage> <http://www.w3.org/2004/02/skos/core#definition> "Represents a specific point or period in an organism's life cycle" .
-<http://example.org/mvikg/DevelopmentalStage> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://example.org/mvikg/DevelopmentalStage> .
-<http://example.org/mvikg/DevelopmentalStage> <http://www.w3.org/2004/02/skos/core#inScheme> <http://example.org/mvikg/linkml> .
-<http://example.org/mvikg/DevelopmentalStage> <http://www.w3.org/2004/02/skos/core#note> "A developmental stage is a stage corresponding to a stage in bacteria's growth. e.g.: exponential, lag." .
 #
 # http://purl.obolibrary.org/obo/SO_0000001
 <http://purl.obolibrary.org/obo/SO_0000001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1794,6 +1777,9 @@ _:genid117 <http://www.geneontology.org/formats/oboInOwl#hasSynonymType> <http:/
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities of the same kind."@en .
 <http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit"@en .
 #
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+#
 # http://www.w3.org/ns/sosa/FeatureOfInterest
 <http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid118 .
@@ -1819,16 +1805,16 @@ _:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
 <http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
 <http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid119 .
-_:genid119 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://example.org/mvikg/DevelopmentalStage> .
-_:genid119 <http://www.w3.org/2002/07/owl#onProperty> <http://example.org/mvikg/has_developmental_stage> .
+_:genid119 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+_:genid119 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
 _:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid120 .
-_:genid120 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
-_:genid120 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
+_:genid120 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/Publication> .
+_:genid120 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/mentioned_by> .
 _:genid120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid121 .
-_:genid121 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/biolink/vocab/Publication> .
-_:genid121 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/biolink/vocab/mentioned_by> .
+_:genid121 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mvikg#DevelopmentalStage> .
+_:genid121 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mvikg#has_developmental_stage> .
 _:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid122 .
 _:genid122 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
@@ -2383,6 +2369,23 @@ _:genid170 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://w3id.org/linkml/ClassDefinition#Mixin
 <https://w3id.org/linkml/ClassDefinition#Mixin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 #
+# https://w3id.org/mvikg#Biome
+<https://w3id.org/mvikg#Biome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mvikg#Biome> <http://www.w3.org/2000/01/rdf-schema#label> "Biome" .
+<https://w3id.org/mvikg#Biome> <http://www.w3.org/2004/02/skos/core#definition> "A biome classification describing a sample's environmental context, typically drawn from the GOLD biome vocabulary." .
+<https://w3id.org/mvikg#Biome> <http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/mvikg#Biome> .
+<https://w3id.org/mvikg#Biome> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/mvikg/linkml> .
+<https://w3id.org/mvikg#Biome> <http://www.w3.org/2004/02/skos/core#note> "We recommend any biome class from the GOLD ontology" .
+#
+# https://w3id.org/mvikg#DevelopmentalStage
+<https://w3id.org/mvikg#DevelopmentalStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mvikg#DevelopmentalStage> <http://www.w3.org/2000/01/rdf-schema#label> "DevelopmentalStage" .
+<https://w3id.org/mvikg#DevelopmentalStage> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.ebi.ac.uk/efo/EFO_0000399> .
+<https://w3id.org/mvikg#DevelopmentalStage> <http://www.w3.org/2004/02/skos/core#definition> "Represents a specific point or period in an organism's life cycle" .
+<https://w3id.org/mvikg#DevelopmentalStage> <http://www.w3.org/2004/02/skos/core#exactMatch> <https://w3id.org/mvikg#DevelopmentalStage> .
+<https://w3id.org/mvikg#DevelopmentalStage> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/mvikg/linkml> .
+<https://w3id.org/mvikg#DevelopmentalStage> <http://www.w3.org/2004/02/skos/core#note> "A developmental stage is a stage corresponding to a stage in bacteria's growth. e.g.: exponential, lag." .
+#
 #
 #
 # #################################################################
@@ -2412,6 +2415,12 @@ _:genid170 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <http://qudt.org/vocab/unit/UNITLESS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://qudt.org/vocab/unit/UNITLESS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/Unit> .
 <http://qudt.org/vocab/unit/UNITLESS> <http://www.w3.org/2000/01/rdf-schema#label> "Unitless"@en .
+#
+# https://w3id.org/mvikg/linkml
+<https://w3id.org/mvikg/linkml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mvikg/linkml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/mvikg/linkml> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies the LinkML-generated subset of the MVIKG schema." .
+<https://w3id.org/mvikg/linkml> <http://www.w3.org/2000/01/rdf-schema#label> "MVIKG LinkML-generated schema subset" .
 #
 #
 #

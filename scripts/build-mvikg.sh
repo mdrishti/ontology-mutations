@@ -65,8 +65,8 @@ robot merge \
 echo "Step 4: Adding ontology metadata..."
 robot annotate \
   --input ../output/temp-combined.owl \
-  --ontology-iri "http://example.org/mvikg" \
-  --version-iri "http://example.org/mvikg/0.0.1" \
+  --ontology-iri "https://w3id.org/mvikg" \
+  --version-iri "https://w3id.org/mvikg/0.1.0" \
   --output ../output/mvikg-integrated.owl \
   --annotation rdfs:label "MVIKG Ontology" \
   --annotation rdfs:comment "A schema for bacterial genotype-phenotype data integration" \

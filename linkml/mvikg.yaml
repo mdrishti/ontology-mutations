@@ -1,4 +1,4 @@
-id: http://example.org/mvikg/linkml
+id: https://w3id.org/mvikg/linkml
 name: mvikg
 description: >-
   LinkML source for the hand-authored MVIKG schema layer (properties and
@@ -10,7 +10,7 @@ description: >-
   and are merged in the same build step as this file's generated output.
 
 prefixes:
-  mvikg: http://example.org/mvikg/
+  mvikg: https://w3id.org/mvikg#
   skos: http://www.w3.org/2004/02/skos/core#
   linkml: https://w3id.org/linkml/
   efo: http://www.ebi.ac.uk/efo/
