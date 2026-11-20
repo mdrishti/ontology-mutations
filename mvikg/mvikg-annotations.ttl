@@ -10,6 +10,16 @@
 # finalized, is preserved in git history at this file's prior revision, not
 # carried into the LinkML source.)
 
+# Self-describing annotation for the LinkML schema-id IRI (used as
+# skos:inScheme on every LinkML-generated term, and as the generated
+# schema's transient owl:Ontology IRI during the build — see build-mvikg.sh
+# step 1d). Not a dereferenceable document; this triple lets the IRI explain
+# itself from within the ontology instead of needing a separate w3id redirect.
+<https://w3id.org/mvikg/linkml>
+    a skos:ConceptScheme ;
+    rdfs:label "MVIKG LinkML-generated schema subset" ;
+    rdfs:comment "Identifies the LinkML-generated subset of the MVIKG schema." .
+
 # Add context-specific annotations to imported classes
 sosa:Sample
     rdfs:comment "In MVIKG: A biological sample with genomic, environmental, and phenotypic metadata" ;
