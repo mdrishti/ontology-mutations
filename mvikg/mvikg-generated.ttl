@@ -4,74 +4,74 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix efo: <http://www.ebi.ac.uk/efo/> .
-@prefix mvikg: <http://example.org/mvikg/> .
+@prefix mvikg: <https://w3id.org/mvikg#> .
 mvikg:Biome a owl:Class ;
 	rdfs:label "Biome" ;
 	skos:definition "A biome classification describing a sample's environmental context, typically drawn from the GOLD biome vocabulary." ;
 	skos:exactMatch mvikg:Biome ;
-	skos:inScheme mvikg:linkml ;
+	skos:inScheme <https://w3id.org/mvikg/linkml> ;
 	skos:note "We recommend any biome class from the GOLD ontology" .
 mvikg:DevelopmentalStage a owl:Class ;
 	rdfs:label "DevelopmentalStage" ;
 	skos:closeMatch efo:EFO_0000399 ;
 	skos:definition "Represents a specific point or period in an organism's life cycle" ;
 	skos:exactMatch mvikg:DevelopmentalStage ;
-	skos:inScheme mvikg:linkml ;
+	skos:inScheme <https://w3id.org/mvikg/linkml> ;
 	skos:note "A developmental stage is a stage corresponding to a stage in bacteria's growth. e.g.: exponential, lag." .
 mvikg:alt a owl:DatatypeProperty ;
 	rdfs:label "alternate allele" ;
 	rdfs:range xsd:string ;
 	skos:definition "The alternate (variant) allele observed at a given sequence position." ;
-	skos:inScheme mvikg:linkml ;
+	skos:inScheme <https://w3id.org/mvikg/linkml> ;
 	skos:note "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
 mvikg:comparedTo a owl:DatatypeProperty ;
 	rdfs:label "compared to" ;
 	rdfs:range xsd:string ;
 	skos:definition "A free-text description of the baseline or control a phenotype outcome was compared against." ;
-	skos:inScheme mvikg:linkml ;
+	skos:inScheme <https://w3id.org/mvikg/linkml> ;
 	skos:note "Free-text description of the baseline/control a phenotype outcome was compared against. Domain (biolink:PhenotypicFeature) is external — see mvikg-restrictions.ttl." .
 mvikg:effect a owl:DatatypeProperty ;
 	rdfs:label "variant effect" ;
 	rdfs:range xsd:string ;
 	skos:definition "A free-text description of the functional effect of a sequence variant, as reported in the source." ;
-	skos:inScheme mvikg:linkml ;
+	skos:inScheme <https://w3id.org/mvikg/linkml> ;
 	skos:note "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
 mvikg:frequencyValue a owl:DatatypeProperty ;
 	rdfs:label "frequency value" ;
 	rdfs:range xsd:decimal ;
 	skos:definition "The numeric frequency value of a sequence variant or allele within a population; interpreted together with mvikg:frequencyUnit." ;
-	skos:inScheme mvikg:linkml ;
+	skos:inScheme <https://w3id.org/mvikg/linkml> ;
 	skos:note "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
 mvikg:has_biome_term a owl:ObjectProperty ;
 	rdfs:label "has_biome_term" ;
 	rdfs:range mvikg:Biome ;
 	skos:definition "Relates a sample or organism taxon to a resolved, curated biome term (typically from GOLD). Use mvikg:has_biome_text instead when the source text does not map to a controlled term." ;
-	skos:inScheme mvikg:linkml ;
+	skos:inScheme <https://w3id.org/mvikg/linkml> ;
 	skos:note "Dual-predicate split of the former single-valued mvikg:has_biome, per the Case A (IRI-or-free-text) pattern." .
 mvikg:has_biome_text a owl:DatatypeProperty ;
 	rdfs:label "has_biome_text" ;
 	rdfs:range xsd:string ;
 	skos:definition "Free-text description of a sample or organism taxon's environmental biome, used when the source text could not be mapped to a controlled GOLD biome term. If a value was normalized into mvikg:has_biome_term, the original text should still be retained here for provenance." ;
-	skos:inScheme mvikg:linkml ;
+	skos:inScheme <https://w3id.org/mvikg/linkml> ;
 	skos:note "Dual-predicate split of the former single-valued mvikg:has_biome, per the Case A (IRI-or-free-text) pattern." .
 mvikg:has_developmental_stage a owl:ObjectProperty ;
 	rdfs:label "has developmental stage" ;
 	rdfs:range mvikg:DevelopmentalStage ;
 	skos:definition "Relates a sample to the developmental stage (e.g. exponential, lag) of the organism it was taken from." ;
-	skos:inScheme mvikg:linkml ;
+	skos:inScheme <https://w3id.org/mvikg/linkml> ;
 	skos:note "Domain (sosa:Sample) is external — see mvikg-restrictions.ttl. No inverse declared (same resolution as frequencyUnit)." .
 mvikg:length a owl:DatatypeProperty ;
 	rdfs:label "variant length" ;
 	rdfs:range xsd:string ;
 	skos:definition "The length of a sequence variant." ;
-	skos:inScheme mvikg:linkml ;
+	skos:inScheme <https://w3id.org/mvikg/linkml> ;
 	skos:note "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." , "Free-text length string — not all source rows give a clean integer." .
-mvikg:linkml.owl.ttl a owl:Ontology ;
-	rdfs:label "mvikg" ;
-	skos:definition "LinkML source for the hand-authored MVIKG schema layer (properties and classes we author ourselves). Domain restrictions against externally extracted classes (sosa:Sample, biolink:OrganismTaxon) are intentionally NOT modeled here — LinkML's OWL generator mints a new local class node for any class_uri stub, which would duplicate rather than reference the real extracted IRIs. Those domains stay hand-authored in mvikg-restrictions.ttl and are merged in the same build step as this file's generated output." .
 mvikg:ref a owl:DatatypeProperty ;
 	rdfs:label "reference allele" ;
 	rdfs:range xsd:string ;
 	skos:definition "The reference allele reported at a given sequence position, prior to the observed variant." ;
-	skos:inScheme mvikg:linkml ;
+	skos:inScheme <https://w3id.org/mvikg/linkml> ;
 	skos:note "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
+<https://w3id.org/mvikg/linkml.owl.ttl> a owl:Ontology ;
+	rdfs:label "mvikg" ;
+	skos:definition "LinkML source for the hand-authored MVIKG schema layer (properties and classes we author ourselves). Domain restrictions against externally extracted classes (sosa:Sample, biolink:OrganismTaxon) are intentionally NOT modeled here — LinkML's OWL generator mints a new local class node for any class_uri stub, which would duplicate rather than reference the real extracted IRIs. Those domains stay hand-authored in mvikg-restrictions.ttl and are merged in the same build step as this file's generated output." .

@@ -1,4 +1,4 @@
-@prefix : <http://example.org/mvikg/linkml.owl.ttl#> .
+@prefix : <https://w3id.org/mvikg/linkml.owl.ttl#> .
 @prefix efo: <http://www.ebi.ac.uk/efo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -6,10 +6,10 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix mvikg: <http://example.org/mvikg/> .
-@base <http://example.org/mvikg/linkml.owl.ttl> .
+@prefix mvikg: <https://w3id.org/mvikg#> .
+@base <https://w3id.org/mvikg/linkml.owl.ttl> .
 
-<http://example.org/mvikg/linkml.owl.ttl> rdf:type owl:Ontology .
+<https://w3id.org/mvikg/linkml.owl.ttl> rdf:type owl:Ontology .
 
 #################################################################
 #    Annotation properties
@@ -39,21 +39,21 @@ skos:note rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://example.org/mvikg/has_biome_term
+###  https://w3id.org/mvikg#has_biome_term
 mvikg:has_biome_term rdf:type owl:ObjectProperty ;
                      rdfs:range mvikg:Biome ;
                      rdfs:label "has_biome_term" ;
                      skos:definition "Relates a sample or organism taxon to a resolved, curated biome term (typically from GOLD). Use mvikg:has_biome_text instead when the source text does not map to a controlled term." ;
-                     skos:inScheme mvikg:linkml ;
+                     skos:inScheme <https://w3id.org/mvikg/linkml> ;
                      skos:note "Dual-predicate split of the former single-valued mvikg:has_biome, per the Case A (IRI-or-free-text) pattern." .
 
 
-###  http://example.org/mvikg/has_developmental_stage
+###  https://w3id.org/mvikg#has_developmental_stage
 mvikg:has_developmental_stage rdf:type owl:ObjectProperty ;
                               rdfs:range mvikg:DevelopmentalStage ;
                               rdfs:label "has developmental stage" ;
                               skos:definition "Relates a sample to the developmental stage (e.g. exponential, lag) of the organism it was taken from." ;
-                              skos:inScheme mvikg:linkml ;
+                              skos:inScheme <https://w3id.org/mvikg/linkml> ;
                               skos:note "Domain (sosa:Sample) is external — see mvikg-restrictions.ttl. No inverse declared (same resolution as frequencyUnit)." .
 
 
@@ -61,67 +61,67 @@ mvikg:has_developmental_stage rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  http://example.org/mvikg/alt
+###  https://w3id.org/mvikg#alt
 mvikg:alt rdf:type owl:DatatypeProperty ;
           rdfs:range xsd:string ;
           rdfs:label "alternate allele" ;
           skos:definition "The alternate (variant) allele observed at a given sequence position." ;
-          skos:inScheme mvikg:linkml ;
+          skos:inScheme <https://w3id.org/mvikg/linkml> ;
           skos:note "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
 
 
-###  http://example.org/mvikg/comparedTo
+###  https://w3id.org/mvikg#comparedTo
 mvikg:comparedTo rdf:type owl:DatatypeProperty ;
                  rdfs:range xsd:string ;
                  rdfs:label "compared to" ;
                  skos:definition "A free-text description of the baseline or control a phenotype outcome was compared against." ;
-                 skos:inScheme mvikg:linkml ;
+                 skos:inScheme <https://w3id.org/mvikg/linkml> ;
                  skos:note "Free-text description of the baseline/control a phenotype outcome was compared against. Domain (biolink:PhenotypicFeature) is external — see mvikg-restrictions.ttl." .
 
 
-###  http://example.org/mvikg/effect
+###  https://w3id.org/mvikg#effect
 mvikg:effect rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:string ;
              rdfs:label "variant effect" ;
              skos:definition "A free-text description of the functional effect of a sequence variant, as reported in the source." ;
-             skos:inScheme mvikg:linkml ;
+             skos:inScheme <https://w3id.org/mvikg/linkml> ;
              skos:note "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
 
 
-###  http://example.org/mvikg/frequencyValue
+###  https://w3id.org/mvikg#frequencyValue
 mvikg:frequencyValue rdf:type owl:DatatypeProperty ;
                      rdfs:range xsd:decimal ;
                      rdfs:label "frequency value" ;
                      skos:definition "The numeric frequency value of a sequence variant or allele within a population; interpreted together with mvikg:frequencyUnit." ;
-                     skos:inScheme mvikg:linkml ;
+                     skos:inScheme <https://w3id.org/mvikg/linkml> ;
                      skos:note "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
 
 
-###  http://example.org/mvikg/has_biome_text
+###  https://w3id.org/mvikg#has_biome_text
 mvikg:has_biome_text rdf:type owl:DatatypeProperty ;
                      rdfs:range xsd:string ;
                      rdfs:label "has_biome_text" ;
                      skos:definition "Free-text description of a sample or organism taxon's environmental biome, used when the source text could not be mapped to a controlled GOLD biome term. If a value was normalized into mvikg:has_biome_term, the original text should still be retained here for provenance." ;
-                     skos:inScheme mvikg:linkml ;
+                     skos:inScheme <https://w3id.org/mvikg/linkml> ;
                      skos:note "Dual-predicate split of the former single-valued mvikg:has_biome, per the Case A (IRI-or-free-text) pattern." .
 
 
-###  http://example.org/mvikg/length
+###  https://w3id.org/mvikg#length
 mvikg:length rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:string ;
              rdfs:label "variant length" ;
              skos:definition "The length of a sequence variant." ;
-             skos:inScheme mvikg:linkml ;
+             skos:inScheme <https://w3id.org/mvikg/linkml> ;
              skos:note "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." ,
                        "Free-text length string — not all source rows give a clean integer." .
 
 
-###  http://example.org/mvikg/ref
+###  https://w3id.org/mvikg#ref
 mvikg:ref rdf:type owl:DatatypeProperty ;
           rdfs:range xsd:string ;
           rdfs:label "reference allele" ;
           skos:definition "The reference allele reported at a given sequence position, prior to the observed variant." ;
-          skos:inScheme mvikg:linkml ;
+          skos:inScheme <https://w3id.org/mvikg/linkml> ;
           skos:note "Domain (biolink:SequenceVariant) is external — see mvikg-restrictions.ttl." .
 
 
@@ -129,22 +129,22 @@ mvikg:ref rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://example.org/mvikg/Biome
+###  https://w3id.org/mvikg#Biome
 mvikg:Biome rdf:type owl:Class ;
             rdfs:label "Biome" ;
             skos:definition "A biome classification describing a sample's environmental context, typically drawn from the GOLD biome vocabulary." ;
             skos:exactMatch mvikg:Biome ;
-            skos:inScheme mvikg:linkml ;
+            skos:inScheme <https://w3id.org/mvikg/linkml> ;
             skos:note "We recommend any biome class from the GOLD ontology" .
 
 
-###  http://example.org/mvikg/DevelopmentalStage
+###  https://w3id.org/mvikg#DevelopmentalStage
 mvikg:DevelopmentalStage rdf:type owl:Class ;
                          rdfs:label "DevelopmentalStage" ;
                          skos:closeMatch efo:EFO_0000399 ;
                          skos:definition "Represents a specific point or period in an organism's life cycle" ;
                          skos:exactMatch mvikg:DevelopmentalStage ;
-                         skos:inScheme mvikg:linkml ;
+                         skos:inScheme <https://w3id.org/mvikg/linkml> ;
                          skos:note "A developmental stage is a stage corresponding to a stage in bacteria's growth. e.g.: exponential, lag." .
 
 
